@@ -1,0 +1,2250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ProvDataSet" targetNamespace="http://www.tempuri.org/ProvDataSet.xsd" xmlns:mstns="http://www.tempuri.org/ProvDataSet.xsd" xmlns="http://www.tempuri.org/ProvDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ProvDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="ProvDataSet" msprop:Generator_UserDSName="ProvDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PROVIDER" msprop:Generator_UserTableName="PROVIDER" msprop:Generator_RowEvArgName="PROVIDERRowChangeEvent" msprop:Generator_TableVarName="tablePROVIDER" msprop:Generator_TablePropName="PROVIDER" msprop:Generator_RowDeletingName="PROVIDERRowDeleting" msprop:Generator_RowChangingName="PROVIDERRowChanging" msprop:Generator_RowDeletedName="PROVIDERRowDeleted" msprop:Generator_RowEvHandlerName="PROVIDERRowChangeEventHandler" msprop:Generator_TableClassName="PROVIDERDataTable" msprop:Generator_RowChangedName="PROVIDERRowChanged" msprop:Generator_RowClassName="PROVIDERRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PROVIDER_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnPROVIDER_ID" msprop:Generator_ColumnPropNameInRow="PROVIDER_ID" msprop:Generator_ColumnPropNameInTable="PROVIDER_IDColumn" msprop:Generator_UserColumnName="PROVIDER_ID" type="xs:int" />
+              <xs:element name="TAXID" msprop:Generator_ColumnVarNameInTable="columnTAXID" msprop:Generator_ColumnPropNameInRow="TAXID" msprop:Generator_ColumnPropNameInTable="TAXIDColumn" msprop:Generator_UserColumnName="TAXID" type="xs:int" />
+              <xs:element name="TAXID_TYPE" msprop:Generator_ColumnVarNameInTable="columnTAXID_TYPE" msprop:Generator_ColumnPropNameInRow="TAXID_TYPE" msprop:Generator_ColumnPropNameInTable="TAXID_TYPEColumn" msprop:Generator_UserColumnName="TAXID_TYPE" type="xs:string" />
+              <xs:element name="NAME1" msprop:Generator_ColumnVarNameInTable="columnNAME1" msprop:Generator_ColumnPropNameInRow="NAME1" msprop:Generator_ColumnPropNameInTable="NAME1Column" msprop:Generator_UserColumnName="NAME1" type="xs:string" />
+              <xs:element name="NAME2" msprop:Generator_ColumnVarNameInTable="columnNAME2" msprop:Generator_ColumnPropNameInRow="NAME2" msprop:Generator_ColumnPropNameInTable="NAME2Column" msprop:Generator_UserColumnName="NAME2" type="xs:string" minOccurs="0" />
+              <xs:element name="NPI" msprop:Generator_ColumnVarNameInTable="columnNPI" msprop:Generator_ColumnPropNameInRow="NPI" msprop:Generator_ColumnPropNameInTable="NPIColumn" msprop:Generator_UserColumnName="NPI" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SUSPEND_SW" msprop:Generator_ColumnVarNameInTable="columnSUSPEND_SW" msprop:Generator_ColumnPropNameInRow="SUSPEND_SW" msprop:Generator_ColumnPropNameInTable="SUSPEND_SWColumn" msprop:Generator_UserColumnName="SUSPEND_SW" type="xs:boolean" />
+              <xs:element name="ADDRESSSUSPENDED" msprop:Generator_ColumnVarNameInTable="columnADDRESSSUSPENDED" msprop:Generator_ColumnPropNameInRow="ADDRESSSUSPENDED" msprop:Generator_ColumnPropNameInTable="ADDRESSSUSPENDEDColumn" msprop:Generator_UserColumnName="ADDRESSSUSPENDED" type="xs:boolean" minOccurs="0" />
+              <xs:element name="PPOC_ELIGIBLE_SW" msprop:Generator_ColumnVarNameInTable="columnPPOC_ELIGIBLE_SW" msprop:Generator_ColumnPropNameInRow="PPOC_ELIGIBLE_SW" msprop:Generator_ColumnPropNameInTable="PPOC_ELIGIBLE_SWColumn" msprop:Generator_UserColumnName="PPOC_ELIGIBLE_SW" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ONLINE_DATE" msprop:Generator_ColumnVarNameInTable="columnONLINE_DATE" msprop:Generator_ColumnPropNameInRow="ONLINE_DATE" msprop:Generator_ColumnPropNameInTable="ONLINE_DATEColumn" msprop:Generator_UserColumnName="ONLINE_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ONLINE_USERID" msprop:Generator_ColumnVarNameInTable="columnONLINE_USERID" msprop:Generator_ColumnPropNameInRow="ONLINE_USERID" msprop:Generator_ColumnPropNameInTable="ONLINE_USERIDColumn" msprop:Generator_UserColumnName="ONLINE_USERID" type="xs:string" minOccurs="0" />
+              <xs:element name="DESCRIPTION" msprop:Generator_ColumnVarNameInTable="columnDESCRIPTION" msprop:Generator_ColumnPropNameInRow="DESCRIPTION" msprop:Generator_ColumnPropNameInTable="DESCRIPTIONColumn" msprop:Generator_UserColumnName="DESCRIPTION" type="xs:string" minOccurs="0" />
+              <xs:element name="ADDRESS_LINE1" msprop:Generator_ColumnVarNameInTable="columnADDRESS_LINE1" msprop:Generator_ColumnPropNameInRow="ADDRESS_LINE1" msprop:Generator_ColumnPropNameInTable="ADDRESS_LINE1Column" msprop:Generator_UserColumnName="ADDRESS_LINE1" type="xs:string" minOccurs="0" />
+              <xs:element name="ADDRESS_LINE2" msprop:Generator_ColumnVarNameInTable="columnADDRESS_LINE2" msprop:Generator_ColumnPropNameInRow="ADDRESS_LINE2" msprop:Generator_ColumnPropNameInTable="ADDRESS_LINE2Column" msprop:Generator_UserColumnName="ADDRESS_LINE2" type="xs:string" minOccurs="0" />
+              <xs:element name="CITY" msprop:Generator_ColumnVarNameInTable="columnCITY" msprop:Generator_ColumnPropNameInRow="CITY" msprop:Generator_ColumnPropNameInTable="CITYColumn" msprop:Generator_UserColumnName="CITY" type="xs:string" minOccurs="0" />
+              <xs:element name="STATE" msprop:Generator_ColumnVarNameInTable="columnSTATE" msprop:Generator_ColumnPropNameInRow="STATE" msprop:Generator_ColumnPropNameInTable="STATEColumn" msprop:Generator_UserColumnName="STATE" type="xs:string" minOccurs="0" />
+              <xs:element name="ZIP" msprop:Generator_ColumnVarNameInTable="columnZIP" msprop:Generator_ColumnPropNameInRow="ZIP" msprop:Generator_ColumnPropNameInTable="ZIPColumn" msprop:Generator_UserColumnName="ZIP" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ZIP_4" msprop:Generator_ColumnVarNameInTable="columnZIP_4" msprop:Generator_ColumnPropNameInRow="ZIP_4" msprop:Generator_ColumnPropNameInTable="ZIP_4Column" msprop:Generator_UserColumnName="ZIP_4" type="xs:decimal" minOccurs="0" />
+              <xs:element name="COUNTRY" msprop:Generator_ColumnVarNameInTable="columnCOUNTRY" msprop:Generator_ColumnPropNameInRow="COUNTRY" msprop:Generator_ColumnPropNameInTable="COUNTRYColumn" msprop:Generator_UserColumnName="COUNTRY" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PROVIDER_ADDRESS" msprop:Generator_UserTableName="PROVIDER_ADDRESS" msprop:Generator_RowEvArgName="PROVIDER_ADDRESSRowChangeEvent" msprop:Generator_TableVarName="tablePROVIDER_ADDRESS" msprop:Generator_TablePropName="PROVIDER_ADDRESS" msprop:Generator_RowDeletingName="PROVIDER_ADDRESSRowDeleting" msprop:Generator_RowChangingName="PROVIDER_ADDRESSRowChanging" msprop:Generator_RowDeletedName="PROVIDER_ADDRESSRowDeleted" msprop:Generator_RowEvHandlerName="PROVIDER_ADDRESSRowChangeEventHandler" msprop:Generator_TableClassName="PROVIDER_ADDRESSDataTable" msprop:Generator_RowChangedName="PROVIDER_ADDRESSRowChanged" msprop:Generator_RowClassName="PROVIDER_ADDRESSRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PROVIDER_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnPROVIDER_ID" msprop:Generator_ColumnPropNameInRow="PROVIDER_ID" msprop:Generator_ColumnPropNameInTable="PROVIDER_IDColumn" msprop:Generator_UserColumnName="PROVIDER_ID" type="xs:int" />
+              <xs:element name="TAXID" msprop:Generator_ColumnVarNameInTable="columnTAXID" msprop:Generator_ColumnPropNameInRow="TAXID" msprop:Generator_ColumnPropNameInTable="TAXIDColumn" msprop:Generator_UserColumnName="TAXID" type="xs:int" />
+              <xs:element name="TAXID_TYPE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTAXID_TYPE" msprop:Generator_ColumnPropNameInRow="TAXID_TYPE" msprop:Generator_ColumnPropNameInTable="TAXID_TYPEColumn" msprop:Generator_UserColumnName="TAXID_TYPE" type="xs:string" minOccurs="0" />
+              <xs:element name="NAME1" msprop:Generator_ColumnVarNameInTable="columnNAME1" msprop:Generator_ColumnPropNameInRow="NAME1" msprop:Generator_ColumnPropNameInTable="NAME1Column" msprop:Generator_UserColumnName="NAME1" type="xs:string" />
+              <xs:element name="NAME2" msprop:Generator_ColumnVarNameInTable="columnNAME2" msprop:Generator_ColumnPropNameInRow="NAME2" msprop:Generator_ColumnPropNameInTable="NAME2Column" msprop:Generator_UserColumnName="NAME2" type="xs:string" minOccurs="0" />
+              <xs:element name="ProviderSuspended" msprop:Generator_ColumnVarNameInTable="columnProviderSuspended" msprop:Generator_ColumnPropNameInRow="ProviderSuspended" msprop:Generator_ColumnPropNameInTable="ProviderSuspendedColumn" msprop:Generator_UserColumnName="ProviderSuspended" type="xs:boolean" />
+              <xs:element name="PPOC_ELIGIBLE_SW" msprop:Generator_ColumnVarNameInTable="columnPPOC_ELIGIBLE_SW" msprop:Generator_ColumnPropNameInRow="PPOC_ELIGIBLE_SW" msprop:Generator_ColumnPropNameInTable="PPOC_ELIGIBLE_SWColumn" msprop:Generator_UserColumnName="PPOC_ELIGIBLE_SW" type="xs:boolean" />
+              <xs:element name="PARENT_ID" msprop:Generator_ColumnVarNameInTable="columnPARENT_ID" msprop:Generator_ColumnPropNameInRow="PARENT_ID" msprop:Generator_ColumnPropNameInTable="PARENT_IDColumn" msprop:Generator_UserColumnName="PARENT_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="NPI" msprop:Generator_ColumnVarNameInTable="columnNPI" msprop:Generator_ColumnPropNameInRow="NPI" msprop:Generator_ColumnPropNameInTable="NPIColumn" msprop:Generator_UserColumnName="NPI" type="xs:decimal" minOccurs="0" />
+              <xs:element name="COMMENT_ID" msprop:Generator_ColumnVarNameInTable="columnCOMMENT_ID" msprop:Generator_ColumnPropNameInRow="COMMENT_ID" msprop:Generator_ColumnPropNameInTable="COMMENT_IDColumn" msprop:Generator_UserColumnName="COMMENT_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="ALERT" msprop:Generator_ColumnVarNameInTable="columnALERT" msprop:Generator_ColumnPropNameInRow="ALERT" msprop:Generator_ColumnPropNameInTable="ALERTColumn" msprop:Generator_UserColumnName="ALERT" type="xs:string" minOccurs="0" />
+              <xs:element name="ADDRESS_LINE1" msprop:Generator_ColumnVarNameInTable="columnADDRESS_LINE1" msprop:Generator_ColumnPropNameInRow="ADDRESS_LINE1" msprop:Generator_ColumnPropNameInTable="ADDRESS_LINE1Column" msprop:Generator_UserColumnName="ADDRESS_LINE1" type="xs:string" minOccurs="0" />
+              <xs:element name="ADDRESS_LINE2" msprop:Generator_ColumnVarNameInTable="columnADDRESS_LINE2" msprop:Generator_ColumnPropNameInRow="ADDRESS_LINE2" msprop:Generator_ColumnPropNameInTable="ADDRESS_LINE2Column" msprop:Generator_UserColumnName="ADDRESS_LINE2" type="xs:string" minOccurs="0" />
+              <xs:element name="CITY" msprop:Generator_ColumnVarNameInTable="columnCITY" msprop:Generator_ColumnPropNameInRow="CITY" msprop:Generator_ColumnPropNameInTable="CITYColumn" msprop:Generator_UserColumnName="CITY" type="xs:string" minOccurs="0" />
+              <xs:element name="STATE" msprop:Generator_ColumnVarNameInTable="columnSTATE" msprop:Generator_ColumnPropNameInRow="STATE" msprop:Generator_ColumnPropNameInTable="STATEColumn" msprop:Generator_UserColumnName="STATE" type="xs:string" minOccurs="0" />
+              <xs:element name="ZIP" msprop:Generator_ColumnVarNameInTable="columnZIP" msprop:Generator_ColumnPropNameInRow="ZIP" msprop:Generator_ColumnPropNameInTable="ZIPColumn" msprop:Generator_UserColumnName="ZIP" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ZIP_4" msprop:Generator_ColumnVarNameInTable="columnZIP_4" msprop:Generator_ColumnPropNameInRow="ZIP_4" msprop:Generator_ColumnPropNameInTable="ZIP_4Column" msprop:Generator_UserColumnName="ZIP_4" type="xs:decimal" minOccurs="0" />
+              <xs:element name="COUNTRY" msprop:Generator_ColumnVarNameInTable="columnCOUNTRY" msprop:Generator_ColumnPropNameInRow="COUNTRY" msprop:Generator_ColumnPropNameInTable="COUNTRYColumn" msprop:Generator_UserColumnName="COUNTRY" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="NPI_REGISTRY" msprop:Generator_UserTableName="NPI_REGISTRY" msprop:Generator_RowEvArgName="NPI_REGISTRYRowChangeEvent" msprop:Generator_TableVarName="tableNPI_REGISTRY" msprop:Generator_TablePropName="NPI_REGISTRY" msprop:Generator_RowDeletingName="NPI_REGISTRYRowDeleting" msprop:Generator_RowChangingName="NPI_REGISTRYRowChanging" msprop:Generator_RowDeletedName="NPI_REGISTRYRowDeleted" msprop:Generator_RowEvHandlerName="NPI_REGISTRYRowChangeEventHandler" msprop:Generator_TableClassName="NPI_REGISTRYDataTable" msprop:Generator_RowChangedName="NPI_REGISTRYRowChanged" msprop:Generator_RowClassName="NPI_REGISTRYRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NPI" msprop:Generator_ColumnVarNameInTable="columnNPI" msprop:Generator_ColumnPropNameInRow="NPI" msprop:Generator_ColumnPropNameInTable="NPIColumn" msprop:Generator_UserColumnName="NPI" type="xs:decimal" />
+              <xs:element name="ENTITY_TYPE_CD" msprop:Generator_ColumnVarNameInTable="columnENTITY_TYPE_CD" msprop:Generator_ColumnPropNameInRow="ENTITY_TYPE_CD" msprop:Generator_ColumnPropNameInTable="ENTITY_TYPE_CDColumn" msprop:Generator_UserColumnName="ENTITY_TYPE_CD" type="xs:short" minOccurs="0" />
+              <xs:element name="REPLACEMENT_NPI" msprop:Generator_ColumnVarNameInTable="columnREPLACEMENT_NPI" msprop:Generator_ColumnPropNameInRow="REPLACEMENT_NPI" msprop:Generator_ColumnPropNameInTable="REPLACEMENT_NPIColumn" msprop:Generator_UserColumnName="REPLACEMENT_NPI" type="xs:decimal" minOccurs="0" />
+              <xs:element name="EMP_IDENTIFICATION_NUM_EIN" msprop:Generator_ColumnVarNameInTable="columnEMP_IDENTIFICATION_NUM_EIN" msprop:Generator_ColumnPropNameInRow="EMP_IDENTIFICATION_NUM_EIN" msprop:Generator_ColumnPropNameInTable="EMP_IDENTIFICATION_NUM_EINColumn" msprop:Generator_UserColumnName="EMP_IDENTIFICATION_NUM_EIN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="9" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_ORG_NAME_LEGAL_BUS_NAME" msprop:Generator_ColumnVarNameInTable="columnPROV_ORG_NAME_LEGAL_BUS_NAME" msprop:Generator_ColumnPropNameInRow="PROV_ORG_NAME_LEGAL_BUS_NAME" msprop:Generator_ColumnPropNameInTable="PROV_ORG_NAME_LEGAL_BUS_NAMEColumn" msprop:Generator_UserColumnName="PROV_ORG_NAME_LEGAL_BUS_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="70" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_LAST_NAME_LEGAL_NAME" msprop:Generator_ColumnVarNameInTable="columnPROV_LAST_NAME_LEGAL_NAME" msprop:Generator_ColumnPropNameInRow="PROV_LAST_NAME_LEGAL_NAME" msprop:Generator_ColumnPropNameInTable="PROV_LAST_NAME_LEGAL_NAMEColumn" msprop:Generator_UserColumnName="PROV_LAST_NAME_LEGAL_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_FIRST_NAME" msprop:Generator_ColumnVarNameInTable="columnPROV_FIRST_NAME" msprop:Generator_ColumnPropNameInRow="PROV_FIRST_NAME" msprop:Generator_ColumnPropNameInTable="PROV_FIRST_NAMEColumn" msprop:Generator_UserColumnName="PROV_FIRST_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_MIDDLE_NAME" msprop:Generator_ColumnVarNameInTable="columnPROV_MIDDLE_NAME" msprop:Generator_ColumnPropNameInRow="PROV_MIDDLE_NAME" msprop:Generator_ColumnPropNameInTable="PROV_MIDDLE_NAMEColumn" msprop:Generator_UserColumnName="PROV_MIDDLE_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_NAME_PRE_TXT" msprop:Generator_ColumnVarNameInTable="columnPROV_NAME_PRE_TXT" msprop:Generator_ColumnPropNameInRow="PROV_NAME_PRE_TXT" msprop:Generator_ColumnPropNameInTable="PROV_NAME_PRE_TXTColumn" msprop:Generator_UserColumnName="PROV_NAME_PRE_TXT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_NAME_SUF_TXT" msprop:Generator_ColumnVarNameInTable="columnPROV_NAME_SUF_TXT" msprop:Generator_ColumnPropNameInRow="PROV_NAME_SUF_TXT" msprop:Generator_ColumnPropNameInTable="PROV_NAME_SUF_TXTColumn" msprop:Generator_UserColumnName="PROV_NAME_SUF_TXT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_CREDENTIAL_TXT" msprop:Generator_ColumnVarNameInTable="columnPROV_CREDENTIAL_TXT" msprop:Generator_ColumnPropNameInRow="PROV_CREDENTIAL_TXT" msprop:Generator_ColumnPropNameInTable="PROV_CREDENTIAL_TXTColumn" msprop:Generator_UserColumnName="PROV_CREDENTIAL_TXT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_OTH_ORG_NAME" msprop:Generator_ColumnVarNameInTable="columnPROV_OTH_ORG_NAME" msprop:Generator_ColumnPropNameInRow="PROV_OTH_ORG_NAME" msprop:Generator_ColumnPropNameInTable="PROV_OTH_ORG_NAMEColumn" msprop:Generator_UserColumnName="PROV_OTH_ORG_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="70" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_OTH_ORG_NAME_TYPE_CD" msprop:Generator_ColumnVarNameInTable="columnPROV_OTH_ORG_NAME_TYPE_CD" msprop:Generator_ColumnPropNameInRow="PROV_OTH_ORG_NAME_TYPE_CD" msprop:Generator_ColumnPropNameInTable="PROV_OTH_ORG_NAME_TYPE_CDColumn" msprop:Generator_UserColumnName="PROV_OTH_ORG_NAME_TYPE_CD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_OTH_LAST_NAME" msprop:Generator_ColumnVarNameInTable="columnPROV_OTH_LAST_NAME" msprop:Generator_ColumnPropNameInRow="PROV_OTH_LAST_NAME" msprop:Generator_ColumnPropNameInTable="PROV_OTH_LAST_NAMEColumn" msprop:Generator_UserColumnName="PROV_OTH_LAST_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_OTH_FIRST_NAME" msprop:Generator_ColumnVarNameInTable="columnPROV_OTH_FIRST_NAME" msprop:Generator_ColumnPropNameInRow="PROV_OTH_FIRST_NAME" msprop:Generator_ColumnPropNameInTable="PROV_OTH_FIRST_NAMEColumn" msprop:Generator_UserColumnName="PROV_OTH_FIRST_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_OTH_MIDDLE_NAME" msprop:Generator_ColumnVarNameInTable="columnPROV_OTH_MIDDLE_NAME" msprop:Generator_ColumnPropNameInRow="PROV_OTH_MIDDLE_NAME" msprop:Generator_ColumnPropNameInTable="PROV_OTH_MIDDLE_NAMEColumn" msprop:Generator_UserColumnName="PROV_OTH_MIDDLE_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_OTH_NAME_PRE_TXT" msprop:Generator_ColumnVarNameInTable="columnPROV_OTH_NAME_PRE_TXT" msprop:Generator_ColumnPropNameInRow="PROV_OTH_NAME_PRE_TXT" msprop:Generator_ColumnPropNameInTable="PROV_OTH_NAME_PRE_TXTColumn" msprop:Generator_UserColumnName="PROV_OTH_NAME_PRE_TXT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_OTH_NAME_SUF_TXT" msprop:Generator_ColumnVarNameInTable="columnPROV_OTH_NAME_SUF_TXT" msprop:Generator_ColumnPropNameInRow="PROV_OTH_NAME_SUF_TXT" msprop:Generator_ColumnPropNameInTable="PROV_OTH_NAME_SUF_TXTColumn" msprop:Generator_UserColumnName="PROV_OTH_NAME_SUF_TXT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_OTH_CREDENTIAL_TXT" msprop:Generator_ColumnVarNameInTable="columnPROV_OTH_CREDENTIAL_TXT" msprop:Generator_ColumnPropNameInRow="PROV_OTH_CREDENTIAL_TXT" msprop:Generator_ColumnPropNameInTable="PROV_OTH_CREDENTIAL_TXTColumn" msprop:Generator_UserColumnName="PROV_OTH_CREDENTIAL_TXT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_OTH_LAST_NAME_TYPE_CD" msprop:Generator_ColumnVarNameInTable="columnPROV_OTH_LAST_NAME_TYPE_CD" msprop:Generator_ColumnPropNameInRow="PROV_OTH_LAST_NAME_TYPE_CD" msprop:Generator_ColumnPropNameInTable="PROV_OTH_LAST_NAME_TYPE_CDColumn" msprop:Generator_UserColumnName="PROV_OTH_LAST_NAME_TYPE_CD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_FST_LN_BUS_MAIL_ADD" msprop:Generator_ColumnVarNameInTable="columnPROV_FST_LN_BUS_MAIL_ADD" msprop:Generator_ColumnPropNameInRow="PROV_FST_LN_BUS_MAIL_ADD" msprop:Generator_ColumnPropNameInTable="PROV_FST_LN_BUS_MAIL_ADDColumn" msprop:Generator_UserColumnName="PROV_FST_LN_BUS_MAIL_ADD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="55" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_SEC_LN_BUS_MAIL_ADD" msprop:Generator_ColumnVarNameInTable="columnPROV_SEC_LN_BUS_MAIL_ADD" msprop:Generator_ColumnPropNameInRow="PROV_SEC_LN_BUS_MAIL_ADD" msprop:Generator_ColumnPropNameInTable="PROV_SEC_LN_BUS_MAIL_ADDColumn" msprop:Generator_UserColumnName="PROV_SEC_LN_BUS_MAIL_ADD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="55" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_BUS_MAIL_ADD_CITY_NAME" msprop:Generator_ColumnVarNameInTable="columnPROV_BUS_MAIL_ADD_CITY_NAME" msprop:Generator_ColumnPropNameInRow="PROV_BUS_MAIL_ADD_CITY_NAME" msprop:Generator_ColumnPropNameInTable="PROV_BUS_MAIL_ADD_CITY_NAMEColumn" msprop:Generator_UserColumnName="PROV_BUS_MAIL_ADD_CITY_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_BUS_MAIL_ADD_STATE_NAME" msprop:Generator_ColumnVarNameInTable="columnPROV_BUS_MAIL_ADD_STATE_NAME" msprop:Generator_ColumnPropNameInRow="PROV_BUS_MAIL_ADD_STATE_NAME" msprop:Generator_ColumnPropNameInTable="PROV_BUS_MAIL_ADD_STATE_NAMEColumn" msprop:Generator_UserColumnName="PROV_BUS_MAIL_ADD_STATE_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_BUS_MAIL_ADD_POSTAL_CD" msprop:Generator_ColumnVarNameInTable="columnPROV_BUS_MAIL_ADD_POSTAL_CD" msprop:Generator_ColumnPropNameInRow="PROV_BUS_MAIL_ADD_POSTAL_CD" msprop:Generator_ColumnPropNameInTable="PROV_BUS_MAIL_ADD_POSTAL_CDColumn" msprop:Generator_UserColumnName="PROV_BUS_MAIL_ADD_POSTAL_CD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_BUS_MAIL_ADD_CTRY_NON_US" msprop:Generator_ColumnVarNameInTable="columnPROV_BUS_MAIL_ADD_CTRY_NON_US" msprop:Generator_ColumnPropNameInRow="PROV_BUS_MAIL_ADD_CTRY_NON_US" msprop:Generator_ColumnPropNameInTable="PROV_BUS_MAIL_ADD_CTRY_NON_USColumn" msprop:Generator_UserColumnName="PROV_BUS_MAIL_ADD_CTRY_NON_US" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_BUS_MAIL_ADD_PHONE_NUM" msprop:Generator_ColumnVarNameInTable="columnPROV_BUS_MAIL_ADD_PHONE_NUM" msprop:Generator_ColumnPropNameInRow="PROV_BUS_MAIL_ADD_PHONE_NUM" msprop:Generator_ColumnPropNameInTable="PROV_BUS_MAIL_ADD_PHONE_NUMColumn" msprop:Generator_UserColumnName="PROV_BUS_MAIL_ADD_PHONE_NUM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_BUS_MAIL_ADD_FAX_NUM" msprop:Generator_ColumnVarNameInTable="columnPROV_BUS_MAIL_ADD_FAX_NUM" msprop:Generator_ColumnPropNameInRow="PROV_BUS_MAIL_ADD_FAX_NUM" msprop:Generator_ColumnPropNameInTable="PROV_BUS_MAIL_ADD_FAX_NUMColumn" msprop:Generator_UserColumnName="PROV_BUS_MAIL_ADD_FAX_NUM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_FST_LN_BUS_PRAC_ADD" msprop:Generator_ColumnVarNameInTable="columnPROV_FST_LN_BUS_PRAC_ADD" msprop:Generator_ColumnPropNameInRow="PROV_FST_LN_BUS_PRAC_ADD" msprop:Generator_ColumnPropNameInTable="PROV_FST_LN_BUS_PRAC_ADDColumn" msprop:Generator_UserColumnName="PROV_FST_LN_BUS_PRAC_ADD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="55" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_SEC_LN_BUS_PRAC_ADD" msprop:Generator_ColumnVarNameInTable="columnPROV_SEC_LN_BUS_PRAC_ADD" msprop:Generator_ColumnPropNameInRow="PROV_SEC_LN_BUS_PRAC_ADD" msprop:Generator_ColumnPropNameInTable="PROV_SEC_LN_BUS_PRAC_ADDColumn" msprop:Generator_UserColumnName="PROV_SEC_LN_BUS_PRAC_ADD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="55" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_BUS_PRAC_ADD_CITY_NAME" msprop:Generator_ColumnVarNameInTable="columnPROV_BUS_PRAC_ADD_CITY_NAME" msprop:Generator_ColumnPropNameInRow="PROV_BUS_PRAC_ADD_CITY_NAME" msprop:Generator_ColumnPropNameInTable="PROV_BUS_PRAC_ADD_CITY_NAMEColumn" msprop:Generator_UserColumnName="PROV_BUS_PRAC_ADD_CITY_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_BUS_PRAC_ADD_STATE_NAME" msprop:Generator_ColumnVarNameInTable="columnPROV_BUS_PRAC_ADD_STATE_NAME" msprop:Generator_ColumnPropNameInRow="PROV_BUS_PRAC_ADD_STATE_NAME" msprop:Generator_ColumnPropNameInTable="PROV_BUS_PRAC_ADD_STATE_NAMEColumn" msprop:Generator_UserColumnName="PROV_BUS_PRAC_ADD_STATE_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_BUS_PRAC_ADD_POSTAL_CD" msprop:Generator_ColumnVarNameInTable="columnPROV_BUS_PRAC_ADD_POSTAL_CD" msprop:Generator_ColumnPropNameInRow="PROV_BUS_PRAC_ADD_POSTAL_CD" msprop:Generator_ColumnPropNameInTable="PROV_BUS_PRAC_ADD_POSTAL_CDColumn" msprop:Generator_UserColumnName="PROV_BUS_PRAC_ADD_POSTAL_CD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_BUS_PRAC_ADD_CTRY_NON_US" msprop:Generator_ColumnVarNameInTable="columnPROV_BUS_PRAC_ADD_CTRY_NON_US" msprop:Generator_ColumnPropNameInRow="PROV_BUS_PRAC_ADD_CTRY_NON_US" msprop:Generator_ColumnPropNameInTable="PROV_BUS_PRAC_ADD_CTRY_NON_USColumn" msprop:Generator_UserColumnName="PROV_BUS_PRAC_ADD_CTRY_NON_US" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_BUS_PRAC_ADD_PHONE_NUM" msprop:Generator_ColumnVarNameInTable="columnPROV_BUS_PRAC_ADD_PHONE_NUM" msprop:Generator_ColumnPropNameInRow="PROV_BUS_PRAC_ADD_PHONE_NUM" msprop:Generator_ColumnPropNameInTable="PROV_BUS_PRAC_ADD_PHONE_NUMColumn" msprop:Generator_UserColumnName="PROV_BUS_PRAC_ADD_PHONE_NUM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_BUS_PRAC_ADD_FAX_NUM" msprop:Generator_ColumnVarNameInTable="columnPROV_BUS_PRAC_ADD_FAX_NUM" msprop:Generator_ColumnPropNameInRow="PROV_BUS_PRAC_ADD_FAX_NUM" msprop:Generator_ColumnPropNameInTable="PROV_BUS_PRAC_ADD_FAX_NUMColumn" msprop:Generator_UserColumnName="PROV_BUS_PRAC_ADD_FAX_NUM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_ENUMERATION_DATE" msprop:Generator_ColumnVarNameInTable="columnPROV_ENUMERATION_DATE" msprop:Generator_ColumnPropNameInRow="PROV_ENUMERATION_DATE" msprop:Generator_ColumnPropNameInTable="PROV_ENUMERATION_DATEColumn" msprop:Generator_UserColumnName="PROV_ENUMERATION_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CMS_LAST_UPDATE_DATE" msprop:Generator_ColumnVarNameInTable="columnCMS_LAST_UPDATE_DATE" msprop:Generator_ColumnPropNameInRow="CMS_LAST_UPDATE_DATE" msprop:Generator_ColumnPropNameInTable="CMS_LAST_UPDATE_DATEColumn" msprop:Generator_UserColumnName="CMS_LAST_UPDATE_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="NPI_DEACT_REASON_CD" msprop:Generator_ColumnVarNameInTable="columnNPI_DEACT_REASON_CD" msprop:Generator_ColumnPropNameInRow="NPI_DEACT_REASON_CD" msprop:Generator_ColumnPropNameInTable="NPI_DEACT_REASON_CDColumn" msprop:Generator_UserColumnName="NPI_DEACT_REASON_CD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NPI_DEACT_DATE" msprop:Generator_ColumnVarNameInTable="columnNPI_DEACT_DATE" msprop:Generator_ColumnPropNameInRow="NPI_DEACT_DATE" msprop:Generator_ColumnPropNameInTable="NPI_DEACT_DATEColumn" msprop:Generator_UserColumnName="NPI_DEACT_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="NPI_REACTIVATION_DATE" msprop:Generator_ColumnVarNameInTable="columnNPI_REACTIVATION_DATE" msprop:Generator_ColumnPropNameInRow="NPI_REACTIVATION_DATE" msprop:Generator_ColumnPropNameInTable="NPI_REACTIVATION_DATEColumn" msprop:Generator_UserColumnName="NPI_REACTIVATION_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PROV_GENDER_CD" msprop:Generator_ColumnVarNameInTable="columnPROV_GENDER_CD" msprop:Generator_ColumnPropNameInRow="PROV_GENDER_CD" msprop:Generator_ColumnPropNameInTable="PROV_GENDER_CDColumn" msprop:Generator_UserColumnName="PROV_GENDER_CD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AUTH_OFF_LAST_NAME" msprop:Generator_ColumnVarNameInTable="columnAUTH_OFF_LAST_NAME" msprop:Generator_ColumnPropNameInRow="AUTH_OFF_LAST_NAME" msprop:Generator_ColumnPropNameInTable="AUTH_OFF_LAST_NAMEColumn" msprop:Generator_UserColumnName="AUTH_OFF_LAST_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AUTH_OFF_FIRST_NAME" msprop:Generator_ColumnVarNameInTable="columnAUTH_OFF_FIRST_NAME" msprop:Generator_ColumnPropNameInRow="AUTH_OFF_FIRST_NAME" msprop:Generator_ColumnPropNameInTable="AUTH_OFF_FIRST_NAMEColumn" msprop:Generator_UserColumnName="AUTH_OFF_FIRST_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AUTH_OFF_MIDDLE_NAME" msprop:Generator_ColumnVarNameInTable="columnAUTH_OFF_MIDDLE_NAME" msprop:Generator_ColumnPropNameInRow="AUTH_OFF_MIDDLE_NAME" msprop:Generator_ColumnPropNameInTable="AUTH_OFF_MIDDLE_NAMEColumn" msprop:Generator_UserColumnName="AUTH_OFF_MIDDLE_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AUTH_OFF_TITLE_OR_POSITION" msprop:Generator_ColumnVarNameInTable="columnAUTH_OFF_TITLE_OR_POSITION" msprop:Generator_ColumnPropNameInRow="AUTH_OFF_TITLE_OR_POSITION" msprop:Generator_ColumnPropNameInTable="AUTH_OFF_TITLE_OR_POSITIONColumn" msprop:Generator_UserColumnName="AUTH_OFF_TITLE_OR_POSITION" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AUTH_OFF_PHONE_NUM" msprop:Generator_ColumnVarNameInTable="columnAUTH_OFF_PHONE_NUM" msprop:Generator_ColumnPropNameInRow="AUTH_OFF_PHONE_NUM" msprop:Generator_ColumnPropNameInTable="AUTH_OFF_PHONE_NUMColumn" msprop:Generator_UserColumnName="AUTH_OFF_PHONE_NUM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HLTHCARE_PROV_TXNMY_CD_1" msprop:Generator_ColumnVarNameInTable="columnHLTHCARE_PROV_TXNMY_CD_1" msprop:Generator_ColumnPropNameInRow="HLTHCARE_PROV_TXNMY_CD_1" msprop:Generator_ColumnPropNameInTable="HLTHCARE_PROV_TXNMY_CD_1Column" msprop:Generator_UserColumnName="HLTHCARE_PROV_TXNMY_CD_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_LIC_NUM_1" msprop:Generator_ColumnVarNameInTable="columnPROV_LIC_NUM_1" msprop:Generator_ColumnPropNameInRow="PROV_LIC_NUM_1" msprop:Generator_ColumnPropNameInTable="PROV_LIC_NUM_1Column" msprop:Generator_UserColumnName="PROV_LIC_NUM_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_LIC_NUM_STATE_CD_1" msprop:Generator_ColumnVarNameInTable="columnPROV_LIC_NUM_STATE_CD_1" msprop:Generator_ColumnPropNameInRow="PROV_LIC_NUM_STATE_CD_1" msprop:Generator_ColumnPropNameInTable="PROV_LIC_NUM_STATE_CD_1Column" msprop:Generator_UserColumnName="PROV_LIC_NUM_STATE_CD_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HLTHCARE_PROV_PRIM_TXNMY_SW_1" msprop:Generator_ColumnVarNameInTable="columnHLTHCARE_PROV_PRIM_TXNMY_SW_1" msprop:Generator_ColumnPropNameInRow="HLTHCARE_PROV_PRIM_TXNMY_SW_1" msprop:Generator_ColumnPropNameInTable="HLTHCARE_PROV_PRIM_TXNMY_SW_1Column" msprop:Generator_UserColumnName="HLTHCARE_PROV_PRIM_TXNMY_SW_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HLTHCARE_PROV_TXNMY_CD_2" msprop:Generator_ColumnVarNameInTable="columnHLTHCARE_PROV_TXNMY_CD_2" msprop:Generator_ColumnPropNameInRow="HLTHCARE_PROV_TXNMY_CD_2" msprop:Generator_ColumnPropNameInTable="HLTHCARE_PROV_TXNMY_CD_2Column" msprop:Generator_UserColumnName="HLTHCARE_PROV_TXNMY_CD_2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_LIC_NUM_2" msprop:Generator_ColumnVarNameInTable="columnPROV_LIC_NUM_2" msprop:Generator_ColumnPropNameInRow="PROV_LIC_NUM_2" msprop:Generator_ColumnPropNameInTable="PROV_LIC_NUM_2Column" msprop:Generator_UserColumnName="PROV_LIC_NUM_2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_LIC_NUM_STATE_CD_2" msprop:Generator_ColumnVarNameInTable="columnPROV_LIC_NUM_STATE_CD_2" msprop:Generator_ColumnPropNameInRow="PROV_LIC_NUM_STATE_CD_2" msprop:Generator_ColumnPropNameInTable="PROV_LIC_NUM_STATE_CD_2Column" msprop:Generator_UserColumnName="PROV_LIC_NUM_STATE_CD_2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HLTHCARE_PROV_PRIM_TXNMY_SW_2" msprop:Generator_ColumnVarNameInTable="columnHLTHCARE_PROV_PRIM_TXNMY_SW_2" msprop:Generator_ColumnPropNameInRow="HLTHCARE_PROV_PRIM_TXNMY_SW_2" msprop:Generator_ColumnPropNameInTable="HLTHCARE_PROV_PRIM_TXNMY_SW_2Column" msprop:Generator_UserColumnName="HLTHCARE_PROV_PRIM_TXNMY_SW_2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HLTHCARE_PROV_TXNMY_CD_3" msprop:Generator_ColumnVarNameInTable="columnHLTHCARE_PROV_TXNMY_CD_3" msprop:Generator_ColumnPropNameInRow="HLTHCARE_PROV_TXNMY_CD_3" msprop:Generator_ColumnPropNameInTable="HLTHCARE_PROV_TXNMY_CD_3Column" msprop:Generator_UserColumnName="HLTHCARE_PROV_TXNMY_CD_3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_LIC_NUM_3" msprop:Generator_ColumnVarNameInTable="columnPROV_LIC_NUM_3" msprop:Generator_ColumnPropNameInRow="PROV_LIC_NUM_3" msprop:Generator_ColumnPropNameInTable="PROV_LIC_NUM_3Column" msprop:Generator_UserColumnName="PROV_LIC_NUM_3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_LIC_NUM_STATE_CD_3" msprop:Generator_ColumnVarNameInTable="columnPROV_LIC_NUM_STATE_CD_3" msprop:Generator_ColumnPropNameInRow="PROV_LIC_NUM_STATE_CD_3" msprop:Generator_ColumnPropNameInTable="PROV_LIC_NUM_STATE_CD_3Column" msprop:Generator_UserColumnName="PROV_LIC_NUM_STATE_CD_3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HLTHCARE_PROV_PRIM_TXNMY_SW_3" msprop:Generator_ColumnVarNameInTable="columnHLTHCARE_PROV_PRIM_TXNMY_SW_3" msprop:Generator_ColumnPropNameInRow="HLTHCARE_PROV_PRIM_TXNMY_SW_3" msprop:Generator_ColumnPropNameInTable="HLTHCARE_PROV_PRIM_TXNMY_SW_3Column" msprop:Generator_UserColumnName="HLTHCARE_PROV_PRIM_TXNMY_SW_3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HLTHCARE_PROV_TXNMY_CD_4" msprop:Generator_ColumnVarNameInTable="columnHLTHCARE_PROV_TXNMY_CD_4" msprop:Generator_ColumnPropNameInRow="HLTHCARE_PROV_TXNMY_CD_4" msprop:Generator_ColumnPropNameInTable="HLTHCARE_PROV_TXNMY_CD_4Column" msprop:Generator_UserColumnName="HLTHCARE_PROV_TXNMY_CD_4" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_LIC_NUM_4" msprop:Generator_ColumnVarNameInTable="columnPROV_LIC_NUM_4" msprop:Generator_ColumnPropNameInRow="PROV_LIC_NUM_4" msprop:Generator_ColumnPropNameInTable="PROV_LIC_NUM_4Column" msprop:Generator_UserColumnName="PROV_LIC_NUM_4" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_LIC_NUM_STATE_CD_4" msprop:Generator_ColumnVarNameInTable="columnPROV_LIC_NUM_STATE_CD_4" msprop:Generator_ColumnPropNameInRow="PROV_LIC_NUM_STATE_CD_4" msprop:Generator_ColumnPropNameInTable="PROV_LIC_NUM_STATE_CD_4Column" msprop:Generator_UserColumnName="PROV_LIC_NUM_STATE_CD_4" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HLTHCARE_PROV_PRIM_TXNMY_SW_4" msprop:Generator_ColumnVarNameInTable="columnHLTHCARE_PROV_PRIM_TXNMY_SW_4" msprop:Generator_ColumnPropNameInRow="HLTHCARE_PROV_PRIM_TXNMY_SW_4" msprop:Generator_ColumnPropNameInTable="HLTHCARE_PROV_PRIM_TXNMY_SW_4Column" msprop:Generator_UserColumnName="HLTHCARE_PROV_PRIM_TXNMY_SW_4" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HLTHCARE_PROV_TXNMY_CD_5" msprop:Generator_ColumnVarNameInTable="columnHLTHCARE_PROV_TXNMY_CD_5" msprop:Generator_ColumnPropNameInRow="HLTHCARE_PROV_TXNMY_CD_5" msprop:Generator_ColumnPropNameInTable="HLTHCARE_PROV_TXNMY_CD_5Column" msprop:Generator_UserColumnName="HLTHCARE_PROV_TXNMY_CD_5" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_LIC_NUM_5" msprop:Generator_ColumnVarNameInTable="columnPROV_LIC_NUM_5" msprop:Generator_ColumnPropNameInRow="PROV_LIC_NUM_5" msprop:Generator_ColumnPropNameInTable="PROV_LIC_NUM_5Column" msprop:Generator_UserColumnName="PROV_LIC_NUM_5" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_LIC_NUM_STATE_CD_5" msprop:Generator_ColumnVarNameInTable="columnPROV_LIC_NUM_STATE_CD_5" msprop:Generator_ColumnPropNameInRow="PROV_LIC_NUM_STATE_CD_5" msprop:Generator_ColumnPropNameInTable="PROV_LIC_NUM_STATE_CD_5Column" msprop:Generator_UserColumnName="PROV_LIC_NUM_STATE_CD_5" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HLTHCARE_PROV_PRIM_TXNMY_SW_5" msprop:Generator_ColumnVarNameInTable="columnHLTHCARE_PROV_PRIM_TXNMY_SW_5" msprop:Generator_ColumnPropNameInRow="HLTHCARE_PROV_PRIM_TXNMY_SW_5" msprop:Generator_ColumnPropNameInTable="HLTHCARE_PROV_PRIM_TXNMY_SW_5Column" msprop:Generator_UserColumnName="HLTHCARE_PROV_PRIM_TXNMY_SW_5" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HLTHCARE_PROV_TXNMY_CD_6" msprop:Generator_ColumnVarNameInTable="columnHLTHCARE_PROV_TXNMY_CD_6" msprop:Generator_ColumnPropNameInRow="HLTHCARE_PROV_TXNMY_CD_6" msprop:Generator_ColumnPropNameInTable="HLTHCARE_PROV_TXNMY_CD_6Column" msprop:Generator_UserColumnName="HLTHCARE_PROV_TXNMY_CD_6" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_LIC_NUM_6" msprop:Generator_ColumnVarNameInTable="columnPROV_LIC_NUM_6" msprop:Generator_ColumnPropNameInRow="PROV_LIC_NUM_6" msprop:Generator_ColumnPropNameInTable="PROV_LIC_NUM_6Column" msprop:Generator_UserColumnName="PROV_LIC_NUM_6" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_LIC_NUM_STATE_CD_6" msprop:Generator_ColumnVarNameInTable="columnPROV_LIC_NUM_STATE_CD_6" msprop:Generator_ColumnPropNameInRow="PROV_LIC_NUM_STATE_CD_6" msprop:Generator_ColumnPropNameInTable="PROV_LIC_NUM_STATE_CD_6Column" msprop:Generator_UserColumnName="PROV_LIC_NUM_STATE_CD_6" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HLTHCARE_PROV_PRIM_TXNMY_SW_6" msprop:Generator_ColumnVarNameInTable="columnHLTHCARE_PROV_PRIM_TXNMY_SW_6" msprop:Generator_ColumnPropNameInRow="HLTHCARE_PROV_PRIM_TXNMY_SW_6" msprop:Generator_ColumnPropNameInTable="HLTHCARE_PROV_PRIM_TXNMY_SW_6Column" msprop:Generator_UserColumnName="HLTHCARE_PROV_PRIM_TXNMY_SW_6" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HLTHCARE_PROV_TXNMY_CD_7" msprop:Generator_ColumnVarNameInTable="columnHLTHCARE_PROV_TXNMY_CD_7" msprop:Generator_ColumnPropNameInRow="HLTHCARE_PROV_TXNMY_CD_7" msprop:Generator_ColumnPropNameInTable="HLTHCARE_PROV_TXNMY_CD_7Column" msprop:Generator_UserColumnName="HLTHCARE_PROV_TXNMY_CD_7" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_LIC_NUM_7" msprop:Generator_ColumnVarNameInTable="columnPROV_LIC_NUM_7" msprop:Generator_ColumnPropNameInRow="PROV_LIC_NUM_7" msprop:Generator_ColumnPropNameInTable="PROV_LIC_NUM_7Column" msprop:Generator_UserColumnName="PROV_LIC_NUM_7" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_LIC_NUM_STATE_CD_7" msprop:Generator_ColumnVarNameInTable="columnPROV_LIC_NUM_STATE_CD_7" msprop:Generator_ColumnPropNameInRow="PROV_LIC_NUM_STATE_CD_7" msprop:Generator_ColumnPropNameInTable="PROV_LIC_NUM_STATE_CD_7Column" msprop:Generator_UserColumnName="PROV_LIC_NUM_STATE_CD_7" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HLTHCARE_PROV_PRIM_TXNMY_SW_7" msprop:Generator_ColumnVarNameInTable="columnHLTHCARE_PROV_PRIM_TXNMY_SW_7" msprop:Generator_ColumnPropNameInRow="HLTHCARE_PROV_PRIM_TXNMY_SW_7" msprop:Generator_ColumnPropNameInTable="HLTHCARE_PROV_PRIM_TXNMY_SW_7Column" msprop:Generator_UserColumnName="HLTHCARE_PROV_PRIM_TXNMY_SW_7" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HLTHCARE_PROV_TXNMY_CD_8" msprop:Generator_ColumnVarNameInTable="columnHLTHCARE_PROV_TXNMY_CD_8" msprop:Generator_ColumnPropNameInRow="HLTHCARE_PROV_TXNMY_CD_8" msprop:Generator_ColumnPropNameInTable="HLTHCARE_PROV_TXNMY_CD_8Column" msprop:Generator_UserColumnName="HLTHCARE_PROV_TXNMY_CD_8" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_LIC_NUM_8" msprop:Generator_ColumnVarNameInTable="columnPROV_LIC_NUM_8" msprop:Generator_ColumnPropNameInRow="PROV_LIC_NUM_8" msprop:Generator_ColumnPropNameInTable="PROV_LIC_NUM_8Column" msprop:Generator_UserColumnName="PROV_LIC_NUM_8" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_LIC_NUM_STATE_CD_8" msprop:Generator_ColumnVarNameInTable="columnPROV_LIC_NUM_STATE_CD_8" msprop:Generator_ColumnPropNameInRow="PROV_LIC_NUM_STATE_CD_8" msprop:Generator_ColumnPropNameInTable="PROV_LIC_NUM_STATE_CD_8Column" msprop:Generator_UserColumnName="PROV_LIC_NUM_STATE_CD_8" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HLTHCARE_PROV_PRIM_TXNMY_SW_8" msprop:Generator_ColumnVarNameInTable="columnHLTHCARE_PROV_PRIM_TXNMY_SW_8" msprop:Generator_ColumnPropNameInRow="HLTHCARE_PROV_PRIM_TXNMY_SW_8" msprop:Generator_ColumnPropNameInTable="HLTHCARE_PROV_PRIM_TXNMY_SW_8Column" msprop:Generator_UserColumnName="HLTHCARE_PROV_PRIM_TXNMY_SW_8" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HLTHCARE_PROV_TXNMY_CD_9" msprop:Generator_ColumnVarNameInTable="columnHLTHCARE_PROV_TXNMY_CD_9" msprop:Generator_ColumnPropNameInRow="HLTHCARE_PROV_TXNMY_CD_9" msprop:Generator_ColumnPropNameInTable="HLTHCARE_PROV_TXNMY_CD_9Column" msprop:Generator_UserColumnName="HLTHCARE_PROV_TXNMY_CD_9" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_LIC_NUM_9" msprop:Generator_ColumnVarNameInTable="columnPROV_LIC_NUM_9" msprop:Generator_ColumnPropNameInRow="PROV_LIC_NUM_9" msprop:Generator_ColumnPropNameInTable="PROV_LIC_NUM_9Column" msprop:Generator_UserColumnName="PROV_LIC_NUM_9" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_LIC_NUM_STATE_CD_9" msprop:Generator_ColumnVarNameInTable="columnPROV_LIC_NUM_STATE_CD_9" msprop:Generator_ColumnPropNameInRow="PROV_LIC_NUM_STATE_CD_9" msprop:Generator_ColumnPropNameInTable="PROV_LIC_NUM_STATE_CD_9Column" msprop:Generator_UserColumnName="PROV_LIC_NUM_STATE_CD_9" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HLTHCARE_PROV_PRIM_TXNMY_SW_9" msprop:Generator_ColumnVarNameInTable="columnHLTHCARE_PROV_PRIM_TXNMY_SW_9" msprop:Generator_ColumnPropNameInRow="HLTHCARE_PROV_PRIM_TXNMY_SW_9" msprop:Generator_ColumnPropNameInTable="HLTHCARE_PROV_PRIM_TXNMY_SW_9Column" msprop:Generator_UserColumnName="HLTHCARE_PROV_PRIM_TXNMY_SW_9" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HLTHCARE_PROV_TXNMY_CD_10" msprop:Generator_ColumnVarNameInTable="columnHLTHCARE_PROV_TXNMY_CD_10" msprop:Generator_ColumnPropNameInRow="HLTHCARE_PROV_TXNMY_CD_10" msprop:Generator_ColumnPropNameInTable="HLTHCARE_PROV_TXNMY_CD_10Column" msprop:Generator_UserColumnName="HLTHCARE_PROV_TXNMY_CD_10" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_LIC_NUM_10" msprop:Generator_ColumnVarNameInTable="columnPROV_LIC_NUM_10" msprop:Generator_ColumnPropNameInRow="PROV_LIC_NUM_10" msprop:Generator_ColumnPropNameInTable="PROV_LIC_NUM_10Column" msprop:Generator_UserColumnName="PROV_LIC_NUM_10" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_LIC_NUM_STATE_CD_10" msprop:Generator_ColumnVarNameInTable="columnPROV_LIC_NUM_STATE_CD_10" msprop:Generator_ColumnPropNameInRow="PROV_LIC_NUM_STATE_CD_10" msprop:Generator_ColumnPropNameInTable="PROV_LIC_NUM_STATE_CD_10Column" msprop:Generator_UserColumnName="PROV_LIC_NUM_STATE_CD_10" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HLTHCARE_PROV_PRIM_TXNMY_SW_10" msprop:Generator_ColumnVarNameInTable="columnHLTHCARE_PROV_PRIM_TXNMY_SW_10" msprop:Generator_ColumnPropNameInRow="HLTHCARE_PROV_PRIM_TXNMY_SW_10" msprop:Generator_ColumnPropNameInTable="HLTHCARE_PROV_PRIM_TXNMY_SW_10Column" msprop:Generator_UserColumnName="HLTHCARE_PROV_PRIM_TXNMY_SW_10" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HLTHCARE_PROV_TXNMY_CD_11" msprop:Generator_ColumnVarNameInTable="columnHLTHCARE_PROV_TXNMY_CD_11" msprop:Generator_ColumnPropNameInRow="HLTHCARE_PROV_TXNMY_CD_11" msprop:Generator_ColumnPropNameInTable="HLTHCARE_PROV_TXNMY_CD_11Column" msprop:Generator_UserColumnName="HLTHCARE_PROV_TXNMY_CD_11" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_LIC_NUM_11" msprop:Generator_ColumnVarNameInTable="columnPROV_LIC_NUM_11" msprop:Generator_ColumnPropNameInRow="PROV_LIC_NUM_11" msprop:Generator_ColumnPropNameInTable="PROV_LIC_NUM_11Column" msprop:Generator_UserColumnName="PROV_LIC_NUM_11" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_LIC_NUM_STATE_CD_11" msprop:Generator_ColumnVarNameInTable="columnPROV_LIC_NUM_STATE_CD_11" msprop:Generator_ColumnPropNameInRow="PROV_LIC_NUM_STATE_CD_11" msprop:Generator_ColumnPropNameInTable="PROV_LIC_NUM_STATE_CD_11Column" msprop:Generator_UserColumnName="PROV_LIC_NUM_STATE_CD_11" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HLTHCARE_PROV_PRIM_TXNMY_SW_11" msprop:Generator_ColumnVarNameInTable="columnHLTHCARE_PROV_PRIM_TXNMY_SW_11" msprop:Generator_ColumnPropNameInRow="HLTHCARE_PROV_PRIM_TXNMY_SW_11" msprop:Generator_ColumnPropNameInTable="HLTHCARE_PROV_PRIM_TXNMY_SW_11Column" msprop:Generator_UserColumnName="HLTHCARE_PROV_PRIM_TXNMY_SW_11" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HLTHCARE_PROV_TXNMY_CD_12" msprop:Generator_ColumnVarNameInTable="columnHLTHCARE_PROV_TXNMY_CD_12" msprop:Generator_ColumnPropNameInRow="HLTHCARE_PROV_TXNMY_CD_12" msprop:Generator_ColumnPropNameInTable="HLTHCARE_PROV_TXNMY_CD_12Column" msprop:Generator_UserColumnName="HLTHCARE_PROV_TXNMY_CD_12" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_LIC_NUM_12" msprop:Generator_ColumnVarNameInTable="columnPROV_LIC_NUM_12" msprop:Generator_ColumnPropNameInRow="PROV_LIC_NUM_12" msprop:Generator_ColumnPropNameInTable="PROV_LIC_NUM_12Column" msprop:Generator_UserColumnName="PROV_LIC_NUM_12" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_LIC_NUM_STATE_CD_12" msprop:Generator_ColumnVarNameInTable="columnPROV_LIC_NUM_STATE_CD_12" msprop:Generator_ColumnPropNameInRow="PROV_LIC_NUM_STATE_CD_12" msprop:Generator_ColumnPropNameInTable="PROV_LIC_NUM_STATE_CD_12Column" msprop:Generator_UserColumnName="PROV_LIC_NUM_STATE_CD_12" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HLTHCARE_PROV_PRIM_TXNMY_SW_12" msprop:Generator_ColumnVarNameInTable="columnHLTHCARE_PROV_PRIM_TXNMY_SW_12" msprop:Generator_ColumnPropNameInRow="HLTHCARE_PROV_PRIM_TXNMY_SW_12" msprop:Generator_ColumnPropNameInTable="HLTHCARE_PROV_PRIM_TXNMY_SW_12Column" msprop:Generator_UserColumnName="HLTHCARE_PROV_PRIM_TXNMY_SW_12" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HLTHCARE_PROV_TXNMY_CD_13" msprop:Generator_ColumnVarNameInTable="columnHLTHCARE_PROV_TXNMY_CD_13" msprop:Generator_ColumnPropNameInRow="HLTHCARE_PROV_TXNMY_CD_13" msprop:Generator_ColumnPropNameInTable="HLTHCARE_PROV_TXNMY_CD_13Column" msprop:Generator_UserColumnName="HLTHCARE_PROV_TXNMY_CD_13" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_LIC_NUM_13" msprop:Generator_ColumnVarNameInTable="columnPROV_LIC_NUM_13" msprop:Generator_ColumnPropNameInRow="PROV_LIC_NUM_13" msprop:Generator_ColumnPropNameInTable="PROV_LIC_NUM_13Column" msprop:Generator_UserColumnName="PROV_LIC_NUM_13" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_LIC_NUM_STATE_CD_13" msprop:Generator_ColumnVarNameInTable="columnPROV_LIC_NUM_STATE_CD_13" msprop:Generator_ColumnPropNameInRow="PROV_LIC_NUM_STATE_CD_13" msprop:Generator_ColumnPropNameInTable="PROV_LIC_NUM_STATE_CD_13Column" msprop:Generator_UserColumnName="PROV_LIC_NUM_STATE_CD_13" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HLTHCARE_PROV_PRIM_TXNMY_SW_13" msprop:Generator_ColumnVarNameInTable="columnHLTHCARE_PROV_PRIM_TXNMY_SW_13" msprop:Generator_ColumnPropNameInRow="HLTHCARE_PROV_PRIM_TXNMY_SW_13" msprop:Generator_ColumnPropNameInTable="HLTHCARE_PROV_PRIM_TXNMY_SW_13Column" msprop:Generator_UserColumnName="HLTHCARE_PROV_PRIM_TXNMY_SW_13" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HLTHCARE_PROV_TXNMY_CD_14" msprop:Generator_ColumnVarNameInTable="columnHLTHCARE_PROV_TXNMY_CD_14" msprop:Generator_ColumnPropNameInRow="HLTHCARE_PROV_TXNMY_CD_14" msprop:Generator_ColumnPropNameInTable="HLTHCARE_PROV_TXNMY_CD_14Column" msprop:Generator_UserColumnName="HLTHCARE_PROV_TXNMY_CD_14" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_LIC_NUM_14" msprop:Generator_ColumnVarNameInTable="columnPROV_LIC_NUM_14" msprop:Generator_ColumnPropNameInRow="PROV_LIC_NUM_14" msprop:Generator_ColumnPropNameInTable="PROV_LIC_NUM_14Column" msprop:Generator_UserColumnName="PROV_LIC_NUM_14" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_LIC_NUM_STATE_CD_14" msprop:Generator_ColumnVarNameInTable="columnPROV_LIC_NUM_STATE_CD_14" msprop:Generator_ColumnPropNameInRow="PROV_LIC_NUM_STATE_CD_14" msprop:Generator_ColumnPropNameInTable="PROV_LIC_NUM_STATE_CD_14Column" msprop:Generator_UserColumnName="PROV_LIC_NUM_STATE_CD_14" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HLTHCARE_PROV_PRIM_TXNMY_SW_14" msprop:Generator_ColumnVarNameInTable="columnHLTHCARE_PROV_PRIM_TXNMY_SW_14" msprop:Generator_ColumnPropNameInRow="HLTHCARE_PROV_PRIM_TXNMY_SW_14" msprop:Generator_ColumnPropNameInTable="HLTHCARE_PROV_PRIM_TXNMY_SW_14Column" msprop:Generator_UserColumnName="HLTHCARE_PROV_PRIM_TXNMY_SW_14" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HLTHCARE_PROV_TXNMY_CD_15" msprop:Generator_ColumnVarNameInTable="columnHLTHCARE_PROV_TXNMY_CD_15" msprop:Generator_ColumnPropNameInRow="HLTHCARE_PROV_TXNMY_CD_15" msprop:Generator_ColumnPropNameInTable="HLTHCARE_PROV_TXNMY_CD_15Column" msprop:Generator_UserColumnName="HLTHCARE_PROV_TXNMY_CD_15" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_LIC_NUM_15" msprop:Generator_ColumnVarNameInTable="columnPROV_LIC_NUM_15" msprop:Generator_ColumnPropNameInRow="PROV_LIC_NUM_15" msprop:Generator_ColumnPropNameInTable="PROV_LIC_NUM_15Column" msprop:Generator_UserColumnName="PROV_LIC_NUM_15" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROV_LIC_NUM_STATE_CD_15" msprop:Generator_ColumnVarNameInTable="columnPROV_LIC_NUM_STATE_CD_15" msprop:Generator_ColumnPropNameInRow="PROV_LIC_NUM_STATE_CD_15" msprop:Generator_ColumnPropNameInTable="PROV_LIC_NUM_STATE_CD_15Column" msprop:Generator_UserColumnName="PROV_LIC_NUM_STATE_CD_15" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HLTHCARE_PROV_PRIM_TXNMY_SW_15" msprop:Generator_ColumnVarNameInTable="columnHLTHCARE_PROV_PRIM_TXNMY_SW_15" msprop:Generator_ColumnPropNameInRow="HLTHCARE_PROV_PRIM_TXNMY_SW_15" msprop:Generator_ColumnPropNameInTable="HLTHCARE_PROV_PRIM_TXNMY_SW_15Column" msprop:Generator_UserColumnName="HLTHCARE_PROV_PRIM_TXNMY_SW_15" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_1" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_1" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_1" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_1Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_1" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_1" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_1" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_1Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_1" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_1" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_1" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_1Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_1" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_1" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_1" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_1Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_2" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_2" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_2" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_2Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_2" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_2" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_2" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_2Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_2" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_2" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_2" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_2Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_2" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_2" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_2" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_2Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_3" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_3" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_3" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_3Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_3" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_3" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_3" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_3Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_3" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_3" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_3" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_3Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_3" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_3" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_3" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_3Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_4" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_4" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_4" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_4Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_4" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_4" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_4" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_4" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_4Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_4" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_4" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_4" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_4" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_4Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_4" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_4" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_4" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_4" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_4Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_4" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_5" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_5" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_5" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_5Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_5" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_5" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_5" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_5" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_5Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_5" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_5" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_5" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_5" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_5Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_5" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_5" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_5" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_5" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_5Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_5" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_6" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_6" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_6" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_6Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_6" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_6" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_6" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_6" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_6Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_6" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_6" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_6" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_6" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_6Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_6" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_6" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_6" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_6" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_6Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_6" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_7" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_7" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_7" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_7Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_7" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_7" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_7" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_7" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_7Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_7" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_7" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_7" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_7" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_7Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_7" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_7" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_7" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_7" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_7Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_7" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_8" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_8" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_8" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_8Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_8" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_8" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_8" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_8" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_8Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_8" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_8" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_8" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_8" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_8Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_8" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_8" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_8" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_8" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_8Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_8" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_9" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_9" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_9" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_9Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_9" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_9" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_9" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_9" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_9Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_9" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_9" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_9" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_9" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_9Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_9" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_9" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_9" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_9" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_9Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_9" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_10" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_10" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_10" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_10Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_10" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_10" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_10" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_10" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_10Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_10" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_10" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_10" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_10" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_10Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_10" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_10" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_10" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_10" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_10Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_10" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_11" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_11" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_11" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_11Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_11" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_11" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_11" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_11" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_11Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_11" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_11" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_11" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_11" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_11Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_11" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_11" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_11" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_11" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_11Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_11" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_12" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_12" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_12" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_12Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_12" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_12" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_12" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_12" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_12Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_12" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_12" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_12" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_12" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_12Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_12" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_12" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_12" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_12" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_12Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_12" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_13" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_13" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_13" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_13Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_13" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_13" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_13" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_13" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_13Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_13" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_13" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_13" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_13" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_13Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_13" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_13" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_13" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_13" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_13Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_13" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_14" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_14" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_14" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_14Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_14" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_14" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_14" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_14" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_14Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_14" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_14" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_14" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_14" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_14Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_14" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_14" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_14" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_14" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_14Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_14" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_15" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_15" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_15" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_15Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_15" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_15" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_15" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_15" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_15Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_15" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_15" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_15" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_15" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_15Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_15" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_15" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_15" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_15" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_15Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_15" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_16" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_16" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_16" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_16Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_16" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_16" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_16" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_16" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_16Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_16" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_16" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_16" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_16" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_16Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_16" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_16" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_16" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_16" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_16Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_16" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_17" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_17" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_17" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_17Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_17" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_17" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_17" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_17" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_17Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_17" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_17" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_17" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_17" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_17Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_17" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_17" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_17" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_17" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_17Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_17" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_18" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_18" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_18" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_18Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_18" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_18" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_18" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_18" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_18Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_18" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_18" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_18" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_18" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_18Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_18" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_18" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_18" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_18" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_18Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_18" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_19" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_19" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_19" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_19Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_19" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_19" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_19" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_19" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_19Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_19" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_19" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_19" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_19" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_19Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_19" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_19" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_19" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_19" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_19Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_19" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_20" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_20" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_20" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_20Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_20" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_20" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_20" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_20" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_20Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_20" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_20" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_20" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_20" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_20Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_20" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_20" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_20" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_20" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_20Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_20" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_21" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_21" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_21" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_21Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_21" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_21" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_21" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_21" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_21Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_21" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_21" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_21" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_21" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_21Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_21" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_21" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_21" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_21" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_21Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_21" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_22" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_22" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_22" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_22Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_22" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_22" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_22" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_22" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_22Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_22" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_22" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_22" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_22" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_22Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_22" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_22" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_22" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_22" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_22Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_22" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_23" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_23" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_23" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_23Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_23" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_23" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_23" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_23" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_23Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_23" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_23" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_23" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_23" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_23Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_23" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_23" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_23" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_23" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_23Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_23" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_24" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_24" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_24" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_24Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_24" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_24" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_24" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_24" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_24Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_24" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_24" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_24" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_24" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_24Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_24" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_24" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_24" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_24" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_24Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_24" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_25" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_25" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_25" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_25Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_25" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_25" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_25" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_25" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_25Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_25" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_25" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_25" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_25" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_25Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_25" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_25" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_25" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_25" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_25Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_25" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_26" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_26" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_26" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_26Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_26" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_26" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_26" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_26" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_26Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_26" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_26" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_26" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_26" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_26Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_26" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_26" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_26" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_26" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_26Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_26" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_27" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_27" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_27" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_27Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_27" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_27" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_27" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_27" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_27Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_27" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_27" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_27" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_27" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_27Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_27" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_27" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_27" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_27" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_27Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_27" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_28" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_28" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_28" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_28Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_28" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_28" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_28" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_28" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_28Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_28" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_28" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_28" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_28" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_28Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_28" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_28" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_28" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_28" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_28Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_28" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_29" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_29" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_29" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_29Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_29" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_29" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_29" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_29" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_29Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_29" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_29" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_29" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_29" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_29Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_29" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_29" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_29" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_29" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_29Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_29" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_30" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_30" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_30" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_30Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_30" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_30" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_30" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_30" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_30Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_30" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_30" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_30" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_30" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_30Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_30" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_30" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_30" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_30" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_30Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_30" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_31" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_31" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_31" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_31Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_31" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_31" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_31" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_31" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_31Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_31" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_31" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_31" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_31" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_31Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_31" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_31" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_31" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_31" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_31Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_31" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_32" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_32" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_32" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_32Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_32" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_32" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_32" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_32" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_32Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_32" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_32" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_32" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_32" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_32Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_32" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_32" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_32" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_32" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_32Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_32" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_33" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_33" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_33" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_33Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_33" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_33" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_33" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_33" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_33Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_33" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_33" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_33" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_33" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_33Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_33" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_33" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_33" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_33" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_33Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_33" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_34" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_34" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_34" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_34Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_34" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_34" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_34" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_34" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_34Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_34" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_34" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_34" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_34" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_34Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_34" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_34" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_34" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_34" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_34Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_34" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_35" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_35" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_35" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_35Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_35" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_35" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_35" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_35" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_35Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_35" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_35" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_35" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_35" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_35Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_35" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_35" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_35" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_35" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_35Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_35" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_36" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_36" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_36" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_36Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_36" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_36" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_36" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_36" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_36Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_36" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_36" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_36" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_36" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_36Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_36" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_36" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_36" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_36" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_36Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_36" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_37" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_37" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_37" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_37Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_37" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_37" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_37" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_37" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_37Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_37" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_37" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_37" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_37" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_37Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_37" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_37" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_37" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_37" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_37Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_37" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_38" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_38" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_38" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_38Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_38" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_38" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_38" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_38" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_38Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_38" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_38" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_38" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_38" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_38Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_38" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_38" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_38" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_38" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_38Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_38" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_39" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_39" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_39" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_39Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_39" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_39" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_39" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_39" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_39Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_39" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_39" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_39" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_39" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_39Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_39" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_39" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_39" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_39" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_39Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_39" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_40" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_40" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_40" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_40Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_40" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_40" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_40" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_40" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_40Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_40" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_40" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_40" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_40" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_40Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_40" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_40" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_40" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_40" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_40Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_40" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_41" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_41" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_41" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_41Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_41" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_41" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_41" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_41" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_41Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_41" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_41" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_41" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_41" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_41Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_41" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_41" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_41" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_41" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_41Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_41" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_42" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_42" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_42" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_42Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_42" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_42" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_42" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_42" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_42Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_42" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_42" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_42" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_42" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_42Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_42" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_42" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_42" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_42" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_42Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_42" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_43" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_43" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_43" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_43Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_43" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_43" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_43" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_43" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_43Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_43" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_43" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_43" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_43" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_43Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_43" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_43" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_43" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_43" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_43Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_43" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_44" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_44" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_44" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_44Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_44" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_44" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_44" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_44" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_44Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_44" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_44" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_44" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_44" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_44Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_44" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_44" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_44" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_44" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_44Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_44" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_45" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_45" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_45" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_45Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_45" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_45" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_45" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_45" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_45Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_45" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_45" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_45" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_45" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_45Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_45" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_45" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_45" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_45" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_45Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_45" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_46" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_46" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_46" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_46Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_46" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_46" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_46" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_46" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_46Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_46" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_46" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_46" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_46" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_46Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_46" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_46" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_46" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_46" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_46Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_46" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_47" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_47" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_47" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_47Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_47" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_47" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_47" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_47" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_47Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_47" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_47" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_47" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_47" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_47Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_47" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_47" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_47" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_47" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_47Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_47" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_48" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_48" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_48" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_48Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_48" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_48" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_48" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_48" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_48Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_48" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_48" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_48" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_48" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_48Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_48" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_48" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_48" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_48" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_48Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_48" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_49" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_49" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_49" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_49Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_49" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_49" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_49" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_49" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_49Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_49" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_49" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_49" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_49" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_49Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_49" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_49" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_49" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_49" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_49Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_49" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_50" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_50" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_50" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_50Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_50" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_TYPE_CD_50" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_TYPE_CD_50" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_TYPE_CD_50" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_TYPE_CD_50Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_TYPE_CD_50" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_STATE_50" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_STATE_50" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_STATE_50" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_STATE_50Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_STATE_50" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OTH_PROV_IDENT_ISSUER_50" msprop:Generator_ColumnVarNameInTable="columnOTH_PROV_IDENT_ISSUER_50" msprop:Generator_ColumnPropNameInRow="OTH_PROV_IDENT_ISSUER_50" msprop:Generator_ColumnPropNameInTable="OTH_PROV_IDENT_ISSUER_50Column" msprop:Generator_UserColumnName="OTH_PROV_IDENT_ISSUER_50" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IS_SOLE_PROPRIETOR" msprop:Generator_ColumnVarNameInTable="columnIS_SOLE_PROPRIETOR" msprop:Generator_ColumnPropNameInRow="IS_SOLE_PROPRIETOR" msprop:Generator_ColumnPropNameInTable="IS_SOLE_PROPRIETORColumn" msprop:Generator_UserColumnName="IS_SOLE_PROPRIETOR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IS_ORG_SUBPART" msprop:Generator_ColumnVarNameInTable="columnIS_ORG_SUBPART" msprop:Generator_ColumnPropNameInRow="IS_ORG_SUBPART" msprop:Generator_ColumnPropNameInTable="IS_ORG_SUBPARTColumn" msprop:Generator_UserColumnName="IS_ORG_SUBPART" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARENT_ORG_LBN" msprop:Generator_ColumnVarNameInTable="columnPARENT_ORG_LBN" msprop:Generator_ColumnPropNameInRow="PARENT_ORG_LBN" msprop:Generator_ColumnPropNameInTable="PARENT_ORG_LBNColumn" msprop:Generator_UserColumnName="PARENT_ORG_LBN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="70" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARENT_ORG_TIN" msprop:Generator_ColumnVarNameInTable="columnPARENT_ORG_TIN" msprop:Generator_ColumnPropNameInRow="PARENT_ORG_TIN" msprop:Generator_ColumnPropNameInTable="PARENT_ORG_TINColumn" msprop:Generator_UserColumnName="PARENT_ORG_TIN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="9" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AUTH_OFFICIAL_NAME_PRE_TXT" msprop:Generator_ColumnVarNameInTable="columnAUTH_OFFICIAL_NAME_PRE_TXT" msprop:Generator_ColumnPropNameInRow="AUTH_OFFICIAL_NAME_PRE_TXT" msprop:Generator_ColumnPropNameInTable="AUTH_OFFICIAL_NAME_PRE_TXTColumn" msprop:Generator_UserColumnName="AUTH_OFFICIAL_NAME_PRE_TXT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AUTH_OFFICIAL_NAME_SUF_TXT" msprop:Generator_ColumnVarNameInTable="columnAUTH_OFFICIAL_NAME_SUF_TXT" msprop:Generator_ColumnPropNameInRow="AUTH_OFFICIAL_NAME_SUF_TXT" msprop:Generator_ColumnPropNameInTable="AUTH_OFFICIAL_NAME_SUF_TXTColumn" msprop:Generator_UserColumnName="AUTH_OFFICIAL_NAME_SUF_TXT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AUTH_OFF_CREDENTIAL_TXT" msprop:Generator_ColumnVarNameInTable="columnAUTH_OFF_CREDENTIAL_TXT" msprop:Generator_ColumnPropNameInRow="AUTH_OFF_CREDENTIAL_TXT" msprop:Generator_ColumnPropNameInTable="AUTH_OFF_CREDENTIAL_TXTColumn" msprop:Generator_UserColumnName="AUTH_OFF_CREDENTIAL_TXT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CREATE_USERID" msprop:Generator_ColumnVarNameInTable="columnCREATE_USERID" msprop:Generator_ColumnPropNameInRow="CREATE_USERID" msprop:Generator_ColumnPropNameInTable="CREATE_USERIDColumn" msprop:Generator_UserColumnName="CREATE_USERID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="55" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LASTUPDT" msprop:Generator_ColumnVarNameInTable="columnLASTUPDT" msprop:Generator_ColumnPropNameInRow="LASTUPDT" msprop:Generator_ColumnPropNameInTable="LASTUPDTColumn" msprop:Generator_UserColumnName="LASTUPDT" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PROVIDER" />
+      <xs:field xpath="mstns:PROVIDER_ID" />
+    </xs:unique>
+    <xs:unique name="ProvDataSetKey1">
+      <xs:selector xpath=".//mstns:PROVIDER_ADDRESS" />
+      <xs:field xpath="mstns:PROVIDER_ID" />
+    </xs:unique>
+    <xs:unique name="NPI_REGISTRY_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:NPI_REGISTRY" />
+      <xs:field xpath="mstns:NPI" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

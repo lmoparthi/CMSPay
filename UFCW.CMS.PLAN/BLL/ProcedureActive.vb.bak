@@ -1,0 +1,210 @@
+Option Explicit On
+Option Strict On
+''' -----------------------------------------------------------------------------
+''' Project	 : UFCW.CMS.Plan
+''' Class	 : CMS.Plan.ProcedureActive
+'''
+''' -----------------------------------------------------------------------------
+''' <summary>
+''' This class represents and handles an Active Procedure
+''' </summary>
+''' <remarks>
+''' </remarks>
+''' <history>
+''' 	[paulw]	1/25/2006	Created
+''' </history>
+''' -----------------------------------------------------------------------------
+
+<Serializable()> _
+Public Class ProcedureActive
+    Inherits Procedure
+
+#Region "Properties and local variables"
+
+    'Private Shared _TraceSwitch As New BooleanSwitch("TraceCloning", "Trace Switch in App.Config")
+
+    Private _PublishDate As Date
+    Private _SequenceNumber As Integer
+    Private _FromDate As Date
+    Private _ToDate As Date
+
+    Public Property PublishDate() As Date
+        ' -----------------------------------------------------------------------------
+        ' <summary>
+        ' Gets and Sets the Publish Date for this Procedure
+        ' </summary>
+        ' <value></value>
+        ' <remarks>
+        ' </remarks>
+        ' <history>
+        ' 	[paulw]	1/25/2006	Created
+        ' </history>
+        ' -----------------------------------------------------------------------------
+        Get
+            Return _PublishDate
+        End Get
+        Set(ByVal value As Date)
+            _PublishDate = Value
+        End Set
+    End Property
+
+    Public Property SequenceNumber() As Integer
+        ' -----------------------------------------------------------------------------
+        ' <summary>
+        ' Gets and Sets the Sequence Number for this Procedure
+        ' </summary>
+        ' <value></value>
+        ' <remarks>
+        ' </remarks>
+        ' <history>
+        ' 	[paulw]	1/25/2006	Created
+        ' </history>
+        ' -----------------------------------------------------------------------------
+        Get
+            Return _SequenceNumber
+        End Get
+        Set(ByVal value As Integer)
+            _SequenceNumber = Value
+        End Set
+    End Property
+
+    Public Property FromDate() As Date
+        ' -----------------------------------------------------------------------------
+        ' <summary>
+        ' Gets and Sets the From Date that this procedure is active for
+        ' </summary>
+        ' <value></value>
+        ' <remarks>
+        ' </remarks>
+        ' <history>
+        ' 	[paulw]	1/25/2006	Created
+        ' </history>
+        ' -----------------------------------------------------------------------------
+        Get
+            Return _FromDate
+        End Get
+        Set(ByVal value As Date)
+            _FromDate = Value
+        End Set
+    End Property
+
+    Public Property ToDate() As Date
+        ' -----------------------------------------------------------------------------
+        ' <summary>
+        ' Gets and Sets the To Date that this procedure is active for
+        ' </summary>
+        ' <value></value>
+        ' <remarks>
+        ' </remarks>
+        ' <history>
+        ' 	[paulw]	1/25/2006	Created
+        ' </history>
+        ' -----------------------------------------------------------------------------
+        Get
+            Return _ToDate
+        End Get
+        Set(ByVal value As Date)
+            _ToDate = Value
+        End Set
+    End Property
+
+#End Region
+
+#Region "Constructors"
+
+    Public Sub New()
+        ' -----------------------------------------------------------------------------
+        ' <summary>
+        ' Default Constructor
+        ' </summary>
+        ' <remarks>
+        ' </remarks>
+        ' <history>
+        ' 	[paulw]	1/25/2006	Created
+        ' </history>
+        ' -----------------------------------------------------------------------------
+        MyBase.New()
+    End Sub
+
+    Public Sub New(ByVal procedureID As Integer?)
+        ' -----------------------------------------------------------------------------
+        ' <summary>
+        ' Constructor with just the procedure id
+        ' </summary>
+        ' <param name="procedureId"></param>
+        ' <remarks>
+        ' </remarks>
+        ' <history>
+        ' 	[paulw]	1/25/2006	Created
+        ' </history>
+        ' -----------------------------------------------------------------------------
+        MyBase.New(procedureID)
+    End Sub
+
+    Public Sub New(ByVal procedureID As Integer?, ByVal billType As String, ByVal diagnosis As String, ByVal modifier As String, ByVal gender As String, ByVal monthsMin As Integer?, ByVal monthsMax As Integer?, ByVal placeOfService As String, ByVal planType As String, ByVal procedureCode As String, ByVal provider As String, ByVal ruleSets As Rulesets)
+        ' -----------------------------------------------------------------------------
+        ' <summary>
+        ' Constructor that sets all default variables, plus the ruleset
+        ' </summary>
+        ' <param name="procedureID"></param>
+        ' <param name="billType"></param>
+        ' <param name="diagnosis"></param>
+        ' <param name="modifier"></param>
+        ' <param name="gender"></param>
+        ' <param name="ageMin"></param>
+        ' <param name="ageMax"></param>
+        ' <param name="placeOfService"></param>
+        ' <param name="planType"></param>
+        ' <param name="procedureCode"></param>
+        ' <param name="providerID"></param>
+        ' <param name="ruleSet"></param>
+        ' <remarks>
+        ' </remarks>
+        ' <history>
+        ' 	[paulw]	1/25/2006	Created
+        ' </history>
+        ' -----------------------------------------------------------------------------
+
+        MyBase.New(procedureID, billType, diagnosis, modifier, gender, monthsMin, monthsMax, placeOfService, planType, procedureCode, provider)
+        _RuleSets = RuleSets
+
+    End Sub
+
+    Public Sub New(ByVal procedureID As Integer?, ByVal billType As String, ByVal diagnosis As String, ByVal modifier As String, ByVal gender As String, ByVal monthsMin As Integer?, ByVal monthsMax As Integer?, ByVal placeOfService As String, ByVal PlanType As String, ByVal procedureCode As String, ByVal provider As String, ByVal ruleSets As Rulesets, ByVal sequenceNum As Integer, ByVal fromDate As Date, ByVal toDate As Date)
+        ' -----------------------------------------------------------------------------
+        ' <summary>
+        ' Constuctor that sets all default variables, plus Active related variables plus ruleset
+        ' </summary>
+        ' <param name="procedureID"></param>
+        ' <param name="billType"></param>
+        ' <param name="diagnosis"></param>
+        ' <param name="modifier"></param>
+        ' <param name="gender"></param>
+        ' <param name="ageMin"></param>
+        ' <param name="ageMax"></param>
+        ' <param name="placeOfService"></param>
+        ' <param name="planType"></param>
+        ' <param name="procedureCode"></param>
+        ' <param name="providerID"></param>
+        ' <param name="ruleSet"></param>
+        ' <param name="sequenceNum"></param>
+        ' <param name="fromDate"></param>
+        ' <param name="toDate"></param>
+        ' <remarks>
+        ' </remarks>
+        ' <history>
+        ' 	[paulw]	1/25/2006	Created
+        ' </history>
+        ' -----------------------------------------------------------------------------
+
+        MyBase.New(ProcedureID, BillType, Diagnosis, Modifier, Gender, MonthsMin, MonthsMax, PlaceOfService, PlanType, ProcedureCode, Provider)
+
+        _SequenceNumber = sequenceNum
+        _FromDate = fromDate
+        _ToDate = toDate
+        _RuleSets = ruleSets
+
+    End Sub
+#End Region
+
+End Class

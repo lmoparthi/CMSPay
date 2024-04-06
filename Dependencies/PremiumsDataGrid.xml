@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PremiumsDataGridStyle>
+  <ColumnCount>12</ColumnCount>
+  <GridLineStyle>False</GridLineStyle>
+  <GridDefaultSort>PSTPERIOD DESC</GridDefaultSort>
+  <Column>
+    <DefaultOrder>1</DefaultOrder>
+    <DefaultCharWidth>9</DefaultCharWidth>
+    <Mapping>FAMILY_ID</Mapping>
+    <HeaderText>Family ID</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+   <Column>
+    <DefaultOrder>2</DefaultOrder>
+    <DefaultCharWidth>11</DefaultCharWidth>
+    <Mapping>PSTPERIOD</Mapping>
+    <HeaderText>Posting Period</HeaderText>
+    <Type>Text</Type>
+    <Format>MM/dd/yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>3</DefaultOrder>
+    <DefaultCharWidth>15</DefaultCharWidth>
+    <Mapping>PREMPAID</Mapping>
+    <HeaderText>Medical Premium Paid</HeaderText>
+    <Type>Text</Type>
+    <Format>c</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>4</DefaultOrder>
+    <DefaultCharWidth>12</DefaultCharWidth>
+    <Mapping>BAL_MED</Mapping>
+    <HeaderText>Medical Balance</HeaderText>
+    <Type>Text</Type>
+    <Format>c</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>5</DefaultOrder>
+    <DefaultCharWidth>13</DefaultCharWidth>
+    <Mapping>DENTAL_COV</Mapping>
+    <HeaderText>Dental Coverage</HeaderText>
+    <Type>Text</Type>
+    <Format>Boolean</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>6</DefaultOrder>
+    <DefaultCharWidth>15</DefaultCharWidth>
+    <Mapping>DENTPAID</Mapping>
+    <HeaderText>Dental Premium Paid</HeaderText>
+    <Type>Text</Type>
+    <Format>c</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>7</DefaultOrder>
+    <DefaultCharWidth>12</DefaultCharWidth>
+    <Mapping>BAL_DENT</Mapping>
+    <HeaderText>Dental Balance</HeaderText>
+    <Type>Text</Type>
+    <Format>c</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>8</DefaultOrder>
+    <DefaultCharWidth>11</DefaultCharWidth>
+    <Mapping>MEMTYPE</Mapping>
+    <HeaderText>Member Type</HeaderText>
+    <Type>Text</Type>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>9</DefaultOrder>
+    <DefaultCharWidth>13</DefaultCharWidth>
+    <Mapping>EMPRSUB</Mapping>
+    <HeaderText>Employer SubNo</HeaderText>
+    <Type>Text</Type>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>10</DefaultOrder>
+    <DefaultCharWidth>11</DefaultCharWidth>
+    <Mapping>PREM_TYPE</Mapping>
+    <HeaderText>Premium Type</HeaderText>
+    <Type>Text</Type>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>11</DefaultOrder>
+    <DefaultCharWidth>13</DefaultCharWidth>
+    <Mapping>PREMAMT</Mapping>
+    <HeaderText>Premium Amount</HeaderText>
+    <Type>Text</Type>
+    <Format>c</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>12</DefaultOrder>
+    <DefaultCharWidth>13</DefaultCharWidth>
+    <Mapping>MEMSTAT</Mapping>
+    <HeaderText>Status</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+</PremiumsDataGridStyle>

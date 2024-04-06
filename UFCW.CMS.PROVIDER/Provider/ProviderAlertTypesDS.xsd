@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="ProviderAlertTypesDS" targetNamespace="http://tempuri.org/ProviderAlertTypesDS.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/ProviderAlertTypesDS.xsd"
+	xmlns:mstns="http://tempuri.org/ProviderAlertTypesDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="ProviderAlertTypesDS" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="RETRIEVE_PROVIDER_ALERT_TYPES">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ALERT" type="xs:string" />
+							<xs:element name="DESCRIPTION" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="AlertTypesDSKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:RETRIEVE_PROVIDER_ALERT_TYPES" />
+			<xs:field xpath="mstns:ALERT" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

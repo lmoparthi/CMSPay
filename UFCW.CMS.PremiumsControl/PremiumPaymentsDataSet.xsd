@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PremiumPaymentsDataSet" targetNamespace="http://tempuri.org/PremiumsDataSet.xsd" xmlns:mstns="http://tempuri.org/PremiumsDataSet.xsd" xmlns="http://tempuri.org/PremiumsDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PremiumPaymentsDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="PremiumPaymentsDataSet" msprop:Generator_UserDSName="PremiumPaymentsDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PREMAUD" msprop:Generator_UserTableName="PREMAUD" msprop:Generator_RowEvArgName="PREMAUDRowChangeEvent" msprop:Generator_TableVarName="tablePREMAUD" msprop:Generator_TablePropName="PREMAUD" msprop:Generator_RowDeletingName="PREMAUDRowDeleting" msprop:Generator_RowChangingName="PREMAUDRowChanging" msprop:Generator_RowDeletedName="PREMAUDRowDeleted" msprop:Generator_RowEvHandlerName="PREMAUDRowChangeEventHandler" msprop:Generator_TableClassName="PREMAUDDataTable" msprop:Generator_RowChangedName="PREMAUDRowChanged" msprop:Generator_RowClassName="PREMAUDRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SSNO" msprop:Generator_ColumnVarNameInTable="columnSSNO" msprop:Generator_ColumnPropNameInRow="SSNO" msprop:Generator_ColumnPropNameInTable="SSNOColumn" msprop:Generator_UserColumnName="SSNO" type="xs:int" />
+              <xs:element name="PSTPERIOD" msprop:Generator_ColumnVarNameInTable="columnPSTPERIOD" msprop:Generator_ColumnPropNameInRow="PSTPERIOD" msprop:Generator_ColumnPropNameInTable="PSTPERIODColumn" msprop:Generator_UserColumnName="PSTPERIOD" type="xs:dateTime" />
+              <xs:element name="LASTUPDT" msprop:Generator_ColumnVarNameInTable="columnLASTUPDT" msprop:Generator_ColumnPropNameInRow="LASTUPDT" msprop:Generator_ColumnPropNameInTable="LASTUPDTColumn" msprop:Generator_UserColumnName="LASTUPDT" type="xs:dateTime" />
+              <xs:element name="FAMILY_ID" msprop:Generator_ColumnVarNameInTable="columnFAMILY_ID" msprop:Generator_ColumnPropNameInRow="FAMILY_ID" msprop:Generator_ColumnPropNameInTable="FAMILY_IDColumn" msprop:Generator_UserColumnName="FAMILY_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="DENTAL_COVA" msprop:Generator_ColumnVarNameInTable="columnDENTAL_COVA" msprop:Generator_ColumnPropNameInRow="DENTAL_COVA" msprop:Generator_ColumnPropNameInTable="DENTAL_COVAColumn" msprop:Generator_UserColumnName="DENTAL_COVA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DENTAMTA" msprop:Generator_ColumnVarNameInTable="columnDENTAMTA" msprop:Generator_ColumnPropNameInRow="DENTAMTA" msprop:Generator_ColumnPropNameInTable="DENTAMTAColumn" msprop:Generator_UserColumnName="DENTAMTA" type="xs:decimal" />
+              <xs:element name="PREMPAIDA" msprop:Generator_ColumnVarNameInTable="columnPREMPAIDA" msprop:Generator_ColumnPropNameInRow="PREMPAIDA" msprop:Generator_ColumnPropNameInTable="PREMPAIDAColumn" msprop:Generator_UserColumnName="PREMPAIDA" type="xs:decimal" />
+              <xs:element name="DENTPAIDA" msprop:Generator_ColumnVarNameInTable="columnDENTPAIDA" msprop:Generator_ColumnPropNameInRow="DENTPAIDA" msprop:Generator_ColumnPropNameInTable="DENTPAIDAColumn" msprop:Generator_UserColumnName="DENTPAIDA" type="xs:decimal" />
+              <xs:element name="PAY_TYPEA" msprop:Generator_ColumnVarNameInTable="columnPAY_TYPEA" msprop:Generator_ColumnPropNameInRow="PAY_TYPEA" msprop:Generator_ColumnPropNameInTable="PAY_TYPEAColumn" msprop:Generator_UserColumnName="PAY_TYPEA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BAL_MEDA" msprop:Generator_ColumnVarNameInTable="columnBAL_MEDA" msprop:Generator_ColumnPropNameInRow="BAL_MEDA" msprop:Generator_ColumnPropNameInTable="BAL_MEDAColumn" msprop:Generator_UserColumnName="BAL_MEDA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BAL_DENTA" msprop:Generator_ColumnVarNameInTable="columnBAL_DENTA" msprop:Generator_ColumnPropNameInRow="BAL_DENTA" msprop:Generator_ColumnPropNameInTable="BAL_DENTAColumn" msprop:Generator_UserColumnName="BAL_DENTA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="USERIDA" msprop:Generator_ColumnVarNameInTable="columnUSERIDA" msprop:Generator_ColumnPropNameInRow="USERIDA" msprop:Generator_ColumnPropNameInTable="USERIDAColumn" msprop:Generator_UserColumnName="USERIDA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ACCTNOA" msprop:Generator_ColumnVarNameInTable="columnACCTNOA" msprop:Generator_ColumnPropNameInRow="ACCTNOA" msprop:Generator_ColumnPropNameInTable="ACCTNOAColumn" msprop:Generator_UserColumnName="ACCTNOA" type="xs:short" />
+              <xs:element name="PREM_TYPEA" msprop:Generator_ColumnVarNameInTable="columnPREM_TYPEA" msprop:Generator_ColumnPropNameInRow="PREM_TYPEA" msprop:Generator_ColumnPropNameInTable="PREM_TYPEAColumn" msprop:Generator_UserColumnName="PREM_TYPEA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PREM_MEDCA" msprop:Generator_ColumnVarNameInTable="columnPREM_MEDCA" msprop:Generator_ColumnPropNameInRow="PREM_MEDCA" msprop:Generator_ColumnPropNameInTable="PREM_MEDCAColumn" msprop:Generator_UserColumnName="PREM_MEDCA" type="xs:short" minOccurs="0" />
+              <xs:element name="PREM_PLANA" msprop:Generator_ColumnVarNameInTable="columnPREM_PLANA" msprop:Generator_ColumnPropNameInRow="PREM_PLANA" msprop:Generator_ColumnPropNameInTable="PREM_PLANAColumn" msprop:Generator_UserColumnName="PREM_PLANA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DENT_PLANA" msprop:Generator_ColumnVarNameInTable="columnDENT_PLANA" msprop:Generator_ColumnPropNameInRow="DENT_PLANA" msprop:Generator_ColumnPropNameInTable="DENT_PLANAColumn" msprop:Generator_UserColumnName="DENT_PLANA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PREMAMTA" msprop:Generator_ColumnVarNameInTable="columnPREMAMTA" msprop:Generator_ColumnPropNameInRow="PREMAMTA" msprop:Generator_ColumnPropNameInTable="PREMAMTAColumn" msprop:Generator_UserColumnName="PREMAMTA" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DENTAMTB" msprop:Generator_ColumnVarNameInTable="columnDENTAMTB" msprop:Generator_ColumnPropNameInRow="DENTAMTB" msprop:Generator_ColumnPropNameInTable="DENTAMTBColumn" msprop:Generator_UserColumnName="DENTAMTB" type="xs:decimal" />
+              <xs:element name="PREMPAIDB" msprop:Generator_ColumnVarNameInTable="columnPREMPAIDB" msprop:Generator_ColumnPropNameInRow="PREMPAIDB" msprop:Generator_ColumnPropNameInTable="PREMPAIDBColumn" msprop:Generator_UserColumnName="PREMPAIDB" type="xs:decimal" />
+              <xs:element name="DENTPAIDB" msprop:Generator_ColumnVarNameInTable="columnDENTPAIDB" msprop:Generator_ColumnPropNameInRow="DENTPAIDB" msprop:Generator_ColumnPropNameInTable="DENTPAIDBColumn" msprop:Generator_UserColumnName="DENTPAIDB" type="xs:decimal" />
+              <xs:element name="PAY_TYPEB" msprop:Generator_ColumnVarNameInTable="columnPAY_TYPEB" msprop:Generator_ColumnPropNameInRow="PAY_TYPEB" msprop:Generator_ColumnPropNameInTable="PAY_TYPEBColumn" msprop:Generator_UserColumnName="PAY_TYPEB">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BAL_MEDB" msprop:Generator_ColumnVarNameInTable="columnBAL_MEDB" msprop:Generator_ColumnPropNameInRow="BAL_MEDB" msprop:Generator_ColumnPropNameInTable="BAL_MEDBColumn" msprop:Generator_UserColumnName="BAL_MEDB">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BAL_DENTB" msprop:Generator_ColumnVarNameInTable="columnBAL_DENTB" msprop:Generator_ColumnPropNameInRow="BAL_DENTB" msprop:Generator_ColumnPropNameInTable="BAL_DENTBColumn" msprop:Generator_UserColumnName="BAL_DENTB">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="USERIDB" msprop:Generator_ColumnVarNameInTable="columnUSERIDB" msprop:Generator_ColumnPropNameInRow="USERIDB" msprop:Generator_ColumnPropNameInTable="USERIDBColumn" msprop:Generator_UserColumnName="USERIDB">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ACCTNOB" msprop:Generator_ColumnVarNameInTable="columnACCTNOB" msprop:Generator_ColumnPropNameInRow="ACCTNOB" msprop:Generator_ColumnPropNameInTable="ACCTNOBColumn" msprop:Generator_UserColumnName="ACCTNOB" type="xs:short" />
+              <xs:element name="PREM_TYPEB" msprop:Generator_ColumnVarNameInTable="columnPREM_TYPEB" msprop:Generator_ColumnPropNameInRow="PREM_TYPEB" msprop:Generator_ColumnPropNameInTable="PREM_TYPEBColumn" msprop:Generator_UserColumnName="PREM_TYPEB">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PREM_MEDCB" msprop:Generator_ColumnVarNameInTable="columnPREM_MEDCB" msprop:Generator_ColumnPropNameInRow="PREM_MEDCB" msprop:Generator_ColumnPropNameInTable="PREM_MEDCBColumn" msprop:Generator_UserColumnName="PREM_MEDCB" type="xs:short" minOccurs="0" />
+              <xs:element name="PREM_PLANB" msprop:Generator_ColumnVarNameInTable="columnPREM_PLANB" msprop:Generator_ColumnPropNameInRow="PREM_PLANB" msprop:Generator_ColumnPropNameInTable="PREM_PLANBColumn" msprop:Generator_UserColumnName="PREM_PLANB" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DENT_PLANB" msprop:Generator_ColumnVarNameInTable="columnDENT_PLANB" msprop:Generator_ColumnPropNameInRow="DENT_PLANB" msprop:Generator_ColumnPropNameInTable="DENT_PLANBColumn" msprop:Generator_UserColumnName="DENT_PLANB" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PREMAMTB" msprop:Generator_ColumnVarNameInTable="columnPREMAMTB" msprop:Generator_ColumnPropNameInRow="PREMAMTB" msprop:Generator_ColumnPropNameInTable="PREMAMTBColumn" msprop:Generator_UserColumnName="PREMAMTB" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MEMSTATB" msprop:Generator_ColumnVarNameInTable="columnMEMSTATB" msprop:Generator_ColumnPropNameInRow="MEMSTATB" msprop:Generator_ColumnPropNameInTable="MEMSTATBColumn" msprop:Generator_UserColumnName="MEMSTATB" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MEMSTATA" msprop:Generator_ColumnVarNameInTable="columnMEMSTATA" msprop:Generator_ColumnPropNameInRow="MEMSTATA" msprop:Generator_ColumnPropNameInTable="MEMSTATAColumn" msprop:Generator_UserColumnName="MEMSTATA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

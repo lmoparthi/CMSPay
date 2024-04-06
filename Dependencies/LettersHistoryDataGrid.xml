@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LettersHistoryDataGridStyle>
+  <ColumnCount>10</ColumnCount>
+  <GridLineStyle>False</GridLineStyle>
+  <Column>
+    <DefaultOrder>1</DefaultOrder>
+    <DefaultCharWidth>15</DefaultCharWidth>
+    <Mapping>LETTERID</Mapping>
+    <HeaderText>Letter Identifier</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>2</DefaultOrder>
+    <DefaultCharWidth>15</DefaultCharWidth>
+    <Mapping>CREATE_DATE</Mapping>
+    <HeaderText>Created On</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>3</DefaultOrder>
+    <DefaultCharWidth>15</DefaultCharWidth>
+    <Mapping>CREATE_USERID</Mapping>
+    <HeaderText>Created By</HeaderText>
+    <GAC>CMSUsers</GAC>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>4</DefaultOrder>
+    <DefaultCharWidth>15</DefaultCharWidth>
+    <Mapping>LETTER_NAME</Mapping>
+    <HeaderText>Letter Name</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>5</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>MAIL_STATUS</Mapping>
+    <HeaderText>Status</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>6</DefaultOrder>
+    <DefaultCharWidth>100</DefaultCharWidth>
+    <Mapping>MAIL_STATUS_DESCRIPTION</Mapping>
+    <HeaderText>Description</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>7</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>CLAIM_ID</Mapping>
+    <HeaderText>CLAIM#</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>8</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>DOCID</Mapping>
+    <HeaderText>Doc ID</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>9</DefaultOrder>
+    <DefaultCharWidth>15</DefaultCharWidth>
+    <Mapping>DOC_CLASS</Mapping>
+    <HeaderText>Document Class</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>10</DefaultOrder>
+    <DefaultCharWidth>20</DefaultCharWidth>
+    <Mapping>DOC_TYPE</Mapping>
+    <HeaderText>Document Type</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+</LettersHistoryDataGridStyle>

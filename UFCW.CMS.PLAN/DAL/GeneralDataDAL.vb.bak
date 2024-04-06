@@ -1,0 +1,285 @@
+Option Explicit On
+Option Strict On
+Imports System
+Imports System.Data
+Imports System.Collections.Specialized
+Imports Microsoft.Practices.EnterpriseLibrary.Data
+Imports Microsoft.Practices.EnterpriseLibrary.ExceptionHandling
+Imports System.Security.Principal
+Imports System.Data.Common
+
+Friend NotInheritable Class GeneralDataDAL
+    ''' -----------------------------------------------------------------------------
+    ''' Project	 : UFCW.CMS.Plan
+    ''' Class	 : CMS.Plan.GeneralDataDAL
+    '''
+    ''' -----------------------------------------------------------------------------
+    ''' <summary>
+    ''' This class handles all CMS related data that does not belong to Staging or Active
+    ''' </summary>
+    ''' <remarks>
+    ''' </remarks>
+    ''' <history>
+    ''' 	[paulw]	10/5/2006	Created (Moved over general DAL functions from other
+    '''                         DAL classes too).
+    ''' </history>
+    ''' -----------------------------------------------------------------------------
+
+    Private Shared ProcedureTotalDS As DataSet
+    Private Shared DiagnosisTotalDS As DataSet
+    Private Shared DiagnosisTotalSC As New StringCollection
+    Private Shared BillTypeTotalDS As DataSet
+    Private Shared BillTypeTotalSC As New StringCollection
+    Private Shared ModifierTotalDS As DataSet
+    Private Shared ModifierTotalSC As New StringCollection
+    Private Shared POSTotalDS As DataSet
+    Private Shared POSTotalSC As New StringCollection
+    Private Shared ProviderTotalDS As DataSet
+    Private Shared ProviderTotalDT As DataTable
+    Private Shared ProviderTotalSC As New StringCollection
+    Private Shared RuleSetTypesTotalDS As DataSet
+    Private Shared RuleSetTypesTotalSC As New Collection
+    Public Shared WindowsUserID As WindowsIdentity = WindowsIdentity.GetCurrent()
+    Public Shared WindowsPrincipalForID As WindowsPrincipal = New WindowsPrincipal(WindowsUserID)
+
+#Region "Constructor"
+#End Region
+
+#Region "Gets"
+    ' -----------------------------------------------------------------------------
+    ' <summary>
+    ' Gets all the ruleset types
+    ' </summary>
+    ' <returns></returns>
+    ' <remarks>
+    ' </remarks>
+    ' <history>
+    ' 	[paulw]	10/5/2006	Created
+    ' </history>
+    ' -----------------------------------------------------------------------------
+    Public Shared Function GetRulesetTypes() As Collection
+
+        Try
+            If RuleSetTypesTotalSC.Count = 0 Then
+                If RuleSetTypesTotalDS Is Nothing Then
+                    RuleSetTypesTotalDS = CMSDALFDBMD.RetrieveRuleSetTypesValues(RuleSetTypesTotalDS)
+                End If
+                For Each DR As DataRow In RuleSetTypesTotalDS.Tables(0).Rows
+                    RuleSetTypesTotalSC.Add(New RuleSetType(DR("RULE_SET_TYPE").ToString(), Convert.ToInt32(DR("RULE_SET_TYPE_ID").ToString())))
+                Next
+            End If
+
+            Return RuleSetTypesTotalSC
+
+        Catch ex As Exception
+
+            Throw New DataLayerException("Could not retrieve valid procedures from the database - " & ex.ToString, ex)
+
+        Finally
+
+        End Try
+
+    End Function
+
+    ' -----------------------------------------------------------------------------
+    ' <summary>
+    ' Gets the Valid Modifiers
+    ' </summary>
+    ' <returns></returns>
+    ' <remarks>
+    ' </remarks>
+    ' <history>
+    ' 	[paulw]	6/13/2006	Created
+    ' </history>
+    ' -----------------------------------------------------------------------------
+    Public Shared Function GetValidModifiers() As StringCollection
+
+        Try
+            If ModifierTotalSC.Count = 0 Then
+                If ModifierTotalDS Is Nothing Then
+                    ModifierTotalDS = CMSDALFDBMD.RetrieveModifierValues(Nothing, ModifierTotalDS)
+                End If
+                For Each DR As DataRow In ModifierTotalDS.Tables(0).Rows
+                    ModifierTotalSC.Add(DR("MODIFIER_VALUE").ToString())
+                Next
+            End If
+
+            Return ModifierTotalSC
+        Catch ex As Exception
+
+            Throw New DataLayerException("Could not retrieve valid modifiers from the database - " & ex.ToString, ex)
+
+        Finally
+        End Try
+    End Function
+    ' -----------------------------------------------------------------------------
+    ' <summary>
+    ' Gets the Valid Place of Services
+    ' </summary>
+    ' <returns></returns>
+    ' <remarks>
+    ' </remarks>
+    ' <history>
+    ' 	[paulw]	6/13/2006	Created
+    ' </history>
+    ' -----------------------------------------------------------------------------
+    Public Shared Function GetValidPlaceOfServices() As StringCollection
+        Try
+            If POSTotalSC.Count = 0 Then
+                If POSTotalDS Is Nothing Then
+                    POSTotalDS = CMSDALFDBMD.RetrievePlaceOfServiceValues(Nothing, POSTotalDS)
+                End If
+                For Each DR As DataRow In POSTotalDS.Tables(0).Rows
+                    POSTotalSC.Add(DR("PLACE_OF_SERV_VALUE").ToString())
+                Next
+            End If
+
+            Return POSTotalSC
+
+        Catch ex As Exception
+
+            Throw New DataLayerException("Could not retrieve valid Place of Services from the database - " & ex.ToString, ex)
+
+        Finally
+        End Try
+    End Function
+    ' -----------------------------------------------------------------------------
+    ' <summary>
+    ' Gets all the Valid Diagnosis Codes
+    ' </summary>
+    ' <returns></returns>
+    ' <remarks>
+    ' </remarks>
+    ' <history>
+    ' 	[paulw]	6/13/2006	Created
+    ' </history>
+    ' -----------------------------------------------------------------------------
+    Public Shared Function GetValidDiagnosis() As StringCollection
+
+        Try
+
+            ' If DiagnosisTotalSC Is Nothing Then
+
+            If DiagnosisTotalSC.Count = 0 Then
+                If DiagnosisTotalDS Is Nothing Then
+                    DiagnosisTotalDS = CMSDALFDBMD.RetrieveDiagnosisValues(DiagnosisTotalDS)
+                End If
+                For Each DR As DataRow In DiagnosisTotalDS.Tables(0).Rows
+                    DiagnosisTotalSC.Add(DR("DIAG_VALUE").ToString())
+                Next
+            End If
+
+            Return DiagnosisTotalSC
+
+        Catch ex As Exception
+
+            Throw New DataLayerException("Could not retrieve valid diagnosis from the database - " & ex.ToString, ex)
+
+        Finally
+        End Try
+    End Function
+    ' -----------------------------------------------------------------------------
+    ' <summary>
+    ' Gets a list of Valid Providers
+    ' </summary>
+    ' <returns></returns>
+    ' <remarks>
+    ' </remarks>
+    ' <history>
+    ' 	[paulw]	6/13/2006	Created
+    ' </history>
+    ' -----------------------------------------------------------------------------
+    Public Shared Function GetValidProviders() As StringCollection
+        Try
+
+            If ProviderTotalSC.Count = 0 Then
+
+                If ProviderTotalDT Is Nothing Then
+                    ProviderTotalDT = CMSDALFDBMD.RetrievePARs()
+                End If
+
+                For Each DR As DataRow In ProviderTotalDT.Rows
+                    ProviderTotalSC.Add(DR("PAR_VALUE").ToString())
+                Next
+            End If
+
+            Return ProviderTotalSC
+
+        Catch ex As Exception
+
+            Throw New DataLayerException("Could not retrieve valid providers from the database - " & ex.ToString, ex)
+
+        Finally
+        End Try
+
+    End Function
+    ' -----------------------------------------------------------------------------
+    ' <summary>
+    ' Gets a list of Valid Bill Types
+    ' </summary>
+    ' <returns></returns>
+    ' <remarks>
+    ' </remarks>
+    ' <history>
+    ' 	[paulw]	6/13/2006	Created
+    ' </history>
+    ' -----------------------------------------------------------------------------
+    Public Shared Function GetValidBillTypes() As StringCollection
+
+        Try
+
+            ' If BillTypeTotalSC Is Nothing Then
+
+            If BillTypeTotalSC.Count = 0 Then
+                If BillTypeTotalDS Is Nothing Then
+                    BillTypeTotalDS = CMSDALFDBMD.RetrieveBillTypeValues(Nothing, BillTypeTotalDS)
+                End If
+                For Each DR As DataRow In BillTypeTotalDS.Tables(0).Rows
+                    BillTypeTotalSC.Add(DR("BILL_TYPE_VALUE").ToString())
+                Next
+            End If
+
+            Return BillTypeTotalSC
+        Catch ex As Exception
+
+            Throw New DataLayerException("Could not retrieve valid bill types from the database - " & ex.ToString, ex)
+
+        Finally
+        End Try
+    End Function
+
+#End Region
+
+#Region "Adds"
+    ' -----------------------------------------------------------------------------
+    ' <summary>
+    ' Add a ruleset type to the database
+    ' </summary>
+    ' <param name="typeName"></param>
+    ' <remarks>
+    ' </remarks>
+    ' <history>
+    ' 	[paulw]	10/5/2006	Created
+    ' </history>
+    ' -----------------------------------------------------------------------------
+    Public Shared Sub AddRulesetType(ByVal typeName As String)
+        Dim DB As Database = CMSDALCommon.CreateDatabase()
+
+        Try
+            Dim SQLCommand As String = "FDBMD.CREATE_RULE_SET_TYPE"
+            Dim DBCommandWrapper As DbCommand = DB.GetStoredProcCommand(SQLCommand)
+            DB.AddInParameter(DBCommandWrapper, "@RULE_SET_TYPE", DbType.String, typeName)
+            DB.CreateConnection.Open()
+            DB.ExecuteNonQuery(DBCommandWrapper)
+        Catch ex As Exception
+
+            Throw New PublishDataException("Cannot Add Ruleset Type - " & ex.ToString, ex)
+
+        Finally
+            If DB.CreateConnection IsNot Nothing Then
+                DB.CreateConnection.Close()
+            End If
+        End Try
+    End Sub
+#End Region
+End Class

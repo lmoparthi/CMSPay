@@ -1,0 +1,21 @@
+﻿https://learn.microsoft.com/en-us/azure/devops/artifacts/get-started-nuget?view=azure-devops&tabs=windows
+
+Make sure you have Nuget.exe installed to path used in commands
+Change Name & version as needed
+
+Tools\Command Line\Developer Command Prompt
+c:\NuGet\nuget spec UFCWCryptor.vbproj   
+
+Add dependencies to *.nuspec file 
+
+	<dependencies>
+		<dependency id="UFCWGeneral" version="(1.*,)" />
+	</dependencies>
+
+Add version to Package Reference
+
+	 Version="[1.*,)"/
+
+
+c:\NuGet\nuget pack UFCWCryptor.vbproj -Properties Configuration=Release  
+c:\NuGet\nuget push UFCWCryptor.1.5.48.32440.nupkg -src http://ufcwdevops/SCUFCWFunds/FundApps/_packaging/UFCWNuGetPackages/nuget/v3/index.json -ApiKey UFCWCryptor

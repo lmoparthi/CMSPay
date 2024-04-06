@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProviderHistoryDataGridStyle>
+  <ColumnCount>4</ColumnCount>
+  <GridLineStyle>False</GridLineStyle>
+  <Column>
+    <DefaultOrder>1</DefaultOrder>
+    <Type>Text</Type>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>CREATE_USERID</Mapping>
+    <HeaderText>User Name</HeaderText>
+    <Format />
+    <NullText />
+  </Column>
+  <Column>
+    <DefaultOrder>2</DefaultOrder>
+    <Type>Text</Type>
+    <DefaultCharWidth>2</DefaultCharWidth>
+    <Mapping>TRANSACTION_DESC</Mapping>
+    <HeaderText>Log Type</HeaderText>
+    <Format />
+    <NullText />
+  </Column>
+  <Column>
+    <DefaultOrder>3</DefaultOrder>
+    <Type>Text</Type>
+    <DefaultCharWidth>50</DefaultCharWidth>
+    <Mapping>TRANSACTION_COMMENT</Mapping>
+    <HeaderText>Description</HeaderText>
+    <Format />
+    <NullText />
+  </Column>
+  <Column>
+    <DefaultOrder>4</DefaultOrder>
+    <Type>Text</Type>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>CREATE_DATE</Mapping>
+    <HeaderText>Transaction Date</HeaderText>
+    <Format />
+    <NullText />
+  </Column>
+</ProviderHistoryDataGridStyle>

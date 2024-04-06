@@ -1,0 +1,199 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{19D725A2-FCC8-49A0-BCF3-1DD173441229}</ProjectGuid>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>UFCW.CMS.UTLUtility.Plugin</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>Off</OptionStrict>
+    <RootNamespace>UFCW.CMS.UTLUtility</RootNamespace>
+    <StartupObject>UFCW.CMS.UTLUtility.%28None%29</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <MyType>Windows</MyType>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>UFCW.CMS.UTLUtility.Plugin.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032</NoWarn>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>UFCW.CMS.UTLUtility.Plugin.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032</NoWarn>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FileNetWrapper">
+      <Name>FileNetWrapper</Name>
+      <HintPath>..\UFCW.CMS.REPORTSPLUGIN\bin\FileNetWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling">
+      <Name>Microsoft.Practices.EnterpriseLibrary.ExceptionHandling</Name>
+      <HintPath>..\UFCW.CMS.PLAN\bin\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic">
+      <Name>Microsoft.VisualBasic</Name>
+    </Reference>
+    <Reference Include="SharedInterfaces">
+      <Name>SharedInterfaces</Name>
+      <HintPath>..\UFCW.CMS.REPORTSPLUGIN\bin\SharedInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\..\DataGridPlus\DataGridPlus.vbproj">
+      <Project>{EE57884B-70A4-4F52-B418-E9F0A76F6473}</Project>
+      <Name>DataGridPlus</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCW.CMS.ANNOTATION\UFCW.CMS.AnnotationEditor.vbproj">
+      <Name>UFCW.CMS.AnnotationEditor</Name>
+      <Project>{CC556172-0E56-4814-B79E-4ABDEDDC6962}</Project>
+      <Package>{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCW.CMS.CLAIMDAL\UFCW.CMS.ClaimDAL.vbproj">
+      <Name>ClaimDAL</Name>
+      <Project>{B49374BD-88C2-4A65-A739-985B929FAB3E}</Project>
+      <Package>{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCW.CMS.CLAIMS.UI\MedicalWork\UFCW.CMS.MedicalWork.Plugin.vbproj">
+      <Name>MedicalWork</Name>
+      <Project>{7BE689D3-8F65-475F-993A-CDF0441F6606}</Project>
+      <Package>{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</Package>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AnnotationDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AnnotationDataSet.Designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="ClaimDataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClaimDataset.Designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="UserSecurityDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserSecurityDataSet.Designer.vb</LastGenOutput>
+    </Content>
+    <Compile Include="AnnotationDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AnnotationDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ClaimDataset.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClaimDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmUTLUtility.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserSecurityDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserSecurityDataSet.xsd</DependentUpon>
+    </Compile>
+    <None Include="AnnotationDataSet.xsx">
+      <DependentUpon>AnnotationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="App.config" />
+    <None Include="ClaimDataset.xsc">
+      <DependentUpon>ClaimDataset.xsd</DependentUpon>
+    </None>
+    <None Include="ClaimDataset.xss">
+      <DependentUpon>ClaimDataset.xsd</DependentUpon>
+    </None>
+    <None Include="ClaimDataset.xsx">
+      <DependentUpon>ClaimDataset.xsd</DependentUpon>
+    </None>
+    <None Include="UserSecurityDataSet.xsx">
+      <DependentUpon>UserSecurityDataSet.xsd</DependentUpon>
+    </None>
+    <EmbeddedResource Include="frmUTLUtility.resx">
+      <DependentUpon>frmUTLUtility.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="My Project\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

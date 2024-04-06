@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="AnnotationsDataSet" targetNamespace="http://www.tempuri.org/AnnotationsDataSet.xsd"
+	xmlns:mstns="http://www.tempuri.org/AnnotationsDataSet.xsd" xmlns="http://www.tempuri.org/AnnotationsDataSet.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="AnnotationsDataSet" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="ANNOTATIONS">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ANNOTATION_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:decimal" />
+							<xs:element name="CLAIM_ID" type="xs:int" />
+							<xs:element name="FAMILY_ID" type="xs:int" />
+							<xs:element name="RELATION_ID" type="xs:int" />
+							<xs:element name="PART_SSN" type="xs:decimal" minOccurs="0" />
+							<xs:element name="PAT_SSN" type="xs:decimal" minOccurs="0" />
+							<xs:element name="PART_FNAME" type="xs:string" minOccurs="0" />
+							<xs:element name="PART_LNAME" type="xs:string" minOccurs="0" />
+							<xs:element name="PAT_FNAME" type="xs:string" minOccurs="0" />
+							<xs:element name="PAT_LNAME" type="xs:string" minOccurs="0" />
+							<xs:element name="ANNOTATION" type="xs:string" />
+							<xs:element name="FLAG" type="xs:base64Binary" minOccurs="0" />
+							<xs:element name="CREATE_USERID" type="xs:string" minOccurs="0" />
+							<xs:element name="CREATE_DATE" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="Icon" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

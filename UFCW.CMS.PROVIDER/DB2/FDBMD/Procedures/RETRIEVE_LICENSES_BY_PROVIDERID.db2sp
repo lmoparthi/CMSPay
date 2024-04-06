@@ -1,0 +1,58 @@
+-- <ScriptOptions statementSeparator="@"/>
+@
+-- <ScriptOptions errors="off"/>
+@
+-- Drop the procedure if one already exists
+DROP  PROCEDURE FDBMD.RETRIEVE_LICENSES_BY_PROVIDERID
+@
+COMMIT
+@
+-- <ScriptOptions errors="on"/>
+@
+-- Create procedure
+CREATE PROCEDURE FDBMD.RETRIEVE_LICENSES_BY_PROVIDERID(
+		IN	vPROVIDER_ID		INTEGER)
+	RESULT SETS 1
+	--LANGUAGE SQL
+	COLLID FODBCOLL
+	--WLM ENVIRONMENT WLMDENV4 
+	STAY RESIDENT YES
+	RUN OPTIONS ''
+--------------------------------------------------------------------------
+-- DB2 SQL procedure
+--------------------------------------------------------------------------
+
+P1: BEGIN
+
+-- Declare variables
+
+
+
+
+-- Declare cursors
+DECLARE LICENSES CURSOR WITH RETURN FOR 
+
+	SELECT	PROVIDER_LICENSE.LICENSE_ID,
+			PROVIDER_LICENSE.LICENSE,
+			PROVIDER_LICENSE.LICENSE_DESCRIPTION
+	FROM	FDBMD.PROVIDER PROVIDER	INNER JOIN
+			FDBMD.PROVIDER_LICENSE ON PROVIDER.PROVIDER_ID = PROVIDER_LICENSE.PROVIDER_ID
+	WHERE  (PROVIDER_LICENSE.PROVIDER_ID = vPROVIDER_ID)
+	AND		PROVIDER.ELECTRONIC_USE_ONLY_SW = 0
+	OPTIMIZE FOR 5 ROWS;
+
+--
+
+-- Cursor left open for client application.
+OPEN LICENSES;
+
+
+--
+
+END P1
+@
+-- <ScriptOptions WLMRefresh="WLMDENV4" />
+@
+-- Grant access privilages to procedure
+GRANT EXECUTE ON PROCEDURE FDBMD.RETRIEVE_LICENSES_BY_PROVIDERID TO PUBLIC
+@

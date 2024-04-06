@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HRABalanceDataGridStyle>
+  <ColumnCount>5</ColumnCount>
+  <RowHeadersVisible>False</RowHeadersVisible>
+  <GridLineStyle>False</GridLineStyle>
+  <Column>
+    <DefaultOrder>3</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>BALANCE</Mapping>
+    <HeaderText>HRA Balance</HeaderText>
+    <Type>Text</Type>
+    <Format>c</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>4</DefaultOrder>
+    <DefaultCharWidth>12</DefaultCharWidth>
+    <Mapping>EFFECTIVE_DATE</Mapping>
+    <HeaderText>Effective Date</HeaderText>
+    <Type>Text</Type>
+    <Format>MM/dd/yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>5</DefaultOrder>
+    <DefaultCharWidth>13</DefaultCharWidth>
+    <Mapping>EXPIRATION_DATE</Mapping>
+    <HeaderText>Expiration Date</HeaderText>
+    <Type>Text</Type>
+    <Format>MM/dd/yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+ </HRABalanceDataGridStyle>

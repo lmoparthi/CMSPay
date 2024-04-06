@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/System.ServiceModel" />
+  <xs:import namespace="UFCW.WCF.FileNet" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/System" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="Echo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="text" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EchoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EchoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Terminate">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TerminateResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FileNetDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.ServiceModel" minOccurs="0" name="faultException" nillable="true" type="q1:FaultExceptionOfFileNetWCFFaultWlkHP1cU" />
+        <xs:element minOccurs="0" name="fileNetUserID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fileNetPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="docID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FileNetDocumentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="UFCW.WCF.FileNet" minOccurs="0" name="FileNetDocumentResult" nillable="true" type="q2:FileNetDocumentProperties" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/System.ServiceModel" minOccurs="0" name="faultException" nillable="true" type="q3:FaultExceptionOfFileNetWCFFaultWlkHP1cU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SessionProperties">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/System.ServiceModel" minOccurs="0" name="faultException" nillable="true" type="q4:FaultExceptionOfFileNetWCFFaultWlkHP1cU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SessionPropertiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="UFCW.WCF.FileNet" minOccurs="0" name="SessionPropertiesResult" nillable="true" type="q5:FileNetSessionProperties" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/System.ServiceModel" minOccurs="0" name="faultException" nillable="true" type="q6:FaultExceptionOfFileNetWCFFaultWlkHP1cU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FileNetViewerProperties">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/System.ServiceModel" minOccurs="0" name="faultException" nillable="true" type="q7:FaultExceptionOfFileNetWCFFaultWlkHP1cU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FileNetViewerPropertiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="UFCW.WCF.FileNet" minOccurs="0" name="FileNetViewerPropertiesResult" nillable="true" type="q8:FileNetViewerProperties" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/System.ServiceModel" minOccurs="0" name="faultException" nillable="true" type="q9:FaultExceptionOfFileNetWCFFaultWlkHP1cU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Attach">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="UFCW.WCF.FileNet" minOccurs="0" name="subscribingProcess" nillable="true" type="q10:WCFProcessInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AttachResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Detach">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="UFCW.WCF.FileNet" minOccurs="0" name="unSubscribingProcess" nillable="true" type="q11:WCFProcessInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DetachResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Logon">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/System.ServiceModel" minOccurs="0" name="faultException" nillable="true" type="q12:FaultExceptionOfFileNetWCFFaultWlkHP1cU" />
+        <xs:element minOccurs="0" name="fileNetUserID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fileNetPassword" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="UFCW.WCF.FileNet" minOccurs="0" name="LogonResult" nillable="true" type="q13:FileNetSessionProperties" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/System.ServiceModel" minOccurs="0" name="faultException" nillable="true" type="q14:FaultExceptionOfFileNetWCFFaultWlkHP1cU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Logoff">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/System.ServiceModel" minOccurs="0" name="faultException" nillable="true" type="q15:FaultExceptionOfFileNetWCFFaultWlkHP1cU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogoffResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LogoffResult" type="xs:boolean" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/System.ServiceModel" minOccurs="0" name="faultException" nillable="true" type="q16:FaultExceptionOfFileNetWCFFaultWlkHP1cU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsVisible">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/System.ServiceModel" minOccurs="0" name="faultException" nillable="true" type="q17:FaultExceptionOfFileNetWCFFaultWlkHP1cU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsVisibleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsVisibleResult" type="xs:boolean" />
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/System.ServiceModel" minOccurs="0" name="faultException" nillable="true" type="q18:FaultExceptionOfFileNetWCFFaultWlkHP1cU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSSN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/System.ServiceModel" minOccurs="0" name="faultException" nillable="true" type="q19:FaultExceptionOfFileNetWCFFaultWlkHP1cU" />
+        <xs:element minOccurs="0" name="fileNetUserID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fileNetPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="docID" nillable="true" type="xs:long" />
+        <xs:element minOccurs="0" name="ssn" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="axSecurity" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="readSecurity" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="writeSecurity" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSSNResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateSSNResult" type="xs:boolean" />
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/System.ServiceModel" minOccurs="0" name="faultException" nillable="true" type="q20:FaultExceptionOfFileNetWCFFaultWlkHP1cU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DisplayDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/System.ServiceModel" minOccurs="0" name="faultException" nillable="true" type="q21:FaultExceptionOfFileNetWCFFaultWlkHP1cU" />
+        <xs:element minOccurs="0" name="fileNetUserID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fileNetPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="document" nillable="true" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DisplayDocumentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="UFCW.WCF.FileNet" minOccurs="0" name="DisplayDocumentResult" nillable="true" type="q22:FileNetDocumentProperties" />
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/System.ServiceModel" minOccurs="0" name="faultException" nillable="true" type="q23:FaultExceptionOfFileNetWCFFaultWlkHP1cU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DisplayDocumentByMaximID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/System.ServiceModel" minOccurs="0" name="faultException" nillable="true" type="q24:FaultExceptionOfFileNetWCFFaultWlkHP1cU" />
+        <xs:element minOccurs="0" name="fileNetUserID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fileNetPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="maximID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DisplayDocumentByMaximIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="UFCW.WCF.FileNet" minOccurs="0" name="DisplayDocumentByMaximIDResult" nillable="true" type="q25:FileNetDocumentProperties" />
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/System.ServiceModel" minOccurs="0" name="faultException" nillable="true" type="q26:FaultExceptionOfFileNetWCFFaultWlkHP1cU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Display">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/System.ServiceModel" minOccurs="0" name="faultException" nillable="true" type="q27:FaultExceptionOfFileNetWCFFaultWlkHP1cU" />
+        <xs:element minOccurs="0" name="fileNetUserID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fileNetPassword" nillable="true" type="xs:string" />
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="documents" nillable="true" type="q28:ArrayOfNullableOflong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DisplayResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/System.ServiceModel" minOccurs="0" name="faultException" nillable="true" type="q29:FaultExceptionOfFileNetWCFFaultWlkHP1cU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetTitleBar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/System.ServiceModel" minOccurs="0" name="faultException" nillable="true" type="q30:FaultExceptionOfFileNetWCFFaultWlkHP1cU" />
+        <xs:element minOccurs="0" name="titleBarText" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="docID" nillable="true" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetTitleBarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/System.ServiceModel" minOccurs="0" name="faultException" nillable="true" type="q31:FaultExceptionOfFileNetWCFFaultWlkHP1cU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTitleBar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/System.ServiceModel" minOccurs="0" name="faultException" nillable="true" type="q32:FaultExceptionOfFileNetWCFFaultWlkHP1cU" />
+        <xs:element minOccurs="0" name="docID" nillable="true" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTitleBarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetTitleBarResult" nillable="true" type="q33:ArrayOfstring" />
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/System.ServiceModel" minOccurs="0" name="faultException" nillable="true" type="q34:FaultExceptionOfFileNetWCFFaultWlkHP1cU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Show">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/System.ServiceModel" minOccurs="0" name="faultException" nillable="true" type="q35:FaultExceptionOfFileNetWCFFaultWlkHP1cU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ShowResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/System.ServiceModel" minOccurs="0" name="faultException" nillable="true" type="q36:FaultExceptionOfFileNetWCFFaultWlkHP1cU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Hide">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/System.ServiceModel" minOccurs="0" name="faultException" nillable="true" type="q37:FaultExceptionOfFileNetWCFFaultWlkHP1cU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HideResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/System.ServiceModel" minOccurs="0" name="faultException" nillable="true" type="q38:FaultExceptionOfFileNetWCFFaultWlkHP1cU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CloseImageWindow">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/System.ServiceModel" minOccurs="0" name="faultException" nillable="true" type="q39:FaultExceptionOfFileNetWCFFaultWlkHP1cU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CloseImageWindowResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/System.ServiceModel" minOccurs="0" name="faultException" nillable="true" type="q40:FaultExceptionOfFileNetWCFFaultWlkHP1cU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ClearImageWindow">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/System.ServiceModel" minOccurs="0" name="faultException" nillable="true" type="q41:FaultExceptionOfFileNetWCFFaultWlkHP1cU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ClearImageWindowResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/System.ServiceModel" minOccurs="0" name="faultException" nillable="true" type="q42:FaultExceptionOfFileNetWCFFaultWlkHP1cU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ServiceAsyncMethod">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="msg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ServiceAsyncMethodResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ServiceAsyncMethodResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

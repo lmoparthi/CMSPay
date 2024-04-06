@@ -1,0 +1,50 @@
+-- <ScriptOptions statementSeparator="@"/>
+@
+-- <ScriptOptions errors="off"/>
+@
+-- Drop the procedure if one already exists
+DROP  PROCEDURE FDBMD.RETRIEVE_PROVIDER_LICENSE_TYPES
+@
+COMMIT
+@
+-- <ScriptOptions errors="on"/>
+@
+-- Create procedure
+CREATE PROCEDURE FDBMD.RETRIEVE_PROVIDER_LICENSE_TYPES()
+	RESULT SETS 1
+	--LANGUAGE SQL
+	COLLID FODBCOLL
+	--WLM ENVIRONMENT WLMDENV4 STAY RESIDENT YES
+	RUN OPTIONS ''
+--------------------------------------------------------------------------
+-- DB2 SQL procedure
+--------------------------------------------------------------------------
+
+P1: BEGIN
+
+-- Declare variables
+
+
+
+
+-- Declare cursors
+DECLARE LICENSE_TYPES CURSOR WITH RETURN FOR 
+	
+	SELECT  *
+	FROM FDBMD.PROVIDER_LICENSE_TYPE PROVIDER_LICENSE_TYPE
+	OPTIMIZE FOR 50 ROWS
+	WITH UR;
+--
+
+-- Cursor left open for client application.
+OPEN LICENSE_TYPES;
+
+
+--
+END P1
+@
+-- <ScriptOptions WLMRefresh="WLMDENV4" />
+@
+-- Grant access privilages to procedure
+GRANT EXECUTE ON PROCEDURE FDBMD.RETRIEVE_PROVIDER_LICENSE_TYPES TO PUBLIC
+@

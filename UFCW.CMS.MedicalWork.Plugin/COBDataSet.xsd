@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="COBDataSet" targetNamespace="http://tempuri.org/COBDS.xsd" xmlns:mstns="http://tempuri.org/COBDS.xsd" xmlns="http://tempuri.org/COBDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="DB2QLOCConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="DB2QLOCConnectionString (MySettings)" PropertyReference="ApplicationSettings.UFCW.CMS.UI.My.MySettings.GlobalReference.Default.DB2QLOCConnectionString" Provider="IBM.Data.DB2" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="COBDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msdata:EnforceConstraints="False" msprop:Generator_DataSetName="COBDataSet" msprop:Generator_UserDSName="COBDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PAYER_VALUES" msprop:Generator_UserTableName="PAYER_VALUES" msprop:Generator_RowEvArgName="PAYER_VALUESRowChangeEvent" msprop:Generator_TableVarName="tablePAYER_VALUES" msprop:Generator_TablePropName="PAYER_VALUES" msprop:Generator_RowDeletingName="PAYER_VALUESRowDeleting" msprop:Generator_RowChangingName="PAYER_VALUESRowChanging" msprop:Generator_RowDeletedName="PAYER_VALUESRowDeleted" msprop:Generator_RowEvHandlerName="PAYER_VALUESRowChangeEventHandler" msprop:Generator_TableClassName="PAYER_VALUESDataTable" msprop:Generator_RowChangedName="PAYER_VALUESRowChanged" msprop:Generator_RowClassName="PAYER_VALUESRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PAYER_ID" msprop:Generator_ColumnVarNameInTable="columnPAYER_ID" msprop:Generator_ColumnPropNameInRow="PAYER_ID" msprop:Generator_ColumnPropNameInTable="PAYER_IDColumn" msprop:Generator_UserColumnName="PAYER_ID" type="xs:int" />
+              <xs:element name="PAYER" msprop:Generator_ColumnVarNameInTable="columnPAYER" msprop:Generator_ColumnPropNameInRow="PAYER" msprop:Generator_ColumnPropNameInTable="PAYERColumn" msprop:Generator_UserColumnName="PAYER" type="xs:string" />
+              <xs:element name="PAYER_NAME" msprop:Generator_ColumnVarNameInTable="columnPAYER_NAME" msprop:Generator_ColumnPropNameInRow="PAYER_NAME" msprop:Generator_ColumnPropNameInTable="PAYER_NAMEColumn" msprop:Generator_UserColumnName="PAYER_NAME" type="xs:string" />
+              <xs:element name="STATES" msprop:Generator_ColumnVarNameInTable="columnSTATES" msprop:Generator_ColumnPropNameInRow="STATES" msprop:Generator_ColumnPropNameInTable="STATESColumn" msprop:Generator_UserColumnName="STATES" type="xs:string" />
+              <xs:element name="PAYER_ABBREV" msprop:Generator_ColumnVarNameInTable="columnPAYER_ABBREV" msprop:Generator_ColumnPropNameInRow="PAYER_ABBREV" msprop:Generator_ColumnPropNameInTable="PAYER_ABBREVColumn" msprop:Generator_UserColumnName="PAYER_ABBREV" type="xs:string" />
+              <xs:element name="PAYER_TYPE" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="PAYER_TYPE" msprop:Generator_ColumnVarNameInTable="columnPAYER_TYPE" msprop:Generator_ColumnPropNameInTable="PAYER_TYPEColumn" msprop:Generator_UserColumnName="PAYER_TYPE" type="xs:string" />
+              <xs:element name="CREATE_USERID" msprop:Generator_ColumnVarNameInTable="columnCREATE_USERID" msprop:Generator_ColumnPropNameInRow="CREATE_USERID" msprop:Generator_ColumnPropNameInTable="CREATE_USERIDColumn" msprop:Generator_UserColumnName="CREATE_USERID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CREATE_DATE" msprop:Generator_ColumnVarNameInTable="columnCREATE_DATE" msprop:Generator_ColumnPropNameInRow="CREATE_DATE" msprop:Generator_ColumnPropNameInTable="CREATE_DATEColumn" msprop:Generator_UserColumnName="CREATE_DATE" type="xs:dateTime" />
+              <xs:element name="USERID" msprop:Generator_ColumnVarNameInTable="columnUSERID" msprop:Generator_ColumnPropNameInRow="USERID" msprop:Generator_ColumnPropNameInTable="USERIDColumn" msprop:Generator_UserColumnName="USERID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LASTUPDT" msprop:Generator_ColumnVarNameInTable="columnLASTUPDT" msprop:Generator_ColumnPropNameInRow="LASTUPDT" msprop:Generator_ColumnPropNameInTable="LASTUPDTColumn" msprop:Generator_UserColumnName="LASTUPDT" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RELATIONSHIP_VALUES" msprop:Generator_UserTableName="RELATIONSHIP_VALUES" msprop:Generator_RowEvArgName="RELATIONSHIP_VALUESRowChangeEvent" msprop:Generator_TableVarName="tableRELATIONSHIP_VALUES" msprop:Generator_TablePropName="RELATIONSHIP_VALUES" msprop:Generator_RowDeletingName="RELATIONSHIP_VALUESRowDeleting" msprop:Generator_RowChangingName="RELATIONSHIP_VALUESRowChanging" msprop:Generator_RowDeletedName="RELATIONSHIP_VALUESRowDeleted" msprop:Generator_RowEvHandlerName="RELATIONSHIP_VALUESRowChangeEventHandler" msprop:Generator_TableClassName="RELATIONSHIP_VALUESDataTable" msprop:Generator_RowChangedName="RELATIONSHIP_VALUESRowChanged" msprop:Generator_RowClassName="RELATIONSHIP_VALUESRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RELATIONSHIP_VALUE" msprop:Generator_ColumnVarNameInTable="columnRELATIONSHIP_VALUE" msprop:Generator_ColumnPropNameInRow="RELATIONSHIP_VALUE" msprop:Generator_ColumnPropNameInTable="RELATIONSHIP_VALUEColumn" msprop:Generator_UserColumnName="RELATIONSHIP_VALUE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESCRIPTION" msprop:Generator_ColumnVarNameInTable="columnDESCRIPTION" msprop:Generator_ColumnPropNameInRow="DESCRIPTION" msprop:Generator_ColumnPropNameInTable="DESCRIPTIONColumn" msprop:Generator_UserColumnName="DESCRIPTION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CREATE_USERID" msprop:Generator_ColumnVarNameInTable="columnCREATE_USERID" msprop:Generator_ColumnPropNameInRow="CREATE_USERID" msprop:Generator_ColumnPropNameInTable="CREATE_USERIDColumn" msprop:Generator_UserColumnName="CREATE_USERID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CREATE_DATE" msprop:Generator_ColumnVarNameInTable="columnCREATE_DATE" msprop:Generator_ColumnPropNameInRow="CREATE_DATE" msprop:Generator_ColumnPropNameInTable="CREATE_DATEColumn" msprop:Generator_UserColumnName="CREATE_DATE" type="xs:dateTime" />
+              <xs:element name="USERID" msprop:Generator_ColumnVarNameInTable="columnUSERID" msprop:Generator_ColumnPropNameInRow="USERID" msprop:Generator_ColumnPropNameInTable="USERIDColumn" msprop:Generator_UserColumnName="USERID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LASTUPDT" msprop:Generator_ColumnVarNameInTable="columnLASTUPDT" msprop:Generator_ColumnPropNameInRow="LASTUPDT" msprop:Generator_ColumnPropNameInTable="LASTUPDTColumn" msprop:Generator_UserColumnName="LASTUPDT" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PAYER_VALUES" />
+      <xs:field xpath="mstns:PAYER_ID" />
+    </xs:unique>
+    <xs:unique name="RELATIONSHIP_VALUES_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:RELATIONSHIP_VALUES" />
+      <xs:field xpath="mstns:RELATIONSHIP_VALUE" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

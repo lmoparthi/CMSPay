@@ -1,0 +1,10 @@
+﻿https://learn.microsoft.com/en-us/azure/devops/artifacts/get-started-nuget?view=azure-devops&tabs=windows
+
+Make sure you have Nuget.exe installed to path used in commands
+Change Name & version as needed
+
+Tools\Command Line\Developer Command Prompt
+c:\NuGet\nuget spec ImageSelector.vbproj   
+
+c:\NuGet\nuget pack ImageSelector.vbproj -Properties Configuration=Release  
+c:\NuGet\nuget push ImageSelector.1.5.48.18478.nupkg -src http://ufcwdevops/SCUFCWFunds/FundApps/_packaging/UFCWNuGetPackages/nuget/v3/index.json -ApiKey ImageSelector

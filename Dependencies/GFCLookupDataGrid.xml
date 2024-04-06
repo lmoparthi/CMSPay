@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GFCLookupDataGridStyle>
+  <ColumnCount>26</ColumnCount>
+  <GridLineStyle>False</GridLineStyle>
+  <Column>
+    <DefaultOrder>26</DefaultOrder>
+    <DefaultCharWidth>20</DefaultCharWidth>
+    <Mapping>GFC</Mapping>
+    <HeaderText>Generic Formulation Code</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>26</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>GFCMASTERCODE</Mapping>
+    <HeaderText>Generic Formulation Master Code</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>26</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>GCRCODE</Mapping>
+    <HeaderText>Generic Cross Reference Code</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>26</DefaultOrder>
+    <DefaultCharWidth>19</DefaultCharWidth>
+    <Mapping>FORMCODE</Mapping>
+    <HeaderText>Generic Cross Form Code</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>26</DefaultOrder>
+    <DefaultCharWidth>28</DefaultCharWidth>
+    <Mapping>STRENGTHCODE</Mapping>
+    <HeaderText>Generic Cross Reference Strength Code</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>26</DefaultOrder>
+    <DefaultCharWidth>26</DefaultCharWidth>
+    <Mapping>ROACODE</Mapping>
+    <HeaderText>Generic Cross Reference ROA Code</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>26</DefaultOrder>
+    <DefaultCharWidth>27</DefaultCharWidth>
+    <Mapping>GFCDEACT</Mapping>
+    <HeaderText>Generic Cross Reference Deactivated</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+</GFCLookupDataGridStyle>

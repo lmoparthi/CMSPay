@@ -1,0 +1,816 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{91E97FD9-347B-43F0-92A5-BD1B746C59C9}</ProjectGuid>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>UFCW.CMS.CustomerServiceControl</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>On</OptionStrict>
+    <RootNamespace>
+    </RootNamespace>
+    <StartupObject>UFCW.CMS.CustomerServiceControl.%28None%29</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <MyType>Windows</MyType>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <PublishUrl>http://localhost/UFCW.CMS.CustomerServiceControl/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>UFCW.CMS.CustomerServiceControl.xml</DocumentationFile>
+    <BaseAddress>188678144</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>CMSCanAudit=False,CMSCanAdjudicateEmployee=False,CMSCanAccessLocalsEmployee=False,CMSCanReprocess=False,CMSCanRemovePricing=False,CMSUTL=False,CMSCanOverrideAccumulators=False,CMSCanPickWork=False, CMSUsers=False, CMSLocals=True, CMSEligibility=False, CMSEligibilityEmployee=False, CMSHRA=False</DefineConstants>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>false</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>40028,40031,42030,42104,42105,42106,42107,42108,42109,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>UFCW.CMS.CustomerServiceControl.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>false</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>40028,40031,42030,42104,42105,42106,42107,42108,42109,42353,42354,42355</NoWarn>
+    <DebugType>Full</DebugType>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DebugAll|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>UFCW.CMS.CustomerServiceControl.xml</DocumentationFile>
+    <BaseAddress>188678144</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>CMSCanAudit=False,CMSCanAdjudicateEmployee=False,CMSCanAccessLocalsEmployee=False,CMSLocals=False,CMSCanReprocess=False,CMSCanRemovePricing=False,CMSUTL=False,CMSCanOverrideAccumulators=False,CMSCanPickWork=False, CMSUsers=False, CMSEligibility=True, CMSEligibilityEmployee=True, CMSHRA=True</DefineConstants>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>40028,40031,42030,42104,42105,42106,42107,42108,42109,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DebugZ|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\DebugZ\</OutputPath>
+    <DefineConstants>CMSCanAudit=False,CMSCanAdjudicateEmployee=False,CMSCanAccessLocalsEmployee=False,CMSCanReprocess=False,CMSCanRemovePricing=False,CMSUTL=False,CMSCanOverrideAccumulators=False,CMSCanPickWork=False, CMSUsers=False, CMSLocals=True, CMSEligibility=False, CMSEligibilityEmployee=False, CMSHRA=False</DefineConstants>
+    <BaseAddress>188678144</BaseAddress>
+    <DocumentationFile>UFCW.CMS.CustomerServiceControl.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>40028,40031,42030,42104,42105,42106,42107,42108,42109,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugLocals|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugLocals\</OutputPath>
+    <DefineConstants>CMSCanAudit=False,CMSCanAdjudicateEmployee=False,CMSCanAccessLocalsEmployee=False,CMSCanReprocess=False,CMSCanRemovePricing=False,CMSUTL=False,CMSCanOverrideAccumulators=False,CMSCanPickWork=False, CMSUsers=False, CMSLocals=True, CMSEligibility=False, CMSEligibilityEmployee=False, CMSHRA=False</DefineConstants>
+    <BaseAddress>188678144</BaseAddress>
+    <DocumentationFile>UFCW.CMS.CustomerServiceControl.xml</DocumentationFile>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>40028,40031,42030,42104,42105,42106,42107,42108,42109,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <CodeAnalysisRuleSet>..\..\..\BaseMSRulesminusGlobalization.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\DataGridPlus\DataGridPlus.vbproj">
+      <Project>{ee57884b-70a4-4f52-b418-e9f0a76f6473}</Project>
+      <Name>DataGridPlus</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\FileNet\FileNetWCFWrapper\FileNetWCFWrapper\FileNetWCFWrapper.vbproj">
+      <Project>{4a970b6c-cb67-42d6-9bd1-bb02d1b12eb2}</Project>
+      <Name>FileNetWCFWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\UFCW.RegMaster\UFCW.REGMASTER.CoverageHistory\UFCW.REGMASTER.CoverageHistory.vbproj">
+      <Project>{b75234a9-5c96-4050-8a29-ce01a7142a67}</Project>
+      <Name>UFCW.REGMASTER.CoverageHistory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\UFCW.RegMaster\UFCW.REGMASTER.RemarksControl\UFCW.REGMASTER.RemarksControl.vbproj">
+      <Project>{990eacdf-1b8e-4750-93dc-9adfe6c4bc3b}</Project>
+      <Name>UFCW.REGMASTER.RemarksControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\UFCW.RegMaster\UFCW.RegMasterDAL\UFCW.RegMasterDAL.vbproj">
+      <Project>{1db1fa39-8a5c-4dee-a47b-5dec11912a6d}</Project>
+      <Name>UFCW.RegMasterDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\UFCWGeneral\UFCWGeneral.vbproj">
+      <Project>{ecc7a924-2f43-4816-ad73-314611f04177}</Project>
+      <Name>UFCWGeneral</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\UFCW.CMS.AccumulatorControl\UFCW.CMS.AccumulatorControl.vbproj">
+      <Project>{09a3bba0-6778-4917-93bd-fbe7ecada82f}</Project>
+      <Name>UFCW.CMS.AccumulatorControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\UFCW.CMS.ACCUMULATOR\UFCW.CMS.Accumulator.vbproj">
+      <Project>{07cd7164-bacc-4d1c-b4b3-bbfc9098854c}</Project>
+      <Name>UFCW.CMS.Accumulator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\UFCW.CMS.ANNOTATION\UFCW.CMS.AnnotationEditor.vbproj">
+      <Project>{cc556172-0e56-4814-b79e-4abdeddc6962}</Project>
+      <Name>UFCW.CMS.AnnotationEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\UFCW.CMS.CLAIMDOCUMENTHISTORY\UFCW.CMS.ClaimDocumentHistory.vbproj">
+      <Project>{20758691-f241-4692-8eec-2e56ad35ab7a}</Project>
+      <Name>UFCW.CMS.ClaimDocumentHistory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\UFCW.CMS.COB\UFCW.CMS.COBControl.vbproj">
+      <Project>{90e050e2-c922-4b0a-b2b7-68927ab32d45}</Project>
+      <Name>UFCW.CMS.COBControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\UFCW.CMS.DAL\UFCW.CMS.DAL.vbproj">
+      <Project>{378ef1dc-a863-4262-94ef-43a7a1d92de6}</Project>
+      <Name>UFCW.CMS.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\UFCW.CMS.ELIGIBILITY\UFCW.CMS.Eligibility.vbproj">
+      <Project>{0f8183dc-dd91-493d-bba7-fe504634706d}</Project>
+      <Name>UFCW.CMS.Eligibility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\UFCW.CMS.FREETEXT\UFCW.CMS.FreeText.vbproj">
+      <Project>{b7416cb4-0dbf-42fc-9674-f8f608e4ca0d}</Project>
+      <Name>UFCW.CMS.FreeText</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\UFCW.CMS.GridExport\UFCW.CMS.GridExport.vbproj">
+      <Project>{c2245d59-4db8-4694-9683-08f07acfe020}</Project>
+      <Name>UFCW.CMS.GridExport</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\UFCW.CMS.HistoryViewer\UFCW.CMS.HistoryViewer.vbproj">
+      <Project>{6300b8b3-f47f-4f36-88f9-2ee61dd87bff}</Project>
+      <Name>UFCW.CMS.HistoryViewer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\UFCW.CMS.Hours\UFCW.CMS.Hours.vbproj">
+      <Project>{48334597-8c66-4eb3-ba30-bbcb9cf7c2cd}</Project>
+      <Name>UFCW.CMS.Hours</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\UFCW.CMS.HRA\UFCW.CMS.HRAControl\UFCW.CMS.HRAControl.vbproj">
+      <Project>{6f97f91e-05ad-4377-8570-0f6db3cc8907}</Project>
+      <Name>UFCW.CMS.HRAControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\UFCW.CMS.LETTERS\UFCW.CMS.LETTERS\UFCW.CMS.LETTERSCONTROL\UFCW.CMS.LETTERSControl.vbproj">
+      <Project>{d99b4249-84c5-404a-abad-70a50169617b}</Project>
+      <Name>UFCW.CMS.LETTERSControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\UFCW.CMS.MemberSearch\UFCW.CMS.MemberSearch.vbproj">
+      <Project>{31e67307-7ef5-48ae-a463-b54091160658}</Project>
+      <Name>UFCW.CMS.MemberSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\UFCW.CMS.PARTICIPANTControl\UFCW.CMS.PARTICIPANTControl.vbproj">
+      <Project>{3db36492-39f1-45e0-a759-f6d585f1dd54}</Project>
+      <Name>UFCW.CMS.PARTICIPANTControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\UFCW.CMS.PLAN\UFCW.CMS.Plan.vbproj">
+      <Project>{08d607b7-37d0-4e90-b6f9-8c62b7f8545d}</Project>
+      <Name>UFCW.CMS.Plan</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\UFCW.CMS.PremiumsControl\UFCW.CMS.PremiumsControl.vbproj">
+      <Project>{46a5bf5f-415e-4810-8bf3-ba81a606f91c}</Project>
+      <Name>UFCW.CMS.PremiumsControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\UFCW.CMS.Prescriptions\UFCW.CMS.Prescriptions.vbproj">
+      <Project>{7ce67568-daff-4264-823e-2f4508d49671}</Project>
+      <Name>UFCW.CMS.Prescriptions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\UFCW.CMS.PROVIDER\PROVIDERCONTROL\UFCW.CMS.ProviderControl.vbproj">
+      <Project>{4d4ca6ee-6ee8-42fd-a68d-eeb934d228bc}</Project>
+      <Name>UFCW.CMS.ProviderControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\UFCW.CMS.UFCWDocs\UFCW.CMS.UFCWDocs.vbproj">
+      <Project>{0955d9c0-99c6-4ac6-b475-d13de7fdd911}</Project>
+      <Name>UFCW.CMS.UFCWDocs</Name>
+    </ProjectReference>
+    <Reference Include="DDTek.Data.Common, Version=4.2.0.0, Culture=neutral, PublicKeyToken=c84cd5c63851e072, processorArchitecture=MSIL" />
+    <Reference Include="DDTek.DB2, Version=4.2.0.0, Culture=neutral, PublicKeyToken=c84cd5c63851e072, processorArchitecture=MSIL" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Discovery" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccumulatorView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlertsHistoryViewerForm.Designer.vb">
+      <DependentUpon>AlertsHistoryViewerForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AlertsHistoryViewerForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AuditDetailsControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BillTypeLookup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BillTypeValuesDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BillTypeValuesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BillTypeValuesDataSet.vb">
+      <DependentUpon>BillTypeValuesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClaimDataset.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClaimDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClaimDataset.vb">
+      <DependentUpon>ClaimDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ContactInfoViewerForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DCNListLookup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiagnosisCodesForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProcedureCodesForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientDiseaseManagement.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientEligibilityViewerForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FamilySummaryRemarksViewerForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerServiceControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LifeEventsViewerForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtendedCheckedListBox.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProviderLookUpForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NDCValuesDataSet.Designer.vb">
+      <DependentUpon>NDCValuesDataSet.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="NDCLookup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiagnosisCodeLookupForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiagnosisValuesDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DiagnosisValuesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FamilyChooser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FamilyList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FreeTextForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClaimsHistoryViewerForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LineDetailsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LineReasons.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifierLookup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifierValuesDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModifierValuesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NDCValuesDataSet.vb">
+      <DependentUpon>NDCValuesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PlaceOfServiceLookup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlaceofServiceValuesDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PlaceofServiceValuesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PlaceofServiceValuesDataSet.vb">
+      <DependentUpon>PlaceofServiceValuesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProcCodesDataSet.vb">
+      <SubType>code</SubType>
+    </Compile>
+    <Compile Include="ProcedureCodeLookupForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientLookUpForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReasonLookup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReasonValuesDataSet.Designer.vb">
+      <DependentUpon>ReasonValuesDataSet.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Content Include="AlertDataGrid.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DiseaseManagementAlertsDataGrid.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ContactInfoAddressDataGrid.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CandidateFileDataGrid.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DNPDataGrid.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IncentiveViewDataGrid.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DistinctFamilyListDataGrid.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DisincentiveLettersDataGrid.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DiagnosisCodesDataGrid.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ProcedureCodesLookupDataGrid.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\CollapseRibbon.JPG" />
+    <Content Include="Resources\ExpandRibbon.jpg" />
+    <EmbeddedResource Include="AccumulatorView.resx">
+      <DependentUpon>AccumulatorView.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlertsHistoryViewerForm.resx">
+      <DependentUpon>AlertsHistoryViewerForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuditDetailsControl.resx">
+      <DependentUpon>AuditDetailsControl.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BillTypeLookup.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BillTypeLookup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactInfoViewerForm.resx">
+      <DependentUpon>ContactInfoViewerForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DCNListLookup.resx">
+      <DependentUpon>DCNListLookup.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiagnosisCodesForm.resx">
+      <DependentUpon>DiagnosisCodesForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProcedureCodesForm.resx">
+      <DependentUpon>ProcedureCodesForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientDiseaseManagement.resx">
+      <DependentUpon>PatientDiseaseManagement.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientEligibilityViewerForm.resx">
+      <DependentUpon>PatientEligibilityViewerForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FamilySummaryRemarksViewerForm.resx">
+      <DependentUpon>FamilySummaryRemarksViewerForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerServiceControl.resx">
+      <DependentUpon>CustomerServiceControl.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LifeEventsViewerForm.resx">
+      <DependentUpon>LifeEventsViewerForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProviderLookUpForm.resx">
+      <DependentUpon>ProviderLookUpForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NDCLookup.resx">
+      <DependentUpon>NDCLookup.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerServiceControl.bmp" />
+    <EmbeddedResource Include="DiagnosisCodeLookupForm.resx">
+      <DependentUpon>DiagnosisCodeLookupForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FamilyChooser.resx">
+      <DependentUpon>FamilyChooser.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FamilyList.resx">
+      <DependentUpon>FamilyList.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FreeTextForm.resx">
+      <DependentUpon>FreeTextForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClaimsHistoryViewerForm.resx">
+      <DependentUpon>ClaimsHistoryViewerForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LineDetailsForm.resx">
+      <DependentUpon>LineDetailsForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LineReasons.resx">
+      <DependentUpon>LineReasons.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifierLookup.resx">
+      <DependentUpon>ModifierLookup.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlaceOfServiceLookup.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PlaceOfServiceLookup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProcedureCodeLookupForm.resx">
+      <DependentUpon>ProcedureCodeLookupForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientLookUpForm.resx">
+      <DependentUpon>PatientLookUpForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="BillTypeDataGrid.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ContactInfoEmailDataGrid.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LifeEventsDataGrid.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LineDetailDataGrid.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="FamilyListDataGrid.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ContactInfoPhoneDataGrid.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ProcedureCodesDataGrid.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DiagnosisCodesLookupDataGrid.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ModifierDataGrid.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PlaceOfServiceDataGrid.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LBLY2KLookupDataGrid.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GFCLookupDataGrid.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="NDCLookupDataGrid.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CustomerServiceResultsDataGrid.xml">
+      <SubType>Code</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CustomerServiceDemographicsDataGrid.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DiagnosisValuesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DiagnosisValuesDataSet.Designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="ModifierValuesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>ModifierValuesDataSet.Designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="ProcCodesDataSet.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <EmbeddedResource Include="ReasonLookup.resx">
+      <DependentUpon>ReasonLookup.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="BillTypeValuesDataSet.xsc">
+      <DependentUpon>BillTypeValuesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BillTypeValuesDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BillTypeValuesDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="BillTypeValuesDataSet.xss">
+      <DependentUpon>BillTypeValuesDataSet.xsd</DependentUpon>
+    </None>
+    <Content Include="ClaimDataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>ClaimDataset.Designer.vb</LastGenOutput>
+    </Content>
+    <None Include="ClaimDataset.xsc">
+      <DependentUpon>ClaimDataset.xsd</DependentUpon>
+    </None>
+    <None Include="ClaimDataset.xss">
+      <DependentUpon>ClaimDataset.xsd</DependentUpon>
+    </None>
+    <None Include="ClaimDataset.xsx">
+      <DependentUpon>ClaimDataset.xsd</DependentUpon>
+    </None>
+    <Content Include="NDCValuesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NDCValuesDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="NDCValuesDataSet.xsc">
+      <DependentUpon>NDCValuesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="NDCValuesDataSet.xss">
+      <DependentUpon>NDCValuesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="NDCValuesDataSet.xsx">
+      <DependentUpon>NDCValuesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DiagnosisValuesDataSet.xsc">
+      <DependentUpon>DiagnosisValuesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DiagnosisValuesDataSet.xss">
+      <DependentUpon>DiagnosisValuesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DiagnosisValuesDataSet.xsx">
+      <DependentUpon>DiagnosisValuesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ModifierValuesDataSet.xsc">
+      <DependentUpon>ModifierValuesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ModifierValuesDataSet.xss">
+      <DependentUpon>ModifierValuesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ModifierValuesDataSet.xsx">
+      <DependentUpon>ModifierValuesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PlaceofServiceValuesDataSet.xsc">
+      <DependentUpon>PlaceofServiceValuesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PlaceofServiceValuesDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PlaceofServiceValuesDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="PlaceofServiceValuesDataSet.xss">
+      <DependentUpon>PlaceofServiceValuesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProcCodesDataSet.xsc">
+      <DependentUpon>ProcCodesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProcCodesDataSet.xss">
+      <DependentUpon>ProcCodesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProcCodesDataSet.xsx">
+      <DependentUpon>ProcCodesDataSet.xsd</DependentUpon>
+    </None>
+    <Content Include="ReasonValuesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReasonValuesDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="ReasonValuesDataSet.xsc">
+      <DependentUpon>ReasonValuesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ReasonValuesDataSet.xss">
+      <DependentUpon>ReasonValuesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ReasonValuesDataSet.xsx">
+      <DependentUpon>ReasonValuesDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="My Project\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CommonServiceLocator">
+      <Version>2.0.6</Version>
+    </PackageReference>
+    <PackageReference Include="DocumentFormat.OpenXml">
+      <Version>2.13.0</Version>
+    </PackageReference>
+    <PackageReference Include="EnterpriseLibrary.Common">
+      <Version>6.0.1304</Version>
+    </PackageReference>
+    <PackageReference Include="EnterpriseLibrary.Data">
+      <Version>6.0.1304</Version>
+    </PackageReference>
+    <PackageReference Include="EnterpriseLibrary.ExceptionHandling">
+      <Version>6.0.1304</Version>
+    </PackageReference>
+    <PackageReference Include="EnterpriseLibrary.ExceptionHandling.Logging">
+      <Version>6.0.1304</Version>
+    </PackageReference>
+    <PackageReference Include="EnterpriseLibrary.Logging">
+      <Version>6.0.1304</Version>
+    </PackageReference>
+    <PackageReference Include="EnterpriseLibrary.Security.Cryptography">
+      <Version>5.0.505</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers">
+      <Version>5.0.3</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Office.Interop.Excel">
+      <Version>15.0.4795.1000</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties Viade-Afterburner-Debug="DisposeMonitoring=True|DeadlockDetection=False|DeadlockPrediction=False|ThreadsMap=False" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

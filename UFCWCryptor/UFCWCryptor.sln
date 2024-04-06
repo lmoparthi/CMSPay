@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32126.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "UFCWCryptor", "UFCWCryptor.vbproj", "{610BAB67-27D6-4E6D-B4B3-90769FD1EB84}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{610BAB67-27D6-4E6D-B4B3-90769FD1EB84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{610BAB67-27D6-4E6D-B4B3-90769FD1EB84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{610BAB67-27D6-4E6D-B4B3-90769FD1EB84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{610BAB67-27D6-4E6D-B4B3-90769FD1EB84}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A7F825F8-494E-4C6E-80C6-F46246C057FE}
+	EndGlobalSection
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 1
+		SccProjectUniqueName0 = UFCWCryptor.vbproj
+		SccProjectName0 = \u0022$/Cryptor\u0022,\u0020FFCAAAAA
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+	EndGlobalSection
+EndGlobal

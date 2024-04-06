@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProviderDataGridStyle>
+  <ColumnCount>2</ColumnCount>
+  <Column>
+    <DefaultOrder>1</DefaultOrder>
+    <DefaultCharWidth>11</DefaultCharWidth>
+    <Mapping>LICENSE</Mapping>
+    <HeaderText>License</HeaderText>
+    <Format>UPPER</Format>
+    <NullText>
+    </NullText>
+    <MaxLength>10</MaxLength>
+  </Column>
+  <Column>
+    <DefaultOrder>2</DefaultOrder>
+    <DefaultCharWidth>50</DefaultCharWidth>
+    <Mapping>LICENSE_DESCRIPTION</Mapping>
+    <HeaderText>License Description</HeaderText>
+    <Format>LicenseCharacterMask</Format>
+    <NullText></NullText>
+    <MaxLength>50</MaxLength>
+  </Column>
+</ProviderDataGridStyle>

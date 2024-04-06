@@ -1,0 +1,72 @@
+-- <ScriptOptions statementSeparator="@"/>
+@
+-- <ScriptOptions errors="off"/>
+@
+-- Drop the procedure if one already exists
+DROP  PROCEDURE FDBMD.COUNT_PROVIDER_MATCH
+@
+COMMIT
+@
+-- <ScriptOptions errors="on"/>
+@
+-- Create procedure
+CREATE PROCEDURE FDBMD.COUNT_PROVIDER_MATCH(
+		IN	vPROVIDER_ID		INTEGER,
+		IN	vTAXID				INTEGER,
+		IN	vNPI				DECIMAL ( 10,0 ),
+		OUT	vMATCH_COUNT		INTEGER)
+	RESULT SETS 1
+	--LANGUAGE SQL
+	COLLID FODBCOLL
+	--WLM ENVIRONMENT WLMDENV4 STAY RESIDENT YES
+	RUN OPTIONS ''
+--------------------------------------------------------------------------
+-- DB2 SQL procedure
+--------------------------------------------------------------------------
+
+P1: BEGIN
+
+DECLARE vNPI_COUNT INTEGER;
+DECLARE vTAXID_COUNT INTEGER;
+DECLARE vPROVIDER_COUNT INTEGER;
+-- Declare variables
+
+
+
+IF vNPI IS NOT NULL THEN
+
+	SELECT  COUNT(*)
+	INTO	vNPI_COUNT 
+	FROM	FDBMD.PROVIDER PROVIDER
+	WHERE	PROVIDER.NPI = vNPI;
+
+END IF;
+
+IF vTAXID IS NOT NULL THEN
+
+	SELECT  COUNT(*)
+	INTO	vTAXID_COUNT 
+	FROM	FDBMD.PROVIDER PROVIDER
+	WHERE	PROVIDER.TAXID = vTAXID;
+
+END IF;
+
+IF vPROVIDER_ID IS NOT NULL THEN
+
+	SELECT  COUNT(*)
+	INTO	vPROVIDER_COUNT 
+	FROM	FDBMD.PROVIDER PROVIDER
+	WHERE	PROVIDER.PROVIDER_ID = vPROVIDER_ID;
+
+END IF;
+
+SET vMATCH_COUNT = vNPI_COUNT + vTAXID_COUNT + vPROVIDER_COUNT;
+--
+
+END P1
+@
+-- <ScriptOptions WLMRefresh="WLMDENV4" />
+@
+-- Grant access privilages to procedure
+GRANT EXECUTE ON PROCEDURE FDBMD.COUNT_PROVIDER_MATCH TO PUBLIC
+@

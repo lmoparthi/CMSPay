@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <xs:schema id="root" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="root" msdata:IsDataSet="true">
+      <xs:complexType>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="data">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+                <xs:element name="comment" type="xs:string" minOccurs="0" msdata:Ordinal="2" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xs:string" />
+              <xs:attribute name="type" type="xs:string" />
+              <xs:attribute name="mimetype" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="resheader">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xs:string" use="required" />
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <data name="EventProcessedMessage">
+    <value>The event with ID {0} has been processed by the Logging Application Block.</value>
+    <comment> For localizers and UE (These comments will be seen in LocStudio).
+ Parameters: 0 - id (int) </comment>
+  </data>
+  <data name="DefaultCategoryMessage">
+    <value>The category "General" sends log information to the event log by default. Please go to event viewer to see if the information was logged.</value>
+  </data>
+  <data name="TracingCategoryMessage">
+    <value>The category "Trace" sends log information to the file {0} by default. Please examine this file to see if the information was logged.</value>
+    <comment>.
+ Parameters: 0 - filename (string) </comment>
+  </data>
+  <data name="InvalidDataMessage">
+    <value>You have entered some invalid information. Please correct the following before proceeding:
+
+</value>
+  </data>
+  <data name="InvalidEventIDMessage">
+    <value>Event ID must be numeric
+</value>
+  </data>
+  <data name="InvalidPriorityMessage">
+    <value>Priority must be numeric
+</value>
+  </data>
+  <data name="InvalidCategoryMessage">
+    <value>A category is required</value>
+  </data>
+  <data name="QuickStartTitleMessage">
+    <value>Logging Application Block Quick Start</value>
+  </data>
+  <data name="LogEventStartMessage">
+    <value>The following information will be submitted to the Logging Application Block:
+	Event ID: {0}
+	MessageD: {1}
+	Category: {2}
+	Priority: {3}</value>
+    <comment>.
+ Parameters: 0 - eventId (int), 1 - msg (string), 2 - cat (string), 3 - pri (int) </comment>
+  </data>
+  <data name="TraceStartMessage">
+    <value>The Quick Start is using the Tracer class to trace activities and log context information. The following call stack will be traced:
+    
+    traceButton_Click
+        DoDataAccess
+            DoTroubleshooting
+    </value>
+  </data>
+  <data name="TraceDoneMessage">
+    <value>The Quick Start has finished executing the tracing scenario. The default configuration of the Quick Starts sends the trace messages to the the flat file sink and logs the troubleshooting message to the event log. Please examine the file {0} for the trace information.</value>
+    <comment>.
+ Parameters: 0 - filename (string) </comment>
+  </data>
+  <data name="SinkFailureMessage">
+    <value>Sink failed because: {0}.</value>
+    <comment>.
+ Parameters: 0 - exceptionString (string) </comment>
+  </data>
+  <data name="DebugSinkTestMessage">
+    <value>This message should be displayed by the debugger.</value>
+  </data>
+  <data name="DebugSinkMessage">
+    <value>Event logged by Debug Sink:
+	Event ID: {0}
+	Message: "{1}".</value>
+    <comment>.
+ Parameters: 0 - id (int), 1 - msg (string) </comment>
+  </data>
+  <data name="CustomizedSinkMessage">
+    <value>The quick start has logged an event by using a customized sink. Please check on the debugger's output for more details on the logged event.</value>
+  </data>
+  <data name="ExtraInformationStartMessage">
+    <value>This scenario is logging extra information to the destination specified by the default category. </value>
+  </data>
+   <data name="ExtraInformationEndMessage">
+    <value>The Quick Start has finished logging the extra information. The default configuration of the Quick Starts sends the entries to the event log.</value>
+  </data>
+ <resheader name="ResMimeType">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="Version">
+    <value>1.0.0.0</value>
+  </resheader>
+  <resheader name="Reader">
+    <value>System.Resources.ResXResourceReader</value>
+  </resheader>
+  <resheader name="Writer">
+    <value>System.Resources.ResXResourceWriter</value>
+  </resheader>
+</root>

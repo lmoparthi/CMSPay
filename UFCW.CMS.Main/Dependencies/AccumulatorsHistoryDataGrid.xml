@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AccumulatorsHistoryDataGridStyle>
+  <ColumnCount>6</ColumnCount>
+  <Column>
+    <DefaultOrder>1</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>ACCUM_NAME</Mapping>
+    <HeaderText>Accumulator</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>False</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>2</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>ENTRY_VALUE</Mapping>
+    <HeaderText>Value</HeaderText>
+    <Type>Text</Type>
+    <Format>c</Format>
+    <ReadOnly>False</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>3</DefaultOrder>
+    <DefaultCharWidth>20</DefaultCharWidth>
+    <Mapping>APPLY_DATE</Mapping>
+    <HeaderText>Apply Date</HeaderText>
+    <Type>Text</Type>
+    <Format>MM/dd/yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>4</DefaultOrder>
+    <DefaultCharWidth>12</DefaultCharWidth>
+    <Mapping>CLAIM_ID</Mapping>
+    <HeaderText>Associated Claim</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>5</DefaultOrder>
+    <DefaultCharWidth>20</DefaultCharWidth>
+    <Mapping>CREATE_USERID</Mapping>
+    <HeaderText>Adjuster</HeaderText>
+    <GAC>CMSUsers</GAC>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>6</DefaultOrder>
+    <DefaultCharWidth>19</DefaultCharWidth>
+    <Mapping>CREATE_DATE</Mapping>
+    <HeaderText>Date Applied</HeaderText>
+    <Type>Text</Type>
+    <Format>MM/dd/yyyy hh:mm:ss tt</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+</AccumulatorsHistoryDataGridStyle>

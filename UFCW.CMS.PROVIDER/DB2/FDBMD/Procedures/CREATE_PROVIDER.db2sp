@@ -1,0 +1,55 @@
+-- <ScriptOptions statementSeparator="@"/>
+@
+-- <ScriptOptions errors="off"/>
+@
+-- Drop the procedure if one already exists
+DROP  PROCEDURE FDBMD.CREATE_PROVIDER
+@
+COMMIT
+@
+-- <ScriptOptions errors="on"/>
+@
+-- Create procedure
+CREATE PROCEDURE FDBMD.CREATE_PROVIDER(
+		IN	vTAXID				INTEGER,
+		IN	vTAXID_TYPE			CHARACTER ( 1 ),
+		IN	vALERT				CHARACTER ( 1 ),
+		IN	vNAME1				VARCHAR ( 50 ),
+		IN	vNAME2				VARCHAR ( 50 ),
+		IN	vSUSPEND_SW			DECIMAL ( 1,0 ),
+		IN	vPPOC_ELIGIBLE_SW	DECIMAL ( 1,0 ),
+		IN	vNPI				DECIMAL ( 10,0 ),
+		IN	vCOMMENTID			INTEGER,
+		IN	vUSERID				VARCHAR ( 40 ),
+		OUT	vPROVIDERID 		INTEGER)
+	--LANGUAGE SQL
+	COLLID FODBMDFY
+	--WLM ENVIRONMENT WLMDENV4 
+	STAY RESIDENT YES
+	RUN OPTIONS ''
+--------------------------------------------------------------------------
+-- DB2 SQL procedure
+--------------------------------------------------------------------------
+
+P1: BEGIN
+
+-- Declare variables
+
+    DECLARE vDEFAULT_DATE TIMESTAMP;
+
+    SET vDEFAULT_DATE = CURRENT TIMESTAMP;
+--
+    SELECT PROVIDER_ID INTO vPROVIDERID FROM FINAL TABLE (
+							INSERT INTO FDBMD.PROVIDER (TAXID,TAXID_TYPE,ALERT,NAME1,NAME2,SUSPEND_SW,PPOC_ELIGIBLE_SW,NPI,COMMENT_ID,ONLINE_DATE,ONLINE_USERID,BATCH_DATE,BATCH_USERID,CREATE_DATE,CREATE_USERID) 
+								VALUES (vTAXID,vTAXID_TYPE,vALERT,vNAME1,vNAME2,vSUSPEND_SW,vPPOC_ELIGIBLE_SW,vNPI,vCOMMENTID,vDEFAULT_DATE,vUSERID,vDEFAULT_DATE,vUSERID,vDEFAULT_DATE,vUSERID)
+								);
+       
+--
+
+END P1
+@
+-- <ScriptOptions WLMRefresh="WLMDENV4"/>
+@
+-- Grant access privilages to procedure
+GRANT EXECUTE ON PROCEDURE FDBMD.CREATE_PROVIDER TO PUBLIC
+@

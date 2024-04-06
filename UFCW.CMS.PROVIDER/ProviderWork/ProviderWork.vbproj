@@ -1,0 +1,472 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7BE689D3-8F65-475F-993A-CDF0441F6606}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>UFCW.CMS.ProviderWork.Plugin</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>On</OptionStrict>
+    <RootNamespace>
+    </RootNamespace>
+    <StartupObject>UFCW.CMS.%28None%29</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <MyType>Windows</MyType>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <PublishUrl>http://localhost/UFCW.CMS.ProviderWork.Plugin/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\debug\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>false</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>40028,40031,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\release\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>false</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>40028,40031,42353,42354,42355</NoWarn>
+    <DebugType>Full</DebugType>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DebugAll|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>false</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <BaseAddress>285212672</BaseAddress>
+    <DocumentationFile>
+    </DocumentationFile>
+    <Optimize>false</Optimize>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>40028,40031,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DDTek.Data.Common, Version=4.3.0.0, Culture=neutral, PublicKeyToken=c84cd5c63851e072, processorArchitecture=MSIL" />
+    <Reference Include="DDTek.DB2, Version=4.3.0.0, Culture=neutral, PublicKeyToken=c84cd5c63851e072, processorArchitecture=MSIL" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\ProviderDAL\ProviderDAL.vbproj">
+      <Project>{B49374BD-88C2-4A65-A739-985B929FAB3E}</Project>
+      <Name>ProviderDAL</Name>
+    </ProjectReference>
+    <Reference Include="UFCW.CMS.ExtendedErrorProvider, Version=1.4.72.19895, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExtendedErrorProvider\bin\release\UFCW.CMS.ExtendedErrorProvider.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddressesDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AddressesDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AddressTypesDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AddressTypesDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Category.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="ProviderAddressSummaryWithCommentsDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProviderAddressSummaryWithCommentsDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProviderAddressTypesDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProviderAddressTypesDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProviderAlertTypesDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProviderAlertTypesDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProviderAssociatedSummaryDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProviderAssociatedSummaryDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProviderHistoryDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProviderHistoryDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProviderLicensesDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProviderLicensesDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProviderLicenseTypeDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProviderLicenseTypeDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProviderWork.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StatesDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StatesDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Validation.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProviderWork.resx">
+      <DependentUpon>ProviderWork.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="AddressesDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AddressesDS.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="AddressTypesDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AddressTypesDS.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="AssociatedProvidersDataGrid.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AssociatedProvidersDataGrid.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="LicensesDataGrid.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ProviderAddressSummaryWithCommentsDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProviderAddressSummaryWithCommentsDS.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ProviderAddressTypesDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProviderAddressTypesDS.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ProviderAlertTypesDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProviderAlertTypesDS.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ProviderAssociatedSummaryDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProviderAssociatedSummaryDS.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ProviderHistoryDataGrid.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ProviderHistoryDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProviderHistoryDS.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ProviderLicensesDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProviderLicensesDS.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ProviderLicenseTypeDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProviderLicenseTypeDS.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="StatesDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StatesDS.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="AddressesDS.xsc">
+      <DependentUpon>AddressesDS.xsd</DependentUpon>
+    </None>
+    <None Include="AddressesDS.xss">
+      <DependentUpon>AddressesDS.xsd</DependentUpon>
+    </None>
+    <None Include="AddressesDS.xsx">
+      <DependentUpon>AddressesDS.xsd</DependentUpon>
+    </None>
+    <None Include="AddressTypesDS.xsc">
+      <DependentUpon>AddressTypesDS.xsd</DependentUpon>
+    </None>
+    <None Include="AddressTypesDS.xss">
+      <DependentUpon>AddressTypesDS.xsd</DependentUpon>
+    </None>
+    <None Include="AddressTypesDS.xsx">
+      <DependentUpon>AddressTypesDS.xsd</DependentUpon>
+    </None>
+    <None Include="app.config" />
+    <None Include="AssociatedProvidersDataGrid.xsc">
+      <DependentUpon>AssociatedProvidersDataGrid.xsd</DependentUpon>
+    </None>
+    <None Include="AssociatedProvidersDataGrid.xss">
+      <DependentUpon>AssociatedProvidersDataGrid.xsd</DependentUpon>
+    </None>
+    <None Include="AssociatedProvidersDataGrid.xsx">
+      <DependentUpon>AssociatedProvidersDataGrid.xsd</DependentUpon>
+    </None>
+    <None Include="ProviderAddressSummaryWithCommentsDS.xsc">
+      <DependentUpon>ProviderAddressSummaryWithCommentsDS.xsd</DependentUpon>
+    </None>
+    <None Include="ProviderAddressSummaryWithCommentsDS.xss">
+      <DependentUpon>ProviderAddressSummaryWithCommentsDS.xsd</DependentUpon>
+    </None>
+    <None Include="ProviderAddressTypesDS.xsc">
+      <DependentUpon>ProviderAddressTypesDS.xsd</DependentUpon>
+    </None>
+    <None Include="ProviderAddressTypesDS.xss">
+      <DependentUpon>ProviderAddressTypesDS.xsd</DependentUpon>
+    </None>
+    <None Include="ProviderAddressTypesDS.xsx">
+      <DependentUpon>ProviderAddressTypesDS.xsd</DependentUpon>
+    </None>
+    <None Include="ProviderAlertTypesDS.xsc">
+      <DependentUpon>ProviderAlertTypesDS.xsd</DependentUpon>
+    </None>
+    <None Include="ProviderAlertTypesDS.xss">
+      <DependentUpon>ProviderAlertTypesDS.xsd</DependentUpon>
+    </None>
+    <None Include="ProviderAlertTypesDS.xsx">
+      <DependentUpon>ProviderAlertTypesDS.xsd</DependentUpon>
+    </None>
+    <None Include="ProviderAssociatedSummaryDS.xsc">
+      <DependentUpon>ProviderAssociatedSummaryDS.xsd</DependentUpon>
+    </None>
+    <None Include="ProviderAssociatedSummaryDS.xss">
+      <DependentUpon>ProviderAssociatedSummaryDS.xsd</DependentUpon>
+    </None>
+    <None Include="ProviderHistoryDS.xsc">
+      <DependentUpon>ProviderHistoryDS.xsd</DependentUpon>
+    </None>
+    <None Include="ProviderHistoryDS.xsx">
+      <DependentUpon>ProviderHistoryDS.xsd</DependentUpon>
+    </None>
+    <None Include="ProviderLicensesDS.xsc">
+      <DependentUpon>ProviderLicensesDS.xsd</DependentUpon>
+    </None>
+    <None Include="ProviderLicensesDS.xss">
+      <DependentUpon>ProviderLicensesDS.xsd</DependentUpon>
+    </None>
+    <None Include="ProviderLicensesDS.xsx">
+      <DependentUpon>ProviderLicensesDS.xsd</DependentUpon>
+    </None>
+    <None Include="ProviderLicenseTypeDS.xsc">
+      <DependentUpon>ProviderLicenseTypeDS.xsd</DependentUpon>
+    </None>
+    <None Include="ProviderLicenseTypeDS.xsx">
+      <DependentUpon>ProviderLicenseTypeDS.xsd</DependentUpon>
+    </None>
+    <None Include="ProviderWork.mdx" />
+    <None Include="StatesDS.xsc">
+      <DependentUpon>StatesDS.xsd</DependentUpon>
+    </None>
+    <None Include="StatesDS.xsx">
+      <DependentUpon>StatesDS.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DataGridPlus">
+      <Version>1.19.48.19117</Version>
+    </PackageReference>
+    <PackageReference Include="EnterpriseLibrary.Common">
+      <Version>6.0.1304</Version>
+    </PackageReference>
+    <PackageReference Include="EnterpriseLibrary.ExceptionHandling">
+      <Version>6.0.1304</Version>
+    </PackageReference>
+    <PackageReference Include="EnterpriseLibrary.ExceptionHandling.Logging">
+      <Version>6.0.1304</Version>
+    </PackageReference>
+    <PackageReference Include="EnterpriseLibrary.Logging">
+      <Version>6.0.1304</Version>
+    </PackageReference>
+    <PackageReference Include="EnterpriseLibrary.Security.Cryptography">
+      <Version>5.0.505</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers">
+      <Version>7.0.4</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="UFCW.CMS.DAL">
+      <Version>1.10.48.25111</Version>
+    </PackageReference>
+    <PackageReference Include="UFCW.CMS.PlugIn">
+      <Version>1.5.48.22817</Version>
+    </PackageReference>
+    <PackageReference Include="UFCW.CMS.SharedInterfaces">
+      <Version>1.4.48.27488</Version>
+    </PackageReference>
+    <PackageReference Include="UFCWCryptor">
+      <Version>1.5.48.32440</Version>
+    </PackageReference>
+    <PackageReference Include="UFCWEMail">
+      <Version>1.22.48.18442</Version>
+    </PackageReference>
+    <PackageReference Include="UFCWException">
+      <Version>1.8.48.18483</Version>
+    </PackageReference>
+    <PackageReference Include="UFCWGeneral">
+      <Version>1.16.48.20162</Version>
+    </PackageReference>
+    <PackageReference Include="UFCWGeneralAD">
+      <Version>1.7.48.29094</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UFCWProvidersDataGrid>
+  <ColumnCount>9</ColumnCount>
+  <GridLineStyle>False</GridLineStyle>
+  <Column>
+    <DefaultCharWidth>16</DefaultCharWidth>
+    <DefaultOrder>1</DefaultOrder>
+    <Mapping>PROVIDER_ID</Mapping>
+    <HeaderText>UFCW Provider ID</HeaderText>
+    <Format>0000000000</Format>
+    <Type>Text</Type>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultCharWidth>12</DefaultCharWidth>
+    <DefaultOrder>2</DefaultOrder>
+    <Mapping>TYPEANDTAXID</Mapping>
+    <HeaderText>TaxID/SSN</HeaderText>
+    <Format>1stCharacterMask</Format>
+    <Type>Text</Type>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultCharWidth>50</DefaultCharWidth>
+    <DefaultOrder>3</DefaultOrder>
+    <Mapping>NAME1</Mapping>
+    <HeaderText>Provider Title</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultCharWidth>11</DefaultCharWidth>
+    <DefaultOrder>4</DefaultOrder>
+    <Mapping>NPI</Mapping>
+    <HeaderText>NPI</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultCharWidth>50</DefaultCharWidth>
+    <DefaultOrder>5</DefaultOrder>
+    <Mapping>CompositeMailAddress</Mapping>
+    <HeaderText>MAIL Address</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <DefaultOrder>6</DefaultOrder>
+    <Mapping>ProviderSuspended</Mapping>
+    <HeaderText>Suspended</HeaderText>
+    <Type>Text</Type>
+    <Format>Yes;;No</Format>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultCharWidth>50</DefaultCharWidth>
+    <DefaultOrder>7</DefaultOrder>
+    <Mapping>DESCRIPTION</Mapping>
+    <HeaderText>Alert</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultCharWidth>20</DefaultCharWidth>
+    <DefaultOrder>8</DefaultOrder>
+    <Mapping>ELECTRONIC_USE_ONLY_SW</Mapping>
+    <HeaderText>System Use Only</HeaderText>
+    <Type>Text</Type>
+    <Format>Yes;;No</Format>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultCharWidth>20</DefaultCharWidth>
+    <DefaultOrder>9</DefaultOrder>
+    <Mapping>HRA_INELIGIBLE_SW</Mapping>
+    <HeaderText>HRA Disallowed</HeaderText>
+    <Type>Text</Type>
+    <Format>Yes;;No</Format>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultCharWidth>20</DefaultCharWidth>
+    <DefaultOrder>10</DefaultOrder>
+    <Mapping>ProviderTimestamp</Mapping>
+    <HeaderText>Last Modified On</HeaderText>
+    <Type>Text</Type>
+    <Format>MM/dd/yyyy hh:mm:ss tt</Format>
+    <NullText></NullText>
+  </Column>
+</UFCWProvidersDataGrid>

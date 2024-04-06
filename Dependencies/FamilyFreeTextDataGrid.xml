@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FamilyFreeTextDataGridStyle>
+  <ColumnCount>3</ColumnCount>
+  <RowHeadersVisible>False</RowHeadersVisible>
+  <GridLineStyle>False</GridLineStyle>
+  <GridDefaultSort>CREATE_DATE DESC</GridDefaultSort>
+  <Column>
+    <DefaultOrder>1</DefaultOrder>
+    <DefaultCharWidth>21</DefaultCharWidth>
+    <Mapping>CREATE_DATE</Mapping>
+    <HeaderText>Date</HeaderText>
+    <Type>Text</Type>
+    <Format>MM/dd/yyyy hh:mm:ss tt</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>2</DefaultOrder>
+    <DefaultCharWidth>140</DefaultCharWidth>
+    <Mapping>FREE_TEXT</Mapping>
+    <HeaderText>Free Text</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <WordWrap>True</WordWrap>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>3</DefaultOrder>
+    <DefaultCharWidth>50</DefaultCharWidth>
+    <Mapping>CREATE_USERID</Mapping>
+    <HeaderText>Free Text Author</HeaderText>
+    <GAC>CMSUsers</GAC>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+</FamilyFreeTextDataGridStyle>

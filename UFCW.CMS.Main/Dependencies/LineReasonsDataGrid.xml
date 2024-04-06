@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LineReasonsDataGridStyle>
+  <ColumnCount>3</ColumnCount>
+  <Column>
+    <DefaultOrder>1</DefaultOrder>
+    <DefaultCharWidth>5</DefaultCharWidth>
+    <Mapping>REASON</Mapping>
+    <HeaderText>Code</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>2</DefaultOrder>
+    <DefaultCharWidth>45</DefaultCharWidth>
+    <Mapping>DESCRIPTION</Mapping>
+    <HeaderText>Description</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>3</DefaultOrder>
+    <DefaultCharWidth>7</DefaultCharWidth>
+    <Mapping>PRIORITY</Mapping>
+    <HeaderText>Priority</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+</LineReasonsDataGridStyle>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiagnosisDataGridStyle>
+  <ColumnCount>2</ColumnCount>
+  <GridLineStyle>False</GridLineStyle>
+  <Column>
+    <DefaultOrder>1</DefaultOrder>
+    <DefaultCharWidth>6</DefaultCharWidth>
+    <Mapping>DIAG_VALUE</Mapping>
+    <HeaderText>Code</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>2</DefaultOrder>
+    <DefaultCharWidth>40</DefaultCharWidth>
+    <Mapping>SHORT_DESC</Mapping>
+    <HeaderText>Description</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+</DiagnosisDataGridStyle>

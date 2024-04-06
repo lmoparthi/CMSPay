@@ -1,0 +1,580 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FileNet" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="FileNet_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1">
+        </msb:BinaryEncoding>
+        <wsaw:UsingAddressing>
+        </wsaw:UsingAddressing>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="UFCW.WCF.FileNet" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/System.ServiceModel" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/System.IO" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/IDMObjects" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/IDMViewerApp" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IFileNet_Echo_InputMessage">
+    <wsdl:part name="parameters" element="tns:Echo" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_Echo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EchoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_Echo_FileNetWCFFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="UFCW.WCF.FileNet" name="detail" element="q1:FileNetWCFFault" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_Terminate_InputMessage">
+    <wsdl:part name="parameters" element="tns:Terminate" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_Terminate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TerminateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_Terminate_FileNetWCFFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="UFCW.WCF.FileNet" name="detail" element="q2:FileNetWCFFault" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_FileNetDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:FileNetDocument" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_FileNetDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FileNetDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_FileNetDocument_FileNetWCFFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="UFCW.WCF.FileNet" name="detail" element="q3:FileNetWCFFault" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_SessionProperties_InputMessage">
+    <wsdl:part name="parameters" element="tns:SessionProperties" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_SessionProperties_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SessionPropertiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_SessionProperties_FileNetWCFFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="UFCW.WCF.FileNet" name="detail" element="q4:FileNetWCFFault" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_FileNetViewerProperties_InputMessage">
+    <wsdl:part name="parameters" element="tns:FileNetViewerProperties" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_FileNetViewerProperties_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FileNetViewerPropertiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_FileNetViewerProperties_FileNetWCFFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="UFCW.WCF.FileNet" name="detail" element="q5:FileNetWCFFault" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_Attach_InputMessage">
+    <wsdl:part name="parameters" element="tns:Attach" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_Attach_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AttachResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_Attach_FileNetWCFFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="UFCW.WCF.FileNet" name="detail" element="q6:FileNetWCFFault" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_Detach_InputMessage">
+    <wsdl:part name="parameters" element="tns:Detach" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_Detach_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DetachResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_Detach_FileNetWCFFaultFault_FaultMessage">
+    <wsdl:part xmlns:q7="UFCW.WCF.FileNet" name="detail" element="q7:FileNetWCFFault" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_Logon_InputMessage">
+    <wsdl:part name="parameters" element="tns:Logon" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_Logon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_Logon_FileNetWCFFaultFault_FaultMessage">
+    <wsdl:part xmlns:q8="UFCW.WCF.FileNet" name="detail" element="q8:FileNetWCFFault" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_Logoff_InputMessage">
+    <wsdl:part name="parameters" element="tns:Logoff" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_Logoff_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogoffResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_Logoff_FileNetWCFFaultFault_FaultMessage">
+    <wsdl:part xmlns:q9="UFCW.WCF.FileNet" name="detail" element="q9:FileNetWCFFault" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_IsVisible_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsVisible" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_IsVisible_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsVisibleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_IsVisible_FileNetWCFFaultFault_FaultMessage">
+    <wsdl:part xmlns:q10="UFCW.WCF.FileNet" name="detail" element="q10:FileNetWCFFault" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_UpdateSSN_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSSN" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_UpdateSSN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSSNResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_UpdateSSN_FileNetWCFFaultFault_FaultMessage">
+    <wsdl:part xmlns:q11="UFCW.WCF.FileNet" name="detail" element="q11:FileNetWCFFault" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_DisplayDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:DisplayDocument" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_DisplayDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisplayDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_DisplayDocument_FileNetWCFFaultFault_FaultMessage">
+    <wsdl:part xmlns:q12="UFCW.WCF.FileNet" name="detail" element="q12:FileNetWCFFault" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_DisplayDocumentByMaximID_InputMessage">
+    <wsdl:part name="parameters" element="tns:DisplayDocumentByMaximID" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_DisplayDocumentByMaximID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisplayDocumentByMaximIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_DisplayDocumentByMaximID_FileNetWCFFaultFault_FaultMessage">
+    <wsdl:part xmlns:q13="UFCW.WCF.FileNet" name="detail" element="q13:FileNetWCFFault" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_Display_InputMessage">
+    <wsdl:part name="parameters" element="tns:Display" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_Display_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisplayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_Display_FileNetWCFFaultFault_FaultMessage">
+    <wsdl:part xmlns:q14="UFCW.WCF.FileNet" name="detail" element="q14:FileNetWCFFault" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_SetTitleBar_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetTitleBar" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_SetTitleBar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetTitleBarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_SetTitleBar_FileNetWCFFaultFault_FaultMessage">
+    <wsdl:part xmlns:q15="UFCW.WCF.FileNet" name="detail" element="q15:FileNetWCFFault" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_GetTitleBar_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTitleBar" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_GetTitleBar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTitleBarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_GetTitleBar_FileNetWCFFaultFault_FaultMessage">
+    <wsdl:part xmlns:q16="UFCW.WCF.FileNet" name="detail" element="q16:FileNetWCFFault" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_Show_InputMessage">
+    <wsdl:part name="parameters" element="tns:Show" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_Show_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_Show_FileNetWCFFaultFault_FaultMessage">
+    <wsdl:part xmlns:q17="UFCW.WCF.FileNet" name="detail" element="q17:FileNetWCFFault" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_Hide_InputMessage">
+    <wsdl:part name="parameters" element="tns:Hide" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_Hide_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HideResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_Hide_FileNetWCFFaultFault_FaultMessage">
+    <wsdl:part xmlns:q18="UFCW.WCF.FileNet" name="detail" element="q18:FileNetWCFFault" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_CloseImageWindow_InputMessage">
+    <wsdl:part name="parameters" element="tns:CloseImageWindow" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_CloseImageWindow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CloseImageWindowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_CloseImageWindow_FileNetWCFFaultFault_FaultMessage">
+    <wsdl:part xmlns:q19="UFCW.WCF.FileNet" name="detail" element="q19:FileNetWCFFault" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_ClearImageWindow_InputMessage">
+    <wsdl:part name="parameters" element="tns:ClearImageWindow" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_ClearImageWindow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ClearImageWindowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_ClearImageWindow_FileNetWCFFaultFault_FaultMessage">
+    <wsdl:part xmlns:q20="UFCW.WCF.FileNet" name="detail" element="q20:FileNetWCFFault" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_ServiceAsyncMethod_InputMessage">
+    <wsdl:part name="parameters" element="tns:ServiceAsyncMethod" />
+  </wsdl:message>
+  <wsdl:message name="IFileNet_ServiceAsyncMethod_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ServiceAsyncMethodResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IFileNet">
+    <wsdl:operation name="Echo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileNet/Echo" message="tns:IFileNet_Echo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileNet/EchoResponse" message="tns:IFileNet_Echo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFileNet/EchoFileNetWCFFaultFault" name="FileNetWCFFaultFault" message="tns:IFileNet_Echo_FileNetWCFFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Terminate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileNet/Terminate" message="tns:IFileNet_Terminate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileNet/TerminateResponse" message="tns:IFileNet_Terminate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFileNet/TerminateFileNetWCFFaultFault" name="FileNetWCFFaultFault" message="tns:IFileNet_Terminate_FileNetWCFFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FileNetDocument">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileNet/FileNetDocument" message="tns:IFileNet_FileNetDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileNet/FileNetDocumentResponse" message="tns:IFileNet_FileNetDocument_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFileNet/FileNetDocumentFileNetWCFFaultFault" name="FileNetWCFFaultFault" message="tns:IFileNet_FileNetDocument_FileNetWCFFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SessionProperties">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileNet/SessionProperties" message="tns:IFileNet_SessionProperties_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileNet/SessionPropertiesResponse" message="tns:IFileNet_SessionProperties_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFileNet/SessionPropertiesFileNetWCFFaultFault" name="FileNetWCFFaultFault" message="tns:IFileNet_SessionProperties_FileNetWCFFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FileNetViewerProperties">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileNet/FileNetViewerProperties" message="tns:IFileNet_FileNetViewerProperties_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileNet/FileNetViewerPropertiesResponse" message="tns:IFileNet_FileNetViewerProperties_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFileNet/FileNetViewerPropertiesFileNetWCFFaultFault" name="FileNetWCFFaultFault" message="tns:IFileNet_FileNetViewerProperties_FileNetWCFFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Attach">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileNet/Attach" message="tns:IFileNet_Attach_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileNet/AttachResponse" message="tns:IFileNet_Attach_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFileNet/AttachFileNetWCFFaultFault" name="FileNetWCFFaultFault" message="tns:IFileNet_Attach_FileNetWCFFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Detach">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileNet/Detach" message="tns:IFileNet_Detach_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileNet/DetachResponse" message="tns:IFileNet_Detach_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFileNet/DetachFileNetWCFFaultFault" name="FileNetWCFFaultFault" message="tns:IFileNet_Detach_FileNetWCFFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Logon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileNet/Logon" message="tns:IFileNet_Logon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileNet/LogonResponse" message="tns:IFileNet_Logon_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFileNet/LogonFileNetWCFFaultFault" name="FileNetWCFFaultFault" message="tns:IFileNet_Logon_FileNetWCFFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Logoff">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileNet/Logoff" message="tns:IFileNet_Logoff_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileNet/LogoffResponse" message="tns:IFileNet_Logoff_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFileNet/LogoffFileNetWCFFaultFault" name="FileNetWCFFaultFault" message="tns:IFileNet_Logoff_FileNetWCFFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsVisible">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileNet/IsVisible" message="tns:IFileNet_IsVisible_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileNet/IsVisibleResponse" message="tns:IFileNet_IsVisible_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFileNet/IsVisibleFileNetWCFFaultFault" name="FileNetWCFFaultFault" message="tns:IFileNet_IsVisible_FileNetWCFFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSSN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileNet/UpdateSSN" message="tns:IFileNet_UpdateSSN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileNet/UpdateSSNResponse" message="tns:IFileNet_UpdateSSN_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFileNet/UpdateSSNFileNetWCFFaultFault" name="FileNetWCFFaultFault" message="tns:IFileNet_UpdateSSN_FileNetWCFFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DisplayDocument">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileNet/DisplayDocument" message="tns:IFileNet_DisplayDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileNet/DisplayDocumentResponse" message="tns:IFileNet_DisplayDocument_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFileNet/DisplayDocumentFileNetWCFFaultFault" name="FileNetWCFFaultFault" message="tns:IFileNet_DisplayDocument_FileNetWCFFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DisplayDocumentByMaximID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileNet/DisplayDocumentByMaximID" message="tns:IFileNet_DisplayDocumentByMaximID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileNet/DisplayDocumentByMaximIDResponse" message="tns:IFileNet_DisplayDocumentByMaximID_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFileNet/DisplayDocumentByMaximIDFileNetWCFFaultFault" name="FileNetWCFFaultFault" message="tns:IFileNet_DisplayDocumentByMaximID_FileNetWCFFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Display">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileNet/Display" message="tns:IFileNet_Display_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileNet/DisplayResponse" message="tns:IFileNet_Display_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFileNet/DisplayFileNetWCFFaultFault" name="FileNetWCFFaultFault" message="tns:IFileNet_Display_FileNetWCFFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetTitleBar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileNet/SetTitleBar" message="tns:IFileNet_SetTitleBar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileNet/SetTitleBarResponse" message="tns:IFileNet_SetTitleBar_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFileNet/SetTitleBarFileNetWCFFaultFault" name="FileNetWCFFaultFault" message="tns:IFileNet_SetTitleBar_FileNetWCFFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTitleBar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileNet/GetTitleBar" message="tns:IFileNet_GetTitleBar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileNet/GetTitleBarResponse" message="tns:IFileNet_GetTitleBar_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFileNet/GetTitleBarFileNetWCFFaultFault" name="FileNetWCFFaultFault" message="tns:IFileNet_GetTitleBar_FileNetWCFFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Show">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileNet/Show" message="tns:IFileNet_Show_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileNet/ShowResponse" message="tns:IFileNet_Show_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFileNet/ShowFileNetWCFFaultFault" name="FileNetWCFFaultFault" message="tns:IFileNet_Show_FileNetWCFFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Hide">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileNet/Hide" message="tns:IFileNet_Hide_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileNet/HideResponse" message="tns:IFileNet_Hide_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFileNet/HideFileNetWCFFaultFault" name="FileNetWCFFaultFault" message="tns:IFileNet_Hide_FileNetWCFFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CloseImageWindow">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileNet/CloseImageWindow" message="tns:IFileNet_CloseImageWindow_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileNet/CloseImageWindowResponse" message="tns:IFileNet_CloseImageWindow_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFileNet/CloseImageWindowFileNetWCFFaultFault" name="FileNetWCFFaultFault" message="tns:IFileNet_CloseImageWindow_FileNetWCFFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ClearImageWindow">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileNet/ClearImageWindow" message="tns:IFileNet_ClearImageWindow_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileNet/ClearImageWindowResponse" message="tns:IFileNet_ClearImageWindow_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFileNet/ClearImageWindowFileNetWCFFaultFault" name="FileNetWCFFaultFault" message="tns:IFileNet_ClearImageWindow_FileNetWCFFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceAsyncMethod">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileNet/ServiceAsyncMethod" message="tns:IFileNet_ServiceAsyncMethod_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileNet/ServiceAsyncMethodResponse" message="tns:IFileNet_ServiceAsyncMethod_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="FileNet" type="tns:IFileNet">
+    <wsp:PolicyReference URI="#FileNet_policy">
+    </wsp:PolicyReference>
+    <soap12:binding transport="http://schemas.microsoft.com/soap/named-pipe" />
+    <wsdl:operation name="Echo">
+      <soap12:operation soapAction="http://tempuri.org/IFileNet/Echo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="FileNetWCFFaultFault">
+        <soap12:fault use="literal" name="FileNetWCFFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Terminate">
+      <soap12:operation soapAction="http://tempuri.org/IFileNet/Terminate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="FileNetWCFFaultFault">
+        <soap12:fault use="literal" name="FileNetWCFFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FileNetDocument">
+      <soap12:operation soapAction="http://tempuri.org/IFileNet/FileNetDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="FileNetWCFFaultFault">
+        <soap12:fault use="literal" name="FileNetWCFFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SessionProperties">
+      <soap12:operation soapAction="http://tempuri.org/IFileNet/SessionProperties" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="FileNetWCFFaultFault">
+        <soap12:fault use="literal" name="FileNetWCFFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FileNetViewerProperties">
+      <soap12:operation soapAction="http://tempuri.org/IFileNet/FileNetViewerProperties" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="FileNetWCFFaultFault">
+        <soap12:fault use="literal" name="FileNetWCFFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Attach">
+      <soap12:operation soapAction="http://tempuri.org/IFileNet/Attach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="FileNetWCFFaultFault">
+        <soap12:fault use="literal" name="FileNetWCFFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Detach">
+      <soap12:operation soapAction="http://tempuri.org/IFileNet/Detach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="FileNetWCFFaultFault">
+        <soap12:fault use="literal" name="FileNetWCFFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Logon">
+      <soap12:operation soapAction="http://tempuri.org/IFileNet/Logon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="FileNetWCFFaultFault">
+        <soap12:fault use="literal" name="FileNetWCFFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Logoff">
+      <soap12:operation soapAction="http://tempuri.org/IFileNet/Logoff" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="FileNetWCFFaultFault">
+        <soap12:fault use="literal" name="FileNetWCFFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="IsVisible">
+      <soap12:operation soapAction="http://tempuri.org/IFileNet/IsVisible" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="FileNetWCFFaultFault">
+        <soap12:fault use="literal" name="FileNetWCFFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSSN">
+      <soap12:operation soapAction="http://tempuri.org/IFileNet/UpdateSSN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="FileNetWCFFaultFault">
+        <soap12:fault use="literal" name="FileNetWCFFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DisplayDocument">
+      <soap12:operation soapAction="http://tempuri.org/IFileNet/DisplayDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="FileNetWCFFaultFault">
+        <soap12:fault use="literal" name="FileNetWCFFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DisplayDocumentByMaximID">
+      <soap12:operation soapAction="http://tempuri.org/IFileNet/DisplayDocumentByMaximID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="FileNetWCFFaultFault">
+        <soap12:fault use="literal" name="FileNetWCFFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Display">
+      <soap12:operation soapAction="http://tempuri.org/IFileNet/Display" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="FileNetWCFFaultFault">
+        <soap12:fault use="literal" name="FileNetWCFFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetTitleBar">
+      <soap12:operation soapAction="http://tempuri.org/IFileNet/SetTitleBar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="FileNetWCFFaultFault">
+        <soap12:fault use="literal" name="FileNetWCFFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTitleBar">
+      <soap12:operation soapAction="http://tempuri.org/IFileNet/GetTitleBar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="FileNetWCFFaultFault">
+        <soap12:fault use="literal" name="FileNetWCFFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Show">
+      <soap12:operation soapAction="http://tempuri.org/IFileNet/Show" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="FileNetWCFFaultFault">
+        <soap12:fault use="literal" name="FileNetWCFFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Hide">
+      <soap12:operation soapAction="http://tempuri.org/IFileNet/Hide" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="FileNetWCFFaultFault">
+        <soap12:fault use="literal" name="FileNetWCFFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CloseImageWindow">
+      <soap12:operation soapAction="http://tempuri.org/IFileNet/CloseImageWindow" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="FileNetWCFFaultFault">
+        <soap12:fault use="literal" name="FileNetWCFFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ClearImageWindow">
+      <soap12:operation soapAction="http://tempuri.org/IFileNet/ClearImageWindow" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="FileNetWCFFaultFault">
+        <soap12:fault use="literal" name="FileNetWCFFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceAsyncMethod">
+      <soap12:operation soapAction="http://tempuri.org/IFileNet/ServiceAsyncMethod" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FileNet">
+    <wsdl:port name="FileNet" binding="tns:FileNet">
+      <soap12:address location="net.pipe://localhost/UFCW.WCF/FileNetWCFService" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.pipe://localhost/UFCW.WCF/FileNetWCFService</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AccidentAccumulatorDataGridStyle>
+  <ColumnCount>3</ColumnCount>
+  <GridLineStyle>False</GridLineStyle>
+  <Column>
+    <DefaultOrder>1</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>CLAIM_ID</Mapping>
+    <HeaderText>Claim ID</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>False</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>2</DefaultOrder>
+    <DefaultCharWidth>13</DefaultCharWidth>
+    <Mapping>ORG_ACCIDENT_CLAIM_ID</Mapping>
+    <HeaderText>Org. Claim ID</HeaderText>
+    <Type>Text</Type>
+    <Format>ORIGINAL</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>3</DefaultOrder>
+    <DefaultCharWidth>13</DefaultCharWidth>
+    <Mapping>ACCUM_ID</Mapping>
+    <HeaderText>Accumulator</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>4</DefaultOrder>
+    <DefaultCharWidth>11</DefaultCharWidth>
+    <Mapping>APPLY_DATE</Mapping>
+    <HeaderText>Incident Date</HeaderText>
+    <Type>Text</Type>
+    <Format>MM/dd/yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+    <Visible>True</Visible>
+    <Method></Method>
+  </Column>
+  <Column>
+    <DefaultOrder>5</DefaultOrder>
+    <DefaultCharWidth>50</DefaultCharWidth>
+    <Mapping>ACCUM_NAME</Mapping>
+    <HeaderText>Accumulator Name</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+</AccidentAccumulatorDataGridStyle>

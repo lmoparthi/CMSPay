@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<UFCWDocsDataGridStyle>
+  <ColumnCount>27</ColumnCount>
+  <GridLineStyle>False</GridLineStyle>
+  <GridDefaultSort>DOCUMENTID DESC</GridDefaultSort>
+  <Column>
+    <DefaultOrder>1</DefaultOrder>
+    <DefaultCharWidth>9</DefaultCharWidth>
+    <Mapping>DocumentID</Mapping>
+    <HeaderText>Doc ID</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>2</DefaultOrder>
+    <DefaultCharWidth>11</DefaultCharWidth>
+    <Mapping>DocumentClass</Mapping>
+    <HeaderText>Doc Class</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>3</DefaultOrder>
+    <DefaultCharWidth>21</DefaultCharWidth>
+    <Mapping>DocType</Mapping>
+    <HeaderText>Doc Type</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>4</DefaultOrder>
+    <DefaultCharWidth>11</DefaultCharWidth>
+    <Mapping>SSN</Mapping>
+    <HeaderText>SSN</HeaderText>
+    <Type>Text</Type>
+    <Format>000-00-0000</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>5</DefaultOrder>
+    <DefaultCharWidth>13</DefaultCharWidth>
+    <Mapping>ProviderID</Mapping>
+    <HeaderText>Provider Tax ID</HeaderText>
+    <Type>Text</Type>
+    <Format>00-0000000</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>6</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>BatchNumber</Mapping>
+    <HeaderText>Batch</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>7</DefaultOrder>
+    <DefaultCharWidth>17</DefaultCharWidth>
+    <Mapping>ParticipantNameFirst</Mapping>
+    <HeaderText>Participant First Name</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>8</DefaultOrder>
+    <DefaultCharWidth>18</DefaultCharWidth>
+    <Mapping>ParticipantNameMiddle</Mapping>
+    <HeaderText>Participant Middle Name</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>9</DefaultOrder>
+    <DefaultCharWidth>17</DefaultCharWidth>
+    <Mapping>ParticipantNameLast</Mapping>
+    <HeaderText>Participant Last Name</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>10</DefaultOrder>
+    <DefaultCharWidth>15</DefaultCharWidth>
+    <Mapping>PatientNameFirst</Mapping>
+    <HeaderText>Patient First Name</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>11</DefaultOrder>
+    <DefaultCharWidth>15</DefaultCharWidth>
+    <Mapping>PatientNameMiddle</Mapping>
+    <HeaderText>Patient Middle Name</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>12</DefaultOrder>
+    <DefaultCharWidth>13</DefaultCharWidth>
+    <Mapping>PatientNameLast</Mapping>
+    <HeaderText>Patient Last Name</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>13</DefaultOrder>
+    <DefaultCharWidth>13</DefaultCharWidth>
+    <Mapping>DateOfService</Mapping>
+    <HeaderText>Date Of Service</HeaderText>
+    <Type>Text</Type>
+    <Format>MM-dd-yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>14</DefaultOrder>
+    <DefaultCharWidth>9</DefaultCharWidth>
+    <Mapping>PageCount</Mapping>
+    <HeaderText>Page Count</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>15</DefaultOrder>
+    <DefaultCharWidth>11</DefaultCharWidth>
+    <Mapping>ScanDate</Mapping>
+    <HeaderText>Scan Date</HeaderText>
+    <Type>Text</Type>
+    <Format>MM-dd-yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>16</DefaultOrder>
+    <DefaultCharWidth>11</DefaultCharWidth>
+    <Mapping>ReceiveDate</Mapping>
+    <HeaderText>Receive Date</HeaderText>
+    <Type>Text</Type>
+    <Format>MM-dd-yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>17</DefaultOrder>
+    <DefaultCharWidth>11</DefaultCharWidth>
+    <Mapping>IndexDate</Mapping>
+    <HeaderText>Index Date</HeaderText>
+    <Type>Text</Type>
+    <Format>MM-dd-yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>18</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>Itemstatus</Mapping>
+    <HeaderText>Status</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>19</DefaultOrder>
+    <DefaultCharWidth>11</DefaultCharWidth>
+    <Mapping>ArchiveOnly</Mapping>
+    <HeaderText>Archive Item</HeaderText>
+    <Type>Text</Type>
+    <Format>Archive</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>20</DefaultOrder>
+    <DefaultCharWidth>11</DefaultCharWidth>
+    <Mapping>CheckNumber</Mapping>
+    <HeaderText>Check Number</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>21</DefaultOrder>
+    <DefaultCharWidth>11</DefaultCharWidth>
+    <Mapping>CheckAmount</Mapping>
+    <HeaderText>Check Amount</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>22</DefaultOrder>
+    <DefaultCharWidth>11</DefaultCharWidth>
+    <Mapping>PSTPeriod</Mapping>
+    <HeaderText>Post Period</HeaderText>
+    <Type>Text</Type>
+    <Format>MM-dd-yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>23</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>Cov_Type</Mapping>
+    <HeaderText>Coverage</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>24</DefaultOrder>
+    <DefaultCharWidth>9</DefaultCharWidth>
+    <Mapping>Payment_Method</Mapping>
+    <HeaderText>Pay Method</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>25</DefaultOrder>
+    <DefaultCharWidth>12</DefaultCharWidth>
+    <Mapping>CompletedOn</Mapping>
+    <HeaderText>Completed Date</HeaderText>
+    <Type>Text</Type>
+    <Format>MM-dd-yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>26</DefaultOrder>
+    <DefaultCharWidth>17</DefaultCharWidth>
+    <Mapping>CompletedBy</Mapping>
+    <HeaderText>Completed By</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>27</DefaultOrder>
+    <DefaultCharWidth>27</DefaultCharWidth>
+    <Mapping>MAXIMID</Mapping>
+    <HeaderText>Maxim ID</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+</UFCWDocsDataGridStyle>

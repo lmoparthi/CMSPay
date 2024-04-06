@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HRQDataGridStyle>
+	<ColumnCount>5</ColumnCount>
+  <RowHeadersVisible>False</RowHeadersVisible>
+  <GridLineStyle>False</GridLineStyle>
+  <GridDefaultSort>DATE_FIRST_SENT</GridDefaultSort>
+  <Column>
+		<DefaultOrder>1</DefaultOrder>
+		<DefaultCharWidth>9</DefaultCharWidth>
+		<Mapping>FAMILY_ID</Mapping>
+		<HeaderText>Family ID</HeaderText>
+		<Type>Text</Type>
+		<Format></Format>
+		<ReadOnly>True</ReadOnly>
+		<NullText></NullText>
+	</Column>
+	<Column>
+		<DefaultOrder>2</DefaultOrder>
+		<DefaultCharWidth>10</DefaultCharWidth>
+		<Mapping>RELATION_ID</Mapping>
+		<HeaderText>Relation ID</HeaderText>
+		<Type>Text</Type>
+		<Format></Format>
+		<ReadOnly>True</ReadOnly>
+		<NullText></NullText>
+	</Column>
+	<Column>
+		<DefaultOrder>3</DefaultOrder>
+		<DefaultCharWidth>13</DefaultCharWidth>
+		<Mapping>DATE_FIRST_SENT</Mapping>
+		<HeaderText>Date First Sent</HeaderText>
+		<Type>Text</Type>
+		<Format>MM/dd/yyyy</Format>
+		<ReadOnly>True</ReadOnly>
+		<NullText></NullText>
+	</Column>
+	<Column>
+		<DefaultOrder>4</DefaultOrder>
+		<DefaultCharWidth>11</DefaultCharWidth>
+		<Mapping>DEADLINE_DATE</Mapping>
+		<HeaderText>Deadline Date</HeaderText>
+		<Type>Text</Type>
+		<Format>MM/dd/yyyy</Format>
+		<ReadOnly>True</ReadOnly>
+		<NullText></NullText>
+	</Column>
+	<Column>
+		<DefaultOrder>5</DefaultOrder>
+		<DefaultCharWidth>12</DefaultCharWidth>
+		<Mapping>EFFECTIVE_DATE</Mapping>
+		<HeaderText>Effective Date</HeaderText>
+		<Type>Text</Type>
+		<Format>MM/dd/yyyy</Format>
+		<ReadOnly>True</ReadOnly>
+		<NullText></NullText>
+	</Column>
+	<Column>
+		<DefaultOrder>6</DefaultOrder>
+		<DefaultCharWidth>11</DefaultCharWidth>
+		<Mapping>RECEIVE_DATE</Mapping>
+		<HeaderText>Receive Date</HeaderText>
+		<Type>Text</Type>
+		<Format>MM/dd/yyyy</Format>
+		<ReadOnly>True</ReadOnly>
+		<NullText></NullText>
+	</Column>
+</HRQDataGridStyle>

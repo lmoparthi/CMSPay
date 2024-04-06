@@ -1,0 +1,23 @@
+﻿https://learn.microsoft.com/en-us/azure/devops/artifacts/get-started-nuget?view=azure-devops&tabs=windows
+
+Make sure you have Nuget.exe installed to path used in commands
+Change Name & version as needed
+
+Tools\Command Line\Developer Command Prompt
+c:\NuGet\nuget spec UFCW.CMS.PARTICIPANTControl.vbproj  
+
+Add dependencies if necassary to *.nuspec file
+
+    <dependencies>
+        <dependency id="UFCWGeneral" version="[1.*,)" />
+        <dependency id="UFCWGeneralAD" version="[1.*,)" />
+        <dependency id="UFCWException" version="[1.*,)" />
+        <dependency id="UFCWCryptor" version="[1.*,)" />
+        <dependency id="UFCWEMail" version="[1.*,)" />
+        <dependency id="DataGridPlus" version="[1.*,)" />
+        <dependency id="UFCW.CMS.DAL" version="[1.*,)" />
+    </dependencies>
+
+
+c:\NuGet\nuget pack UFCW.CMS.PARTICIPANTControl.vbproj -Properties Configuration=Release  
+c:\NuGet\nuget push UFCW.CMS.PARTICIPANTControl.1.5.48.29546.nupkg -src http://ufcwdevops/SCUFCWFunds/FundApps/_packaging/UFCWNuGetPackages/nuget/v3/index.json -ApiKey UFCW.CMS.PARTICIPANTControl

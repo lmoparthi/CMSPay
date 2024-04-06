@@ -1,0 +1,116 @@
+﻿
+Imports System
+Imports System.Collections.Generic
+Imports System.Data
+Imports System.Linq
+Imports System.Security.Cryptography
+Imports System.Text
+Imports System.Reflection
+
+Public Class CacheFunctions
+    'Public Shared Function GetChangeTriggersForPlanType(myDataTable As DataTable, planType As String) As ChangeTriggerInfo
+
+    '    Dim PROC_NAME As String = MethodBase.GetCurrentMethod.Name
+    '    Dim sMsg As String = String.Empty
+
+    '    Dim result As ChangeTriggerInfo = Nothing
+
+    '    If myDataTable Is Nothing Then
+    '        Return result
+    '    End If
+
+    '    If myDataTable.Rows.Count = 0 Then
+    '        Return result
+    '    End If
+
+    '    Try
+    '        Dim filteredRows As IEnumerable(Of DataRow) = From row In myDataTable.AsEnumerable()
+    '                                                      Where row.Field(Of String)("PLAN_TYPE") = planType
+    '                                                      Select row
+
+    '        Dim maxSequenceNumber As Integer = filteredRows.Max(Function(row) row.Field(Of Integer)("SEQ_NBR"))
+    '        Dim sequenceNumberCount As Integer = filteredRows.Select(Function(row) row.Field(Of Integer)("SEQ_NBR")).Distinct().Count()
+
+    '        Using sha256 As SHA256 = SHA256.Create()
+    '            Dim sequenceNumbersBytes As Byte() = Encoding.UTF8.GetBytes(String.Join(",", filteredRows.Select(Function(row) row.Field(Of Integer)("SEQ_NBR"))))
+    '            Dim hashBytes As Byte() = sha256.ComputeHash(sequenceNumbersBytes)
+    '            Dim sequenceNumberHash As String = BitConverter.ToString(hashBytes).Replace("-", "").ToLower()
+
+    '            result = New ChangeTriggerInfo With {
+    '            .MaximumSequenceNumber = maxSequenceNumber,
+    '            .SequenceNumberCount = sequenceNumberCount,
+    '            .SequenceNumberHash = sequenceNumberHash
+    '        }
+
+
+    '        End Using
+
+    '    Catch ex As Exception
+    '        sMsg = String.Format("Exception occurred:   {0}'{1}'", PROC_NAME, ex.Message)
+    '        Debug.WriteLine(sMsg)
+
+    '    End Try
+
+    '    Return result
+
+    'End Function
+
+    Public Shared Function GetChangeTriggersForPlanType(myDataTable As DataTable, planType As String) As ChangeTriggerInfo
+
+        Dim PROC_NAME As String = MethodBase.GetCurrentMethod.Name
+        Dim sMsg As String = String.Empty
+
+        Dim result As ChangeTriggerInfo = Nothing
+
+        If myDataTable Is Nothing Then
+            Return result
+        End If
+
+        If myDataTable.Rows.Count = 0 Then
+            Return result
+        End If
+
+        Try
+
+            Dim filteredRows As IEnumerable(Of DataRow) = From row In myDataTable.AsEnumerable()
+                                                          Where row.Field(Of String)("PLAN_TYPE") = planType
+                                                          Select row
+
+            Dim maxSequenceNumber As Integer = If(filteredRows.Any(), filteredRows.Max(Function(row) row.Field(Of Integer)("SEQ_NBR")), 0)
+            Dim sequenceNumberCount As Integer = If(filteredRows.Any(), filteredRows.Select(Function(row) row.Field(Of Integer)("SEQ_NBR")).Distinct().Count(), 0)
+
+            Using sha256 As SHA256 = SHA256.Create()
+                Dim sequenceNumbersBytes As Byte() = If(filteredRows.Any(), Encoding.UTF8.GetBytes(String.Join(",", filteredRows.Select(Function(row) row.Field(Of Integer)("SEQ_NBR")))), New Byte() {})
+                Dim hashBytes As Byte() = sha256.ComputeHash(sequenceNumbersBytes)
+                Dim sequenceNumberHash As String = BitConverter.ToString(hashBytes).Replace("-", "").ToLower()
+
+                result = New ChangeTriggerInfo With {
+            .MaximumSequenceNumber = maxSequenceNumber,
+            .SequenceNumberCount = sequenceNumberCount,
+            .SequenceNumberHash = sequenceNumberHash
+        }
+
+            End Using
+
+        Catch ex As Exception
+            sMsg = String.Format("Exception occurred:   {0}'{1}'", PROC_NAME, ex.Message)
+            Debug.WriteLine(sMsg)
+
+        End Try
+
+        Return result
+
+    End Function
+
+
+End Class
+
+Public Class ChangeTriggerInfo
+    Public Property MaximumSequenceNumber As Integer
+    Public Property SequenceNumberCount As Integer
+    Public Property SequenceNumberHash As String
+End Class
+
+
+
+

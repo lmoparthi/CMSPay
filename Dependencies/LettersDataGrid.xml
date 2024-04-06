@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LettersDataGridStyle>
+  <ColumnCount>5</ColumnCount>
+  <Column>
+    <DefaultOrder>1</DefaultOrder>
+    <DefaultCharWidth>15</DefaultCharWidth>
+    <Mapping>LETTER_NAME</Mapping>
+    <HeaderText>Letter Name</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>2</DefaultOrder>
+    <DefaultCharWidth>100</DefaultCharWidth>
+    <Mapping>DESCRIPTION</Mapping>
+    <HeaderText>Description</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>3</DefaultOrder>
+    <DefaultCharWidth>12</DefaultCharWidth>
+    <Mapping>ENABLE_PEND</Mapping>
+    <HeaderText>Will Pend Claim</HeaderText>
+    <Type>Text</Type>
+    <Format>Yes;;No</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>4</DefaultOrder>
+    <DefaultCharWidth>11</DefaultCharWidth>
+    <Mapping>PEND_DURATION_IN_DAYS</Mapping>
+    <HeaderText>Pend period</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>5</DefaultOrder>
+    <DefaultCharWidth>25</DefaultCharWidth>
+    <Mapping>ENABLE_HIDE</Mapping>
+    <HeaderText>Claim will be Hidden</HeaderText>
+    <Type>Text</Type>
+    <Format>Yes;;No</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+</LettersDataGridStyle>

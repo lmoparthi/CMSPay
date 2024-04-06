@@ -1,0 +1,34 @@
+﻿https://learn.microsoft.com/en-us/azure/devops/artifacts/get-started-nuget?view=azure-devops&tabs=windows
+
+Make sure you have Nuget.exe installed to path used in commands
+Change Name & version as needed
+
+Tools\Command Line\Developer Command Prompt
+c:\NuGet\nuget spec UFCW.CMS.Accumulator.vbproj   
+
+Add dependencies to *.nuspec file 
+
+	<dependencies>
+		<dependency id="UFCWGeneral" version="[1.*,)" />
+		<dependency id="UFCWGeneralAD" version="[1.*,)" />
+		<dependency id="UFCW.CMS.DAL" version="[1.*,)" />
+		<dependency id="UFCWClone" version="[1.*,)" />
+		<dependency id="UFCWException" version="[1.*,)" />
+	    <dependency id="UFCWEMail" version="[1.*,)" />
+	    <dependency id="UFCWCryptor" version="[1.*,)" />
+	</dependencies>
+
+
+Add Version rules to vbproj file
+
+	<PackageReference Include="UFCW.CMS.DAL" Version="[1.*,)"/>
+	<PackageReference Include="UFCWClone" Version="[1.*,)"/>
+	<PackageReference Include="UFCWException" Version="[1.*,)"/>
+	<PackageReference Include="UFCWGeneral" Version="[1.*,)"/>
+	<PackageReference Include="UFCWGeneralAD" Version="[1.*,)"/>
+	<PackageReference Include="UFCWEMail" version="[1.*,)" />
+	<PackageReference Include="UFCWCryptor" version="[1.*,)" />
+
+
+c:\NuGet\nuget pack UFCW.CMS.Accumulator.vbproj -Properties Configuration=Release  
+c:\NuGet\nuget push UFCW.CMS.Accumulator.1.3.48.21827.nupkg -src http://ufcwdevops/SCUFCWFunds/FundApps/_packaging/UFCWNuGetPackages/nuget/v3/index.json -ApiKey UFCW.CMS.Accumulator

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MemtypeDataGridStyle>
+  <ColumnCount>6</ColumnCount>
+  <GridLineStyle>False</GridLineStyle>
+  <Column>
+    <DefaultOrder>0</DefaultOrder>
+    <DefaultCharWidth>15</DefaultCharWidth>
+    <Mapping>FAMILY_ID</Mapping>
+    <HeaderText>FamilyID</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+    <Visible>True</Visible>
+  </Column>
+  <Column>
+    <DefaultOrder>1</DefaultOrder>
+    <DefaultCharWidth>3</DefaultCharWidth>
+    <Mapping>RELATION_ID</Mapping>
+    <HeaderText>RelationID</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+    <Visible>True</Visible>
+  </Column>
+  <Column>
+    <DefaultOrder>2</DefaultOrder>
+    <DefaultCharWidth>12</DefaultCharWidth>
+    <Mapping>ELIG_PERIOD</Mapping>
+    <HeaderText>Eligibility Period</HeaderText>
+    <Type>Text</Type>
+    <Format>MM-dd-yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+    <Visible>True</Visible>
+  </Column>
+  <Column>
+    <DefaultOrder>3</DefaultOrder>
+    <DefaultCharWidth>5</DefaultCharWidth>
+    <Mapping>MEMTYPE</Mapping>
+    <HeaderText>Memtype</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+    <Visible>True</Visible>
+  </Column>
+    <Column>
+    <DefaultOrder>4</DefaultOrder>
+    <DefaultCharWidth>4</DefaultCharWidth>
+    <Mapping>ONLINE_USERID</Mapping>
+    <HeaderText>Modified UserID</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+    <Visible>True</Visible>
+  </Column>
+  <Column>
+    <DefaultOrder>5</DefaultOrder>
+    <DefaultCharWidth>15</DefaultCharWidth>
+    <Mapping>ONLINE_DATE</Mapping>
+    <HeaderText>Modified Date</HeaderText>
+    <Type>Text</Type>
+    <Format>MM-dd-yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+    <Visible>True</Visible>
+  </Column>
+</MemtypeDataGridStyle>

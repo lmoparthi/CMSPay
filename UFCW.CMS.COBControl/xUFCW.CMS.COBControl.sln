@@ -1,0 +1,94 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "UFCW.CMS.COBControl", "UFCW.CMS.COBControl.vbproj", "{90E050E2-C922-4B0A-B2B7-68927AB32D45}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DataGridPlus", "..\..\DataGridPlus\DataGridPlus.vbproj", "{EE57884B-70A4-4F52-B418-E9F0A76F6473}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "UFCW.CMS.DAL", "..\UFCW.CMS.DAL\UFCW.CMS.DAL.vbproj", "{378EF1DC-A863-4262-94EF-43A7A1D92DE6}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "UFCWGeneral", "..\..\UFCWGeneral\UFCWGeneral.vbproj", "{ECC7A924-2F43-4816-AD73-314611F04177}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		AutoOnly|Any CPU = AutoOnly|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		DebugAll|Any CPU = DebugAll|Any CPU
+		DebugLocals|Any CPU = DebugLocals|Any CPU
+		DebugZ|Any CPU = DebugZ|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90E050E2-C922-4B0A-B2B7-68927AB32D45}.AutoOnly|Any CPU.ActiveCfg = DebugLocals|Any CPU
+		{90E050E2-C922-4B0A-B2B7-68927AB32D45}.AutoOnly|Any CPU.Build.0 = DebugLocals|Any CPU
+		{90E050E2-C922-4B0A-B2B7-68927AB32D45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90E050E2-C922-4B0A-B2B7-68927AB32D45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90E050E2-C922-4B0A-B2B7-68927AB32D45}.DebugAll|Any CPU.ActiveCfg = DebugLocals|Any CPU
+		{90E050E2-C922-4B0A-B2B7-68927AB32D45}.DebugAll|Any CPU.Build.0 = DebugLocals|Any CPU
+		{90E050E2-C922-4B0A-B2B7-68927AB32D45}.DebugLocals|Any CPU.ActiveCfg = DebugLocals|Any CPU
+		{90E050E2-C922-4B0A-B2B7-68927AB32D45}.DebugLocals|Any CPU.Build.0 = DebugLocals|Any CPU
+		{90E050E2-C922-4B0A-B2B7-68927AB32D45}.DebugZ|Any CPU.ActiveCfg = DebugLocals|Any CPU
+		{90E050E2-C922-4B0A-B2B7-68927AB32D45}.DebugZ|Any CPU.Build.0 = DebugLocals|Any CPU
+		{90E050E2-C922-4B0A-B2B7-68927AB32D45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90E050E2-C922-4B0A-B2B7-68927AB32D45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE57884B-70A4-4F52-B418-E9F0A76F6473}.AutoOnly|Any CPU.ActiveCfg = DebugLocals|Any CPU
+		{EE57884B-70A4-4F52-B418-E9F0A76F6473}.AutoOnly|Any CPU.Build.0 = DebugLocals|Any CPU
+		{EE57884B-70A4-4F52-B418-E9F0A76F6473}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE57884B-70A4-4F52-B418-E9F0A76F6473}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE57884B-70A4-4F52-B418-E9F0A76F6473}.DebugAll|Any CPU.ActiveCfg = DebugAll|Any CPU
+		{EE57884B-70A4-4F52-B418-E9F0A76F6473}.DebugAll|Any CPU.Build.0 = DebugAll|Any CPU
+		{EE57884B-70A4-4F52-B418-E9F0A76F6473}.DebugLocals|Any CPU.ActiveCfg = DebugLocals|Any CPU
+		{EE57884B-70A4-4F52-B418-E9F0A76F6473}.DebugLocals|Any CPU.Build.0 = DebugLocals|Any CPU
+		{EE57884B-70A4-4F52-B418-E9F0A76F6473}.DebugZ|Any CPU.ActiveCfg = DebugZ|Any CPU
+		{EE57884B-70A4-4F52-B418-E9F0A76F6473}.DebugZ|Any CPU.Build.0 = DebugZ|Any CPU
+		{EE57884B-70A4-4F52-B418-E9F0A76F6473}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE57884B-70A4-4F52-B418-E9F0A76F6473}.Release|Any CPU.Build.0 = Release|Any CPU
+		{378EF1DC-A863-4262-94EF-43A7A1D92DE6}.AutoOnly|Any CPU.ActiveCfg = AutoOnly|Any CPU
+		{378EF1DC-A863-4262-94EF-43A7A1D92DE6}.AutoOnly|Any CPU.Build.0 = AutoOnly|Any CPU
+		{378EF1DC-A863-4262-94EF-43A7A1D92DE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{378EF1DC-A863-4262-94EF-43A7A1D92DE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{378EF1DC-A863-4262-94EF-43A7A1D92DE6}.DebugAll|Any CPU.ActiveCfg = DebugAll|Any CPU
+		{378EF1DC-A863-4262-94EF-43A7A1D92DE6}.DebugAll|Any CPU.Build.0 = DebugAll|Any CPU
+		{378EF1DC-A863-4262-94EF-43A7A1D92DE6}.DebugLocals|Any CPU.ActiveCfg = DebugLocals|Any CPU
+		{378EF1DC-A863-4262-94EF-43A7A1D92DE6}.DebugLocals|Any CPU.Build.0 = DebugLocals|Any CPU
+		{378EF1DC-A863-4262-94EF-43A7A1D92DE6}.DebugZ|Any CPU.ActiveCfg = DebugZ|Any CPU
+		{378EF1DC-A863-4262-94EF-43A7A1D92DE6}.DebugZ|Any CPU.Build.0 = DebugZ|Any CPU
+		{378EF1DC-A863-4262-94EF-43A7A1D92DE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{378EF1DC-A863-4262-94EF-43A7A1D92DE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECC7A924-2F43-4816-AD73-314611F04177}.AutoOnly|Any CPU.ActiveCfg = AutoOnly|Any CPU
+		{ECC7A924-2F43-4816-AD73-314611F04177}.AutoOnly|Any CPU.Build.0 = AutoOnly|Any CPU
+		{ECC7A924-2F43-4816-AD73-314611F04177}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECC7A924-2F43-4816-AD73-314611F04177}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECC7A924-2F43-4816-AD73-314611F04177}.DebugAll|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECC7A924-2F43-4816-AD73-314611F04177}.DebugAll|Any CPU.Build.0 = Debug|Any CPU
+		{ECC7A924-2F43-4816-AD73-314611F04177}.DebugLocals|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECC7A924-2F43-4816-AD73-314611F04177}.DebugLocals|Any CPU.Build.0 = Debug|Any CPU
+		{ECC7A924-2F43-4816-AD73-314611F04177}.DebugZ|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECC7A924-2F43-4816-AD73-314611F04177}.DebugZ|Any CPU.Build.0 = Debug|Any CPU
+		{ECC7A924-2F43-4816-AD73-314611F04177}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECC7A924-2F43-4816-AD73-314611F04177}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {94D1FF96-F4A0-4BE3-BA82-1ECBF11A23AE}
+	EndGlobalSection
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 3
+		SccProjectUniqueName0 = UFCW.CMS.COBControl.vbproj
+		SccProjectName0 = \u0022$/UFCW.CMS/UFCW.CMS.COB\u0022,\u0020NRCAAAAA
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		SccProjectUniqueName1 = ..\\..\\DataGridPlus\\DataGridPlus.vbproj
+		SccProjectName1 = \u0022$/DataGridPlus\u0022,\u0020TQAAAAAA
+		SccLocalPath1 = ..\\..\\DataGridPlus
+		SccProvider1 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		SccProjectUniqueName2 = ..\\UFCW.CMS.DAL\\UFCW.CMS.DAL.vbproj
+		SccProjectName2 = \u0022$/UFCW.CMS/UFCW.CMS.DAL\u0022,\u0020OSGAAAAA
+		SccLocalPath2 = ..\\UFCW.CMS.DAL
+		SccProvider2 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+	EndGlobalSection
+EndGlobal

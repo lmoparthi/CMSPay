@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="AddressesDS" targetNamespace="http://tempuri.org/AddressesDS.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/AddressesDS.xsd" xmlns:mstns="http://tempuri.org/AddressesDS.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="AddressesDS" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="PROVIDER_ADDRESS">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="PROVIDER_ID" type="xs:int" />
+							<xs:element name="ADDRESS_TYPE" type="xs:int" />
+							<xs:element name="SUSPEND_SW" type="xs:decimal" />
+							<xs:element name="ADDRESS_LINE1" type="xs:string" minOccurs="0" />
+							<xs:element name="ADDRESS_LINE2" type="xs:string" minOccurs="0" />
+							<xs:element name="CITY" type="xs:string" minOccurs="0" />
+							<xs:element name="COUNTRY" type="xs:string" minOccurs="0" />
+							<xs:element name="STATE" type="xs:string" minOccurs="0" />
+							<xs:element name="ZIP" type="xs:decimal" minOccurs="0" />
+							<xs:element name="ZIP_4" type="xs:decimal" minOccurs="0" />
+							<xs:element name="EMAIL1" type="xs:string" minOccurs="0" />
+							<xs:element name="PHONE1" type="xs:decimal" minOccurs="0" />
+							<xs:element name="EXTENSION1" type="xs:int" minOccurs="0" />
+							<xs:element name="CONTACT1" type="xs:string" minOccurs="0" />
+							<xs:element name="EMAIL2" type="xs:string" minOccurs="0" />
+							<xs:element name="PHONE2" type="xs:decimal" minOccurs="0" />
+							<xs:element name="EXTENSION2" type="xs:int" minOccurs="0" />
+							<xs:element name="CONTACT2" type="xs:string" minOccurs="0" />
+							<xs:element name="CREATE_USERID" type="xs:string" />
+							<xs:element name="CREATE_DATE" type="xs:dateTime" />
+							<xs:element name="BATCH_USERID" type="xs:string" />
+							<xs:element name="BATCH_DATE" type="xs:dateTime" />
+							<xs:element name="AddressTimestamp" type="xs:dateTime" />
+							<xs:element name="AddressUserID" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="AddressesDSKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:PROVIDER_ADDRESS" />
+			<xs:field xpath="mstns:PROVIDER_ID" />
+			<xs:field xpath="mstns:ADDRESS_TYPE" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

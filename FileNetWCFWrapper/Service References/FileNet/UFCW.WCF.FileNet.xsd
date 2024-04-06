@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="UFCW.WCF.FileNet" elementFormDefault="qualified" targetNamespace="UFCW.WCF.FileNet" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/IDMObjects" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/System.IO" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/IDMViewerApp" />
+  <xs:complexType name="FileNetWCFFault">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="InnerException" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Reason" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StackTrace" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TargetSite" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FileNetWCFFault" nillable="true" type="tns:FileNetWCFFault" />
+  <xs:complexType name="FileNetDocumentProperties">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Annotations" nillable="true" type="tns:ArrayOfFileNetAnnotation" />
+      <xs:element minOccurs="0" name="ClassDescription" nillable="true" type="tns:FileNetClassDescription" />
+      <xs:element minOccurs="0" name="ID" type="xs:long" />
+      <xs:element minOccurs="0" name="IconFile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Label" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Library" nillable="true" type="tns:FileNetLibrary" />
+      <xs:element minOccurs="0" name="MimeType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/IDMObjects" minOccurs="0" name="ObjectType" type="q1:idmObjectType" />
+      <xs:element minOccurs="0" name="PageCount" type="xs:long" />
+      <xs:element minOccurs="0" name="Permissions" nillable="true" type="tns:ArrayOfFileNetPermission" />
+      <xs:element minOccurs="0" name="Properties" nillable="true" type="tns:ArrayOfFileNetProperty" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/IDMObjects" minOccurs="0" name="SystemType" type="q2:idmSysTypeOptions" />
+      <xs:element minOccurs="0" name="TypeName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FileNetDocumentProperties" nillable="true" type="tns:FileNetDocumentProperties" />
+  <xs:complexType name="ArrayOfFileNetAnnotation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FileNetAnnotation" nillable="true" type="tns:FileNetAnnotation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFileNetAnnotation" nillable="true" type="tns:ArrayOfFileNetAnnotation" />
+  <xs:complexType name="FileNetAnnotation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClassDescription" nillable="true" type="tns:FileNetClassDescription" />
+      <xs:element minOccurs="0" name="ID" type="xs:long" />
+      <xs:element minOccurs="0" name="Label" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Library" nillable="true" type="tns:FileNetLibrary" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/IDMObjects" minOccurs="0" name="ObjectType" type="q3:idmObjectType" />
+      <xs:element minOccurs="0" name="Permissions" nillable="true" type="tns:ArrayOfFileNetPermission" />
+      <xs:element minOccurs="0" name="Properties" nillable="true" type="tns:ArrayOfFileNetProperty" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/IDMObjects" minOccurs="0" name="SystemType" type="q4:idmSysTypeOptions" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FileNetAnnotation" nillable="true" type="tns:FileNetAnnotation" />
+  <xs:complexType name="FileNetClassDescription">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" nillable="true" type="tns:FileNetObject" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/IDMObjects" minOccurs="0" name="InstanceType" type="q5:idmObjectType" />
+      <xs:element minOccurs="0" name="Label" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PropertyDescriptions" nillable="true" type="tns:ArrayOfFileNetPropertyDescription" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FileNetClassDescription" nillable="true" type="tns:FileNetClassDescription" />
+  <xs:complexType name="FileNetObject">
+    <xs:sequence>
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/System.IO" minOccurs="0" name="Item" nillable="true" type="q6:MemoryStream" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FileNetObject" nillable="true" type="tns:FileNetObject" />
+  <xs:complexType name="ArrayOfFileNetPropertyDescription">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FileNetPropertyDescription" nillable="true" type="tns:FileNetPropertyDescription" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFileNetPropertyDescription" nillable="true" type="tns:ArrayOfFileNetPropertyDescription" />
+  <xs:complexType name="FileNetPropertyDescription">
+    <xs:sequence>
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/IDMObjects" minOccurs="0" name="InstanceType" type="q7:idmObjectType" />
+      <xs:element minOccurs="0" name="Label" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Size" type="xs:long" />
+      <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/IDMObjects" minOccurs="0" name="TypeID" type="q8:idmTypeID" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FileNetPropertyDescription" nillable="true" type="tns:FileNetPropertyDescription" />
+  <xs:complexType name="FileNetLibrary">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActiveGroup" nillable="true" type="tns:FileNetGroup" />
+      <xs:element minOccurs="0" name="ActiveUser" nillable="true" type="tns:FileNetUser" />
+      <xs:element minOccurs="0" name="Groups" nillable="true" type="tns:ArrayOfFileNetGroup" />
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Label" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LogonId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/IDMObjects" minOccurs="0" name="ObjectType" type="q9:idmObjectType" />
+      <xs:element minOccurs="0" name="Permissions" nillable="true" type="tns:ArrayOfFileNetPermission" />
+      <xs:element minOccurs="0" name="PrintFaxServices" nillable="true" type="tns:ArrayOfFileNetPrintFax" />
+      <xs:element minOccurs="0" name="ProductVersion" nillable="true" type="xs:string" />
+      <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/IDMObjects" minOccurs="0" name="SystemType" type="q10:idmSysTypeOptions" />
+      <xs:element minOccurs="0" name="SystemVersion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TopFolders" nillable="true" type="tns:ArrayOfFileNetFolder" />
+      <xs:element minOccurs="0" name="Users" nillable="true" type="tns:ArrayOfFileNetUser" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FileNetLibrary" nillable="true" type="tns:FileNetLibrary" />
+  <xs:complexType name="FileNetGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:long" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/IDMObjects" minOccurs="0" name="ObjectType" type="q11:idmObjectType" />
+      <xs:element minOccurs="0" name="Users" nillable="true" type="tns:ArrayOfFileNetUser" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FileNetGroup" nillable="true" type="tns:FileNetGroup" />
+  <xs:complexType name="ArrayOfFileNetUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FileNetUser" nillable="true" type="tns:FileNetUser" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFileNetUser" nillable="true" type="tns:ArrayOfFileNetUser" />
+  <xs:complexType name="FileNetUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DefaultGroup" nillable="true" type="tns:FileNetGroup" />
+      <xs:element minOccurs="0" name="Groups" nillable="true" type="tns:ArrayOfFileNetGroup" />
+      <xs:element minOccurs="0" name="ID" type="xs:long" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/IDMObjects" minOccurs="0" name="ObjectType" type="q12:idmObjectType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FileNetUser" nillable="true" type="tns:FileNetUser" />
+  <xs:complexType name="ArrayOfFileNetGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FileNetGroup" nillable="true" type="tns:FileNetGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFileNetGroup" nillable="true" type="tns:ArrayOfFileNetGroup" />
+  <xs:complexType name="ArrayOfFileNetPermission">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FileNetPermission" nillable="true" type="tns:FileNetPermission" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFileNetPermission" nillable="true" type="tns:ArrayOfFileNetPermission" />
+  <xs:complexType name="FileNetPermission">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Access" type="xs:long" />
+      <xs:element minOccurs="0" name="GranteeName" nillable="true" type="xs:string" />
+      <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/IDMObjects" minOccurs="0" name="GranteeType" type="q13:idmObjectType" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Label" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FileNetPermission" nillable="true" type="tns:FileNetPermission" />
+  <xs:complexType name="ArrayOfFileNetPrintFax">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FileNetPrintFax" nillable="true" type="tns:FileNetPrintFax" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFileNetPrintFax" nillable="true" type="tns:ArrayOfFileNetPrintFax" />
+  <xs:complexType name="FileNetPrintFax">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Queues" nillable="true" type="tns:ArrayOfFileNetPrintFaxQueue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FileNetPrintFax" nillable="true" type="tns:FileNetPrintFax" />
+  <xs:complexType name="ArrayOfFileNetPrintFaxQueue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FileNetPrintFaxQueue" nillable="true" type="tns:FileNetPrintFaxQueue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFileNetPrintFaxQueue" nillable="true" type="tns:ArrayOfFileNetPrintFaxQueue" />
+  <xs:complexType name="FileNetPrintFaxQueue">
+    <xs:sequence>
+      <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/IDMObjects" minOccurs="0" name="Direction" type="q14:idmPrintFaxDirectionType" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumberOfTrays" type="xs:short" />
+      <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/IDMObjects" minOccurs="0" name="PaperSizes" nillable="true" type="q15:ArrayOfidmPrintFaxPaperSizeType" />
+      <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/IDMObjects" minOccurs="0" name="QueueType" type="q16:idmPrintFaxQueueType" />
+      <xs:element minOccurs="0" name="Speed" type="xs:short" />
+      <xs:element minOccurs="0" name="Staple" type="xs:boolean" />
+      <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/IDMObjects" minOccurs="0" name="Status" type="q17:idmPrintFaxQueueStatusType" />
+      <xs:element minOccurs="0" name="TwoSided" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FileNetPrintFaxQueue" nillable="true" type="tns:FileNetPrintFaxQueue" />
+  <xs:complexType name="ArrayOfFileNetFolder">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FileNetFolder" nillable="true" type="tns:FileNetFolder" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFileNetFolder" nillable="true" type="tns:ArrayOfFileNetFolder" />
+  <xs:complexType name="FileNetFolder">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClassDescription" nillable="true" type="tns:FileNetClassDescription" />
+      <xs:element minOccurs="0" name="ID" type="xs:long" />
+      <xs:element minOccurs="0" name="Label" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Library" nillable="true" type="tns:FileNetLibrary" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/IDMObjects" minOccurs="0" name="ObjectType" type="q18:idmObjectType" />
+      <xs:element minOccurs="0" name="Parent" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="PathName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Permissions" nillable="true" type="tns:ArrayOfFileNetPermission" />
+      <xs:element minOccurs="0" name="Properties" nillable="true" type="tns:ArrayOfFileNetProperty" />
+      <xs:element minOccurs="0" name="SubFolders" nillable="true" type="tns:ArrayOfFileNetFolder" />
+      <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/IDMObjects" minOccurs="0" name="SystemType" type="q19:idmSysTypeOptions" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FileNetFolder" nillable="true" type="tns:FileNetFolder" />
+  <xs:complexType name="ArrayOfFileNetProperty">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FileNetProperty" nillable="true" type="tns:FileNetProperty" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFileNetProperty" nillable="true" type="tns:ArrayOfFileNetProperty" />
+  <xs:complexType name="FileNetProperty">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Label" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PropertyDescription" nillable="true" type="tns:FileNetPropertyDescription" />
+      <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/IDMObjects" minOccurs="0" name="TypeID" type="q20:idmTypeID" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="tns:FileNetObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FileNetProperty" nillable="true" type="tns:FileNetProperty" />
+  <xs:complexType name="FileNetSessionProperties">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LibraryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LoggedOn" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FileNetSessionProperties" nillable="true" type="tns:FileNetSessionProperties" />
+  <xs:complexType name="FileNetViewerProperties">
+    <xs:sequence>
+      <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/IDMViewerApp" minOccurs="0" name="ShowWindow" type="q21:idmShowWindow" />
+      <xs:element minOccurs="0" name="Visible" type="xs:boolean" />
+      <xs:element minOccurs="0" name="WindowHeight" type="xs:int" />
+      <xs:element minOccurs="0" name="WindowLeft" type="xs:int" />
+      <xs:element minOccurs="0" name="WindowTop" type="xs:int" />
+      <xs:element minOccurs="0" name="WindowWidth" type="xs:int" />
+      <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/IDMViewerApp" minOccurs="0" name="ZoomMode" type="q22:idmZoomMode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FileNetViewerProperties" nillable="true" type="tns:FileNetViewerProperties" />
+  <xs:complexType name="WCFProcessInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ByProcessName" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ProcessID" type="xs:long" />
+      <xs:element minOccurs="0" name="ProcessName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WCFProcessInfo" nillable="true" type="tns:WCFProcessInfo" />
+</xs:schema>

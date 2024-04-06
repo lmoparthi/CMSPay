@@ -1,0 +1,56 @@
+-- <ScriptOptions statementSeparator="@"/>
+@
+-- <ScriptOptions errors="off"/>
+@
+-- Drop the procedure if one already exists
+DROP  PROCEDURE FDBMD.RETRIEVE_PROVIDER_LOG_BY_PROVIDERID
+@
+COMMIT
+@
+-- <ScriptOptions errors="on"/>
+@
+-- Create procedure
+CREATE PROCEDURE FDBMD.RETRIEVE_PROVIDER_LOG_BY_PROVIDERID(
+		IN	vPROVIDER_ID		INTEGER)
+	RESULT SETS 1
+	--LANGUAGE SQL
+	COLLID FODBCOLL
+	--WLM ENVIRONMENT WLMDENV4 STAY RESIDENT YES
+	RUN OPTIONS ''
+--------------------------------------------------------------------------
+-- DB2 SQL procedure
+--------------------------------------------------------------------------
+
+P1: BEGIN
+
+-- Declare variables
+
+
+
+
+-- Declare cursors
+DECLARE ADOCURSOR CURSOR WITH RETURN FOR 
+	SELECT	HISTORY_TYPES.TRANSACTION_DESC,
+			HISTORY.TRANSACTION_COMMENT,
+			HISTORY.CREATE_USERID,
+			HISTORY.CREATE_DATE
+	FROM	FDBMD.HISTORY HISTORY INNER JOIN 
+			FDBMD.HISTORY_TYPES HISTORY_TYPES ON  HISTORY.TRANSACTION_TYPE = HISTORY_TYPES.TRANSACTION_TYPE
+	WHERE  HISTORY.PROVIDER_ID = vPROVIDER_ID
+	ORDER BY HISTORY.CREATE_DATE
+	OPTIMIZE FOR 10 ROWS;
+--
+
+-- Cursor left open for client application.
+OPEN ADOCURSOR;
+
+
+--
+
+END P1
+@
+-- <ScriptOptions WLMRefresh="WLMDENV4" />
+@
+-- Grant access privilages to procedure
+GRANT EXECUTE ON PROCEDURE FDBMD.RETRIEVE_PROVIDER_LOG_BY_PROVIDERID TO PUBLIC
+@

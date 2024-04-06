@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BillTypeValuesDataSet" targetNamespace="http://tempuri.org/BillTypeValuesDataSet.xsd" xmlns:mstns="http://tempuri.org/BillTypeValuesDataSet.xsd" xmlns="http://tempuri.org/BillTypeValuesDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="BillTypeValuesDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="BillTypeValuesDataSet" msprop:Generator_DataSetName="BillTypeValuesDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BILL_TYPE_VALUES" msprop:Generator_UserTableName="BILL_TYPE_VALUES" msprop:Generator_RowDeletedName="BILL_TYPE_VALUESRowDeleted" msprop:Generator_RowChangedName="BILL_TYPE_VALUESRowChanged" msprop:Generator_RowClassName="BILL_TYPE_VALUESRow" msprop:Generator_RowChangingName="BILL_TYPE_VALUESRowChanging" msprop:Generator_RowEvArgName="BILL_TYPE_VALUESRowChangeEvent" msprop:Generator_RowEvHandlerName="BILL_TYPE_VALUESRowChangeEventHandler" msprop:Generator_TableClassName="BILL_TYPE_VALUESDataTable" msprop:Generator_TableVarName="tableBILL_TYPE_VALUES" msprop:Generator_RowDeletingName="BILL_TYPE_VALUESRowDeleting" msprop:Generator_TablePropName="BILL_TYPE_VALUES">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BILL_TYPE_VALUE" msprop:Generator_UserColumnName="BILL_TYPE_VALUE" msprop:Generator_ColumnPropNameInRow="BILL_TYPE_VALUE" msprop:Generator_ColumnVarNameInTable="columnBILL_TYPE_VALUE" msprop:Generator_ColumnPropNameInTable="BILL_TYPE_VALUEColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FROM_DATE" msprop:Generator_UserColumnName="FROM_DATE" msprop:Generator_ColumnPropNameInRow="FROM_DATE" msprop:Generator_ColumnVarNameInTable="columnFROM_DATE" msprop:Generator_ColumnPropNameInTable="FROM_DATEColumn" type="xs:dateTime" />
+              <xs:element name="THRU_DATE" msprop:Generator_UserColumnName="THRU_DATE" msprop:Generator_ColumnPropNameInRow="THRU_DATE" msprop:Generator_ColumnVarNameInTable="columnTHRU_DATE" msprop:Generator_ColumnPropNameInTable="THRU_DATEColumn" type="xs:dateTime" />
+              <xs:element name="FULL_DESC" msprop:Generator_UserColumnName="FULL_DESC" msprop:Generator_ColumnPropNameInRow="FULL_DESC" msprop:Generator_ColumnVarNameInTable="columnFULL_DESC" msprop:Generator_ColumnPropNameInTable="FULL_DESCColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="600" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESC_1" msprop:Generator_UserColumnName="DESC_1" msprop:Generator_ColumnPropNameInRow="DESC_1" msprop:Generator_ColumnVarNameInTable="columnDESC_1" msprop:Generator_ColumnPropNameInTable="DESC_1Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESC_2" msprop:Generator_UserColumnName="DESC_2" msprop:Generator_ColumnPropNameInRow="DESC_2" msprop:Generator_ColumnVarNameInTable="columnDESC_2" msprop:Generator_ColumnPropNameInTable="DESC_2Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESC_3" msprop:Generator_UserColumnName="DESC_3" msprop:Generator_ColumnPropNameInRow="DESC_3" msprop:Generator_ColumnVarNameInTable="columnDESC_3" msprop:Generator_ColumnPropNameInTable="DESC_3Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CREATE_USERID" msprop:Generator_UserColumnName="CREATE_USERID" msprop:Generator_ColumnPropNameInRow="CREATE_USERID" msprop:Generator_ColumnVarNameInTable="columnCREATE_USERID" msprop:Generator_ColumnPropNameInTable="CREATE_USERIDColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CREATE_DATE" msprop:Generator_UserColumnName="CREATE_DATE" msprop:Generator_ColumnPropNameInRow="CREATE_DATE" msprop:Generator_ColumnVarNameInTable="columnCREATE_DATE" msprop:Generator_ColumnPropNameInTable="CREATE_DATEColumn" type="xs:dateTime" />
+              <xs:element name="USERID" msprop:Generator_UserColumnName="USERID" msprop:Generator_ColumnPropNameInRow="USERID" msprop:Generator_ColumnVarNameInTable="columnUSERID" msprop:Generator_ColumnPropNameInTable="USERIDColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LASTUPDT" msprop:Generator_UserColumnName="LASTUPDT" msprop:Generator_ColumnPropNameInRow="LASTUPDT" msprop:Generator_ColumnVarNameInTable="columnLASTUPDT" msprop:Generator_ColumnPropNameInTable="LASTUPDTColumn" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:BILL_TYPE_VALUES" />
+      <xs:field xpath="mstns:BILL_TYPE_VALUE" />
+      <xs:field xpath="mstns:FROM_DATE" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

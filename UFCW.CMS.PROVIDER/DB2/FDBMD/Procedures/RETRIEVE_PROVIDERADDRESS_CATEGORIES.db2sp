@@ -1,0 +1,51 @@
+-- <ScriptOptions statementSeparator="@"/>
+@
+-- <ScriptOptions errors="off"/>
+@
+-- Drop the procedure if one already exists
+DROP  PROCEDURE FDBMD.RETRIEVE_PROVIDERADDRESS_CATEGORIES
+@
+COMMIT
+@
+-- <ScriptOptions errors="on"/>
+@
+-- Create procedure
+CREATE PROCEDURE FDBMD.RETRIEVE_PROVIDERADDRESS_CATEGORIES()
+	RESULT SETS 1
+	--LANGUAGE SQL
+	COLLID FODBCOLL
+	--WLM ENVIRONMENT WLMDENV4 
+	STAY RESIDENT YES
+	RUN OPTIONS ''
+--------------------------------------------------------------------------
+-- DB2 SQL procedure
+--------------------------------------------------------------------------
+
+P1: BEGIN
+
+-- Declare variables
+
+
+
+
+-- Declare cursors
+DECLARE PROVIDER_ADDRESS_TYPE CURSOR WITH RETURN FOR 
+	SELECT  PROVIDER_ADDRESS_TYPE.ADDRESS_TYPE, 
+			PROVIDER_ADDRESS_TYPE.NAME
+	FROM FDBMD.PROVIDER_ADDRESS_TYPE PROVIDER_ADDRESS_TYPE
+	OPTIMIZE FOR 5 ROWS
+	WITH UR;
+--
+
+-- Cursor left open for client application.
+OPEN PROVIDER_ADDRESS_TYPE;
+
+
+--
+END P1
+@
+-- <ScriptOptions WLMRefresh="WLMDENV4" />
+@
+-- Grant access privilages to procedure
+GRANT EXECUTE ON PROCEDURE FDBMD.RETRIEVE_PROVIDERADDRESS_CATEGORIES TO PUBLIC
+@

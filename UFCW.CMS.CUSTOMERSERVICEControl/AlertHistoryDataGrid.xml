@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AlertHistoryDataGrid>
+  <ColumnCount>5</ColumnCount>
+  <Column>
+    <DefaultOrder>0</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>FAMILY_ID</Mapping>
+    <HeaderText>Family ID</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>1</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>RELATION_ID</Mapping>
+    <HeaderText>Relation ID</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>2</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>SUMMARY</Mapping>
+    <HeaderText>History Summary</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+   <Column>
+    <DefaultOrder>3</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>CREATE_DATE</Mapping>
+    <HeaderText>Modification Date</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>4</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>CREATE_USERID</Mapping>
+    <HeaderText>UserID</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+</AlertHistoryDataGrid>

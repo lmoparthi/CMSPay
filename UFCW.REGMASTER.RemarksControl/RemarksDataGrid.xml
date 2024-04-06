@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RemarksDataGridStyle>
+  <ColumnCount>4</ColumnCount>
+  <GridDefaultSort>CREATE_DATE DESC</GridDefaultSort>
+  <Column>
+    <DefaultOrder>0</DefaultOrder>
+    <DefaultCharWidth>50</DefaultCharWidth>
+    <Mapping>REMARKS</Mapping>
+    <HeaderText>Remarks</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <WordWrap>True</WordWrap>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>1</DefaultOrder>
+    <DefaultCharWidth>40</DefaultCharWidth>
+    <Mapping>POSTING_DATE</Mapping>
+    <HeaderText>Posting Date</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>2</DefaultOrder>
+    <DefaultCharWidth>40</DefaultCharWidth>
+    <Mapping>CREATE_USERID</Mapping>
+    <GAC>CMSUsers</GAC>
+    <HeaderText>User</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>3</DefaultOrder>
+    <DefaultCharWidth>15</DefaultCharWidth>
+    <Mapping>CREATE_DATE</Mapping>
+    <HeaderText>Created Date</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+</RemarksDataGridStyle>

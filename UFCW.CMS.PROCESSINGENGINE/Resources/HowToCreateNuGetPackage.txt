@@ -1,0 +1,27 @@
+﻿https://learn.microsoft.com/en-us/azure/devops/artifacts/get-started-nuget?view=azure-devops&tabs=windows
+
+Make sure you have Nuget.exe installed to path used in commands
+Change Name & version as needed
+
+Tools\Command Line\Developer Command Prompt
+c:\NuGet\nuget spec UFCW.CMS.ProcessingEngine.vbproj   
+
+Add dependencies to *.nuspec file 
+
+	<dependencies>
+		<dependency id="UFCWGeneral" version="[1.*,)" />
+		<dependency id="UFCWGeneralAD" version="[1.*,)" />
+		<dependency id="UFCWEmail" version="[1.*,)" />
+		<dependency id="UFCWClone" version="[1.*,)" />
+		<dependency id="UFCWException" version="[1.*,)" />
+		<dependency id="UFCWCryptor" version="[1.*,)" />
+		<dependency id="UFCW.CMS.Plan" version="[1.*,)" />
+		<dependency id="UFCW.CMS.Binder" version="[1.*,)" />
+		<dependency id="UFCW.CMS.DAL" version="[1.*,)" />
+		<dependency id="UFCW.CMS.AlertManager" version="[1.*,)" />
+		<dependency id="UFCW.CMS.Accumulator" version="[1.*,)" />
+	</dependencies>
+
+
+c:\NuGet\nuget pack UFCW.CMS.ProcessingEngine.vbproj -Properties Configuration=Release  
+c:\NuGet\nuget push UFCW.CMS.ProcessingEngine.1.2.48.30285.nupkg -src http://ufcwdevops/SCUFCWFunds/FundApps/_packaging/UFCWNuGetPackages/nuget/v3/index.json -ApiKey UFCW.CMS.ProcessingEngine

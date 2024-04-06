@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AccumulatorsDataGridStyle>
+  <ColumnCount>4</ColumnCount>
+  <!--Column>
+    <DefaultOrder>1</DefaultOrder>
+    <DefaultCharWidth>12</DefaultCharWidth>
+    <Mapping>ACCUM_NAME</Mapping>
+    <HeaderText>Accumulator</HeaderText>
+    <Type>Combo</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+    <SQL>SELECT ACCUM_NAME FROM FDBMD.ACCUMULATOR WHERE MANUAL_SW = 1 ORDER BY ACCUM_NAME FOR READ ONLY OPTIMIZE FOR 100 ROWS</SQL>
+    <SQLDisplayColumn>ACCUM_NAME</SQLDisplayColumn>
+  </Column-->
+  <Column>
+    <DefaultOrder>1</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>ACCUM_NAME</Mapping>
+    <HeaderText>Accumulator</HeaderText>
+    <Type>Text</Type>
+    <Format>Upper</Format>
+    <ReadOnly>False</ReadOnly>
+    <NullText></NullText>
+    <SQL>SELECT ACCUM_NAME FROM FDBMD.ACCUMULATOR WHERE MANUAL_SW = 1 AND ACTIVE_SW = 1 ORDER BY ACCUM_NAME FOR READ ONLY OPTIMIZE FOR 100 ROWS</SQL>
+    <SQLDisplayColumn>ACCUM_NAME</SQLDisplayColumn>
+  </Column>
+  <Column>
+    <DefaultOrder>2</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>ACCUM_VALUE</Mapping>
+    <HeaderText>Value</HeaderText>
+    <Type>Text</Type>
+    <Format>c</Format>
+    <ReadOnly>False</ReadOnly>
+    <NullText></NullText>
+    <SQL></SQL>
+    <SQLDisplayColumn></SQLDisplayColumn>
+  </Column>
+  <Column>
+    <DefaultOrder>3</DefaultOrder>
+    <DefaultCharWidth>0</DefaultCharWidth>
+    <Mapping>ORIGINAL_ACCUM_VALUE</Mapping>
+    <HeaderText>Original Value</HeaderText>
+    <Type>Text</Type>
+    <Format>c</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+    <SQL></SQL>
+    <SQLDisplayColumn></SQLDisplayColumn>
+  </Column>
+</AccumulatorsDataGridStyle>

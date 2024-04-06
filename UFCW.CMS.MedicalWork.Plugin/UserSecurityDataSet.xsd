@@ -1,0 +1,24 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="UserSecurityDataSet" targetNamespace="http://www.tempuri.org/UserSecurityDataSet.xsd" xmlns:mstns="http://www.tempuri.org/UserSecurityDataSet.xsd" xmlns="http://www.tempuri.org/UserSecurityDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="UserSecurityDataSet" msdata:IsDataSet="true">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="USER_DOC_TYPES">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="USERID" type="xs:string" />
+              <xs:element name="DOC_CLASS" type="xs:string" />
+              <xs:element name="DOC_TYPE" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:USER_DOC_TYPES" />
+      <xs:field xpath="mstns:USERID" />
+      <xs:field xpath="mstns:DOC_CLASS" />
+      <xs:field xpath="mstns:DOC_TYPE" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

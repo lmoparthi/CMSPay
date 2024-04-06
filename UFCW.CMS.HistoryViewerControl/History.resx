@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="SqlSelectCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlSelectCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlSelectCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="SqlInsertCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlInsertCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlInsertCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <data name="SqlInsertCommand1.CommandText" xml:space="preserve">
+    <value>INSERT INTO History(TranID, ProcessDateTime, TransactionType, DocumentID, SSN, SSNAlias, HistoryText, Detail, Code, DocClass, DocType, userid, lastupdt, CompleteDate) VALUES (@TranID, @ProcessDateTime, @TransactionType, @DocumentID, @SSN, @SSNAlias, @HistoryText, @Detail, @Code, @DocClass, @DocType, @userid, @lastupdt, @CompleteDate); SELECT SQLTranID, TranID, ProcessDateTime, TransactionType, DocumentID, SSN, SSNAlias, HistoryText, Detail, Code, DocClass, DocType, userid, lastupdt, CompleteDate FROM History WHERE (SQLTranID = @@IDENTITY)</value>
+  </data>
+  <metadata name="SqlUpdateCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlUpdateCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlUpdateCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <data name="SqlUpdateCommand1.CommandText" xml:space="preserve">
+    <value>UPDATE History SET TranID = @TranID, ProcessDateTime = @ProcessDateTime, TransactionType = @TransactionType, DocumentID = @DocumentID, SSN = @SSN, SSNAlias = @SSNAlias, HistoryText = @HistoryText, Detail = @Detail, Code = @Code, DocClass = @DocClass, DocType = @DocType, userid = @userid, lastupdt = @lastupdt, CompleteDate = @CompleteDate WHERE (SQLTranID = @Original_SQLTranID) AND (Code = @Original_Code OR @Original_Code IS NULL AND Code IS NULL) AND (CompleteDate = @Original_CompleteDate OR @Original_CompleteDate IS NULL AND CompleteDate IS NULL) AND (Detail = @Original_Detail OR @Original_Detail IS NULL AND Detail IS NULL) AND (DocClass = @Original_DocClass OR @Original_DocClass IS NULL AND DocClass IS NULL) AND (DocType = @Original_DocType OR @Original_DocType IS NULL AND DocType IS NULL) AND (DocumentID = @Original_DocumentID OR @Original_DocumentID IS NULL AND DocumentID IS NULL) AND (HistoryText = @Original_HistoryText OR @Original_HistoryText IS NULL AND HistoryText IS NULL) AND (ProcessDateTime = @Original_ProcessDateTime OR @Original_ProcessDateTime IS NULL AND ProcessDateTime IS NULL) AND (SSN = @Original_SSN OR @Original_SSN IS NULL AND SSN IS NULL) AND (SSNAlias = @Original_SSNAlias OR @Original_SSNAlias IS NULL AND SSNAlias IS NULL) AND (TranID = @Original_TranID OR @Original_TranID IS NULL AND TranID IS NULL) AND (TransactionType = @Original_TransactionType OR @Original_TransactionType IS NULL AND TransactionType IS NULL) AND (lastupdt = @Original_lastupdt OR @Original_lastupdt IS NULL AND lastupdt IS NULL) AND (userid = @Original_userid OR @Original_userid IS NULL AND userid IS NULL); SELECT SQLTranID, TranID, ProcessDateTime, TransactionType, DocumentID, SSN, SSNAlias, HistoryText, Detail, Code, DocClass, DocType, userid, lastupdt, CompleteDate FROM History WHERE (SQLTranID = @SQLTranID)</value>
+  </data>
+  <metadata name="SqlDeleteCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlDeleteCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlDeleteCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <data name="SqlDeleteCommand1.CommandText" xml:space="preserve">
+    <value>DELETE FROM History WHERE (SQLTranID = @Original_SQLTranID) AND (Code = @Original_Code OR @Original_Code IS NULL AND Code IS NULL) AND (CompleteDate = @Original_CompleteDate OR @Original_CompleteDate IS NULL AND CompleteDate IS NULL) AND (Detail = @Original_Detail OR @Original_Detail IS NULL AND Detail IS NULL) AND (DocClass = @Original_DocClass OR @Original_DocClass IS NULL AND DocClass IS NULL) AND (DocType = @Original_DocType OR @Original_DocType IS NULL AND DocType IS NULL) AND (DocumentID = @Original_DocumentID OR @Original_DocumentID IS NULL AND DocumentID IS NULL) AND (HistoryText = @Original_HistoryText OR @Original_HistoryText IS NULL AND HistoryText IS NULL) AND (ProcessDateTime = @Original_ProcessDateTime OR @Original_ProcessDateTime IS NULL AND ProcessDateTime IS NULL) AND (SSN = @Original_SSN OR @Original_SSN IS NULL AND SSN IS NULL) AND (SSNAlias = @Original_SSNAlias OR @Original_SSNAlias IS NULL AND SSNAlias IS NULL) AND (TranID = @Original_TranID OR @Original_TranID IS NULL AND TranID IS NULL) AND (TransactionType = @Original_TransactionType OR @Original_TransactionType IS NULL AND TransactionType IS NULL) AND (lastupdt = @Original_lastupdt OR @Original_lastupdt IS NULL AND lastupdt IS NULL) AND (userid = @Original_userid OR @Original_userid IS NULL AND userid IS NULL)</value>
+  </data>
+  <metadata name="HistAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>152, 17</value>
+  </metadata>
+  <metadata name="HistDataset.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>261, 17</value>
+  </metadata>
+  <metadata name="SqlSelectCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlSelectCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlSelectCommand2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <data name="SqlSelectCommand2.CommandText" xml:space="preserve">
+    <value>SELECT MaximID, DocumentID, DocumentClass, EntryInsertTime, EmployeeItem, ReceiveDate, DocType, ArchiveOnly, ItemStatus, SSN, ParticipantNameLast, ParticipantNameMiddle, ParticipantNameFirst, PatientNameLast, PatientNameMiddle, PatientNameFirst, ProviderID, ProviderSuffix, DateOfService, ScanDate, PageCount, BatchNumber, IndexDate, CheckAccountNumber, CheckAmount, CheckCode, CheckDate, CheckNumber, CompletedBy, CompletedOn, LastUpdateBy, LastUpdateTime FROM UFCWDocs WITH (nolock)</value>
+  </data>
+  <metadata name="SqlInsertCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlInsertCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlInsertCommand2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <data name="SqlInsertCommand2.CommandText" xml:space="preserve">
+    <value>INSERT INTO UFCWDocs(MaximID, DocumentID, DocumentClass, EntryInsertTime, EmployeeItem, ReceiveDate, DocType, ArchiveOnly, ItemStatus, SSN, ParticipantNameLast, ParticipantNameMiddle, ParticipantNameFirst, PatientNameLast, PatientNameMiddle, PatientNameFirst, ProviderID, ProviderSuffix, DateOfService, ScanDate, PageCount, BatchNumber, IndexDate, CheckAccountNumber, CheckAmount, CheckCode, CheckDate, CheckNumber, CompletedBy, CompletedOn, LastUpdateBy, LastUpdateTime) VALUES (@MaximID, @DocumentID, @DocumentClass, @EntryInsertTime, @EmployeeItem, @ReceiveDate, @DocType, @ArchiveOnly, @ItemStatus, @SSN, @ParticipantNameLast, @ParticipantNameMiddle, @ParticipantNameFirst, @PatientNameLast, @PatientNameMiddle, @PatientNameFirst, @ProviderID, @ProviderSuffix, @DateOfService, @ScanDate, @PageCount, @BatchNumber, @IndexDate, @CheckAccountNumber, @CheckAmount, @CheckCode, @CheckDate, @CheckNumber, @CompletedBy, @CompletedOn, @LastUpdateBy, @LastUpdateTime); SELECT MaximID, DocumentID, DocumentClass, EntryInsertTime, EmployeeItem, ReceiveDate, DocType, ArchiveOnly, ItemStatus, SSN, ParticipantNameLast, ParticipantNameMiddle, ParticipantNameFirst, PatientNameLast, PatientNameMiddle, PatientNameFirst, ProviderID, ProviderSuffix, DateOfService, ScanDate, PageCount, BatchNumber, IndexDate, CheckAccountNumber, CheckAmount, CheckCode, CheckDate, CheckNumber, CompletedBy, CompletedOn, LastUpdateBy, LastUpdateTime FROM UFCWDocs WHERE (DocumentID = @DocumentID)</value>
+  </data>
+  <metadata name="SqlUpdateCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlUpdateCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlUpdateCommand2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <data name="SqlUpdateCommand2.CommandText" xml:space="preserve">
+    <value>UPDATE UFCWDocs SET MaximID = @MaximID, DocumentID = @DocumentID, DocumentClass = @DocumentClass, EntryInsertTime = @EntryInsertTime, EmployeeItem = @EmployeeItem, ReceiveDate = @ReceiveDate, DocType = @DocType, ArchiveOnly = @ArchiveOnly, ItemStatus = @ItemStatus, SSN = @SSN, ParticipantNameLast = @ParticipantNameLast, ParticipantNameMiddle = @ParticipantNameMiddle, ParticipantNameFirst = @ParticipantNameFirst, PatientNameLast = @PatientNameLast, PatientNameMiddle = @PatientNameMiddle, PatientNameFirst = @PatientNameFirst, ProviderID = @ProviderID, ProviderSuffix = @ProviderSuffix, DateOfService = @DateOfService, ScanDate = @ScanDate, PageCount = @PageCount, BatchNumber = @BatchNumber, IndexDate = @IndexDate, CheckAccountNumber = @CheckAccountNumber, CheckAmount = @CheckAmount, CheckCode = @CheckCode, CheckDate = @CheckDate, CheckNumber = @CheckNumber, CompletedBy = @CompletedBy, CompletedOn = @CompletedOn, LastUpdateBy = @LastUpdateBy, LastUpdateTime = @LastUpdateTime WHERE (DocumentID = @Original_DocumentID) AND (ArchiveOnly = @Original_ArchiveOnly OR @Original_ArchiveOnly IS NULL AND ArchiveOnly IS NULL) AND (BatchNumber = @Original_BatchNumber OR @Original_BatchNumber IS NULL AND BatchNumber IS NULL) AND (CheckAccountNumber = @Original_CheckAccountNumber OR @Original_CheckAccountNumber IS NULL AND CheckAccountNumber IS NULL) AND (CheckAmount = @Original_CheckAmount OR @Original_CheckAmount IS NULL AND CheckAmount IS NULL) AND (CheckCode = @Original_CheckCode OR @Original_CheckCode IS NULL AND CheckCode IS NULL) AND (CheckDate = @Original_CheckDate OR @Original_CheckDate IS NULL AND CheckDate IS NULL) AND (CheckNumber = @Original_CheckNumber OR @Original_CheckNumber IS NULL AND CheckNumber IS NULL) AND (CompletedBy = @Original_CompletedBy OR @Original_CompletedBy IS NULL AND CompletedBy IS NULL) AND (CompletedOn = @Original_CompletedOn OR @Original_CompletedOn IS NULL AND CompletedOn IS NULL) AND (DateOfService = @Original_DateOfService OR @Original_DateOfService IS NULL AND DateOfService IS NULL) AND (DocType = @Original_DocType) AND (DocumentClass = @Original_DocumentClass) AND (EmployeeItem = @Original_EmployeeItem) AND (EntryInsertTime = @Original_EntryInsertTime) AND (IndexDate = @Original_IndexDate OR @Original_IndexDate IS NULL AND IndexDate IS NULL) AND (ItemStatus = @Original_ItemStatus) AND (LastUpdateBy = @Original_LastUpdateBy OR @Original_LastUpdateBy IS NULL AND LastUpdateBy IS NULL) AND (LastUpdateTime = @Original_LastUpdateTime OR @Original_LastUpdateTime IS NULL AND LastUpdateTime IS NULL) AND (MaximID = @Original_MaximID) AND (PageCount = @Original_PageCount OR @Original_PageCount IS NULL AND PageCount IS NULL) AND (ParticipantNameFirst = @Original_ParticipantNameFirst OR @Original_ParticipantNameFirst IS NULL AND ParticipantNameFirst IS NULL) AND (ParticipantNameLast = @Original_ParticipantNameLast OR @Original_ParticipantNameLast IS NULL AND ParticipantNameLast IS NULL) AND (ParticipantNameMiddle = @Original_ParticipantNameMiddle OR @Original_ParticipantNameMiddle IS NULL AND ParticipantNameMiddle IS NULL) AND (PatientNameFirst = @Original_PatientNameFirst OR @Original_PatientNameFirst IS NULL AND PatientNameFirst IS NULL) AND (PatientNameLast = @Original_PatientNameLast OR @Original_PatientNameLast IS NULL AND PatientNameLast IS NULL) AND (PatientNameMiddle = @Original_PatientNameMiddle OR @Original_PatientNameMiddle IS NULL AND PatientNameMiddle IS NULL) AND (ProviderID = @Original_ProviderID OR @Original_ProviderID IS NULL AND ProviderID IS NULL) AND (ProviderSuffix = @Original_ProviderSuffix OR @Original_ProviderSuffix IS NULL AND ProviderSuffix IS NULL) AND (ReceiveDate = @Original_ReceiveDate) AND (SSN = @Original_SSN OR @Original_SSN IS NULL AND SSN IS NULL) AND (ScanDate = @Original_ScanDate OR @Original_ScanDate IS NULL AND ScanDate IS NULL); SELECT MaximID, DocumentID, DocumentClass, EntryInsertTime, EmployeeItem, ReceiveDate, DocType, ArchiveOnly, ItemStatus, SSN, ParticipantNameLast, ParticipantNameMiddle, ParticipantNameFirst, PatientNameLast, PatientNameMiddle, PatientNameFirst, ProviderID, ProviderSuffix, DateOfService, ScanDate, PageCount, BatchNumber, IndexDate, CheckAccountNumber, CheckAmount, CheckCode, CheckDate, CheckNumber, CompletedBy, CompletedOn, LastUpdateBy, LastUpdateTime FROM UFCWDocs WHERE (DocumentID = @DocumentID)</value>
+  </data>
+  <metadata name="SqlDeleteCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlDeleteCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlDeleteCommand2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <data name="SqlDeleteCommand2.CommandText" xml:space="preserve">
+    <value>DELETE FROM UFCWDocs WHERE (DocumentID = @Original_DocumentID) AND (ArchiveOnly = @Original_ArchiveOnly OR @Original_ArchiveOnly IS NULL AND ArchiveOnly IS NULL) AND (BatchNumber = @Original_BatchNumber OR @Original_BatchNumber IS NULL AND BatchNumber IS NULL) AND (CheckAccountNumber = @Original_CheckAccountNumber OR @Original_CheckAccountNumber IS NULL AND CheckAccountNumber IS NULL) AND (CheckAmount = @Original_CheckAmount OR @Original_CheckAmount IS NULL AND CheckAmount IS NULL) AND (CheckCode = @Original_CheckCode OR @Original_CheckCode IS NULL AND CheckCode IS NULL) AND (CheckDate = @Original_CheckDate OR @Original_CheckDate IS NULL AND CheckDate IS NULL) AND (CheckNumber = @Original_CheckNumber OR @Original_CheckNumber IS NULL AND CheckNumber IS NULL) AND (CompletedBy = @Original_CompletedBy OR @Original_CompletedBy IS NULL AND CompletedBy IS NULL) AND (CompletedOn = @Original_CompletedOn OR @Original_CompletedOn IS NULL AND CompletedOn IS NULL) AND (DateOfService = @Original_DateOfService OR @Original_DateOfService IS NULL AND DateOfService IS NULL) AND (DocType = @Original_DocType) AND (DocumentClass = @Original_DocumentClass) AND (EmployeeItem = @Original_EmployeeItem) AND (EntryInsertTime = @Original_EntryInsertTime) AND (IndexDate = @Original_IndexDate OR @Original_IndexDate IS NULL AND IndexDate IS NULL) AND (ItemStatus = @Original_ItemStatus) AND (LastUpdateBy = @Original_LastUpdateBy OR @Original_LastUpdateBy IS NULL AND LastUpdateBy IS NULL) AND (LastUpdateTime = @Original_LastUpdateTime OR @Original_LastUpdateTime IS NULL AND LastUpdateTime IS NULL) AND (MaximID = @Original_MaximID) AND (PageCount = @Original_PageCount OR @Original_PageCount IS NULL AND PageCount IS NULL) AND (ParticipantNameFirst = @Original_ParticipantNameFirst OR @Original_ParticipantNameFirst IS NULL AND ParticipantNameFirst IS NULL) AND (ParticipantNameLast = @Original_ParticipantNameLast OR @Original_ParticipantNameLast IS NULL AND ParticipantNameLast IS NULL) AND (ParticipantNameMiddle = @Original_ParticipantNameMiddle OR @Original_ParticipantNameMiddle IS NULL AND ParticipantNameMiddle IS NULL) AND (PatientNameFirst = @Original_PatientNameFirst OR @Original_PatientNameFirst IS NULL AND PatientNameFirst IS NULL) AND (PatientNameLast = @Original_PatientNameLast OR @Original_PatientNameLast IS NULL AND PatientNameLast IS NULL) AND (PatientNameMiddle = @Original_PatientNameMiddle OR @Original_PatientNameMiddle IS NULL AND PatientNameMiddle IS NULL) AND (ProviderID = @Original_ProviderID OR @Original_ProviderID IS NULL AND ProviderID IS NULL) AND (ProviderSuffix = @Original_ProviderSuffix OR @Original_ProviderSuffix IS NULL AND ProviderSuffix IS NULL) AND (ReceiveDate = @Original_ReceiveDate) AND (SSN = @Original_SSN OR @Original_SSN IS NULL AND SSN IS NULL) AND (ScanDate = @Original_ScanDate OR @Original_ScanDate IS NULL AND ScanDate IS NULL)</value>
+  </data>
+  <metadata name="DocsAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>369, 17</value>
+  </metadata>
+  <metadata name="DocsDataset.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>483, 17</value>
+  </metadata>
+  <metadata name="TTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>596, 17</value>
+  </metadata>
+  <metadata name="HistoryImageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="HistoryImageList.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAO
+        DwAAAk1TRnQBSQFMAgEBDgEAARMBAAEEAQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        AwABQAMAAUADAAEBAQABCAYAARAYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
+        AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
+        AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
+        AWYDAAGZAwABzAIAATMDAAIzAgABMwFmAgABMwGZAgABMwHMAgABMwH/AgABZgMAAWYBMwIAAmYCAAFm
+        AZkCAAFmAcwCAAFmAf8CAAGZAwABmQEzAgABmQFmAgACmQIAAZkBzAIAAZkB/wIAAcwDAAHMATMCAAHM
+        AWYCAAHMAZkCAALMAgABzAH/AgAB/wFmAgAB/wGZAgAB/wHMAQABMwH/AgAB/wEAATMBAAEzAQABZgEA
+        ATMBAAGZAQABMwEAAcwBAAEzAQAB/wEAAf8BMwIAAzMBAAIzAWYBAAIzAZkBAAIzAcwBAAIzAf8BAAEz
+        AWYCAAEzAWYBMwEAATMCZgEAATMBZgGZAQABMwFmAcwBAAEzAWYB/wEAATMBmQIAATMBmQEzAQABMwGZ
+        AWYBAAEzApkBAAEzAZkBzAEAATMBmQH/AQABMwHMAgABMwHMATMBAAEzAcwBZgEAATMBzAGZAQABMwLM
+        AQABMwHMAf8BAAEzAf8BMwEAATMB/wFmAQABMwH/AZkBAAEzAf8BzAEAATMC/wEAAWYDAAFmAQABMwEA
+        AWYBAAFmAQABZgEAAZkBAAFmAQABzAEAAWYBAAH/AQABZgEzAgABZgIzAQABZgEzAWYBAAFmATMBmQEA
+        AWYBMwHMAQABZgEzAf8BAAJmAgACZgEzAQADZgEAAmYBmQEAAmYBzAEAAWYBmQIAAWYBmQEzAQABZgGZ
+        AWYBAAFmApkBAAFmAZkBzAEAAWYBmQH/AQABZgHMAgABZgHMATMBAAFmAcwBmQEAAWYCzAEAAWYBzAH/
+        AQABZgH/AgABZgH/ATMBAAFmAf8BmQEAAWYB/wHMAQABzAEAAf8BAAH/AQABzAEAApkCAAGZATMBmQEA
+        AZkBAAGZAQABmQEAAcwBAAGZAwABmQIzAQABmQEAAWYBAAGZATMBzAEAAZkBAAH/AQABmQFmAgABmQFm
+        ATMBAAGZATMBZgEAAZkBZgGZAQABmQFmAcwBAAGZATMB/wEAApkBMwEAApkBZgEAA5kBAAKZAcwBAAKZ
+        Af8BAAGZAcwCAAGZAcwBMwEAAWYBzAFmAQABmQHMAZkBAAGZAswBAAGZAcwB/wEAAZkB/wIAAZkB/wEz
+        AQABmQHMAWYBAAGZAf8BmQEAAZkB/wHMAQABmQL/AQABzAMAAZkBAAEzAQABzAEAAWYBAAHMAQABmQEA
+        AcwBAAHMAQABmQEzAgABzAIzAQABzAEzAWYBAAHMATMBmQEAAcwBMwHMAQABzAEzAf8BAAHMAWYCAAHM
+        AWYBMwEAAZkCZgEAAcwBZgGZAQABzAFmAcwBAAGZAWYB/wEAAcwBmQIAAcwBmQEzAQABzAGZAWYBAAHM
+        ApkBAAHMAZkBzAEAAcwBmQH/AQACzAIAAswBMwEAAswBZgEAAswBmQEAA8wBAALMAf8BAAHMAf8CAAHM
+        Af8BMwEAAZkB/wFmAQABzAH/AZkBAAHMAf8BzAEAAcwC/wEAAcwBAAEzAQAB/wEAAWYBAAH/AQABmQEA
+        AcwBMwIAAf8CMwEAAf8BMwFmAQAB/wEzAZkBAAH/ATMBzAEAAf8BMwH/AQAB/wFmAgAB/wFmATMBAAHM
+        AmYBAAH/AWYBmQEAAf8BZgHMAQABzAFmAf8BAAH/AZkCAAH/AZkBMwEAAf8BmQFmAQAB/wKZAQAB/wGZ
+        AcwBAAH/AZkB/wEAAf8BzAIAAf8BzAEzAQAB/wHMAWYBAAH/AcwBmQEAAf8CzAEAAf8BzAH/AQAC/wEz
+        AQABzAH/AWYBAAL/AZkBAAL/AcwBAAJmAf8BAAFmAf8BZgEAAWYC/wEAAf8CZgEAAf8BZgH/AQAC/wFm
+        AQABIQEAAaUBAANfAQADdwEAA4YBAAOWAQADywEAA7IBAAPXAQAD3QEAA+MBAAPqAQAD8QEAA/gBAAHw
+        AfsB/wEAAaQCoAEAA4ADAAH/AgAB/wMAAv8BAAH/AwAB/wEAAf8BAAL/AgAD/5UAAgIB/wEHAQIB/wEH
+        AQIBBwH/NgABAgH/AgcB/wMHAf8CBzIAAgIBAAH/AgcB/wMHAf8DBzIAAQIB/wEAAQIBBwH/AwcB/wQH
+        MgAB/wEHAQABAgH/AwcB/wQHAf8yAAIHAQAB/wMHAf8BBwMCAv8yAAECAf8BAAECAgcB/wIHAwIC/yoA
+        AewHAAH/AQcBAAECAQcB/wQHBP8yAAIHAQACAgEHAgIBBwICAf80AAECAQc+AAEHAv8DBwP/eAAHB6kA
+        AewLBzQAAewK/wEHNAAB7Ar/AQc0AAHsCv8BBzQAAewK/wEHGAAC/wEHAQACBwgAAgcBAAEHAv8IAAHs
+        Cv8BBxoAAQcC/wEHAQABBwQAAQcBAAEHAv8BBwoAAewK/wEHFgAC/wIHAQAD/wEAAQcEAAEHAQAD/wEA
+        AgcC/wYAAewK/wEHGgABBwP/AQAB/gQAAf4BAAP/AQcKAAHsCv8BBxMAA/8BAAP/AQAD/wEAAf4EAAH+
+        AQAD/wEAA/8BAAP/AwAB7Ar/AQcVAAH/AQcCAAT/CgAE/wIAAQcB/wUAAewK/wEHNAAB7Aj/NwAB7Aj/
+        AQcB/wHsNAAB7Aj/AQcB7DUACuxJAAfsOAAHAQPsNAACAQf5AgEC7BgAA+wIAA3sAgABAQv5AQEB7BUA
+        AewCBwIAAgcB7AYAAewOAAEBC/kBAQLsEgAB7AMAAf8CAAL/BQAFBwr/AQABAQP5Av8D+QL/A/kBAQHs
+        FAAB/wEAAf8DBAP/CAABBwH/BewD/wEAAQED+QP/AfkD/wP5AQEB7BUAAf8EBAEAAv8DAAkHBv8BAAEB
+        BPkF/wT5AQEB7BUAAfwDBAH/AQQB/w0AA+wD/wEAAQEF+QP/BfkBAQHsFQAB/AMEAf8DAAHsAwAFBwn/
+        AQABAQT5Bf8E+QEBAewWAAMEAwAB7AkABf8BAQEHAgEBAAEBA/kD/wH5A/8D+QEBAewaAAEHAewIAAf/
+        AQEBBwIBAQABAQP5Av8D+QL/A/kBARcABOwXAAEBC/kBATMAAQEL+QEBNAACAQf5AgE3AAcBUAAB7BoA
+        BP8NAAHsDwAB7AEAAf8BAAHsGQABBwMAAQcMAALsDQAB7AIAAv8BAAHsBQAB7Ar/AQcIAAEHAwABBwsA
+        AuwPAAEHA/8BAALsBQAB7AEAAQcBAAEHAQABBwEAAQcBAAEHCAABBwMAAQcKAALsAgAD7AkAAQcF/wIA
+        AuwFAAHsAQAB7AEAAewBAAHsAQAB7AEAAuwGAAEHAQAB/wEAAQcBAAH/BwAC7AMABOwGAAHsAQcH/wEH
+        AQAC7AQAAewIBwHsAQcB7AYAAQcBAAEHAQABBwEAAQcGAALsBwAC7AQAAewL/wEAAewFAAHsCAAB7AEH
+        BgABBwEAAQcBAAEHAQABBwUAAuwHAATsAwAB7AT/BPwD/wEAAuwEAAHsAf8GBwHsAQAC7AUAAQcBAAEH
+        AQABBwEAAQcFAAHsCQAB7AEHAewCAAHsBv8C/AX/AQAB7AQAAewB/wEABOwBBwLsBwABBwEAAQcBAAEH
+        AQABBw4AA+wCBwEAAewG/wL8Bf8BAAHsBAAB7AH/AQADBgHsAQcC7AcAAQcBAAEHAQABBwEAAQcPAAHs
+        AgcCAAHsBf8D/AX/AQAB7AQAAewB/wEAAf4CBgHsAQcC7AcAAQcBAAH/AgcBAAEHDgAD7AIHAQAB7A3/
+        BgAB7AH/BQABBwLsBwABBwIAAQcCAAEHDwAB7AIHAwAB7AX/AvwE/wcAAewG/wEHAuwHAAIHAwACBxAA
+        AewCBwIAAewBBwT/AgcE/wgAAewHBwHsCAAD/wIHEgABBwQAAuwBBwb/AuwJAAjsIAABBwUAB+wVAAFC
+        AU0BPgcAAT4DAAEoAwABQAMAAUADAAEBAQABAQYAAQIWAAP/AQAE/wQAAf4B/wHgAQEEAAH8Af8B4AUA
+        AfgB/wYAAfABfwYAAeIBfwYAAcYBPwYAAf8BPwYAAf8BnwYAAf8BjwYAAf8BzwYAAf8B5wEAAQMEAAH/
+        AfMBAAEfBAAB/wH5AQABHwQAAf8B/QEAAT8EAAL/AYABPwQAAcABAQb/AcABAQb/AcABAQb/AcABAQb/
+        AcABAQL/AfwBDAEwAT8BwAEBAv8B+AIAAR8BwAEBAv8B8AIAAQ8BwAEBAv8B4AIAAQcBwAEBAv8BgAIA
+        AQEBwAEBAv8EAAHAAQEC/wGAAgABAQHAAQEC/wHgARwBOAEHAcABAQb/AcABAwb/AcABBwb/AcABDwj/
+        AfgBDwL/AfgBfwL/AfABAwH/AfsB8AE/Av8BwAEBAf8BOwHgAQ8BwAEBAYABAQH/AYsBgAEDAcABAAGA
+        AQABwAEDAYABAQQAAf8BiwHABQAB/wE7BgAB3wH7AYAFAAHfAf8BwAEBAYADAAHcAf8B4AEDAYADAAHR
+        Af8B8AEHAeACAAEBAcABAwH4AR8B4AEAAYABAwHRAf8BPwH+Av8BgAEDAdwB/wGPAfMC/wHAAQcB3wH/
+        AeABBwL/AfABHwL/AfgBPwH8AT8D/wGPAv8B+AEfAf4B/wH+AQ8BgAEHAfABHwH8Af8B+AEPAYABAwHx
+        AR8B+AH/AfABBwHAAQEB8AEHAfABHwHgAQMB4AEAAfABBwHgAQ8BwAEBAeABAAHwAQcBwAEHAYABAQHw
+        AQAB8AEHAYABAwGAAQAB8AEAAfABBwGAAQMCAAHwAQEB8AEHAYABAQIAAfABAQHwAQcBwAEDAgAB8AEB
+        AfABBwHgAQEBAAEBAfABAQHwAQcB8AEDAYABAwHwAQEB8AEHAfgB8QGAAQMB+AEBAfgBDwH8AfsBwAEH
+        AfwBAwH8AR8B/gH9AfABHwL/Cw==
+</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAIAICAQAAAAAADoAgAAJgAAABAQEAAAAAAAKAEAAA4DAAAoAAAAIAAAAEAAAAABAAQAAAAAAIAC
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAgAAAAICAAIAAAACAAIAAgIAAAICAgADAwMAAAAD/AAD/
+        AAAA//8A/wAAAP8A/wD//wAA////AAAAAAAAAAAAAAAAAAAAAAAAAIiIiIiIAAAAAAAAAAAAAACIiIiI
+        iAAAAAAAAAAAAAAAiIiIiIgHAAAAAAAAAAAAAIiIiIiIB3CIgAAAAAAAAACIgHd4iAd3AIBwAAAAAAAA
+        iIAACIgAd3CAdwAAAAAAAIiIiIiIDwdwgHdwAAAAAACIiIiIiA/wcIB3dwAAAAAAAAAAAAAP+ACAd3cA
+        AAAAAAAAiIiIiIhwgHd3AAAAAAAAAIB3d3d3cIB3dwAAAAAAAACAAAAAAACAd3cAAAAAAAAAgAAAAAAA
+        gHd3AAAAAAAAAIiIiIiIiIB3dwAAAAAAAACAAAAAAACAd3cAAAAAAAAAgIiIiIiAgHd3AAAAAAAAAICI
+        iIiIgIB3dwAAAAAAAACAiIiIiICAd3cAAAAAAAAAgIiIiIiAgHd3AAAAAAAAAICIgHeIgIB3dwAAAAAA
+        AACAiIAAiICAd3cAAAAAAAAAgIiIiIiAgHd3AAAAAAAAAIAAAAAAAIB3dwAAAAAAAACIiIiIiIiAd3cA
+        AAAAAAAAiIiIiIiIgHd3AAAAAAAAAAAAAAAAAAB3dwAAAAAAAAAP////////B3cAAAAAAAAAAP//////
+        //B3AAAAAAAAAAAP////////BwAAAAAAAAAAAP////////AAAAAAAAAAAAAAAAAAAAAAAAAA4AH//+AB
+        ///gAP//4AAD/+AAAf/gAAD/4AAAf+AAAD/gAAAf4AAAH/4AAB/+AAAf/gAAH/4AAB/+AAAf/gAAH/4A
+        AB/+AAAf/gAAH/4AAB/+AAAf/gAAH/4AAB/+AAAf/gAAH/4AAB/+AAAf/wAAH/+AAB//wAAf/+AAH//w
+        AB8oAAAAEAAAACAAAAABAAQAAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAgAAAAICAAIAA
+        AACAAIAAgIAAAICAgADAwMAAAAD/AAD/AAAA//8A/wAAAP8A/wD//wAA////AAAAAAAAAAAACIiIgIAA
+        AAAIgAiACIAAAAiIiIDwgAAAAAAAAICAcAAACIiIcIB3AAAIB3dwgHcAAAgAAACAdwAACAiIgIB3AAAI
+        CACAgHcAAAgIiICAdwAACAAAAIB3AAAIiIiIgHcAAAAAAAAAdwAAAAD///AHAAAAAAAAAAAAAH8AAAAf
+        AAAADwAAAAcAAAADAADAAQAAwAEAAMABAADAAQAAwAEAAMABAADAAQAAwAEAAMABAADwAQAA+AEAAA==
+</value>
+  </data>
+</root>

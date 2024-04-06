@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "UFCW.CMS.PlugIn", "UFCW.CMS.PlugIn.vbproj", "{07B991D5-1996-443F-B419-9C286B4EF16C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		DebugAll|Any CPU = DebugAll|Any CPU
+		DebugZ|Any CPU = DebugZ|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{07B991D5-1996-443F-B419-9C286B4EF16C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07B991D5-1996-443F-B419-9C286B4EF16C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07B991D5-1996-443F-B419-9C286B4EF16C}.DebugAll|Any CPU.ActiveCfg = DebugAll|Any CPU
+		{07B991D5-1996-443F-B419-9C286B4EF16C}.DebugAll|Any CPU.Build.0 = DebugAll|Any CPU
+		{07B991D5-1996-443F-B419-9C286B4EF16C}.DebugZ|Any CPU.ActiveCfg = DebugZ|Any CPU
+		{07B991D5-1996-443F-B419-9C286B4EF16C}.DebugZ|Any CPU.Build.0 = DebugZ|Any CPU
+		{07B991D5-1996-443F-B419-9C286B4EF16C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07B991D5-1996-443F-B419-9C286B4EF16C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {732527E6-93F0-4784-BF06-E162AB3489F9}
+	EndGlobalSection
+EndGlobal

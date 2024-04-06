@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TerminationsDS" targetNamespace="http://tempuri.org/TerminationsDS.xsd" xmlns:mstns="http://tempuri.org/TerminationsDS.xsd" xmlns="http://tempuri.org/TerminationsDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TerminationsDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="TerminationsDS" msprop:Generator_UserDSName="TerminationsDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TERMS" msprop:Generator_TableClassName="TERMSDataTable" msprop:Generator_TableVarName="tableTERMS" msprop:Generator_TablePropName="TERMS" msprop:Generator_RowDeletingName="TERMSRowDeleting" msprop:Generator_RowChangingName="TERMSRowChanging" msprop:Generator_RowEvHandlerName="TERMSRowChangeEventHandler" msprop:Generator_RowDeletedName="TERMSRowDeleted" msprop:Generator_UserTableName="TERMS" msprop:Generator_RowChangedName="TERMSRowChanged" msprop:Generator_RowEvArgName="TERMSRowChangeEvent" msprop:Generator_RowClassName="TERMSRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TERM_ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnTERM_ID" msprop:Generator_ColumnPropNameInRow="TERM_ID" msprop:Generator_ColumnPropNameInTable="TERM_IDColumn" msprop:Generator_UserColumnName="TERM_ID" type="xs:int" />
+              <xs:element name="EMPRNO" msprop:Generator_ColumnVarNameInTable="columnEMPRNO" msprop:Generator_ColumnPropNameInRow="EMPRNO" msprop:Generator_ColumnPropNameInTable="EMPRNOColumn" msprop:Generator_UserColumnName="EMPRNO" type="xs:int" />
+              <xs:element name="EMPRSUB" msprop:Generator_ColumnVarNameInTable="columnEMPRSUB" msprop:Generator_ColumnPropNameInRow="EMPRSUB" msprop:Generator_ColumnPropNameInTable="EMPRSUBColumn" msprop:Generator_UserColumnName="EMPRSUB" type="xs:short" />
+              <xs:element name="SSNO" msprop:Generator_ColumnVarNameInTable="columnSSNO" msprop:Generator_ColumnPropNameInRow="SSNO" msprop:Generator_ColumnPropNameInTable="SSNOColumn" msprop:Generator_UserColumnName="SSNO" type="xs:int" />
+              <xs:element name="TERM_DATE" msprop:Generator_ColumnVarNameInTable="columnTERM_DATE" msprop:Generator_ColumnPropNameInRow="TERM_DATE" msprop:Generator_ColumnPropNameInTable="TERM_DATEColumn" msprop:Generator_UserColumnName="TERM_DATE" type="xs:dateTime" />
+              <xs:element name="DATE_ADDED" msprop:Generator_ColumnVarNameInTable="columnDATE_ADDED" msprop:Generator_ColumnPropNameInRow="DATE_ADDED" msprop:Generator_ColumnPropNameInTable="DATE_ADDEDColumn" msprop:Generator_UserColumnName="DATE_ADDED" type="xs:dateTime" />
+              <xs:element name="STATUS" msprop:Generator_ColumnVarNameInTable="columnSTATUS" msprop:Generator_ColumnPropNameInRow="STATUS" msprop:Generator_ColumnPropNameInTable="STATUSColumn" msprop:Generator_UserColumnName="STATUS">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="USERID" msprop:Generator_ColumnVarNameInTable="columnUSERID" msprop:Generator_ColumnPropNameInRow="USERID" msprop:Generator_ColumnPropNameInTable="USERIDColumn" msprop:Generator_UserColumnName="USERID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LASTUPDT" msprop:Generator_ColumnVarNameInTable="columnLASTUPDT" msprop:Generator_ColumnPropNameInRow="LASTUPDT" msprop:Generator_ColumnPropNameInTable="LASTUPDTColumn" msprop:Generator_UserColumnName="LASTUPDT" type="xs:dateTime" />
+              <xs:element name="FAMILY_ID" msprop:Generator_ColumnVarNameInTable="columnFAMILY_ID" msprop:Generator_ColumnPropNameInRow="FAMILY_ID" msprop:Generator_ColumnPropNameInTable="FAMILY_IDColumn" msprop:Generator_UserColumnName="FAMILY_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="RELATION_ID" msprop:Generator_ColumnVarNameInTable="columnRELATION_ID" msprop:Generator_ColumnPropNameInRow="RELATION_ID" msprop:Generator_ColumnPropNameInTable="RELATION_IDColumn" msprop:Generator_UserColumnName="RELATION_ID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TERMS" />
+      <xs:field xpath="mstns:TERM_ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

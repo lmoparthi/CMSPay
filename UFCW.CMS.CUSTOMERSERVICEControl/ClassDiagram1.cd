@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AccumulatorView" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACCAAAAAAACAAAACAAAAAAAAAAIAAABAAAA=</HashCode>
+      <FileName>AccumulatorView.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AlertsHistoryViewerForm" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gCAAAAAAECAgAUAoAACAwACDAAoAAAAAAAAABAgAAAA=</HashCode>
+      <FileName>AlertsHistoryViewerForm.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AuditDetailsControl" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>RnMPEAIULCAkAQBSACiEAAgaxBCQagIroBAhBAbSgSI=</HashCode>
+      <FileName>AuditDetailsControl.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BillTypeLookup" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAEAAACAACAAiEAiAwACCAAIAAEgAAQAgAAAQBAA=</HashCode>
+      <FileName>BillTypeLookup.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BillTypeValuesDataSet" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAwAAQAJABAAAQAAAAAgCQBgAAAABAAEAhBA=</HashCode>
+      <FileName>BillTypeValuesDataSet.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClaimDataset" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>KAAgByEAA0BAABLQDCBgQACICAgCwBkEAgEAAAFABBI=</HashCode>
+      <FileName>ClaimDataset.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClaimsHistoryViewerForm" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAgACBAABAgAACA6ACCoAIGAgAIAAEAAAgAAAA=</HashCode>
+      <FileName>ClaimsHistoryViewerForm.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ContactInfoViewerForm" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kAAAAhAAACIgAAAgAACAwACDAAIAkAAAAAAABAgAAAg=</HashCode>
+      <FileName>ContactInfoViewerForm.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CustomerServiceControl" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>t/3/v//627/f79///0ff////b///vfs9/9X//9f///8=</HashCode>
+      <FileName>CustomerServiceControl.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExecuteSearch" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABQAAAAAAAUAAEEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CustomerServiceControl.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PopulateControls" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAIAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>CustomerServiceControl.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DCNListLookup" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAAABAgAACAQACCAAAAAgEAAAAAAAAQAAA=</HashCode>
+      <FileName>DCNListLookup.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DiagnosisCodeLookupForm" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQEAAEAAAiAACAAgAAiAwACCAAEAAgAAAEAAAAAQBAA=</HashCode>
+      <FileName>DiagnosisCodeLookupForm.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DiagnosisCodesForm" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAABBAFCECICgQQgAQGIwAiGAAUZACAAAAQEgIJEAAA=</HashCode>
+      <FileName>DiagnosisCodesForm.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DiagnosisValuesDataSet" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAwAAAAJABAAAQAAAAAgCQBgAAAAAAQEABDA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExtendedCheckedListBox" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAACAQAAABWAgCAAAAAAAAAAAAAAAAAAAAgSAAAAAA=</HashCode>
+      <FileName>ExtendedCheckedListBox.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FamilyChooser" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DCgAAEAAACEAAIEAgACIAAADhAIAAAAAAAAABAgAAAA=</HashCode>
+      <FileName>FamilyChooser.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FamilyList" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEEAAAAACAAAIBAAACQAAAaAAAAAAIBAAAAAAgAAAA=</HashCode>
+      <FileName>FamilyList.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FamilySummaryRemarksViewerForm" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAECAgAIIhAACAwACDAAIAAAAAAAAABAggAAA=</HashCode>
+      <FileName>FamilySummaryRemarksViewerForm.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FreeTextForm" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAIAASAAAIAgAACAwACCAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FreeTextForm.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LifeEventsViewerForm" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gICAAAAAACAgAEAgAgCEwACCAQIAAAAAACAABAgAAAA=</HashCode>
+      <FileName>LifeEventsViewerForm.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LineDetailsForm" Collapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AREQAACAEKCCAEIgBQCJwAiTgDAMCgMAIAwgaBgAAII=</HashCode>
+      <FileName>LineDetailsForm.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LineReasonsForm" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAABIBEgECJQgQwhEAmIwAiGAAFSQiASAQAEAIAAAAA=</HashCode>
+      <FileName>LineReasons.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ModifierLookup" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAQAAAAKAAAQErAgiAxBSCACAAAAAAAIIgAAAQEBA=</HashCode>
+      <FileName>ModifierLookup.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ModifierValuesDataSet" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAwAAAAJABAAAQAAAAAgCQJgAAAAEAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NDCLookup" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAEgAQCAACAIkAAqA4ACTBBAAAAAACAABUAgQAAA=</HashCode>
+      <FileName>NDCLookup.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NDCValuesDataSet" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQBZLCAAJxxpIINKBMCDQAAAAIlSQBkIhgBECeGAFTk=</HashCode>
+      <FileName>NDCValuesDataSet.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PatientDiseaseManagementForm" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAACAgACSgAACAwACDBgYAgCEBAACABCgAAAA=</HashCode>
+      <FileName>PatientDiseaseManagement.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PatientEligibilityViewerForm" Collapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQIAAAAAACAkAAAgIACAwASCAAIAAAAAAAAABAgAAAA=</HashCode>
+      <FileName>PatientEligibilityViewerForm.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PatientLookUpForm" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AhFAAcgEACFCAAAgQAGAwACGAEIEAAQAQAEAAQgAAAg=</HashCode>
+      <FileName>PatientLookUpForm.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlaceOfServiceLookup" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEABEQIBCAICACgAAiAwACKAAAAAAAAAAAAAAAQEAA=</HashCode>
+      <FileName>PlaceOfServiceLookup.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlaceofServiceValuesDataSet" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABwAAAAJABAAAQAAAAAgCQBgIAAAAAAEABBA=</HashCode>
+      <FileName>PlaceofServiceValuesDataSet.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProcCodesDataSet" Collapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAwAAIAIAAAAAAAAAAAAAQBAAAAAEAAEABBA=</HashCode>
+      <FileName>ProcCodesDataSet.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProcedureCodeLookupForm" Collapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIECAEAAACADKAEgQAiAwgGCAAQARAAAAAAAAAAQAAA=</HashCode>
+      <FileName>ProcedureCodeLookupForm.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProcedureCodesForm" Collapsed="true">
+    <Position X="11" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAABAAEAFCIAxwQgCAGYwgmGADEQACIAAAgGAKAAAAA=</HashCode>
+      <FileName>ProcedureCodesForm.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProviderLookUpForm" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gBEAAQgAACCNAAIgAAOAwADCABAAAQAEQAEAIEAAAAA=</HashCode>
+      <FileName>ProviderLookUpForm.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReasonLookup" Collapsed="true">
+    <Position X="2.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAACAACAQhCQiAwACCAABAAAgAAAIQAACAAEA=</HashCode>
+      <FileName>ReasonLookup.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReasonValuesDataSet" Collapsed="true">
+    <Position X="4" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAwAAAALABQAAQAAAAAgCQBgAAAAAAAEABBQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

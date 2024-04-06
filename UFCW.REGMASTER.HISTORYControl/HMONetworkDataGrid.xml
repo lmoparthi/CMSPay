@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HMONetworkDataGridStyle>
+  <ColumnCount>13</ColumnCount>
+  <GridLineStyle>False</GridLineStyle>
+  <GridDefaultSort>CREATE_DATE DESC</GridDefaultSort>
+  <Column>
+    <DefaultOrder>1</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>FROM_DATE</Mapping>
+    <HeaderText>From Date</HeaderText>
+    <Type>Text</Type>
+    <Format>MM-dd-yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+    <Visible>True</Visible>
+  </Column>
+  <Column>
+    <DefaultOrder>2</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>THRU_DATE</Mapping>
+    <HeaderText>To Date</HeaderText>
+    <Type>Text</Type>
+    <Format>MM-dd-yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+    <Visible>True</Visible>
+  </Column>
+  <Column>
+    <DefaultOrder>3</DefaultOrder>
+    <DefaultCharWidth>9</DefaultCharWidth>
+    <Mapping>MEDICAL_PLAN</Mapping>
+    <HeaderText>Coverage Code</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+    <Visible>True</Visible>
+  </Column>
+  <Column>
+    <DefaultOrder>4</DefaultOrder>
+    <DefaultCharWidth>9</DefaultCharWidth>
+    <Mapping>HMO_NETWORK</Mapping>
+    <HeaderText>HMO Network</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+    <Visible>True</Visible>
+  </Column>
+  <Column>
+    <DefaultOrder>5</DefaultOrder>
+    <DefaultCharWidth>20</DefaultCharWidth>
+    <Mapping>DESCRIPTION</Mapping>
+    <HeaderText>HMO Network Desc.</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+    <Visible>True</Visible>
+  </Column>
+  <Column>
+    <DefaultOrder>6</DefaultOrder>
+    <DefaultCharWidth>20</DefaultCharWidth>
+    <Mapping>CREATE_USERID</Mapping>
+    <HeaderText>User</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+    <Visible>True</Visible>
+  </Column>
+  <Column>
+    <DefaultOrder>7</DefaultOrder>
+    <DefaultCharWidth>15</DefaultCharWidth>
+    <Mapping>CREATE_DATE</Mapping>
+    <HeaderText>Date Created</HeaderText>
+    <Type>Text</Type>
+    <Format>MM-dd-yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+    <Visible>True</Visible>
+  </Column>
+  <Column>
+    <DefaultOrder>8</DefaultOrder>
+    <DefaultCharWidth>4</DefaultCharWidth>
+    <Mapping>BATCH_USERID</Mapping>
+    <HeaderText>Batch UserID</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+    <Visible>False</Visible>
+  </Column>
+  <Column>
+    <DefaultOrder>9</DefaultOrder>
+    <DefaultCharWidth>15</DefaultCharWidth>
+    <Mapping>BATCH_DATE</Mapping>
+    <HeaderText>Batch Date</HeaderText>
+    <Type>Text</Type>
+    <Format>MM-dd-yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+    <Visible>False</Visible>
+  </Column>
+  <Column>
+    <DefaultOrder>10</DefaultOrder>
+    <DefaultCharWidth>20</DefaultCharWidth>
+    <Mapping>HMO_ID</Mapping>
+    <HeaderText>HMO ID</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+    <Visible>False</Visible>
+  </Column>
+  <Column>
+    <DefaultOrder>11</DefaultOrder>
+    <DefaultCharWidth>20</DefaultCharWidth>
+    <Mapping>ONLINE_DATE</Mapping>
+    <HeaderText>ONLINE DATE</HeaderText>
+    <Type>Text</Type>
+    <Format>yyyy-MM-dd HH:mm:ss.ffffff</Format>    
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+    <Visible>false</Visible>
+  </Column>  
+  <Column>
+    <DefaultOrder>12</DefaultOrder>
+    <DefaultCharWidth>20</DefaultCharWidth>
+    <Mapping>RELATION_ID</Mapping>
+    <HeaderText>Relation ID</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+    <Visible>false</Visible>
+  </Column>
+  <Column>
+    <DefaultOrder>13</DefaultOrder>
+    <DefaultCharWidth>20</DefaultCharWidth>
+    <Mapping>FAMILY_ID</Mapping>
+    <HeaderText>Family ID</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+    <Visible>false</Visible>
+  </Column>
+</HMONetworkDataGridStyle>

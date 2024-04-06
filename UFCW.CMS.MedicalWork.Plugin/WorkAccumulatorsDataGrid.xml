@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WorkAccumulatorsDataGridStyle>
+  <ColumnCount>4</ColumnCount>
+  <GridLineStyle>False</GridLineStyle>
+  <Column>
+    <DefaultOrder>1</DefaultOrder>
+    <DefaultCharWidth>13</DefaultCharWidth>
+    <Mapping>ACCUM_NAME</Mapping>
+    <HeaderText>Accumulator Name</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>2</DefaultOrder>
+    <DefaultCharWidth>50</DefaultCharWidth>
+    <Mapping>ORIGINAL_VALUE</Mapping>
+    <HeaderText>Orig. Value</HeaderText>
+    <Type>Text</Type>
+    <Format>0.00</Format>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>3</DefaultOrder>
+    <DefaultCharWidth>50</DefaultCharWidth>
+    <Mapping>PROPOSED_VALUE</Mapping>
+    <HeaderText>Proposed Value</HeaderText>
+    <Type>Text</Type>
+    <Format>0.00</Format>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>4</DefaultOrder>
+    <DefaultCharWidth>50</DefaultCharWidth>
+    <Mapping>YEAR</Mapping>
+    <HeaderText>Year</HeaderText>
+    <Type>Text</Type>
+    <Format>yyyy</Format>
+    <NullText></NullText>
+  </Column>
+</WorkAccumulatorsDataGridStyle>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HoursDataGridStyle>
+  <ColumnCount>19</ColumnCount>
+  <GridLineStyle>False</GridLineStyle>
+  <GridDefaultSort>WRKPERIOD DESC</GridDefaultSort>
+  <Column>
+    <DefaultOrder>1</DefaultOrder>
+    <DefaultCharWidth>9</DefaultCharWidth>
+    <Mapping>PLANTYPE</Mapping>
+    <HeaderText>Plan Type</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>2</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>MEMTYPE</Mapping>
+    <HeaderText>Mem Type</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>3</DefaultOrder>
+    <DefaultCharWidth>12</DefaultCharWidth>
+    <Mapping>MEMDESC</Mapping>
+    <HeaderText>Mem Type Desc.</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>4</DefaultOrder>
+    <DefaultCharWidth>17</DefaultCharWidth>
+    <Mapping>WRKPERIOD</Mapping>
+    <HeaderText>Acct Reporting Period</HeaderText>
+    <Type>Text</Type>
+    <Format>MM/dd/yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>5</DefaultOrder>
+    <DefaultCharWidth>11</DefaultCharWidth>
+    <Mapping>PSTPERIOD</Mapping>
+    <HeaderText>Worked Period</HeaderText>
+    <Type>Text</Type>
+    <Format>MM/dd/yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>6</DefaultOrder>
+    <DefaultCharWidth>12</DefaultCharWidth>
+    <Mapping>ELIGIBILITY_MONTH</Mapping>
+    <HeaderText>Month Eligible</HeaderText>
+    <Type>Text</Type>
+    <Format>MM/dd/yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>7</DefaultOrder>
+    <DefaultCharWidth>11</DefaultCharWidth>
+    <Mapping>REG_HOURS</Mapping>
+    <HeaderText>Hours Worked</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>8</DefaultOrder>
+    <DefaultCharWidth>15</DefaultCharWidth>
+    <Mapping>FAMLVE_HRS</Mapping>
+    <HeaderText>Family Leave Hours</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>9</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>ACCTNO</Mapping>
+    <HeaderText>Account#</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>10</DefaultOrder>
+    <DefaultCharWidth>6</DefaultCharWidth>
+    <Mapping>LOCALNO</Mapping>
+    <HeaderText>Local#</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>11</DefaultOrder>
+    <DefaultCharWidth>6</DefaultCharWidth>
+    <Mapping>STORENO</Mapping>
+    <HeaderText>Store#</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>12</DefaultOrder>
+    <DefaultCharWidth>7</DefaultCharWidth>
+    <Mapping>SOURCE</Mapping>
+    <HeaderText>Source</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>13</DefaultOrder>
+    <DefaultCharWidth>7</DefaultCharWidth>
+    <Mapping>PROCESS</Mapping>
+    <HeaderText>Process</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>14</DefaultOrder>
+    <DefaultCharWidth>11</DefaultCharWidth>
+    <Mapping>ORIG_POSTING</Mapping>
+    <HeaderText>Orig. Posting</HeaderText>
+    <Type>Text</Type>
+    <Format>MM/dd/yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>15</DefaultOrder>
+    <DefaultCharWidth>11</DefaultCharWidth>
+    <Mapping>LASTUPDT</Mapping>
+    <HeaderText>Last Updated</HeaderText>
+    <Type>Text</Type>
+    <Format>MM/dd/yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>16</DefaultOrder>
+    <DefaultCharWidth>12</DefaultCharWidth>
+    <Mapping>TVHRS</Mapping>
+    <HeaderText>Term. Vac.</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>17</DefaultOrder>
+    <DefaultCharWidth>21</DefaultCharWidth>
+    <Mapping>EMPRNAME</Mapping>
+    <HeaderText>Employer Name</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>18</DefaultOrder>
+    <DefaultCharWidth>20</DefaultCharWidth>
+    <Mapping>PARTNAME</Mapping>
+    <HeaderText>Store Name</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>19</DefaultOrder>
+    <DefaultCharWidth>11</DefaultCharWidth>
+    <Mapping>CONTR_HRS</Mapping>
+    <HeaderText>Cont Hours</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+</HoursDataGridStyle>

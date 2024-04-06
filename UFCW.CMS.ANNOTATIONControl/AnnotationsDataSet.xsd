@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AnnotationsDataSet" targetNamespace="http://www.tempuri.org/AnnotationDataSet.xsd" xmlns:mstns="http://www.tempuri.org/AnnotationDataSet.xsd" xmlns="http://www.tempuri.org/AnnotationDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="AnnotationsDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="AnnotationsDataSet" msprop:Generator_UserDSName="AnnotationsDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ANNOTATIONS" msprop:Generator_TableClassName="ANNOTATIONSDataTable" msprop:Generator_TableVarName="tableANNOTATIONS" msprop:Generator_TablePropName="ANNOTATIONS" msprop:Generator_RowDeletingName="ANNOTATIONSRowDeleting" msprop:Generator_RowChangingName="ANNOTATIONSRowChanging" msprop:Generator_RowEvHandlerName="ANNOTATIONSRowChangeEventHandler" msprop:Generator_RowDeletedName="ANNOTATIONSRowDeleted" msprop:Generator_UserTableName="ANNOTATIONS" msprop:Generator_RowChangedName="ANNOTATIONSRowChanged" msprop:Generator_RowEvArgName="ANNOTATIONSRowChangeEvent" msprop:Generator_RowClassName="ANNOTATIONSRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ANNOTATION_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnANNOTATION_ID" msprop:Generator_ColumnPropNameInRow="ANNOTATION_ID" msprop:Generator_ColumnPropNameInTable="ANNOTATION_IDColumn" msprop:Generator_UserColumnName="ANNOTATION_ID" type="xs:decimal" />
+              <xs:element name="CLAIM_ID" msprop:Generator_ColumnVarNameInTable="columnCLAIM_ID" msprop:Generator_ColumnPropNameInRow="CLAIM_ID" msprop:Generator_ColumnPropNameInTable="CLAIM_IDColumn" msprop:Generator_UserColumnName="CLAIM_ID" type="xs:int" />
+              <xs:element name="FAMILY_ID" msprop:Generator_ColumnVarNameInTable="columnFAMILY_ID" msprop:Generator_ColumnPropNameInRow="FAMILY_ID" msprop:Generator_ColumnPropNameInTable="FAMILY_IDColumn" msprop:Generator_UserColumnName="FAMILY_ID" type="xs:int" />
+              <xs:element name="RELATION_ID" msprop:Generator_ColumnVarNameInTable="columnRELATION_ID" msprop:Generator_ColumnPropNameInRow="RELATION_ID" msprop:Generator_ColumnPropNameInTable="RELATION_IDColumn" msprop:Generator_UserColumnName="RELATION_ID" type="xs:int" />
+              <xs:element name="PART_SSN" msprop:Generator_ColumnVarNameInTable="columnPART_SSN" msprop:Generator_ColumnPropNameInRow="PART_SSN" msprop:Generator_ColumnPropNameInTable="PART_SSNColumn" msprop:Generator_UserColumnName="PART_SSN" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PAT_SSN" msprop:Generator_ColumnVarNameInTable="columnPAT_SSN" msprop:Generator_ColumnPropNameInRow="PAT_SSN" msprop:Generator_ColumnPropNameInTable="PAT_SSNColumn" msprop:Generator_UserColumnName="PAT_SSN" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PART_FNAME" msprop:Generator_ColumnVarNameInTable="columnPART_FNAME" msprop:Generator_ColumnPropNameInRow="PART_FNAME" msprop:Generator_ColumnPropNameInTable="PART_FNAMEColumn" msprop:Generator_UserColumnName="PART_FNAME" type="xs:string" minOccurs="0" />
+              <xs:element name="PART_LNAME" msprop:Generator_ColumnVarNameInTable="columnPART_LNAME" msprop:Generator_ColumnPropNameInRow="PART_LNAME" msprop:Generator_ColumnPropNameInTable="PART_LNAMEColumn" msprop:Generator_UserColumnName="PART_LNAME" type="xs:string" minOccurs="0" />
+              <xs:element name="PAT_FNAME" msprop:Generator_ColumnVarNameInTable="columnPAT_FNAME" msprop:Generator_ColumnPropNameInRow="PAT_FNAME" msprop:Generator_ColumnPropNameInTable="PAT_FNAMEColumn" msprop:Generator_UserColumnName="PAT_FNAME" type="xs:string" minOccurs="0" />
+              <xs:element name="PAT_LNAME" msprop:Generator_ColumnVarNameInTable="columnPAT_LNAME" msprop:Generator_ColumnPropNameInRow="PAT_LNAME" msprop:Generator_ColumnPropNameInTable="PAT_LNAMEColumn" msprop:Generator_UserColumnName="PAT_LNAME" type="xs:string" minOccurs="0" />
+              <xs:element name="ANNOTATION" msprop:Generator_ColumnVarNameInTable="columnANNOTATION" msprop:Generator_ColumnPropNameInRow="ANNOTATION" msprop:Generator_ColumnPropNameInTable="ANNOTATIONColumn" msprop:Generator_UserColumnName="ANNOTATION" type="xs:string" />
+              <xs:element name="FLAG" msprop:Generator_ColumnVarNameInTable="columnFLAG" msprop:Generator_ColumnPropNameInRow="FLAG" msprop:Generator_ColumnPropNameInTable="FLAGColumn" msprop:Generator_UserColumnName="FLAG" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="CREATE_USERID" msprop:Generator_ColumnVarNameInTable="columnCREATE_USERID" msprop:Generator_ColumnPropNameInRow="CREATE_USERID" msprop:Generator_ColumnPropNameInTable="CREATE_USERIDColumn" msprop:Generator_UserColumnName="CREATE_USERID" type="xs:string" minOccurs="0" />
+              <xs:element name="CREATE_DATE" msprop:Generator_ColumnVarNameInTable="columnCREATE_DATE" msprop:Generator_ColumnPropNameInRow="CREATE_DATE" msprop:Generator_ColumnPropNameInTable="CREATE_DATEColumn" msprop:Generator_UserColumnName="CREATE_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Icon" msprop:Generator_ColumnVarNameInTable="columnIcon" msprop:Generator_ColumnPropNameInRow="Icon" msprop:Generator_ColumnPropNameInTable="IconColumn" msprop:Generator_UserColumnName="Icon" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="EligCalcElementsDS" targetNamespace="http://tempuri.org/EligCalcElementsDS.xsd" xmlns:mstns="http://tempuri.org/EligCalcElementsDS.xsd" xmlns="http://tempuri.org/EligCalcElementsDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="EligCalcElementsDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="EligCalcElementsDS" msprop:Generator_UserDSName="EligCalcElementsDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ELGCALC_ELEMENTS" msprop:Generator_TableClassName="ELGCALC_ELEMENTSDataTable" msprop:Generator_TableVarName="tableELGCALC_ELEMENTS" msprop:Generator_TablePropName="ELGCALC_ELEMENTS" msprop:Generator_RowDeletingName="ELGCALC_ELEMENTSRowDeleting" msprop:Generator_RowChangingName="ELGCALC_ELEMENTSRowChanging" msprop:Generator_RowEvHandlerName="ELGCALC_ELEMENTSRowChangeEventHandler" msprop:Generator_RowDeletedName="ELGCALC_ELEMENTSRowDeleted" msprop:Generator_UserTableName="ELGCALC_ELEMENTS" msprop:Generator_RowChangedName="ELGCALC_ELEMENTSRowChanged" msprop:Generator_RowEvArgName="ELGCALC_ELEMENTSRowChangeEvent" msprop:Generator_RowClassName="ELGCALC_ELEMENTSRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FAMILY_ID" msprop:Generator_ColumnVarNameInTable="columnFAMILY_ID" msprop:Generator_ColumnPropNameInRow="FAMILY_ID" msprop:Generator_ColumnPropNameInTable="FAMILY_IDColumn" msprop:Generator_UserColumnName="FAMILY_ID" type="xs:int" />
+              <xs:element name="RELATION_ID" msprop:Generator_ColumnVarNameInTable="columnRELATION_ID" msprop:Generator_ColumnPropNameInRow="RELATION_ID" msprop:Generator_ColumnPropNameInTable="RELATION_IDColumn" msprop:Generator_UserColumnName="RELATION_ID" type="xs:short" />
+              <xs:element name="ENTRY_DATE" msprop:Generator_ColumnVarNameInTable="columnENTRY_DATE" msprop:Generator_ColumnPropNameInRow="ENTRY_DATE" msprop:Generator_ColumnPropNameInTable="ENTRY_DATEColumn" msprop:Generator_UserColumnName="ENTRY_DATE" type="xs:dateTime" />
+              <xs:element name="BREAK_IN_SERVICE" msprop:Generator_ColumnVarNameInTable="columnBREAK_IN_SERVICE" msprop:Generator_ColumnPropNameInRow="BREAK_IN_SERVICE" msprop:Generator_ColumnPropNameInTable="BREAK_IN_SERVICEColumn" msprop:Generator_UserColumnName="BREAK_IN_SERVICE" type="xs:dateTime" />
+              <xs:element name="LAST_MEMTYPE" msprop:Generator_ColumnVarNameInTable="columnLAST_MEMTYPE" msprop:Generator_ColumnPropNameInRow="LAST_MEMTYPE" msprop:Generator_ColumnPropNameInTable="LAST_MEMTYPEColumn" msprop:Generator_UserColumnName="LAST_MEMTYPE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GRAD_COUNT" msprop:Generator_ColumnVarNameInTable="columnGRAD_COUNT" msprop:Generator_ColumnPropNameInRow="GRAD_COUNT" msprop:Generator_ColumnPropNameInTable="GRAD_COUNTColumn" msprop:Generator_UserColumnName="GRAD_COUNT" type="xs:decimal" />
+              <xs:element name="GRAD_STATUS" msprop:Generator_ColumnVarNameInTable="columnGRAD_STATUS" msprop:Generator_ColumnPropNameInRow="GRAD_STATUS" msprop:Generator_ColumnPropNameInTable="GRAD_STATUSColumn" msprop:Generator_UserColumnName="GRAD_STATUS">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LAST_LOCAL" msprop:Generator_ColumnVarNameInTable="columnLAST_LOCAL" msprop:Generator_ColumnPropNameInRow="LAST_LOCAL" msprop:Generator_ColumnPropNameInTable="LAST_LOCALColumn" msprop:Generator_UserColumnName="LAST_LOCAL" type="xs:short" />
+              <xs:element name="LAST_DATE_WORKED" msprop:Generator_ColumnVarNameInTable="columnLAST_DATE_WORKED" msprop:Generator_ColumnPropNameInRow="LAST_DATE_WORKED" msprop:Generator_ColumnPropNameInTable="LAST_DATE_WORKEDColumn" msprop:Generator_UserColumnName="LAST_DATE_WORKED" type="xs:dateTime" />
+              <xs:element name="LAST_EMPLOYER" msprop:Generator_ColumnVarNameInTable="columnLAST_EMPLOYER" msprop:Generator_ColumnPropNameInRow="LAST_EMPLOYER" msprop:Generator_ColumnPropNameInTable="LAST_EMPLOYERColumn" msprop:Generator_UserColumnName="LAST_EMPLOYER" type="xs:int" />
+              <xs:element name="LAST_VACATION_UPDATE" msprop:Generator_ColumnVarNameInTable="columnLAST_VACATION_UPDATE" msprop:Generator_ColumnPropNameInRow="LAST_VACATION_UPDATE" msprop:Generator_ColumnPropNameInTable="LAST_VACATION_UPDATEColumn" msprop:Generator_UserColumnName="LAST_VACATION_UPDATE" type="xs:dateTime" />
+              <xs:element name="VACATION_DATE" msprop:Generator_ColumnVarNameInTable="columnVACATION_DATE" msprop:Generator_ColumnPropNameInRow="VACATION_DATE" msprop:Generator_ColumnPropNameInTable="VACATION_DATEColumn" msprop:Generator_UserColumnName="VACATION_DATE" type="xs:dateTime" />
+              <xs:element name="TERM_DATE" msprop:Generator_ColumnVarNameInTable="columnTERM_DATE" msprop:Generator_ColumnPropNameInRow="TERM_DATE" msprop:Generator_ColumnPropNameInTable="TERM_DATEColumn" msprop:Generator_UserColumnName="TERM_DATE" type="xs:dateTime" />
+              <xs:element name="VACATION_MONTHS" msprop:Generator_ColumnVarNameInTable="columnVACATION_MONTHS" msprop:Generator_ColumnPropNameInRow="VACATION_MONTHS" msprop:Generator_ColumnPropNameInTable="VACATION_MONTHSColumn" msprop:Generator_UserColumnName="VACATION_MONTHS" type="xs:int" />
+              <xs:element name="CREATE_USERID" msprop:Generator_ColumnVarNameInTable="columnCREATE_USERID" msprop:Generator_ColumnPropNameInRow="CREATE_USERID" msprop:Generator_ColumnPropNameInTable="CREATE_USERIDColumn" msprop:Generator_UserColumnName="CREATE_USERID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CREATE_DATE" msprop:Generator_ColumnVarNameInTable="columnCREATE_DATE" msprop:Generator_ColumnPropNameInRow="CREATE_DATE" msprop:Generator_ColumnPropNameInTable="CREATE_DATEColumn" msprop:Generator_UserColumnName="CREATE_DATE" type="xs:dateTime" />
+              <xs:element name="BATCH_USERID" msprop:Generator_ColumnVarNameInTable="columnBATCH_USERID" msprop:Generator_ColumnPropNameInRow="BATCH_USERID" msprop:Generator_ColumnPropNameInTable="BATCH_USERIDColumn" msprop:Generator_UserColumnName="BATCH_USERID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BATCH_DATE" msprop:Generator_ColumnVarNameInTable="columnBATCH_DATE" msprop:Generator_ColumnPropNameInRow="BATCH_DATE" msprop:Generator_ColumnPropNameInTable="BATCH_DATEColumn" msprop:Generator_UserColumnName="BATCH_DATE" type="xs:dateTime" />
+              <xs:element name="ONLINE_USERID" msprop:Generator_ColumnVarNameInTable="columnONLINE_USERID" msprop:Generator_ColumnPropNameInRow="ONLINE_USERID" msprop:Generator_ColumnPropNameInTable="ONLINE_USERIDColumn" msprop:Generator_UserColumnName="ONLINE_USERID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ONLINE_DATE" msprop:Generator_ColumnVarNameInTable="columnONLINE_DATE" msprop:Generator_ColumnPropNameInRow="ONLINE_DATE" msprop:Generator_ColumnPropNameInTable="ONLINE_DATEColumn" msprop:Generator_UserColumnName="ONLINE_DATE" type="xs:dateTime" />
+              <xs:element name="LAST_HOURLY_ACCTNO" msprop:Generator_ColumnVarNameInTable="columnLAST_HOURLY_ACCTNO" msprop:Generator_ColumnPropNameInRow="LAST_HOURLY_ACCTNO" msprop:Generator_ColumnPropNameInTable="LAST_HOURLY_ACCTNOColumn" msprop:Generator_UserColumnName="LAST_HOURLY_ACCTNO" type="xs:int" minOccurs="0" />
+              <xs:element name="LAST_HOURLY_WORKPERIOD" msprop:Generator_ColumnVarNameInTable="columnLAST_HOURLY_WORKPERIOD" msprop:Generator_ColumnPropNameInRow="LAST_HOURLY_WORKPERIOD" msprop:Generator_ColumnPropNameInTable="LAST_HOURLY_WORKPERIODColumn" msprop:Generator_UserColumnName="LAST_HOURLY_WORKPERIOD" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="POSTING_ACTIVITY_IND" msprop:Generator_ColumnVarNameInTable="columnPOSTING_ACTIVITY_IND" msprop:Generator_ColumnPropNameInRow="POSTING_ACTIVITY_IND" msprop:Generator_ColumnPropNameInTable="POSTING_ACTIVITY_INDColumn" msprop:Generator_UserColumnName="POSTING_ACTIVITY_IND" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ELGCALC_ELEMENTS" />
+      <xs:field xpath="mstns:FAMILY_ID" />
+      <xs:field xpath="mstns:RELATION_ID" />
+      <xs:field xpath="mstns:ENTRY_DATE" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

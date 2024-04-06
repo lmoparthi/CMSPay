@@ -1,0 +1,117 @@
+''' -----------------------------------------------------------------------------
+''' Project	 : UFCW.CMS.Plan
+''' Class	 : CMS.Plan.PreSubTotalRuleGroup
+'''
+''' -----------------------------------------------------------------------------
+''' <summary>
+''' This class represents the presubtotal rules
+''' </summary>
+''' <remarks>
+''' </remarks>
+''' <history>
+''' 	[paulw]	4/18/2006	Created
+''' </history>
+''' -----------------------------------------------------------------------------
+<Serializable()> _
+Public Class PreSubTotalRuleGroup
+    Inherits RuleGroup
+
+    'Private Shared _TraceSwitch As New BooleanSwitch("TraceCloning", "Trace Switch in App.Config")
+    Private Shared _MultiLineValue As Decimal
+
+    Public Shared Property MultiLineCoPayValue() As Decimal
+        Get
+            Return _MultiLineValue
+        End Get
+        Set(ByVal value As Decimal)
+            _MultiLineValue = value
+        End Set
+    End Property
+#Region "Methods"
+    ' -----------------------------------------------------------------------------
+    ' <summary>
+    ' This groups eval method.  This method goes through each rule
+    '  and calls it's eval method
+    ' </summary>
+    ' <param name="dsbursement">The disbursment object</param>
+    ' <param name="accumManager">The MemberAccumlator object</param>
+    ' <param name="dateOfService">The date of the claim</param>
+    ' <param name="dlgate">The delegate that handles the execution of actions that come from the processor</param>
+    ' <param name="alrtDelagate">The delegate that handles alerts</param>
+    ' <returns></returns>
+    ' <remarks>
+    ' This function will do an 'eval' on each rule that is a presubtotal rule.
+    '  This group must be ordered.  The order is important.  It is 1) Deductible
+    '  2) CoPay or multiline CoPay 3) CoInsurance 4) All Others.
+    ' </remarks>
+    ' <history>
+    ' 	[paulw]	4/18/2006	Created
+    '     [paulw] 9/27/2006   Per ACR MED-0029, added MultiLineCoPay type support
+    '     [paulw] 10/3/2006	Per ACR MED-0023, added support for deny type
+    ' </history>
+    ' -----------------------------------------------------------------------------
+    Public Overrides Function Eval(ByVal disbursement As Disbursement, ByVal memberAccumulatorManager As MemberAccumulatorManager, ByVal dateOfService As Date?, ByVal actionDelegate As IAction.ExecuteAction, ByVal alertDelegate As Alert.AddAlert) As Disbursement
+
+        Dim Dsb As Disbursement
+
+        Dim ExecuteFirstAL As New ArrayList
+        Dim ExecuteSecondAL As New ArrayList
+        Dim ExecuteThirdAL As New ArrayList
+        Dim ExecuteFourthAL As New ArrayList
+
+        Try
+
+            Dsb = CType(disbursement.Clone, Disbursement)
+
+            For Each Rule As Rule In List
+
+                If TypeOf Rule Is FundNonPaymentRule Then
+                    Return Rule.Eval(Dsb, memberAccumulatorManager, dateOfService, actionDelegate, alertDelegate)
+                End If
+
+                If TypeOf Rule Is ProceduralAllowanceRule Then
+                    ExecuteFirstAL.Add(Rule)
+                ElseIf TypeOf Rule Is DeductibleRule Then
+                    ExecuteSecondAL.Add(Rule)
+                ElseIf TypeOf Rule Is CoPayRule OrElse TypeOf Rule Is MultilineCoPayRule Then
+                    ExecuteThirdAL.Add(Rule)
+                ElseIf TypeOf Rule Is CoInsuranceRule Then
+                    ExecuteFourthAL.Add(Rule)
+                End If
+            Next
+
+            'will never get here if it is a FundNonPaymentRule
+            For Each Rule As Rule In ExecuteFirstAL
+                Dsb = Rule.Eval(Dsb, memberAccumulatorManager, dateOfService, actionDelegate, alertDelegate)
+            Next
+
+            For Each Rule As Rule In ExecuteSecondAL
+                Dsb = Rule.Eval(Dsb, memberAccumulatorManager, dateOfService, actionDelegate, alertDelegate)
+            Next
+
+            For Each Rule As Rule In ExecuteThirdAL
+                Dsb = Rule.Eval(Dsb, memberAccumulatorManager, dateOfService, actionDelegate, alertDelegate)
+            Next
+
+            For Each Rule As Rule In ExecuteFourthAL
+                Dsb = Rule.Eval(Dsb, memberAccumulatorManager, dateOfService, actionDelegate, alertDelegate)
+            Next
+
+            Return Dsb
+
+        Catch ex As Exception
+            Throw
+        Finally
+
+            ' Dsb = Nothing
+
+            ' ExecuteFirstAL = Nothing
+            ' ExecuteSecondAL = Nothing
+            ' ExecuteThirdAL = Nothing
+            ' ExecuteFourthAL = Nothing
+
+        End Try
+
+    End Function
+#End Region
+End Class

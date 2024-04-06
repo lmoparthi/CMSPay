@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<POSLookupDataGridStyle>
+	<ColumnCount>3</ColumnCount>
+  <GridLineStyle>False</GridLineStyle>
+  <Column>
+		<DefaultOrder>1</DefaultOrder>
+		<DefaultCharWidth>9</DefaultCharWidth>
+		<Mapping>PLACE_OF_SERV_VALUE</Mapping>
+		<HeaderText>POS</HeaderText>
+		<Type>Text</Type>
+    <Method></Method>
+    <Format></Format>
+		<ReadOnly>True</ReadOnly>
+		<NullText></NullText>
+    <Visible>True</Visible>
+  </Column>
+	<Column>
+		<DefaultOrder>2</DefaultOrder>
+		<DefaultCharWidth>40</DefaultCharWidth>
+		<Mapping>SHORT_DESC</Mapping>
+		<HeaderText>Short Description</HeaderText>
+		<Type>Text</Type>
+    <Method></Method>
+    <Format></Format>
+		<ReadOnly>True</ReadOnly>
+		<NullText></NullText>
+    <Visible>True</Visible>
+  </Column>
+  <Column>
+    <DefaultOrder>3</DefaultOrder>
+    <DefaultCharWidth>1300</DefaultCharWidth>
+    <Mapping>FULL_DESC</Mapping>
+    <HeaderText>Full Description</HeaderText>
+    <Type>Text</Type>
+    <Method></Method>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+    <Visible>True</Visible>
+  </Column>
+</POSLookupDataGridStyle>

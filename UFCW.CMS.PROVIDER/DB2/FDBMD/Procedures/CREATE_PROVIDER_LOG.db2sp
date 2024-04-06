@@ -1,0 +1,48 @@
+-- <ScriptOptions statementSeparator="@"/>
+@
+-- <ScriptOptions errors="off"/>
+@
+-- Drop the procedure if one already exists
+DROP  PROCEDURE FDBMD.CREATE_PROVIDER_LOG
+@
+COMMIT
+@
+-- <ScriptOptions errors="on"/>
+@
+-- Create procedure
+CREATE PROCEDURE FDBMD.CREATE_PROVIDER_LOG(
+		IN	vPROVIDER_ID			INTEGER,
+		IN	vTRANSACTION_TYPE		INTEGER,
+		IN	vTRANSACTION_COMMENT	VARCHAR		( 150 ),
+		IN	vUSERID					VARCHAR		( 40 ))
+	--LANGUAGE SQL
+	COLLID FODBMDFY
+	--WLM ENVIRONMENT WLMDENV4
+	RUN OPTIONS ''
+--------------------------------------------------------------------------
+-- DB2 SQL procedure
+--------------------------------------------------------------------------
+
+P1: BEGIN
+
+-- Declare variables
+
+DECLARE vDEFAULT_DATE TIMESTAMP;
+SET vDEFAULT_DATE = CURRENT TIMESTAMP;
+
+
+--
+
+INSERT INTO FDBMD.HISTORY	(PROVIDER_ID,TRANSACTION_TYPE,TRANSACTION_COMMENT,CREATE_USERID,CREATE_DATE) 
+VALUES						(vPROVIDER_ID,vTRANSACTION_TYPE,vTRANSACTION_COMMENT,vUSERID,vDEFAULT_DATE);
+
+
+--
+
+END P1
+@
+-- <ScriptOptions WLMRefresh="WLMDENV4" />
+@
+-- Grant access privilages to procedure
+GRANT EXECUTE ON PROCEDURE FDBMD.CREATE_PROVIDER_LOG TO PUBLIC
+@

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LBLY2KLookupDataGridStyle>
+  <ColumnCount>26</ColumnCount>
+  <GridLineStyle>False</GridLineStyle>
+  <Column>
+    <DefaultOrder>1</DefaultOrder>
+    <DefaultCharWidth>15</DefaultCharWidth>
+    <Mapping>MFGCODE</Mapping>
+    <HeaderText>Manufacturer Code</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>2</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>LABELERCODE</Mapping>
+    <HeaderText>Labeler code</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>3</DefaultOrder>
+    <DefaultCharWidth>12</DefaultCharWidth>
+    <Mapping>REBATESTATUS</Mapping>
+    <HeaderText>Rebate Eligible</HeaderText>
+    <Type>Text</Type>
+    <Format>YesNo</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>4</DefaultOrder>
+    <DefaultCharWidth>17</DefaultCharWidth>
+    <Mapping>REBATEEFFECTIVEDATE</Mapping>
+    <HeaderText>Rebate Effective Date</HeaderText>
+    <Type>Text</Type>
+    <Format>MM/dd/yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>5</DefaultOrder>
+    <DefaultCharWidth>18</DefaultCharWidth>
+    <Mapping>REBATETERMINATIONDATE</Mapping>
+    <HeaderText>Rebate Terminated Date</HeaderText>
+    <Type>Text</Type>
+    <Format>MM/dd/yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+</LBLY2KLookupDataGridStyle>

@@ -1,0 +1,481 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{08D607B7-37D0-4E90-B6F9-8C62B7F8545D}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>UFCW.CMS.Plan</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>On</OptionStrict>
+    <RootNamespace>
+    </RootNamespace>
+    <StartupObject>UFCW.CMS.Plan.%28None%29</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <MyType>Windows</MyType>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <PublishUrl>http://localhost/UFCW.CMS.Plan/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>UFCW.CMS.Plan.xml</DocumentationFile>
+    <BaseAddress>76480512</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>40028,40031,42030,42104,42105,42106,42107,42108,42109,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>UFCW.CMS.Plan.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>false</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>40028,40031,42030,42104,42105,42106,42107,42108,42109,42353,42354,42355</NoWarn>
+    <DebugType>Full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\HowToCreateNuGetPackage.txt" />
+    <Content Include="Resources\Pencil.bmp" />
+    <None Include="app.config" />
+    <None Include="BLL\ProcedureRange.xsc">
+      <DependentUpon>ProcedureRange.xsd</DependentUpon>
+    </None>
+    <None Include="BLL\ProcedureRange.xss">
+      <DependentUpon>ProcedureRange.xsd</DependentUpon>
+    </None>
+    <None Include="BLL\ProcedureRange.xsx">
+      <DependentUpon>ProcedureRange.xsd</DependentUpon>
+    </None>
+    <Compile Include="AddedFunctionality\CacheDataSetFunctions.vb" />
+    <Compile Include="AddedFunctionality\CacheFunctions.vb" />
+    <Compile Include="Extensions\CollectionExtensions.vb" />
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\AccidentRule.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\Actions.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\AlterAccumulatorAction.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\CoInsuranceRule.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\Contract.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\ContractController.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\CoPayRule.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\OriginalRule.vb" />
+    <Compile Include="BLL\ProcedureRange.vb">
+      <DependentUpon>ProcedureRange.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\Range.Designer.vb" />
+    <Compile Include="BLL\ReviewRule.vb" />
+    <Compile Include="BLL\DeductibleRule.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\DenyRule.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\Disbursement.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\FundAllowanceAction.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\FundDecreasingRuleGroup.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\FundDenialAction.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\FundIncreasingRuleGroup.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\FundReductionAction.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\HRAInEligible.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\MultilineCoPayRule.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\OutOfPocketRule.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\PlanActive.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\PlanController.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\PlanStaged.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\PreSubTotalRuleGroup.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\PreventativeRule.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\ProceduralAllowanceRule.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\ProcedureActive.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\ProcedureStaged.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\ProviderWriteOffAction.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\ProviderWriteOffRule.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\Publisher.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\RangeManager.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\RulesetActive.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\RulesetStaged.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\SpecialRuleGroup.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\StandardAccumulatorRule.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\AccumulatorRule.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Action.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\ActionArgs.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Condition.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Conditions.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\CoResponsibilityRule.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Exceptions\BusinessLayerException.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Exceptions\ConvertToActiveException.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Exceptions\ConvertToStagedException.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Exceptions\FundDenialException.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Exceptions\InvalidContractException.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Exceptions\InvalidOperatorException.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Exceptions\InvalidProcedureException.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Exceptions\NeedsRepricingException.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Exceptions\PlanException.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Exceptions\ProcedureRangeException.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Exceptions\ProcessingEngineException.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Exceptions\ProviderWriteOffException.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Exceptions\PublishException.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Exceptions\StagingException.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\FundNonPaymentRule.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Interfaces\IAction.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Interfaces\IContract.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Interfaces\IPlan.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Interfaces\IProcedure.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Interfaces\IRuleset.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Plan.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Procedure.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\ProcedureCollection.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Rule.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\RuleGroup.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Ruleset.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\RulesetCollection.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\RuleSetType.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DAL\ContractDAL.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DAL\Exceptions\ActiveDataException.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DAL\Exceptions\CommitDataException.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DAL\Exceptions\ContractDataException.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DAL\Exceptions\ConvertDataException.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DAL\Exceptions\DataLayerException.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DAL\Exceptions\InvalidContractDataException.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DAL\Exceptions\PublishDataException.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DAL\Exceptions\StagingDataException.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DAL\GeneralDataDAL.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DAL\PlanActiveDAL.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DAL\PlanStagingDAL.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Content Include="BLL\ProcedureRange.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="ProjectBuildScripts\PreBuild.ps1" />
+    <None Include="UFCW.CMS.Plan.nuspec" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="My Project\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="EnterpriseLibrary.Common">
+      <Version>6.0.1304</Version>
+    </PackageReference>
+    <PackageReference Include="EnterpriseLibrary.Data">
+      <Version>6.0.1304</Version>
+    </PackageReference>
+    <PackageReference Include="EnterpriseLibrary.ExceptionHandling">
+      <Version>6.0.1304</Version>
+    </PackageReference>
+    <PackageReference Include="EnterpriseLibrary.ExceptionHandling.Logging">
+      <Version>6.0.1304</Version>
+    </PackageReference>
+    <PackageReference Include="EnterpriseLibrary.Logging">
+      <Version>6.0.1304</Version>
+    </PackageReference>
+    <PackageReference Include="EnterpriseLibrary.Security.Cryptography">
+      <Version>5.0.505</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers">
+      <Version>7.0.3</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Office.Interop.Excel">
+      <Version>15.0.4795.1001</Version>
+    </PackageReference>
+    <PackageReference Include="UFCW.CMS.Accumulator" Version="[1.481.1,)">
+    </PackageReference>
+    <PackageReference Include="UFCW.CMS.AlertManager" Version="[1.481.1,)">
+    </PackageReference>
+    <PackageReference Include="UFCW.CMS.DAL" Version="[1.481.1,)">
+    </PackageReference>
+    <PackageReference Include="UFCWClone" Version="[1.481.1,)">
+    </PackageReference>
+    <PackageReference Include="UFCWException" Version="[1.481.1,)">
+    </PackageReference>
+    <PackageReference Include="UFCWGeneral" Version="[1.481.1,)">
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>powershell.exe -ExecutionPolicy Bypass -File "$(ProjectDir)ProjectBuildScripts\PreBuild.ps1" -SolutionDir "$(SolutionDir)\" -ProjectName "$(ProjectName)"  -ProjectDir "$(ProjectDir)\" -TargetDir "$(TargetDir)\" -TargetPath "$(TargetPath)" -ConfigurationName "$(ConfigurationName)"</PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

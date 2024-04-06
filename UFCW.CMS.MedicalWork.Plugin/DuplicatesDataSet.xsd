@@ -1,0 +1,89 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DuplicatesDataSet" targetNamespace="http://www.tempuri.org/DuplicatesDataSet.xsd"
+	xmlns:mstns="http://www.tempuri.org/DuplicatesDataSet.xsd" xmlns="http://www.tempuri.org/DuplicatesDataSet.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DuplicatesDataSet" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="MEDHDR">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="MATCH" type="xs:string" />
+							<xs:element name="CLAIM_ID" type="xs:int" />
+							<xs:element name="FAMILY_ID" type="xs:int" />
+							<xs:element name="RELATION_ID" type="xs:short" />
+							<xs:element name="PART_SSN" type="xs:int" />
+							<xs:element name="PAT_SSN" type="xs:int" />
+							<xs:element name="DOCID" type="xs:decimal" minOccurs="0" />
+							<xs:element name="MAXID" type="xs:string" minOccurs="0" />
+							<xs:element name="SYSTEM_CODE" type="xs:string" />
+							<xs:element name="STATUS" type="xs:string" />
+							<xs:element name="STATUS_DATE" type="xs:dateTime" />
+							<xs:element name="CLAIM_TYPE" type="xs:string" minOccurs="0" />
+							<xs:element name="ADMITTANCE" type="xs:string" minOccurs="0" />
+							<xs:element name="REC_DATE" type="xs:dateTime" />
+							<xs:element name="NETWRK_REC_DATE" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="OCC_FROM_DATE" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="OCC_TO_DATE" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="INCIDENT_DATE" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="PPO" type="xs:string" minOccurs="0" />
+							<xs:element name="COB" type="xs:string" minOccurs="0" />
+							<xs:element name="PAYEE" type="xs:string" minOccurs="0" />
+							<xs:element name="PRICED_BY" type="xs:string" minOccurs="0" />
+							<xs:element name="PRICING_ERROR" type="xs:string" minOccurs="0" />
+							<xs:element name="SECURITY_SW" type="xs:decimal" />
+							<xs:element name="DUPLICATE_SW" type="xs:decimal" />
+							<xs:element name="NON_PAR_SW" type="xs:decimal" />
+							<xs:element name="OUT_OF_AREA_SW" type="xs:decimal" />
+							<xs:element name="AUTO_ACCIDENT_SW" type="xs:decimal" />
+							<xs:element name="WORKERS_COMP_SW" type="xs:decimal" />
+							<xs:element name="OTH_ACCIDENT_SW" type="xs:decimal" />
+							<xs:element name="OTH_INS_SW" type="xs:decimal" />
+							<xs:element name="ATTACH_SW" type="xs:decimal" />
+							<xs:element name="CHIRO_SW" type="xs:decimal" />
+							<xs:element name="PARITY_SW" type="xs:decimal" />
+							<xs:element name="SED_SW" type="xs:decimal" />
+							<xs:element name="AUTHORIZED_SW" type="xs:decimal" />
+							<xs:element name="ASSIGN_OF_BEN_SW" type="xs:decimal" />
+							<xs:element name="ADJUSTMENT_SW" type="xs:decimal" />
+							<xs:element name="OTH_INS_REFUSAL_SW" type="xs:decimal" />
+							<xs:element name="OTH_INS_ID" type="xs:int" minOccurs="0" />
+							<xs:element name="OTH_INS_POLICY_NBR" type="xs:string" minOccurs="0" />
+							<xs:element name="PAT_FNAME" type="xs:string" minOccurs="0" />
+							<xs:element name="PAT_LNAME" type="xs:string" minOccurs="0" />
+							<xs:element name="PAT_SEX" type="xs:string" minOccurs="0" />
+							<xs:element name="PAT_DOB" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="PAT_ACCT_NBR" type="xs:string" minOccurs="0" />
+							<xs:element name="PAT_ZIP" type="xs:int" minOccurs="0" />
+							<xs:element name="PAT_ZIP2" type="xs:short" minOccurs="0" />
+							<xs:element name="PROV_TIN" type="xs:int" minOccurs="0" />
+							<xs:element name="PROV_ID" type="xs:int" minOccurs="0" />
+							<xs:element name="PROV_ZIP" type="xs:int" minOccurs="0" />
+							<xs:element name="PROV_ZIP2" type="xs:short" minOccurs="0" />
+							<xs:element name="PROV_LICENSE" type="xs:string" minOccurs="0" />
+							<xs:element name="BILL_TAXID" type="xs:int" minOccurs="0" />
+							<xs:element name="BILL_NAME" type="xs:string" minOccurs="0" />
+							<xs:element name="BILL_ADDR1" type="xs:string" minOccurs="0" />
+							<xs:element name="BILL_ADDR2" type="xs:string" minOccurs="0" />
+							<xs:element name="BILL_CITY" type="xs:string" minOccurs="0" />
+							<xs:element name="BILL_STATE" type="xs:string" minOccurs="0" />
+							<xs:element name="BILL_ZIP" type="xs:int" minOccurs="0" />
+							<xs:element name="BILL_ZIP2" type="xs:short" minOccurs="0" />
+							<xs:element name="TOT_CHRG_AMT" type="xs:decimal" />
+							<xs:element name="TOT_PRICED_AMT" type="xs:decimal" minOccurs="0" />
+							<xs:element name="TOT_ALLOWED_AMT" type="xs:decimal" minOccurs="0" />
+							<xs:element name="TOT_OTH_INS_AMT" type="xs:decimal" minOccurs="0" />
+							<xs:element name="TOT_PAID_AMT" type="xs:decimal" minOccurs="0" />
+							<xs:element name="TOT_PROCESSED_AMT" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="DuplicatesDataSetKey2" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:MEDHDR" />
+			<xs:field xpath="mstns:CLAIM_ID" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

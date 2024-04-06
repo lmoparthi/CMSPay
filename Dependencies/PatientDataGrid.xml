@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<PatientDataGridStyle>
+  <ColumnCount>7</ColumnCount>
+  <Column>
+    <DefaultOrder>1</DefaultOrder>
+    <DefaultCharWidth>7</DefaultCharWidth>
+    <Mapping>RELATION_ID</Mapping>
+    <HeaderText>Relation ID</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>2</DefaultOrder>
+    <DefaultCharWidth>9</DefaultCharWidth>
+    <Mapping>SSNO</Mapping>
+    <HeaderText>SSN</HeaderText>
+    <Type>Text</Type>
+    <Format>000-00-0000</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>3</DefaultOrder>
+    <DefaultCharWidth>17</DefaultCharWidth>
+    <Mapping>FIRST_NAME</Mapping>
+    <HeaderText>First Name</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>4</DefaultOrder>
+    <DefaultCharWidth>9</DefaultCharWidth>
+    <Mapping>MIDDLE_INITIAL</Mapping>
+    <HeaderText>Initial</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>5</DefaultOrder>
+    <DefaultCharWidth>13</DefaultCharWidth>
+    <Mapping>LAST_NAME</Mapping>
+    <HeaderText>Last Name</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>6</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>BIRTH_DATE</Mapping>
+    <HeaderText>Birth Date</HeaderText>
+    <Type>Text</Type>
+    <Format>MM/dd/yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>7</DefaultOrder>
+    <DefaultCharWidth>20</DefaultCharWidth>
+    <Mapping>GENDER</Mapping>
+    <HeaderText>Gender</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+</PatientDataGridStyle>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PremLetterDataGridStyle>
+  <ColumnCount>12</ColumnCount>
+  <GridLineStyle>False</GridLineStyle>
+  <GridDefaultSort>MAILDATE DESC</GridDefaultSort>
+  <Column>
+    <DefaultOrder>1</DefaultOrder>
+    <DefaultCharWidth>11</DefaultCharWidth>
+    <Mapping>MAILDATE</Mapping>
+    <HeaderText>Mailed On</HeaderText>
+    <Type>Text</Type>
+    <Format>MM/dd/yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+   <Column>
+    <DefaultOrder>2</DefaultOrder>
+    <DefaultCharWidth>17</DefaultCharWidth>
+    <Mapping>LETTERNAME</Mapping>
+    <HeaderText>Form Name</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>3</DefaultOrder>
+    <DefaultCharWidth>72</DefaultCharWidth>
+    <Mapping>LETTERDESC</Mapping>
+    <HeaderText>Form Desc.</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>4</DefaultOrder>
+    <DefaultCharWidth>11</DefaultCharWidth>
+    <Mapping>RECDATE</Mapping>
+    <HeaderText>Received Date</HeaderText>
+    <Type>Text</Type>
+    <Format>MM/dd/yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>5</DefaultOrder>
+    <DefaultCharWidth>14</DefaultCharWidth>
+    <Mapping>COV_SELECTED</Mapping>
+    <HeaderText>Selected Coverage</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>6</DefaultOrder>
+    <DefaultCharWidth>15</DefaultCharWidth>
+    <Mapping>DOCID_OUT</Mapping>
+    <HeaderText>Document Sent</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>7</DefaultOrder>
+    <DefaultCharWidth>15</DefaultCharWidth>
+    <Mapping>DOCID_IN</Mapping>
+    <HeaderText>Document Received</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>8</DefaultOrder>
+    <DefaultCharWidth>13</DefaultCharWidth>
+    <Mapping>DUEDATE</Mapping>
+    <HeaderText>Response Due By</HeaderText>
+    <Type>Text</Type>
+    <Format>MM/dd/yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>9</DefaultOrder>
+    <DefaultCharWidth>11</DefaultCharWidth>
+    <Mapping>NAMEF</Mapping>
+    <HeaderText>Mail To Name</HeaderText>
+    <Type>Text</Type>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>10</DefaultOrder>
+    <DefaultCharWidth>16</DefaultCharWidth>
+    <Mapping>ADDRF</Mapping>
+    <HeaderText>Mail To Address</HeaderText>
+    <Type>Text</Type>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>11</DefaultOrder>
+    <DefaultCharWidth>5</DefaultCharWidth>
+    <Mapping>MAILSTATUS</Mapping>
+    <HeaderText>Status</HeaderText>
+    <Type>Text</Type>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>12</DefaultOrder>
+    <DefaultCharWidth>16</DefaultCharWidth>
+    <Mapping>DESC</Mapping>
+    <HeaderText>Error Reason</HeaderText>
+    <Type>Text</Type>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+</PremLetterDataGridStyle>

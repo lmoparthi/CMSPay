@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssociatedProvidersDataGridStyle >
+  <ColumnCount>6</ColumnCount>
+  <GridLineStyle>False</GridLineStyle>
+  <Column>
+    <DefaultOrder>1</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>TYPEANDTAXID</Mapping>
+    <HeaderText>TaxID/SSN</HeaderText>
+    <Format>1stCharacterMask</Format>
+    <NullText></NullText>
+    <Type>Text</Type>
+  </Column>
+  <Column>
+    <DefaultOrder>2</DefaultOrder>
+    <DefaultCharWidth>20</DefaultCharWidth>
+    <Mapping>NAME1</Mapping>
+    <HeaderText>Provider Name</HeaderText>
+    <Format>LicenseCharacterMask</Format>
+    <NullText></NullText>
+    <Type>Text</Type>
+  </Column>
+  <Column>
+    <DefaultOrder>3</DefaultOrder>
+    <DefaultCharWidth>4</DefaultCharWidth>
+    <Mapping>ProviderSuspended</Mapping>
+    <HeaderText>Suspended</HeaderText>
+    <Format>DecimalBoolean2YesNo</Format>
+    <NullText></NullText>
+    <Type>Text</Type>
+  </Column>
+  <Column>
+    <DefaultOrder>4</DefaultOrder>
+    <DefaultCharWidth>50</DefaultCharWidth>
+    <Mapping>CompositeAddress</Mapping>
+    <HeaderText>Street/City/State/Zip</HeaderText>
+    <Format></Format>
+    <NullText></NullText>
+    <Type>Text</Type>
+  </Column>
+  <Column>
+    <DefaultOrder>5</DefaultOrder>
+    <DefaultCharWidth>25</DefaultCharWidth>
+    <Mapping>CONTACT1</Mapping>
+    <HeaderText>Primary Contact</HeaderText>
+    <Format></Format>
+    <NullText></NullText>
+    <Type>Text</Type>
+  </Column>
+  <Column>
+    <DefaultOrder>6</DefaultOrder>
+    <DefaultCharWidth>3</DefaultCharWidth>
+    <Mapping>AddressSuspended</Mapping>
+    <HeaderText>Address Suspended</HeaderText>
+    <Format>DecimalBoolean2YesNo</Format>
+    <NullText></NullText>
+    <Type>Text</Type>
+  </Column>
+</AssociatedProvidersDataGridStyle>

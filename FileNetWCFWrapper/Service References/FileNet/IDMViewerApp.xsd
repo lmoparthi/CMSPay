@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/IDMViewerApp" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/IDMViewerApp" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="idmShowWindow">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="idmShowWindowNormal" />
+      <xs:enumeration value="idmShowWindowMinimize" />
+      <xs:enumeration value="idmShowWindowMaximize" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="idmShowWindow" nillable="true" type="tns:idmShowWindow" />
+  <xs:simpleType name="idmZoomMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="idmZoomModeCustom" />
+      <xs:enumeration value="idmZoomModeFitToWidth" />
+      <xs:enumeration value="idmZoomModeFitToHeight" />
+      <xs:enumeration value="idmZoomModeFitToWindow" />
+      <xs:enumeration value="idmZoomModeDisplayEveryPixel" />
+      <xs:enumeration value="idmZoomModeStretchToFit" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="idmZoomMode" nillable="true" type="tns:idmZoomMode" />
+</xs:schema>

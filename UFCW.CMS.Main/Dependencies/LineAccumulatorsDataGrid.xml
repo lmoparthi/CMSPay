@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LineAccumulatorsDataGridStyle>
+  <ColumnCount>2</ColumnCount>
+  <Column>
+    <DefaultOrder>1</DefaultOrder>
+    <DefaultCharWidth>12</DefaultCharWidth>
+    <Mapping>ACCUM_NAME</Mapping>
+    <HeaderText>Accumulator Name</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>2</DefaultOrder>
+    <DefaultCharWidth>12</DefaultCharWidth>
+    <Mapping>ENTRY_VALUE</Mapping>
+    <HeaderText>Apply</HeaderText>
+    <Type>Text</Type>
+    <Format>c</Format>
+    <ReadOnly>False</ReadOnly>
+    <NullText></NullText>
+  </Column>
+</LineAccumulatorsDataGridStyle>

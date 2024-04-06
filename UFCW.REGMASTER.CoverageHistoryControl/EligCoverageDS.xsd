@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="EligCoverageDS" targetNamespace="http://tempuri.org/EligCoverageDS.xsd" xmlns:mstns="http://tempuri.org/EligCoverageDS.xsd" xmlns="http://tempuri.org/EligCoverageDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="EligCoverageDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="EligCoverageDS" msprop:Generator_UserDSName="EligCoverageDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ELIG_COVERAGE" msprop:Generator_TableClassName="ELIG_COVERAGEDataTable" msprop:Generator_TableVarName="tableELIG_COVERAGE" msprop:Generator_TablePropName="ELIG_COVERAGE" msprop:Generator_RowDeletingName="ELIG_COVERAGERowDeleting" msprop:Generator_RowChangingName="ELIG_COVERAGERowChanging" msprop:Generator_RowEvHandlerName="ELIG_COVERAGERowChangeEventHandler" msprop:Generator_RowDeletedName="ELIG_COVERAGERowDeleted" msprop:Generator_UserTableName="ELIG_COVERAGE" msprop:Generator_RowChangedName="ELIG_COVERAGERowChanged" msprop:Generator_RowEvArgName="ELIG_COVERAGERowChangeEvent" msprop:Generator_RowClassName="ELIG_COVERAGERow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="COVERAGE_ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCOVERAGE_ID" msprop:Generator_ColumnPropNameInRow="COVERAGE_ID" msprop:Generator_ColumnPropNameInTable="COVERAGE_IDColumn" msprop:Generator_UserColumnName="COVERAGE_ID" type="xs:int" />
+              <xs:element name="FAMILY_ID" msprop:Generator_ColumnVarNameInTable="columnFAMILY_ID" msprop:Generator_ColumnPropNameInRow="FAMILY_ID" msprop:Generator_ColumnPropNameInTable="FAMILY_IDColumn" msprop:Generator_UserColumnName="FAMILY_ID" type="xs:int" />
+              <xs:element name="RELATION_ID" msprop:Generator_ColumnVarNameInTable="columnRELATION_ID" msprop:Generator_ColumnPropNameInRow="RELATION_ID" msprop:Generator_ColumnPropNameInTable="RELATION_IDColumn" msprop:Generator_UserColumnName="RELATION_ID" type="xs:int" />
+              <xs:element name="COVERAGE_TYPE" msprop:Generator_ColumnVarNameInTable="columnCOVERAGE_TYPE" msprop:Generator_ColumnPropNameInRow="COVERAGE_TYPE" msprop:Generator_ColumnPropNameInTable="COVERAGE_TYPEColumn" msprop:Generator_UserColumnName="COVERAGE_TYPE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FROM_DATE" msprop:Generator_ColumnVarNameInTable="columnFROM_DATE" msprop:Generator_ColumnPropNameInRow="FROM_DATE" msprop:Generator_ColumnPropNameInTable="FROM_DATEColumn" msprop:Generator_UserColumnName="FROM_DATE" type="xs:dateTime" />
+              <xs:element name="THRU_DATE" msprop:Generator_ColumnVarNameInTable="columnTHRU_DATE" msprop:Generator_ColumnPropNameInRow="THRU_DATE" msprop:Generator_ColumnPropNameInTable="THRU_DATEColumn" msprop:Generator_UserColumnName="THRU_DATE" type="xs:dateTime" />
+              <xs:element name="COVERAGE_CODE" msprop:Generator_ColumnVarNameInTable="columnCOVERAGE_CODE" msprop:Generator_ColumnPropNameInRow="COVERAGE_CODE" msprop:Generator_ColumnPropNameInTable="COVERAGE_CODEColumn" msprop:Generator_UserColumnName="COVERAGE_CODE" type="xs:int" />
+              <xs:element name="CREATE_USERID" msprop:Generator_ColumnVarNameInTable="columnCREATE_USERID" msprop:Generator_ColumnPropNameInRow="CREATE_USERID" msprop:Generator_ColumnPropNameInTable="CREATE_USERIDColumn" msprop:Generator_UserColumnName="CREATE_USERID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CREATE_DATE" msprop:Generator_ColumnVarNameInTable="columnCREATE_DATE" msprop:Generator_ColumnPropNameInRow="CREATE_DATE" msprop:Generator_ColumnPropNameInTable="CREATE_DATEColumn" msprop:Generator_UserColumnName="CREATE_DATE" type="xs:dateTime" />
+              <xs:element name="BATCH_USERID" msprop:Generator_ColumnVarNameInTable="columnBATCH_USERID" msprop:Generator_ColumnPropNameInRow="BATCH_USERID" msprop:Generator_ColumnPropNameInTable="BATCH_USERIDColumn" msprop:Generator_UserColumnName="BATCH_USERID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BATCH_DATE" msprop:Generator_ColumnVarNameInTable="columnBATCH_DATE" msprop:Generator_ColumnPropNameInRow="BATCH_DATE" msprop:Generator_ColumnPropNameInTable="BATCH_DATEColumn" msprop:Generator_UserColumnName="BATCH_DATE" type="xs:dateTime" />
+              <xs:element name="ONLINE_USERID" msprop:Generator_ColumnVarNameInTable="columnONLINE_USERID" msprop:Generator_ColumnPropNameInRow="ONLINE_USERID" msprop:Generator_ColumnPropNameInTable="ONLINE_USERIDColumn" msprop:Generator_UserColumnName="ONLINE_USERID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ONLINE_DATE" msprop:Generator_ColumnVarNameInTable="columnONLINE_DATE" msprop:Generator_ColumnPropNameInRow="ONLINE_DATE" msprop:Generator_ColumnPropNameInTable="ONLINE_DATEColumn" msprop:Generator_UserColumnName="ONLINE_DATE" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ELIG_COVERAGE" />
+      <xs:field xpath="mstns:COVERAGE_ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

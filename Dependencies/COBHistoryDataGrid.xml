@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<COBHistoryDataGridStyle>
+  <ColumnCount>7</ColumnCount>
+  <GridLineStyle>False</GridLineStyle>
+  <Column>
+    <DefaultOrder>1</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>FAMILY_ID</Mapping>
+    <HeaderText>Family ID</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>2</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>RELATION_ID</Mapping>
+    <HeaderText>Relation ID</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>3</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>HISTORY_SUMMARY</Mapping>
+    <HeaderText>History Summary</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>4</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>TRANSACTION_COMMENT</Mapping>
+    <HeaderText>History Detail</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>5</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>CREATE_DATE</Mapping>
+    <HeaderText>Modification Date</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>6</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>CREATE_USERID</Mapping>
+    <GAC>CMSUsers</GAC>
+    <HeaderText>UserID</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+</COBHistoryDataGridStyle>

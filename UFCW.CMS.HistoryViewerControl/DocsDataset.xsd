@@ -1,0 +1,51 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DocsDataset" targetNamespace="http://www.tempuri.org/DocsDataset.xsd" xmlns:mstns="http://www.tempuri.org/DocsDataset.xsd" xmlns="http://www.tempuri.org/DocsDataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DocsDataset" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="UFCWDocs">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="MaximID" type="xs:string" />
+							<xs:element name="DocumentID" type="xs:integer" />
+							<xs:element name="DocumentClass" type="xs:string" />
+							<xs:element name="EntryInsertTime" type="xs:dateTime" />
+							<xs:element name="EmployeeItem" type="xs:boolean" />
+							<xs:element name="ReceiveDate" type="xs:dateTime" />
+							<xs:element name="DocType" type="xs:string" />
+							<xs:element name="ArchiveOnly" type="xs:boolean" minOccurs="0" />
+							<xs:element name="ItemStatus" type="xs:string" />
+							<xs:element name="SSN" type="xs:integer" minOccurs="0" />
+							<xs:element name="ParticipantNameLast" type="xs:string" minOccurs="0" />
+							<xs:element name="ParticipantNameMiddle" type="xs:string" minOccurs="0" />
+							<xs:element name="ParticipantNameFirst" type="xs:string" minOccurs="0" />
+							<xs:element name="PatientNameLast" type="xs:string" minOccurs="0" />
+							<xs:element name="PatientNameMiddle" type="xs:string" minOccurs="0" />
+							<xs:element name="PatientNameFirst" type="xs:string" minOccurs="0" />
+							<xs:element name="ProviderID" type="xs:string" minOccurs="0" />
+							<xs:element name="ProviderSuffix" type="xs:string" minOccurs="0" />
+							<xs:element name="DateOfService" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="ScanDate" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="PageCount" type="xs:int" minOccurs="0" />
+							<xs:element name="BatchNumber" type="xs:string" minOccurs="0" />
+							<xs:element name="IndexDate" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="CheckAccountNumber" type="xs:int" minOccurs="0" />
+							<xs:element name="CheckAmount" type="xs:decimal" minOccurs="0" />
+							<xs:element name="CheckCode" type="xs:string" minOccurs="0" />
+							<xs:element name="CheckDate" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="CheckNumber" type="xs:string" minOccurs="0" />
+							<xs:element name="CompletedBy" type="xs:string" minOccurs="0" />
+							<xs:element name="CompletedOn" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="LastUpdateBy" type="xs:string" minOccurs="0" />
+							<xs:element name="LastUpdateTime" type="xs:dateTime" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:UFCWDocs" />
+			<xs:field xpath="mstns:DocumentID" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PlaceofServiceValuesDataSet" targetNamespace="http://tempuri.org/PlaceofServiceValuesDataSet.xsd" xmlns:mstns="http://tempuri.org/PlaceofServiceValuesDataSet.xsd" xmlns="http://tempuri.org/PlaceofServiceValuesDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Provider=IBMDADB2.DB2COPY1;Data Source=DB2DLOC;Persist Security Info=True;User ID=srib;Location=172.16.1.170:5004" IsAppSettingsProperty="False" Modifier="Assembly" Name="IBMDADB2.DB2DLOC.DB2DLOC" Provider="System.Data.OleDb">
+          </Connection>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PlaceofServiceValuesDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="PlaceofServiceValuesDataSet" msprop:Generator_DataSetName="PlaceofServiceValuesDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PLACE_OF_SERVE_VALUES" msprop:Generator_UserTableName="PLACE_OF_SERVE_VALUES" msprop:Generator_RowDeletedName="PLACE_OF_SERVE_VALUESRowDeleted" msprop:Generator_RowChangedName="PLACE_OF_SERVE_VALUESRowChanged" msprop:Generator_RowClassName="PLACE_OF_SERVE_VALUESRow" msprop:Generator_RowChangingName="PLACE_OF_SERVE_VALUESRowChanging" msprop:Generator_RowEvArgName="PLACE_OF_SERVE_VALUESRowChangeEvent" msprop:Generator_RowEvHandlerName="PLACE_OF_SERVE_VALUESRowChangeEventHandler" msprop:Generator_TableClassName="PLACE_OF_SERVE_VALUESDataTable" msprop:Generator_TableVarName="tablePLACE_OF_SERVE_VALUES" msprop:Generator_RowDeletingName="PLACE_OF_SERVE_VALUESRowDeleting" msprop:Generator_TablePropName="PLACE_OF_SERVE_VALUES">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PLACE_OF_SERV_VALUE" msprop:Generator_UserColumnName="PLACE_OF_SERV_VALUE" msprop:Generator_ColumnVarNameInTable="columnPLACE_OF_SERV_VALUE" msprop:Generator_ColumnPropNameInRow="PLACE_OF_SERV_VALUE" msprop:Generator_ColumnPropNameInTable="PLACE_OF_SERV_VALUEColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FROM_DATE" msprop:Generator_UserColumnName="FROM_DATE" msprop:Generator_ColumnVarNameInTable="columnFROM_DATE" msprop:Generator_ColumnPropNameInRow="FROM_DATE" msprop:Generator_ColumnPropNameInTable="FROM_DATEColumn" type="xs:dateTime" />
+              <xs:element name="THRU_DATE" msprop:Generator_UserColumnName="THRU_DATE" msprop:Generator_ColumnVarNameInTable="columnTHRU_DATE" msprop:Generator_ColumnPropNameInRow="THRU_DATE" msprop:Generator_ColumnPropNameInTable="THRU_DATEColumn" type="xs:dateTime" />
+              <xs:element name="SHORT_DESC" msprop:Generator_UserColumnName="SHORT_DESC" msprop:Generator_ColumnVarNameInTable="columnSHORT_DESC" msprop:Generator_ColumnPropNameInRow="SHORT_DESC" msprop:Generator_ColumnPropNameInTable="SHORT_DESCColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FULL_DESC" msprop:Generator_UserColumnName="FULL_DESC" msprop:Generator_ColumnVarNameInTable="columnFULL_DESC" msprop:Generator_ColumnPropNameInRow="FULL_DESC" msprop:Generator_ColumnPropNameInTable="FULL_DESCColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CREATE_USERID" msprop:Generator_UserColumnName="CREATE_USERID" msprop:Generator_ColumnVarNameInTable="columnCREATE_USERID" msprop:Generator_ColumnPropNameInRow="CREATE_USERID" msprop:Generator_ColumnPropNameInTable="CREATE_USERIDColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CREATE_DATE" msprop:Generator_UserColumnName="CREATE_DATE" msprop:Generator_ColumnVarNameInTable="columnCREATE_DATE" msprop:Generator_ColumnPropNameInRow="CREATE_DATE" msprop:Generator_ColumnPropNameInTable="CREATE_DATEColumn" type="xs:dateTime" />
+              <xs:element name="USERID" msprop:Generator_UserColumnName="USERID" msprop:Generator_ColumnVarNameInTable="columnUSERID" msprop:Generator_ColumnPropNameInRow="USERID" msprop:Generator_ColumnPropNameInTable="USERIDColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LASTUPDT" msprop:Generator_UserColumnName="LASTUPDT" msprop:Generator_ColumnVarNameInTable="columnLASTUPDT" msprop:Generator_ColumnPropNameInRow="LASTUPDT" msprop:Generator_ColumnPropNameInTable="LASTUPDTColumn" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PLACE_OF_SERVE_VALUES" />
+      <xs:field xpath="mstns:PLACE_OF_SERV_VALUE" />
+      <xs:field xpath="mstns:FROM_DATE" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

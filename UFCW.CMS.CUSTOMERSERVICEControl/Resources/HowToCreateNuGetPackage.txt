@@ -1,0 +1,48 @@
+﻿https://learn.microsoft.com/en-us/azure/devops/artifacts/get-started-nuget?view=azure-devops&tabs=windows
+
+Make sure you have Nuget.exe installed to path used in commands
+Change Name & version as needed
+
+Tools\Command Line\Developer Command Prompt
+c:\NuGet\nuget spec UFCW.CMS.CustomerServiceControl.vbproj   
+
+
+	  <dependencies>
+		  <dependency id="UFCWGeneral" version="[1.*,)" />
+		  <dependency id="UFCWGeneralAD" version="[1.*,)" />
+		  <dependency id="UFCWCryptor" version="[1.*,)" />
+		  <dependency id="UFCWClone" version="[1.*,)" />
+		  <dependency id="UFCWException" version="[1.*,)" />
+		  <dependency id="UFCWEmail" version="[1.*,)" />
+		  <dependency id="ImageSelector" version="[1.*,)" />
+		  <dependency id="FileNetWCFWrapper" version="[1.*,)" />
+		  <dependency id="DataGridPlus" version="[1.*,)" />
+		  <dependency id="UFCW.CMS.DAL" version="[1.*,)" />
+		  <dependency id="UFCW.CMS.Accumulator" version="[1.*,)" />
+		  <dependency id="UFCW.CMS.AccumulatorControl" version="[1.*,)" />
+		  <dependency id="UFCW.CMS.AnnotationEditor" version="[1.*,)" />
+		  <dependency id="UFCW.CMS.ClaimDocumentHistory" version="[1.*,)" />
+		  <dependency id="UFCW.CMS.COBControl" version="[1.*,)" />
+		  <dependency id="UFCW.CMS.DentalControl" version="[1.*,)" />
+		  <dependency id="UFCW.CMS.Eligibility" version="[1.*,)" />
+		  <dependency id="UFCW.CMS.FreeText" version="[1.*,)" />
+		  <dependency id="UFCW.CMS.HistoryViewer" version="[1.*,)" />
+		  <dependency id="UFCW.CMS.Hours" version="[1.*,)" />
+		  <dependency id="UFCW.CMS.HRAControl" version="[1.*,)" />
+		  <dependency id="UFCW.CMS.MemberSearch" version="[1.*,)" />
+		  <dependency id="UFCW.CMS.Plan" version="[1.*,)" />
+		  <dependency id="UFCW.CMS.PremiumsControl" version="[1.*,)" />
+		  <dependency id="UFCW.CMS.Prescriptions" version="[1.*,)" />
+		  <dependency id="UFCW.CMS.ProviderControl" version="[1.*,)" />
+		  <dependency id="UFCW.CMS.UFCWDocs" version="[1.*,)" />
+		  <dependency id="UFCW.REGMASTER.CoverageHistory" version="[1.*,)" />
+		  <dependency id="UFCW.REGMASTER.EligMaintenance" version="[1.*,)" />
+		  <dependency id="UFCW.REGMASTER.History" version="[1.*,)" />
+		  <dependency id="UFCW.REGMASTER.RemarksControl" version="[1.*,)" />
+		  <dependency id="UFCW.RegMasterDAL" version="[1.*,)" />
+	  </dependencies>
+
+
+
+c:\NuGet\nuget pack UFCW.CMS.CustomerServiceControl.vbproj -Properties Configuration=Release  
+c:\NuGet\nuget push UFCW.CMS.CustomerServiceControl.1.5.48.28034.nupkg -src http://ufcwdevops/SCUFCWFunds/FundApps/_packaging/UFCWNuGetPackages/nuget/v3/index.json -ApiKey UFCW.CMS.CustomerServiceControl

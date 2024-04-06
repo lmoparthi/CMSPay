@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PHONEDataGridStyle>
+  <ColumnCount>14</ColumnCount>
+  <GridDefaultSort>FROM_DATE DESC, PHONE_TYPE</GridDefaultSort>
+  <Column>
+    <DefaultOrder>1</DefaultOrder>
+    <DefaultCharWidth>13</DefaultCharWidth>
+    <Mapping>FROM_DATE</Mapping>
+    <HeaderText>From Date</HeaderText>
+    <Type>Text</Type>
+    <Format>MM/dd/yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>2</DefaultOrder>
+    <DefaultCharWidth>13</DefaultCharWidth>
+    <Mapping>THRU_DATE</Mapping>
+    <HeaderText>Thru Date</HeaderText>
+    <Type>Text</Type>
+    <Format>MM/dd/yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>3</DefaultOrder>
+    <DefaultCharWidth>30</DefaultCharWidth>
+    <Mapping>PHONE</Mapping>
+    <HeaderText>Phone</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+    <Visible>True</Visible>
+  </Column>
+  <Column>
+    <DefaultOrder>4</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>PRIORITY</Mapping>
+    <HeaderText>Preferred</HeaderText>
+    <Type>Text</Type>
+    <Format>YesNo</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+    <Visible>True</Visible>
+  </Column>
+  <Column>
+    <DefaultOrder>5</DefaultOrder>
+    <DefaultCharWidth>15</DefaultCharWidth>
+    <Mapping>TYPE</Mapping>
+    <HeaderText>Phone Desc.</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText>N/A</NullText>
+    <Visible>True</Visible>
+  </Column>
+  <Column>
+    <DefaultOrder>6</DefaultOrder>
+    <DefaultCharWidth>15</DefaultCharWidth>
+    <Mapping>APPROVAL_REQUIRED_SW</Mapping>
+    <HeaderText>Requires Approval</HeaderText>
+    <Type>Text</Type>
+    <Format>YesNo</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+    <Visible>True</Visible>
+  </Column>
+  <Column>
+    <DefaultOrder>7</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>ARCHIVE</Mapping>
+    <HeaderText>Archived</HeaderText>
+    <Type>Text</Type>
+    <Format>YesNo</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+    <Visible>True</Visible>
+  </Column>
+  <Column>
+    <DefaultOrder>8</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>SMS_OK_SW</Mapping>
+    <HeaderText>SMS Allowed</HeaderText>
+    <Type>Text</Type>
+    <Format>YesNo</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+    <Visible>True</Visible>
+  </Column>
+  <Column>
+    <DefaultOrder>9</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>AUTODIAL_OK_SW</Mapping>
+    <HeaderText>Auto Dial OK</HeaderText>
+    <Type>Text</Type>
+    <Format>YesNo</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+    <Visible>True</Visible>
+  </Column>
+  <Column>
+    <DefaultOrder>10</DefaultOrder>
+    <DefaultCharWidth>30</DefaultCharWidth>
+    <Mapping>SOURCE</Mapping>
+    <HeaderText>Source</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+    <Visible>True</Visible>
+  </Column>
+  <Column>
+    <DefaultOrder>11</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>ONLINE_DATE</Mapping>
+    <HeaderText>Last Updated</HeaderText>
+    <Type>Text</Type>
+    <Format>MM-dd-yyyy hh:mm:ss.fff</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>12</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>ONLINE_USERID</Mapping>
+    <HeaderText>Last Updated By</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>13</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>CREATE_DATE</Mapping>
+    <HeaderText>Created Date</HeaderText>
+    <Type>Text</Type>
+    <Format>MM-dd-yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>14</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>CREATE_USERID</Mapping>
+    <HeaderText>Created By</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+</PHONEDataGridStyle>

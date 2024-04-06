@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EMAILDataGridStyle>
+  <ColumnCount>11</ColumnCount>
+  <GridDefaultSort>FROM_DATE DESC</GridDefaultSort>
+  <Column>
+    <DefaultOrder>1</DefaultOrder>
+    <DefaultCharWidth>13</DefaultCharWidth>
+    <Mapping>FROM_DATE</Mapping>
+    <HeaderText>From Date</HeaderText>
+    <Type>Text</Type>
+    <Format>MM/dd/yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>2</DefaultOrder>
+    <DefaultCharWidth>13</DefaultCharWidth>
+    <Mapping>THRU_DATE</Mapping>
+    <HeaderText>Thru Date</HeaderText>
+    <Type>Text</Type>
+    <Format>MM/dd/yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>3</DefaultOrder>
+    <DefaultCharWidth>25</DefaultCharWidth>
+    <Mapping>EMAIL1</Mapping>
+    <HeaderText>Primary EMail</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>4</DefaultOrder>
+    <DefaultCharWidth>25</DefaultCharWidth>
+    <Mapping>EMAIL2</Mapping>
+    <HeaderText>Secondary EMail</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>5</DefaultOrder>
+    <DefaultCharWidth>25</DefaultCharWidth>
+    <Mapping>SOURCE</Mapping>
+    <HeaderText>EMail Source</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>6</DefaultOrder>
+    <DefaultCharWidth>20</DefaultCharWidth>
+    <Mapping>CREATE_USERID</Mapping>
+    <HeaderText>Created UserID</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>7</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>CREATE_DATE</Mapping>
+    <HeaderText>Created Date</HeaderText>
+    <Type>Text</Type>
+    <Format>MM-dd-yyyy hh:mm:ss tt</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>8</DefaultOrder>
+    <DefaultCharWidth>20</DefaultCharWidth>
+    <Mapping>ONLINE_USERID</Mapping>
+    <HeaderText>Modified UserID</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+    <Visible>True</Visible>
+  </Column>
+  <Column>
+    <DefaultOrder>9</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>ONLINE_DATE</Mapping>
+    <HeaderText>Modified Date</HeaderText>
+    <Type>Text</Type>
+    <Format>MM-dd-yyyy hh:mm:ss tt</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+    <Visible>True</Visible>
+  </Column>
+  <Column>
+    <DefaultOrder>10</DefaultOrder>
+    <DefaultCharWidth>15</DefaultCharWidth>
+    <Mapping>ARCHIVE</Mapping>
+    <HeaderText>Archived</HeaderText>
+    <Type>Text</Type>
+    <Format>YesNo</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+    <Visible>True</Visible>
+  </Column>
+  <Column>
+    <DefaultOrder>11</DefaultOrder>
+    <DefaultCharWidth>15</DefaultCharWidth>
+    <Mapping>APPROVAL_REQUIRED_SW</Mapping>
+    <HeaderText>Requires Approval</HeaderText>
+    <Type>Text</Type>
+    <Format>YesNo</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+    <Visible>True</Visible>
+  </Column>
+  <Column>
+    <DefaultOrder>12</DefaultOrder>
+    <DefaultCharWidth>15</DefaultCharWidth>
+    <Mapping>MASS_MAIL_OPTIN_SW</Mapping>
+    <HeaderText>Bulk Use OK</HeaderText>
+    <Type>Text</Type>
+    <Format>YesNo</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+    <Visible>True</Visible>
+  </Column>
+  <Column>
+    <DefaultOrder>13</DefaultOrder>
+    <DefaultCharWidth>15</DefaultCharWidth>
+    <Mapping>ELECTRONIC_OPTIN_SW</Mapping>
+    <HeaderText>Electronic Only Preferred</HeaderText>
+    <Type>Text</Type>
+    <Format>YesNo</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+    <Visible>True</Visible>
+  </Column>
+</EMAILDataGridStyle>

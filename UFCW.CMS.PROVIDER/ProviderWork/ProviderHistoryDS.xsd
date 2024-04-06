@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="ProviderHistoryDS" targetNamespace="http://tempuri.org/ProviderHistoryDS.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/ProviderHistoryDS.xsd"
+	xmlns:mstns="http://tempuri.org/ProviderHistoryDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="ProviderHistoryDS" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="ProviderHistory">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="HISTORY_ID" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="CLAIM_ID" type="xs:int" minOccurs="0" />
+							<xs:element name="PROVIDER_ID" type="xs:int" minOccurs="0" />
+							<xs:element name="TRANSACTION_DESC" type="xs:string" />
+							<xs:element name="TRANSACTION_COMMENT" type="xs:string" minOccurs="0" />
+							<xs:element name="TRANSACTION_DETAIL" type="xs:int" minOccurs="0" />
+							<xs:element name="CREATE_USERID" type="xs:string" />
+							<xs:element name="CREATE_DATE" type="xs:dateTime" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="ProviderHistoryDSKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:ProviderHistory" />
+			<xs:field xpath="mstns:HISTORY_ID" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

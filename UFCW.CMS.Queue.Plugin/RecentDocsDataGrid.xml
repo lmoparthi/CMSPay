@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RecentDocsDataGridStyle>
+  <ColumnCount>3</ColumnCount>
+  <GridLineStyle>False</GridLineStyle>
+  <Column>
+    <DefaultOrder>1</DefaultOrder>
+    <DefaultCharWidth>12</DefaultCharWidth>
+    <Mapping>DOCID</Mapping>
+    <HeaderText>Doc ID</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+    <Visible>True</Visible>
+  </Column>
+  <Column>
+    <DefaultOrder>2</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>PART_SSN</Mapping>
+    <HeaderText>SSN</HeaderText>
+    <Type>Text</Type>
+    <Format>000-00-0000</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>3</DefaultOrder>
+    <DefaultCharWidth>20</DefaultCharWidth>
+    <Mapping>LastAccessed</Mapping>
+    <HeaderText>Last Accessed On</HeaderText>
+    <Type>Text</Type>
+    <Format>MM/dd/yyyy hh:mm:ss tt</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+    <Visible>True</Visible>
+  </Column>
+</RecentDocsDataGridStyle>

@@ -1,0 +1,45 @@
+-- <ScriptOptions statementSeparator="@"/>
+@
+-- <ScriptOptions errors="off"/>
+@
+-- Drop the procedure if one already exists
+DROP  PROCEDURE FDBMD.DELETE_PROVIDER_LICENSE
+@
+COMMIT
+@
+-- <ScriptOptions errors="on"/>
+@
+-- Create procedure
+CREATE PROCEDURE FDBMD.DELETE_PROVIDER_LICENSE(
+		IN	vLICENSE_ID				INTEGER,
+		IN	vORIGINAL_ONLINE_DATE	TIMESTAMP)
+	--LANGUAGE SQL
+	COLLID FODBMDFY
+	--WLM ENVIRONMENT WLMDENV4
+	RUN OPTIONS ''
+--------------------------------------------------------------------------
+-- DB2 SQL procedure
+--------------------------------------------------------------------------
+
+P1: BEGIN
+
+-- Declare variables
+
+
+
+--
+
+DELETE FROM FDBMD.PROVIDER_LICENSE PROVIDER_LICENSE
+WHERE		(PROVIDER_LICENSE.LICENSE_ID = vLICENSE_ID 
+AND			(ONLINE_DATE >= vORIGINAL_ONLINE_DATE AND ONLINE_DATE  < vORIGINAL_ONLINE_DATE + 1 SECONDS));
+
+
+--
+
+END P1
+@
+-- <ScriptOptions WLMRefresh="WLMDENV4" />
+@
+-- Grant access privilages to procedure
+GRANT EXECUTE ON PROCEDURE FDBMD.DELETE_PROVIDER_LICENSE TO PUBLIC
+@

@@ -1,0 +1,48 @@
+-- <ScriptOptions statementSeparator="@"/>
+@
+-- <ScriptOptions errors="off"/>
+@
+-- Drop the procedure if one already exists
+DROP  PROCEDURE FDBMD.CREATE_PROVIDER_LICENSE
+@
+COMMIT
+@
+-- <ScriptOptions errors="on"/>
+@
+-- Create procedure
+CREATE PROCEDURE FDBMD.CREATE_PROVIDER_LICENSE(
+		IN	vPROVIDER_ID			INTEGER,
+		IN	vLICENSE				CHARACTER ( 10 ),
+		IN	vLICENSE_DESCRIPTION	VARCHAR ( 50 ),
+		IN	vUSERID					VARCHAR ( 40 ))
+	--LANGUAGE SQL
+	COLLID FODBMDFY
+	--WLM ENVIRONMENT WLMDENV4
+	RUN OPTIONS ''
+--------------------------------------------------------------------------
+-- DB2 SQL procedure
+--------------------------------------------------------------------------
+
+P1: BEGIN
+
+-- Declare variables
+
+DECLARE vDEFAULT_DATE TIMESTAMP;
+SET vDEFAULT_DATE = CURRENT TIMESTAMP;
+
+
+--
+
+INSERT INTO FDBMD.PROVIDER_LICENSE (PROVIDER_ID,LICENSE,LICENSE_DESCRIPTION,ONLINE_USERID,CREATE_USERID,CREATE_DATE,BATCH_USERID,BATCH_DATE,ONLINE_DATE) 
+							VALUES (vPROVIDER_ID,vLICENSE,vLICENSE_DESCRIPTION,vUSERID,vUSERID,vDEFAULT_DATE,vUSERID,vDEFAULT_DATE,vDEFAULT_DATE);
+
+
+--
+
+END P1
+@
+-- <ScriptOptions WLMRefresh="WLMDENV4" />
+@
+-- Grant access privilages to procedure
+GRANT EXECUTE ON PROCEDURE FDBMD.CREATE_PROVIDER_LICENSE TO PUBLIC
+@

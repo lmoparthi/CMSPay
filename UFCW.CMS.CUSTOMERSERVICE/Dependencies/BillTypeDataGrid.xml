@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BillTypeDataGridStyle>
+  <ColumnCount>2</ColumnCount>
+  <GridLineStyle>False</GridLineStyle>
+  <Column>
+    <DefaultOrder>1</DefaultOrder>
+    <DefaultCharWidth>5</DefaultCharWidth>
+    <Mapping>BILL_TYPE_VALUE</Mapping>
+    <HeaderText>Code</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>2</DefaultOrder>
+    <DefaultCharWidth>84</DefaultCharWidth>
+    <Mapping>FULL_DESC</Mapping>
+    <HeaderText>Description</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>3</DefaultOrder>
+    <DefaultCharWidth>70</DefaultCharWidth>
+    <Mapping>DESC_3</Mapping>
+    <HeaderText>Comments</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+</BillTypeDataGridStyle>

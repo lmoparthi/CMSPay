@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DCNDataGridStyle>
+  <ColumnCount>21</ColumnCount>
+  <GridLineStyle>False</GridLineStyle>
+  <Column>
+    <DefaultOrder>1</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>CLAIM_ID</Mapping>
+    <HeaderText>Claim#</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>2</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>FAMILY_ID</Mapping>
+    <HeaderText>Family ID</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>3</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>RELATION_ID</Mapping>
+    <HeaderText>Relation ID</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>4</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>STATUS</Mapping>
+    <HeaderText>Status</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>5</DefaultOrder>
+    <DefaultCharWidth>15</DefaultCharWidth>
+    <Mapping>DCN</Mapping>
+    <HeaderText>DCN</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>6</DefaultOrder>
+    <DefaultCharWidth>13</DefaultCharWidth>
+    <Mapping>ANTHEM_DCN</Mapping>
+    <HeaderText>Anthem DCN</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>7</DefaultOrder>
+    <DefaultCharWidth>20</DefaultCharWidth>
+    <Mapping>REC_DATE</Mapping>
+    <HeaderText>Received Date</HeaderText>
+    <Type>Text</Type>
+    <Format>MM/dd/yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>8</DefaultOrder>
+    <DefaultCharWidth>20</DefaultCharWidth>
+    <Mapping>PROCESSED_DATE</Mapping>
+    <HeaderText>Processed Date</HeaderText>
+    <Type>Text</Type>
+    <Format>MM/dd/yyyy hh:mm:ss tt</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>9</DefaultOrder>
+    <DefaultCharWidth>25</DefaultCharWidth>
+    <Mapping>PROCESSED_BY</Mapping>
+    <HeaderText>Processed By</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>10</DefaultOrder>
+    <DefaultCharWidth>20</DefaultCharWidth>
+    <Mapping>LAST_ACCESSED_DATE</Mapping>
+    <HeaderText>Last Accessed Date</HeaderText>
+    <Type>Text</Type>
+    <Format>MM/dd/yyyy hh:mm:ss tt</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>11</DefaultOrder>
+    <DefaultCharWidth>13</DefaultCharWidth>
+    <Mapping>LAST_ACCESSED_BY</Mapping>
+    <HeaderText>Last Accessed By</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>12</DefaultOrder>
+    <DefaultCharWidth>13</DefaultCharWidth>
+    <Mapping>PAT_FNAME</Mapping>
+    <HeaderText>First Name</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>13</DefaultOrder>
+    <DefaultCharWidth>13</DefaultCharWidth>
+    <Mapping>PAT_LNAME</Mapping>
+    <HeaderText>Last Name</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>14</DefaultOrder>
+    <DefaultCharWidth>13</DefaultCharWidth>
+    <Mapping>PENDED_TO</Mapping>
+    <HeaderText>Pended To</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>15</DefaultOrder>
+    <DefaultCharWidth>13</DefaultCharWidth>
+    <Mapping>REMIT_DATE</Mapping>
+    <HeaderText>835 Remit Date</HeaderText>
+    <Type>Text</Type>
+    <Format>MM/dd/yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>16</DefaultOrder>
+    <DefaultCharWidth>13</DefaultCharWidth>
+    <Mapping>DOC_TYPE</Mapping>
+    <HeaderText>Doc Type</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>17</DefaultOrder>
+    <DefaultCharWidth>13</DefaultCharWidth>
+    <Mapping>PROV_TIN</Mapping>
+    <HeaderText>Prov. TIN</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>18</DefaultOrder>
+    <DefaultCharWidth>13</DefaultCharWidth>
+    <Mapping>PROV_ID</Mapping>
+    <HeaderText>Prov. ID</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>19</DefaultOrder>
+    <DefaultCharWidth>13</DefaultCharWidth>
+    <Mapping>ROUTED_BY</Mapping>
+    <HeaderText>Routed By</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>20</DefaultOrder>
+    <DefaultCharWidth>13</DefaultCharWidth>
+    <Mapping>ROUTED_DATE</Mapping>
+    <HeaderText>Routed Date</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>21</DefaultOrder>
+    <DefaultCharWidth>20</DefaultCharWidth>
+    <Mapping>LASTUPDT</Mapping>
+    <HeaderText>Last Updated Date</HeaderText>
+    <Type>Text</Type>
+    <Format>MM/dd/yyyy hh:mm:ss tt</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+</DCNDataGridStyle>

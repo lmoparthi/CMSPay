@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="ProcCodesDataSet" targetNamespace="http://www.tempuri.org/ProcCodesDataSet.xsd"
+	xmlns:mstns="http://www.tempuri.org/ProcCodesDataSet.xsd" xmlns="http://www.tempuri.org/ProcCodesDataSet.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="ProcCodesDataSet" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="PROCEDURE_VALUES">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="PROC_VALUE" type="xs:string" />
+							<xs:element name="FROM_DATE" type="xs:dateTime" />
+							<xs:element name="THRU_DATE" type="xs:dateTime" />
+							<xs:element name="SHORT_DESC" type="xs:string" />
+							<xs:element name="FULL_DESC" type="xs:string" />
+							<xs:element name="LASTUPDT" type="xs:dateTime" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:PROCEDURE_VALUES" />
+			<xs:field xpath="mstns:PROC_VALUE" />
+			<xs:field xpath="mstns:FROM_DATE" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

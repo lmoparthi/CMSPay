@@ -1,0 +1,16 @@
+﻿https://learn.microsoft.com/en-us/azure/devops/artifacts/get-started-nuget?view=azure-devops&tabs=windows
+
+Make sure you have Nuget.exe installed to path used in commands
+Change Name & version as needed
+
+	  <dependencies>
+		<dependency id="Overby.Extensions.Attachments" version="[1.2.0,2.0.0)" />
+		<dependency id="DocumentFormat.OpenXml" version="[2.2.0,3.0.0)" />
+
+	  </dependencies>
+
+
+Tools\Command Line\Developer Command Prompt
+c:\NuGet\nuget spec UFCWGeneral.vbproj   
+c:\NuGet\nuget pack UFCWGeneral.vbproj -Properties Configuration=Release  
+c:\NuGet\nuget push UFCWGeneral.1.17.48.28840.nupkg -src http://ufcwdevops/SCUFCWFunds/FundApps/_packaging/UFCWNuGetPackages/nuget/v3/index.json -ApiKey UFCWGeneral

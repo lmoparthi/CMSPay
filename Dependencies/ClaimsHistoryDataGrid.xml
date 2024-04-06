@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ClaimsHistoryDataGridStyle>
+  <ColumnCount>6</ColumnCount>
+  <GridDefaultSort>LAST_ACCESSED_DATE DESC</GridDefaultSort>
+  <GridLineStyle>False</GridLineStyle>
+  <Column>
+    <DefaultOrder>1</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>CLAIM_ID</Mapping>
+    <HeaderText>Claim#</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>2</DefaultOrder>
+    <DefaultCharWidth>12</DefaultCharWidth>
+    <Mapping>DOCID</Mapping>
+    <HeaderText>Document#</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>3</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>FAMILY_ID</Mapping>
+    <HeaderText>Family ID</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>4</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>PART_SSN</Mapping>
+    <HeaderText>SSN</HeaderText>
+    <Type>Text</Type>
+    <Format>000-00-0000</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>5</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>STATUS</Mapping>
+    <HeaderText>Action</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>6</DefaultOrder>
+    <DefaultCharWidth>20</DefaultCharWidth>
+    <Mapping>LAST_ACCESSED_DATE</Mapping>
+    <HeaderText>Last Accessed</HeaderText>
+    <Type>Text</Type>
+    <Format>MM/dd/yyyy hh:mm:ss tt</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+</ClaimsHistoryDataGridStyle>

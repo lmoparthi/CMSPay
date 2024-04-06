@@ -1,0 +1,257 @@
+Option Explicit On
+Option Strict On
+Imports System
+Imports Microsoft.Practices.EnterpriseLibrary.ExceptionHandling
+''' -----------------------------------------------------------------------------
+''' Project	 : UFCW.CMS.Plan
+''' Class	 : CMS.Plan.Publisher
+'''
+''' -----------------------------------------------------------------------------
+''' <summary>
+''' This class handle publishing.  This class should only be used by Plan (as of now,
+'''  PlanStaged is all that can/will use it)
+''' </summary>
+''' <remarks>
+''' </remarks>
+''' <history>
+''' 	[paulw]	1/25/2006	Created
+''' </history>
+''' -----------------------------------------------------------------------------
+Public Class Publisher
+#Region "Variables and Properties"
+    'Private Shared _TraceSwitch As New BooleanSwitch("TraceCloning", "Trace Switch in App.Config")
+    Private _StagedPlan As PlanStaged
+    Private _PublishDate As Date
+
+    ' -----------------------------------------------------------------------------
+    ' <summary>
+    ' Gets the Plan Type for this publisher
+    ' </summary>
+    ' <value></value>
+    ' <remarks>
+    ' </remarks>
+    ' <history>
+    ' 	[paulw]	1/25/2006	Created
+    ' </history>
+    ' -----------------------------------------------------------------------------
+    ReadOnly Property PlanType() As String
+        Get
+            Return _StagedPlan.PlanType
+        End Get
+    End Property
+
+    ' -----------------------------------------------------------------------------
+    ' <summary>
+    ' Gets the latest used Batch Number, increments it locally and returns it
+    ' </summary>
+    ' <returns></returns>
+    ' <remarks>
+    ' </remarks>
+    ' <history>
+    ' 	[paulw]	1/25/2006	Created
+    ' </history>
+    ' -----------------------------------------------------------------------------
+    'Public ReadOnly Property BatchNumber() As Integer
+    '    Get
+    '        Try
+    '            Dim nextBatchNumber As Integer = PlanStagingDAL.GetCurrentBatchNumber
+    '            nextBatchNumber += 1
+    '            Return nextBatchNumber
+    '        Catch ex As Exception
+    '            Dim Rethrow As Boolean = ExceptionPolicy.HandleException(ex, "General")
+    '            If (rethrow) Then
+    '                Throw
+    '            End If
+    '        End Try
+    '    End Get
+    'End Property
+
+#End Region
+
+#Region "Constructors"
+
+    Private Sub New()
+
+    End Sub
+    Public Sub New(ByVal stagedPlan As PlanStaged)
+        _StagedPlan = stagedPlan
+        _PublishDate = UFCWGeneral.NowDate
+    End Sub
+#End Region
+
+#Region "Publish Functions"
+
+    ' -----------------------------------------------------------------------------
+    ' <summary>
+    ' Publish a plan from staging
+    ' </summary>
+    ' <param name="fromDate">The from date to publish this plan to</param>
+    ' <param name="toDate">The to date to publish this plan to</param>
+    ' <param name="procCollection">The procedures to publish</param>
+    ' <param name="userId">The user that is publishing this group of procedures</param>
+    ' <remarks>
+    ' </remarks>
+    ' <history>
+    ' 	[paulw]	1/25/2006	Created
+    ' </history>
+    ' -----------------------------------------------------------------------------
+    Public Sub PublishPlan(ByVal fromDate As Date, ByVal toDate As Date, ByVal procCollection As Procedures, ByVal userId As String)
+        Try
+            PlanStagingDAL.PublishStagedPlan(ConvertStagedProceduresToActiveProcedures(fromDate, toDate, procCollection), _PublishDate, _StagedPlan.PlanType, userId)
+        Catch ex As Exception
+
+            Throw New PublishException("Cannot Publish this Plan", ex)
+        End Try
+    End Sub
+    ' -----------------------------------------------------------------------------
+    ' <summary>
+    ' Gets the current Staged Procedures from the db and pushes them into an active
+    '  procedure collection
+    ' </summary>
+    ' <returns></returns>
+    ' <remarks>
+    ' </remarks>
+    ' <history>
+    ' 	[paulw]	1/25/2006	Created
+    ' </history>
+    ' -----------------------------------------------------------------------------
+
+    ' -----------------------------------------------------------------------------
+    ' <summary>
+    ' Gets the current Staged Procedures from the db and pushes them into an active
+    '  procedure collection
+    ' </summary>
+    ' <param name="fromDate">the from date for creating the new procedures</param>
+    ' <param name="toDate">the to date for creating the new procedures</param>
+    ' <param name="stagedProcCollection">The staged procedures to be converted</param>
+    ' <returns></returns>
+    ' <remarks>
+    ' </remarks>
+    ' <history>
+    ' 	[paulw]	1/25/2006	Created
+    ' </history>
+    ' -----------------------------------------------------------------------------
+    Private Function ConvertStagedProceduresToActiveProcedures(ByVal fromDate As Date, ByVal toDate As Date, ByVal stagedProcCollection As Procedures) As Procedures
+        Dim RlSetCol As New Rulesets
+        Dim activeProcedureCollectionToPublish As New Procedures
+        Try
+            Dim ContractFromDate As Date = ContractController.GetContract(fromDate).BeginDate
+            Dim ContractToDate As Date = ContractController.GetContract(fromDate).EndDate
+            'get a collection of staged procedures
+            'Dim stagedProcCollection As ProcedureCollection = PlanStagingDAL.GetStagedProcedures(_stagedPlan.PlanType, False)
+            'get a collection of active procedures
+            Dim activeProcCollection As Procedures = PlanActiveDAL.GetActiveProcedures(_StagedPlan.PlanType, True)
+            Dim stagedProc As ProcedureStaged
+            'final "publishing" collection
+
+            For I As Integer = 0 To stagedProcCollection.Count - 1
+                'For Each stagedProc As ProcedureStaged In stagedProcCollection
+                stagedProc = DirectCast(stagedProcCollection(I), ProcedureStaged)
+                If Not stagedProc.Status = StatusCodes.Unchanged Then
+                    If Not stagedProc.NewRuleSets Is Nothing Then
+                        'Check And See If staged proc is in active proc collection
+                        Dim activeProc As ProcedureActive = Nothing
+                        If stagedProc.Status = StatusCodes.Changed Then
+                            activeProc = GetMatchingActiveProcedure(stagedProc, activeProcCollection)
+                        End If
+
+                        Dim newActiveProc As ProcedureActive
+                        'Dim activeRulSet As RulesetActive = ConvertStagedRulesetToActiveRuleset(stagedProc.NewRuleSets)
+                        If activeProc Is Nothing Then
+                            'new procedure
+                            newActiveProc = New ProcedureActive(stagedProc.ProcedureID, stagedProc.BillType, stagedProc.Diagnosis, stagedProc.Modifier, stagedProc.Gender, stagedProc.MonthsMin, stagedProc.MonthsMax, stagedProc.PlaceOfService, stagedProc.PlanType, stagedProc.ProcedureCode, stagedProc.Provider, New Rulesets, 1, contractFromDate, contractToDate)
+                        Else
+                            'new procedure(duplicate of existing w/new sequence number)
+                            newActiveProc = New ProcedureActive(stagedProc.ProcedureID, stagedProc.BillType, stagedProc.Diagnosis, stagedProc.Modifier, stagedProc.Gender, stagedProc.MonthsMin, stagedProc.MonthsMax, stagedProc.PlaceOfService, stagedProc.PlanType, stagedProc.ProcedureCode, stagedProc.Provider, New Rulesets, activeProc.SequenceNumber + 1, fromDate, toDate)
+                        End If
+                        For Each rulSet As RuleSetStaged In stagedProc.NewRuleSets
+                            newActiveProc.RuleSets.Add(ConvertStagedRulesetToActiveRuleset(rulSet))
+                        Next
+                        activeProcedureCollectionToPublish.Add(newActiveProc)
+                    End If
+                End If
+            Next
+
+            Return activeProcedureCollectionToPublish
+
+        Catch ex As Exception
+
+            Throw New ConvertToActiveException("Cannot Convert the Staged Procedure Collection to an Active Procedure Collection", ex)
+        End Try
+
+    End Function
+    ' -----------------------------------------------------------------------------
+    ' <summary>
+    ' Converts a Staged Ruleset to an ActiveRuleset
+    ' </summary>
+    ' <param name="stagedRlSet"></param>
+    ' <returns></returns>
+    ' <remarks>
+    ' </remarks>
+    ' <history>
+    ' 	[paulw]	1/25/2006	Created
+    ' </history>
+    ' -----------------------------------------------------------------------------
+    Private Function ConvertStagedRulesetToActiveRuleset(ByVal stagedRlSet As RuleSetStaged) As RuleSetActive
+        Dim activeRulSet As New RuleSetActive
+        Try
+            If stagedRlSet.Status = RulesSetStatus.NotPublished Then
+                activeRulSet.RulesetID = stagedRlSet.RulesetID
+                activeRulSet.RuleSetName = stagedRlSet.RuleSetName
+                activeRulSet.RulesetType = stagedRlSet.RulesetType
+                activeRulSet.Hidden = stagedRlSet.Hidden
+                'If stagedRlSet.Status = RulesetStaged.RulessetStatus.NotPublished Then
+                '    activeRulSet.Status = RulesetActive.RulesetStatus.[New]
+                'Else
+                '    activeRulSet.Status = RulesetActive.RulesetStatus.UnChaged
+                'End If
+                For Each rl As Rule In stagedRlSet
+                    activeRulSet.Add(rl)
+                Next
+            End If
+
+            Return activeRulSet
+
+        Catch ex As Exception
+
+            Throw New ConvertToActiveException("Cannot Convert the Staged Ruleset to an Active Ruleset", ex)
+
+        End Try
+
+    End Function
+
+    ' -----------------------------------------------------------------------------
+    ' <summary>
+    ' Gets a matching active procedure with the highest sequence number
+    ' </summary>
+    ' <param name="stagedProc"></param>
+    ' <param name="activeProcedures"></param>
+    ' <returns></returns>
+    ' <remarks>
+    ' </remarks>
+    ' <history>
+    ' 	[paulw]	1/25/2006	Created
+    ' </history>
+    ' -----------------------------------------------------------------------------
+    Private Function GetMatchingActiveProcedure(ByVal stagedProc As ProcedureStaged, ByVal activeProcedures As Procedures) As ProcedureActive
+        Try
+            Dim seq_num As Integer = -1
+            Dim activeProc As ProcedureActive
+            'loop through all the active procedures
+
+            For i As Integer = 0 To activeProcedures.Count - 1
+                'For Each activeProc As ProcedureActive In activeProcedures
+                activeProc = DirectCast(activeProcedures(i), ProcedureActive)
+                'if they are the same procudure
+                If activeProc.ProcedureID = stagedProc.ProcedureID Then
+                    Return activeProc
+                End If
+            Next
+
+        Catch ex As Exception
+
+            Throw New BusinessLayerException("Problems Getting Matching Active Procedure", ex)
+        End Try
+    End Function
+#End Region
+End Class

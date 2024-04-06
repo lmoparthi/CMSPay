@@ -1,0 +1,52 @@
+-- <ScriptOptions statementSeparator="@"/>
+@
+-- <ScriptOptions errors="off"/>
+@
+-- Drop the procedure if one already exists
+DROP  PROCEDURE FDBMD.RETRIEVE_ADDRESS_CATEGORIES
+@
+COMMIT
+@
+-- <ScriptOptions errors="on"/>
+@
+-- Create procedure
+CREATE PROCEDURE FDBMD.RETRIEVE_ADDRESS_CATEGORIES()
+	RESULT SETS 1
+	--LANGUAGE SQL
+	COLLID FODBCOLL
+	--WLM ENVIRONMENT WLMDENV4 STAY RESIDENT YES
+	RUN OPTIONS ''
+--------------------------------------------------------------------------
+-- DB2 SQL procedure
+--------------------------------------------------------------------------
+
+P1: BEGIN
+
+-- Declare variables
+
+
+
+
+-- Declare cursors
+DECLARE ADOCURSOR CURSOR WITH RETURN FOR 
+	
+	SELECT  ADDRESSTYPES.ADDRESSTYPEID, ADDRESSTYPES.NAME
+	FROM	FDBMD.ADDRESSTYPES ADDRESSTYPES
+	FOR READ ONLY
+	OPTIMIZE FOR 5 ROWS
+	WITH UR;
+
+--
+
+-- Cursor left open for client application.
+OPEN ADOCURSOR;
+
+
+--
+END P1
+@
+-- <ScriptOptions WLMRefresh="WLMDENV4" />
+@
+-- Grant access privilages to procedure
+GRANT EXECUTE ON PROCEDURE FDBMD.RETRIEVE_ADDRESS_CATEGORIES TO PUBLIC
+@

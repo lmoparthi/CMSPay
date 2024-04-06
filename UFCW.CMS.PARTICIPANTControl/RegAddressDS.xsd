@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="RegAddressDS" targetNamespace="http://tempuri.org/RegAddressDS.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/RegAddressDS.xsd" xmlns:mstns="http://tempuri.org/RegAddressDS.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="RegAddressDS" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="REG_ADDRESS">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="FAMILY_ID" type="xs:int" />
+							<xs:element name="RELATION_ID" type="xs:int" />
+							<xs:element name="FROM_DATE" type="xs:dateTime" />
+							<xs:element name="THRU_DATE" type="xs:dateTime" />
+							<xs:element name="PART_SSNO" type="xs:int" />
+							<xs:element name="PHONE1" type="xs:string" minOccurs="0" />
+							<xs:element name="PHONE2" type="xs:string" minOccurs="0" />
+							<xs:element name="FOREIGN_SW" type="xs:decimal" />
+							<xs:element name="COUNTRY" type="xs:string" minOccurs="0" />
+							<xs:element name="ADDRESS1" type="xs:string" minOccurs="0" />
+							<xs:element name="ADDRESS2" type="xs:string" minOccurs="0" />
+							<xs:element name="CITY" type="xs:string" minOccurs="0" />
+							<xs:element name="STATE" type="xs:string" minOccurs="0" />
+							<xs:element name="ZIP1" type="xs:int" minOccurs="0" />
+							<xs:element name="ZIP2" type="xs:int" minOccurs="0" />
+							<xs:element name="CHECK_FOREIGN_SW" type="xs:decimal" />
+							<xs:element name="CHECK_COUNTRY" type="xs:string" minOccurs="0" />
+							<xs:element name="CHECK_ADDRESS1" type="xs:string" minOccurs="0" />
+							<xs:element name="CHECK_ADDRESS2" type="xs:string" minOccurs="0" />
+							<xs:element name="CHECK_CITY" type="xs:string" minOccurs="0" />
+							<xs:element name="CHECK_STATE" type="xs:string" minOccurs="0" />
+							<xs:element name="CHECK_ZIP1" type="xs:int" minOccurs="0" />
+							<xs:element name="CHECK_ZIP2" type="xs:int" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

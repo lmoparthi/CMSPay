@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ACCUMULATORS" targetNamespace="http://tempuri.org/ManualAccumulator.xsd" xmlns:mstns="http://tempuri.org/ManualAccumulator.xsd" xmlns="http://tempuri.org/ManualAccumulator.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ACCUMULATORS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="ACCUMULATORS" msprop:Generator_UserDSName="ACCUMULATORS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ACCUMULATORS" msprop:Generator_TableClassName="ACCUMULATORSDataTable" msprop:Generator_TableVarName="tableACCUMULATORS" msprop:Generator_TablePropName="_ACCUMULATORS" msprop:Generator_RowDeletingName="ACCUMULATORSRowDeleting" msprop:Generator_RowChangingName="ACCUMULATORSRowChanging" msprop:Generator_RowEvHandlerName="ACCUMULATORSRowChangeEventHandler" msprop:Generator_RowDeletedName="ACCUMULATORSRowDeleted" msprop:Generator_UserTableName="ACCUMULATORS" msprop:Generator_RowChangedName="ACCUMULATORSRowChanged" msprop:Generator_RowEvArgName="ACCUMULATORSRowChangeEvent" msprop:Generator_RowClassName="ACCUMULATORSRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ACCUM_NAME" msprop:Generator_ColumnVarNameInTable="columnACCUM_NAME" msprop:Generator_ColumnPropNameInRow="ACCUM_NAME" msprop:Generator_ColumnPropNameInTable="ACCUM_NAMEColumn" msprop:Generator_UserColumnName="ACCUM_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="ACCUM_VALUE" msprop:Generator_ColumnVarNameInTable="columnACCUM_VALUE" msprop:Generator_ColumnPropNameInRow="ACCUM_VALUE" msprop:Generator_ColumnPropNameInTable="ACCUM_VALUEColumn" msprop:Generator_UserColumnName="ACCUM_VALUE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ORIGINAL_ACCUM_VALUE" msprop:Generator_ColumnVarNameInTable="columnORIGINAL_ACCUM_VALUE" msprop:Generator_ColumnPropNameInRow="ORIGINAL_ACCUM_VALUE" msprop:Generator_ColumnPropNameInTable="ORIGINAL_ACCUM_VALUEColumn" msprop:Generator_UserColumnName="ORIGINAL_ACCUM_VALUE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DISPLAY_ORDER" msprop:Generator_ColumnVarNameInTable="columnDISPLAY_ORDER" msprop:Generator_ColumnPropNameInRow="DISPLAY_ORDER" msprop:Generator_ColumnPropNameInTable="DISPLAY_ORDERColumn" msprop:Generator_UserColumnName="DISPLAY_ORDER" type="xs:integer" minOccurs="0" />
+              <xs:element name="ACTIVE_SW" msprop:Generator_ColumnVarNameInTable="columnACTIVE_SW" msprop:Generator_ColumnPropNameInRow="ACTIVE_SW" msprop:Generator_ColumnPropNameInTable="ACTIVE_SWColumn" msprop:Generator_UserColumnName="ACTIVE_SW" type="xs:string" minOccurs="0" />
+              <xs:element name="MANUAL_SW" msprop:Generator_ColumnVarNameInTable="columnMANUAL_SW" msprop:Generator_ColumnPropNameInRow="MANUAL_SW" msprop:Generator_ColumnPropNameInTable="MANUAL_SWColumn" msprop:Generator_UserColumnName="MANUAL_SW" type="xs:boolean" minOccurs="0" />
+              <xs:element name="BATCH_SW" msprop:Generator_ColumnVarNameInTable="columnBATCH_SW" msprop:Generator_ColumnPropNameInRow="BATCH_SW" msprop:Generator_ColumnPropNameInTable="BATCH_SWColumn" msprop:Generator_UserColumnName="BATCH_SW" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

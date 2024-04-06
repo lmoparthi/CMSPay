@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SpecialRemarksDataGridStyle>
+  <ColumnCount>12</ColumnCount>
+  <GridLineStyle>False</GridLineStyle>
+  <Column>
+    <DefaultOrder>1</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>ACCTNO</Mapping>
+    <HeaderText>Account#</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+ <Column>
+    <DefaultOrder>6</DefaultOrder>
+    <DefaultCharWidth>12</DefaultCharWidth>
+    <Mapping>ELIGIBILITY_MONTH</Mapping>
+    <HeaderText>Month Eligible</HeaderText>
+    <Type>Text</Type>
+    <Format>MMM yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>1</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>REMARKS</Mapping>
+    <HeaderText>Remarks</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>11</DefaultOrder>
+    <DefaultCharWidth>9</DefaultCharWidth>
+    <Mapping>ONLINE_USERID</Mapping>
+    <HeaderText>Created By</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>12</DefaultOrder>
+    <DefaultCharWidth>11</DefaultCharWidth>
+    <Mapping>ONLINE_DATE</Mapping>
+    <HeaderText>Created Date</HeaderText>
+    <Type>Text</Type>
+    <Format>MM/dd/yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+</SpecialRemarksDataGridStyle>

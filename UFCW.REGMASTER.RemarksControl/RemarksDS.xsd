@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="RemarksDS" targetNamespace="http://tempuri.org/RemarksDS.xsd" xmlns:mstns="http://tempuri.org/RemarksDS.xsd" xmlns="http://tempuri.org/RemarksDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="RemarksDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="RemarksDS" msprop:Generator_UserDSName="RemarksDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="REG_REMARKS" msprop:Generator_TableClassName="REG_REMARKSDataTable" msprop:Generator_RowEvArgName="REG_REMARKSRowChangeEvent" msprop:Generator_TableVarName="tableREG_REMARKS" msprop:Generator_TablePropName="REG_REMARKS" msprop:Generator_RowDeletingName="REG_REMARKSRowDeleting" msprop:Generator_RowChangingName="REG_REMARKSRowChanging" msprop:Generator_RowEvHandlerName="REG_REMARKSRowChangeEventHandler" msprop:Generator_RowDeletedName="REG_REMARKSRowDeleted" msprop:Generator_RowChangedName="REG_REMARKSRowChanged" msprop:Generator_UserTableName="REG_REMARKS" msprop:Generator_RowClassName="REG_REMARKSRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="REMARK_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnREMARK_ID" msprop:Generator_ColumnPropNameInRow="REMARK_ID" msprop:Generator_ColumnPropNameInTable="REMARK_IDColumn" msprop:Generator_UserColumnName="REMARK_ID" type="xs:int" />
+              <xs:element name="FAMILY_ID" msprop:Generator_ColumnVarNameInTable="columnFAMILY_ID" msprop:Generator_ColumnPropNameInRow="FAMILY_ID" msprop:Generator_ColumnPropNameInTable="FAMILY_IDColumn" msprop:Generator_UserColumnName="FAMILY_ID" type="xs:int" />
+              <xs:element name="RELATION_ID" msprop:Generator_ColumnVarNameInTable="columnRELATION_ID" msprop:Generator_ColumnPropNameInRow="RELATION_ID" msprop:Generator_ColumnPropNameInTable="RELATION_IDColumn" msprop:Generator_UserColumnName="RELATION_ID" type="xs:short" />
+              <xs:element name="POSTING_DATE" msprop:Generator_ColumnVarNameInTable="columnPOSTING_DATE" msprop:Generator_ColumnPropNameInRow="POSTING_DATE" msprop:Generator_ColumnPropNameInTable="POSTING_DATEColumn" msprop:Generator_UserColumnName="POSTING_DATE" type="xs:dateTime" />
+              <xs:element name="REMARKS" msprop:Generator_ColumnVarNameInTable="columnREMARKS" msprop:Generator_ColumnPropNameInRow="REMARKS" msprop:Generator_ColumnPropNameInTable="REMARKSColumn" msprop:Generator_UserColumnName="REMARKS">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="760" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CREATE_USERID" msprop:Generator_ColumnVarNameInTable="columnCREATE_USERID" msprop:Generator_ColumnPropNameInRow="CREATE_USERID" msprop:Generator_ColumnPropNameInTable="CREATE_USERIDColumn" msprop:Generator_UserColumnName="CREATE_USERID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CREATE_DATE" msprop:Generator_ColumnVarNameInTable="columnCREATE_DATE" msprop:Generator_ColumnPropNameInRow="CREATE_DATE" msprop:Generator_ColumnPropNameInTable="CREATE_DATEColumn" msprop:Generator_UserColumnName="CREATE_DATE" type="xs:dateTime" />
+              <xs:element name="BATCH_USERID" msprop:Generator_ColumnVarNameInTable="columnBATCH_USERID" msprop:Generator_ColumnPropNameInRow="BATCH_USERID" msprop:Generator_ColumnPropNameInTable="BATCH_USERIDColumn" msprop:Generator_UserColumnName="BATCH_USERID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BATCH_DATE" msprop:Generator_ColumnVarNameInTable="columnBATCH_DATE" msprop:Generator_ColumnPropNameInRow="BATCH_DATE" msprop:Generator_ColumnPropNameInTable="BATCH_DATEColumn" msprop:Generator_UserColumnName="BATCH_DATE" type="xs:dateTime" />
+              <xs:element name="ONLINE_USERID" msprop:Generator_ColumnVarNameInTable="columnONLINE_USERID" msprop:Generator_ColumnPropNameInRow="ONLINE_USERID" msprop:Generator_ColumnPropNameInTable="ONLINE_USERIDColumn" msprop:Generator_UserColumnName="ONLINE_USERID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ONLINE_DATE" msprop:Generator_ColumnVarNameInTable="columnONLINE_DATE" msprop:Generator_ColumnPropNameInRow="ONLINE_DATE" msprop:Generator_ColumnPropNameInTable="ONLINE_DATEColumn" msprop:Generator_UserColumnName="ONLINE_DATE" type="xs:dateTime" />
+              <xs:element name="DELETE_FLAG" msprop:Generator_ColumnVarNameInTable="columnDELETE_FLAG" msprop:Generator_ColumnPropNameInRow="DELETE_FLAG" msprop:Generator_ColumnPropNameInTable="DELETE_FLAGColumn" msprop:Generator_UserColumnName="DELETE_FLAG" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:REG_REMARKS" />
+      <xs:field xpath="mstns:REMARK_ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

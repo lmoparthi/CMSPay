@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProviderDataGridStyle>
+  <ColumnCount>4</ColumnCount>
+  <Column>
+    <DefaultOrder>1</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>CREATE_USERID</Mapping>
+    <HeaderText>User Name</HeaderText>
+    <Format />
+    <NullText />
+  </Column>
+  <Column>
+    <DefaultOrder>2</DefaultOrder>
+    <DefaultCharWidth>2</DefaultCharWidth>
+    <Mapping>TRANSACTION_DESC</Mapping>
+    <HeaderText>Log Type</HeaderText>
+    <Format />
+    <NullText />
+  </Column>
+  <Column>
+    <DefaultOrder>3</DefaultOrder>
+    <DefaultCharWidth>50</DefaultCharWidth>
+    <Mapping>TRANSACTION_COMMENT</Mapping>
+    <HeaderText>Description</HeaderText>
+    <Format />
+    <NullText />
+  </Column>
+  <Column>
+    <DefaultOrder>4</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>CREATE_DATE</Mapping>
+    <HeaderText>Transact<?xml version="1.0" encoding="utf-8"?>
+<ProviderDataGridStyle>
+  <ColumnCount>4</ColumnCount>
+  <Column>
+    <DefaultOrder>1</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>CREATE_USERID</Mapping>
+    <HeaderText>User Name</HeaderText>
+    <Format />
+    <NullText />
+  </Column>
+  <Column>
+    <DefaultOrder>2</DefaultOrder>
+    <DefaultCharWidth>2</DefaultCharWidth>
+    <Mapping>TRANSACTION_DESC</Mapping>
+    <HeaderText>Log Type</HeaderText>
+    <Format />
+    <NullText />
+  </Column>
+  <Column>
+    <DefaultOrder>3</DefaultOrder>
+    <DefaultCharWidth>50</DefaultCharWidth>
+    <Mapping>TRANSACTION_COMMENT</Mapping>
+    <HeaderText>Description</HeaderText>
+    <Format />
+    <NullText />
+  </Column>
+  <Column>
+    <DefaultOrder>4</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>CREATE_DATE</Mapping>
+    <HeaderText>Transaction Date</HeaderText>
+    <Format />
+    <NullText />
+  </Column>
+</ProviderDataGridStyle>ion Date</HeaderText>
+    <Format />
+    <NullText />
+  </Column>
+</ProviderDataGridStyle>

@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="EligAcctHoursDS" targetNamespace="http://tempuri.org/EligAcctHoursDS.xsd" xmlns:mstns="http://tempuri.org/EligAcctHoursDS.xsd" xmlns="http://tempuri.org/EligAcctHoursDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="EligAcctHoursDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="EligAcctHoursDS" msprop:Generator_UserDSName="EligAcctHoursDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ELIG_ACCT_HOURS" msprop:Generator_TableClassName="ELIG_ACCT_HOURSDataTable" msprop:Generator_TableVarName="tableELIG_ACCT_HOURS" msprop:Generator_RowChangedName="ELIG_ACCT_HOURSRowChanged" msprop:Generator_TablePropName="ELIG_ACCT_HOURS" msprop:Generator_RowDeletingName="ELIG_ACCT_HOURSRowDeleting" msprop:Generator_RowChangingName="ELIG_ACCT_HOURSRowChanging" msprop:Generator_RowEvHandlerName="ELIG_ACCT_HOURSRowChangeEventHandler" msprop:Generator_RowDeletedName="ELIG_ACCT_HOURSRowDeleted" msprop:Generator_RowClassName="ELIG_ACCT_HOURSRow" msprop:Generator_UserTableName="ELIG_ACCT_HOURS" msprop:Generator_RowEvArgName="ELIG_ACCT_HOURSRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FAMILY_ID" msprop:Generator_ColumnVarNameInTable="columnFAMILY_ID" msprop:Generator_ColumnPropNameInRow="FAMILY_ID" msprop:Generator_ColumnPropNameInTable="FAMILY_IDColumn" msprop:Generator_UserColumnName="FAMILY_ID" type="xs:int" />
+              <xs:element name="RELATION_ID" msprop:Generator_ColumnVarNameInTable="columnRELATION_ID" msprop:Generator_ColumnPropNameInRow="RELATION_ID" msprop:Generator_ColumnPropNameInTable="RELATION_IDColumn" msprop:Generator_UserColumnName="RELATION_ID" type="xs:int" />
+              <xs:element name="PSTPERIOD" msprop:Generator_ColumnVarNameInTable="columnPSTPERIOD" msprop:Generator_ColumnPropNameInRow="PSTPERIOD" msprop:Generator_ColumnPropNameInTable="PSTPERIODColumn" msprop:Generator_UserColumnName="PSTPERIOD" type="xs:dateTime" />
+              <xs:element name="ACCTNO" msprop:Generator_ColumnVarNameInTable="columnACCTNO" msprop:Generator_ColumnPropNameInRow="ACCTNO" msprop:Generator_ColumnPropNameInTable="ACCTNOColumn" msprop:Generator_UserColumnName="ACCTNO" type="xs:int" />
+              <xs:element name="EMPLR_TYPE" msprop:Generator_ColumnVarNameInTable="columnEMPLR_TYPE" msprop:Generator_ColumnPropNameInRow="EMPLR_TYPE" msprop:Generator_ColumnPropNameInTable="EMPLR_TYPEColumn" msprop:Generator_UserColumnName="EMPLR_TYPE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PLANTYPE" msprop:Generator_ColumnVarNameInTable="columnPLANTYPE" msprop:Generator_ColumnPropNameInRow="PLANTYPE" msprop:Generator_ColumnPropNameInTable="PLANTYPEColumn" msprop:Generator_UserColumnName="PLANTYPE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MEMTYPE" msprop:Generator_ColumnVarNameInTable="columnMEMTYPE" msprop:Generator_ColumnPropNameInRow="MEMTYPE" msprop:Generator_ColumnPropNameInTable="MEMTYPEColumn" msprop:Generator_UserColumnName="MEMTYPE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MEMCLASS" msprop:Generator_ColumnVarNameInTable="columnMEMCLASS" msprop:Generator_ColumnPropNameInRow="MEMCLASS" msprop:Generator_ColumnPropNameInTable="MEMCLASSColumn" msprop:Generator_UserColumnName="MEMCLASS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HOURS" msprop:Generator_ColumnVarNameInTable="columnHOURS" msprop:Generator_ColumnPropNameInRow="HOURS" msprop:Generator_ColumnPropNameInTable="HOURSColumn" msprop:Generator_UserColumnName="HOURS" type="xs:decimal" minOccurs="0" />
+              <xs:element name="HOURS_CODE" msprop:Generator_ColumnVarNameInTable="columnHOURS_CODE" msprop:Generator_ColumnPropNameInRow="HOURS_CODE" msprop:Generator_ColumnPropNameInTable="HOURS_CODEColumn" msprop:Generator_UserColumnName="HOURS_CODE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CREATE_USERID" msprop:Generator_ColumnVarNameInTable="columnCREATE_USERID" msprop:Generator_ColumnPropNameInRow="CREATE_USERID" msprop:Generator_ColumnPropNameInTable="CREATE_USERIDColumn" msprop:Generator_UserColumnName="CREATE_USERID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CREATE_DATE" msprop:Generator_ColumnVarNameInTable="columnCREATE_DATE" msprop:Generator_ColumnPropNameInRow="CREATE_DATE" msprop:Generator_ColumnPropNameInTable="CREATE_DATEColumn" msprop:Generator_UserColumnName="CREATE_DATE" type="xs:dateTime" />
+              <xs:element name="BATCH_USERID" msprop:Generator_ColumnVarNameInTable="columnBATCH_USERID" msprop:Generator_ColumnPropNameInRow="BATCH_USERID" msprop:Generator_ColumnPropNameInTable="BATCH_USERIDColumn" msprop:Generator_UserColumnName="BATCH_USERID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BATCH_DATE" msprop:Generator_ColumnVarNameInTable="columnBATCH_DATE" msprop:Generator_ColumnPropNameInRow="BATCH_DATE" msprop:Generator_ColumnPropNameInTable="BATCH_DATEColumn" msprop:Generator_UserColumnName="BATCH_DATE" type="xs:dateTime" />
+              <xs:element name="ONLINE_USERID" msprop:Generator_ColumnVarNameInTable="columnONLINE_USERID" msprop:Generator_ColumnPropNameInRow="ONLINE_USERID" msprop:Generator_ColumnPropNameInTable="ONLINE_USERIDColumn" msprop:Generator_UserColumnName="ONLINE_USERID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ONLINE_DATE" msprop:Generator_ColumnVarNameInTable="columnONLINE_DATE" msprop:Generator_ColumnPropNameInRow="ONLINE_DATE" msprop:Generator_ColumnPropNameInTable="ONLINE_DATEColumn" msprop:Generator_UserColumnName="ONLINE_DATE" type="xs:dateTime" />
+              <xs:element name="ELIG_PERIOD" msprop:Generator_ColumnVarNameInTable="columnELIG_PERIOD" msprop:Generator_ColumnPropNameInRow="ELIG_PERIOD" msprop:Generator_ColumnPropNameInTable="ELIG_PERIODColumn" msprop:Generator_UserColumnName="ELIG_PERIOD" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CONSEC_SERVICE_SW" msprop:Generator_ColumnVarNameInTable="columnCONSEC_SERVICE_SW" msprop:Generator_ColumnPropNameInRow="CONSEC_SERVICE_SW" msprop:Generator_ColumnPropNameInTable="CONSEC_SERVICE_SWColumn" msprop:Generator_UserColumnName="CONSEC_SERVICE_SW" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PROCESS_STATUS" msprop:Generator_ColumnVarNameInTable="columnPROCESS_STATUS" msprop:Generator_ColumnPropNameInRow="PROCESS_STATUS" msprop:Generator_ColumnPropNameInTable="PROCESS_STATUSColumn" msprop:Generator_UserColumnName="PROCESS_STATUS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WEIGHTED_HOURS" msprop:Generator_ColumnVarNameInTable="columnWEIGHTED_HOURS" msprop:Generator_ColumnPropNameInRow="WEIGHTED_HOURS" msprop:Generator_ColumnPropNameInTable="WEIGHTED_HOURSColumn" msprop:Generator_UserColumnName="WEIGHTED_HOURS" type="xs:decimal" minOccurs="0" />
+              <xs:element name="REMARKS" msprop:Generator_ColumnVarNameInTable="columnREMARKS" msprop:Generator_ColumnPropNameInRow="REMARKS" msprop:Generator_ColumnPropNameInTable="REMARKSColumn" msprop:Generator_UserColumnName="REMARKS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SHORT_DESC" msprop:Generator_ColumnVarNameInTable="columnSHORT_DESC" msprop:Generator_ColumnPropNameInRow="SHORT_DESC" msprop:Generator_ColumnPropNameInTable="SHORT_DESCColumn" msprop:Generator_UserColumnName="SHORT_DESC" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ELIG_ACCT_HOURS" />
+      <xs:field xpath="mstns:FAMILY_ID" />
+      <xs:field xpath="mstns:RELATION_ID" />
+      <xs:field xpath="mstns:PSTPERIOD" />
+      <xs:field xpath="mstns:ACCTNO" />
+      <xs:field xpath="mstns:EMPLR_TYPE" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

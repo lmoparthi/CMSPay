@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FreeTextEditorDataGridStyle>
+	<ColumnCount>3</ColumnCount>
+  <RowHeadersVisible>False</RowHeadersVisible>
+  <GridLineStyle>False</GridLineStyle>
+  <Column>
+		<DefaultOrder>1</DefaultOrder>
+		<DefaultCharWidth>12</DefaultCharWidth>
+		<Mapping>CREATE_DATE</Mapping>
+		<HeaderText>Date</HeaderText>
+		<Type>Text</Type>
+		<Format>MM/dd/yyyy</Format>
+		<ReadOnly>True</ReadOnly>
+		<NullText></NullText>
+	</Column>
+	<Column>
+		<DefaultOrder>2</DefaultOrder>
+		<DefaultCharWidth>78</DefaultCharWidth>
+		<Mapping>FREE_TEXT</Mapping>
+		<HeaderText>Free Text</HeaderText>
+		<Type>Text</Type>
+		<Format></Format>
+		<ReadOnly>True</ReadOnly>
+    <WordWrap>True</WordWrap>
+    <NullText></NullText>
+	</Column>
+	<Column>
+		<DefaultOrder>3</DefaultOrder>
+		<DefaultCharWidth>40</DefaultCharWidth>
+		<Mapping>CREATE_USERID</Mapping>
+		<HeaderText>Free Text By</HeaderText>
+    <GAC>CMSUsers</GAC>
+    <Type>Text</Type>
+		<Format></Format>
+		<ReadOnly>True</ReadOnly>
+		<NullText></NullText>
+	</Column>
+</FreeTextEditorDataGridStyle>

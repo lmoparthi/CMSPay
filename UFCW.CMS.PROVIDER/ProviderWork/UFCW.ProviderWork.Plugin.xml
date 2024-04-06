@@ -1,0 +1,280 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>UFCW.ProviderWork.Plugin</name>
+    <version>1.0.2831.15780</version>
+    <fullname>UFCW.ProviderWork.Plugin, Version=1.0.2831.15780, Culture=neutral, PublicKeyToken=null</fullname>
+  </assembly>
+  <members>
+    <member name="T:UFCW.CMS.ProviderWork">
+      <summary>
+ Form to handle Provider Work 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 
+ </history></member>
+    <member name="P:UFCW.CMS.ProviderWork.UniqueID">
+      <summary>
+ this property gets or sets a unique id suppilied by the calling form 
+ </summary>
+ <value />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Nick Snyder]	3/24/2006	Created 
+ </history></member>
+    <member name="E:UFCW.CMS.ProviderWork.OpenProvider">
+      <summary>
+ performs main initialization of form 
+ </summary>
+ <param name="sender" />
+ <param name="e" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[nick snyder]	8/16/2006	Created 
+ </history></member>
+    <member name="E:UFCW.CMS.ProviderWork.OpenProvider">
+      <summary>
+ performs main initialization of form 
+ </summary>
+ <param name="sender" />
+ <param name="e" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[nick snyder]	8/16/2006	Created 
+ </history></member>
+    <member name="M:UFCW.CMS.ProviderWork.Work_Closing(System.Object,System.ComponentModel.CancelEventArgs)">
+      <summary>
+ when closing, the item needs to be released by setting the busy_sw = 0 
+ </summary>
+ <param name="sender" />
+ <param name="e" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Nick Snyder]	3/24/2006	Created 
+ </history></member>
+    <member name="M:UFCW.CMS.ProviderWork.Work_Activated(System.Object,System.EventArgs)">
+      <summary>
+ Syncs the image with this claim if an image exists 
+ </summary>
+ <param name="sender" />
+ <param name="e" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Nick Snyder]	4/27/2006	Created 
+ </history></member>
+    <member name="M:UFCW.CMS.ProviderWork.SetSettings">
+      <summary>
+ Sets the basic form settings.  Windowstate, height, width, top, and left. 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Nick Snyder]	11/16/2005	Created 
+ </history></member>
+    <member name="M:UFCW.CMS.ProviderWork.SaveSettings">
+      <summary>
+ Saves the basic form settings.  Windowstate, height, width, top, and left. 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Nick Snyder]	11/16/2005	Created 
+ </history></member>
+    <member name="M:UFCW.CMS.ProviderWork.LoadProviderAlertTypesList">
+      <summary>
+ Loads the available Alert Types to select 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Nick Snyder]	4/20/2006	Created 
+ </history></member>
+    <member name="M:UFCW.CMS.ProviderWork.LoadStatesList">
+      <summary>
+ Loads the available Address Types to select 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Nick Snyder]	4/20/2006	Created 
+ </history></member>
+    <member name="M:UFCW.CMS.ProviderWork.LoadProviderAddressTypesList">
+      <summary>
+ Loads the available Address Types to select 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Nick Snyder]	4/20/2006	Created 
+ </history></member>
+    <member name="M:UFCW.CMS.ProviderWork.LoadProviderLicenseTypesList">
+      <summary>
+ Loads the available plans to select 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Nick Snyder]	4/20/2006	Created 
+ </history></member>
+    <member name="M:UFCW.CMS.ProviderWork.LoadProvider">
+      <summary>
+ Loads all data for the entire Claim 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Nick Snyder]	5/15/2006	Created 
+ </history></member>
+    <member name="M:UFCW.CMS.ProviderWork.LoadProviderMetaData">
+      <summary>
+ loads claim metadata needed for processing 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Nick Snyder]	3/24/2006	Created 
+ </history></member>
+    <member name="M:UFCW.CMS.ProviderWork.LoadProviderLicenses">
+      <summary>
+ Loads the licenses associated to the provider 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Nick Snyder]	4/20/2006	Created 
+ </history></member>
+    <member name="M:UFCW.CMS.ProviderWork.LoadProviderAssociated">
+      <summary>
+ Loads the licenses associated to the provider 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Nick Snyder]	4/20/2006	Created 
+ </history></member>
+    <member name="F:UFCW.CMS.ProviderWork.End">
+      <summary>
+ adjusts SSN values entered for a databinding 
+ </summary>
+ <param name="sender" />
+ <param name="e" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[nick snyder]	8/16/2006	Created 
+ </history></member>
+    <member name="M:UFCW.CMS.ProviderWork.SSNBinding_Format(System.Object,System.Windows.Forms.ConvertEventArgs)">
+      <summary>
+ formats SSN values entered for a databinding 
+ </summary>
+ <param name="sender" />
+ <param name="e" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[nick snyder]	8/16/2006	Created 
+ </history></member>
+    <member name="M:UFCW.CMS.ProviderWork.TINBinding_Parse(System.Object,System.Windows.Forms.ConvertEventArgs)">
+      <summary>
+ adjusts TIN values entered for a databinding 
+ </summary>
+ <param name="sender" />
+ <param name="e" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[nick snyder]	8/16/2006	Created 
+ </history></member>
+    <member name="M:UFCW.CMS.ProviderWork.TINBinding_Format(System.Object,System.Windows.Forms.ConvertEventArgs)">
+      <summary>
+ formats TIN values entered for a databinding 
+ </summary>
+ <param name="sender" />
+ <param name="e" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[nick snyder]	8/16/2006	Created 
+ </history></member>
+    <member name="M:UFCW.CMS.ProviderWork.EmailTextBox_Validating(System.Object,System.ComponentModel.CancelEventArgs)">
+      <summary>
+ formats combobox values entered for a databinding 
+ </summary>
+ <param name="sender" />
+ <param name="e" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[nick snyder]	8/16/2006	Created 
+ </history></member>
+    <member name="M:UFCW.CMS.ProviderWork.FormatSSN(System.String)">
+      <summary>
+ formats an ssn 
+ </summary>
+ <param name="strSSN" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[nick snyder]	8/16/2006	Created 
+ </history></member>
+    <member name="M:UFCW.CMS.ProviderWork.UnFormatSSN(System.String)">
+      <summary>
+ unformats an ssn 
+ </summary>
+ <param name="strSSN" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[nick snyder]	8/16/2006	Created 
+ </history></member>
+    <member name="M:UFCW.CMS.ProviderWork.FormatTIN(System.String)">
+      <summary>
+ formats an TIN 
+ </summary>
+ <param name="tin" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[nick snyder]	8/16/2006	Created 
+ </history></member>
+    <member name="M:UFCW.CMS.ProviderWork.UnFormatTIN(System.String)">
+      <summary>
+ Unformats an TIN 
+ </summary>
+ <param name="tin" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[nick snyder]	8/16/2006	Created 
+ </history></member>
+    <member name="M:UFCW.CMS.ProviderWork.SetTableStyle(DataGridPlus.DataGridCustom,System.Data.DataTable)">
+      <summary>
+ Sets the TableStyle for the Queue 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Nick Snyder]	2/15/2006	Created 
+ </history></member>
+    <member name="M:UFCW.CMS.ProviderWork.SaveColSettings(DataGridPlus.DataGridCustom)">
+      <summary>
+ Saves settings for the grid columns 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Nick Snyder]	2/15/2006	Created 
+ </history></member>
+  </members>
+</doc>

@@ -1,0 +1,412 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DentalLineDetailDataGridStyle>
+  <ColumnCount>47</ColumnCount>
+  <GridLineStyle>False</GridLineStyle>
+  <GridDefaultSort>FAMILY_ID DESC</GridDefaultSort>
+
+  <Column>
+    <DefaultOrder>1</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>MEDICAL_NBR</Mapping>
+    <HeaderText>Medical NBR</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>2</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>PROCEDURE</Mapping>
+    <HeaderText>Procedure</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>3</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>TOOTH</Mapping>
+    <HeaderText>Tooth</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>4</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>TOOTH_SURFACE</Mapping>
+    <HeaderText>Tooth Surface</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>5</DefaultOrder>
+    <DefaultCharWidth>11</DefaultCharWidth>
+    <Mapping>DATE_OF_SERVICE</Mapping>
+    <HeaderText>Date Of Service</HeaderText>
+    <Type>Text</Type>
+    <Format>MM-dd-yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>6</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>CLAIM</Mapping>
+    <HeaderText>Claim</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>7</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>CHECK_IND</Mapping>
+    <HeaderText>Check IND</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>8</DefaultOrder>
+    <DefaultCharWidth>11</DefaultCharWidth>
+    <Mapping>PROCESSED_DATE</Mapping>
+    <HeaderText>Process Date</HeaderText>
+    <Type>Text</Type>
+    <Format>MM-dd-yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>9</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>PLAN</Mapping>
+    <HeaderText>Plan</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>10</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>PROVIDER</Mapping>
+    <HeaderText>Provider</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>11</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>PROVIDER_SUB</Mapping>
+    <HeaderText>Provider Sub</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>12</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>TAX_IND</Mapping>
+    <HeaderText>Tax IND</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>13</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>OVERRIDE	</Mapping>
+    <HeaderText>Override</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>14</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>OPID</Mapping>
+    <HeaderText>OPID</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>15</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>UPPER_LOWER_IND</Mapping>
+    <HeaderText>Upper Lower IND</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>16</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>LETTER_NBR</Mapping>
+    <HeaderText>Letter NBR</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>17</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>MAINTENANCE</Mapping>
+    <HeaderText>Maintenance</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>18</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>FORCE_CHECK</Mapping>
+    <HeaderText>Force Check</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>19</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>PAY_CODE</Mapping>
+    <HeaderText>Pay Code</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>20</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>FLAG</Mapping>
+    <HeaderText>Flag</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>21</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>CHARGED_AMT</Mapping>
+    <HeaderText>Charged Amt</HeaderText>
+    <Type>Text</Type>
+    <Format>c</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>22</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>OTHER_INS_AMT</Mapping>
+    <HeaderText>Other INS Amt</HeaderText>
+    <Type>Text</Type>
+    <Format>c</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>23</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>OTHER_INS_TYPE</Mapping>
+    <HeaderText>Other INS Type</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>24</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>PAID_AMT</Mapping>
+    <HeaderText>Paid Amt</HeaderText>
+    <Type>Text</Type>
+    <Format>c</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>25</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>CLAIM_REVIEWER</Mapping>
+    <HeaderText>Claim Reviwer</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>26</DefaultOrder>
+    <DefaultCharWidth>11</DefaultCharWidth>
+    <Mapping>PAID_DATE</Mapping>
+    <HeaderText>Paid Date</HeaderText>
+    <Type>Text</Type>
+    <Format>MM-dd-yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>27</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>CHECK_NBR</Mapping>
+    <HeaderText>Check NBR</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>28</DefaultOrder>
+    <DefaultCharWidth>11</DefaultCharWidth>
+    <Mapping>PRE_DATE</Mapping>
+    <HeaderText>Pre Date</HeaderText>
+    <Type>Text</Type>
+    <Format>MM-dd-yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>29</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>MLT</Mapping>
+    <HeaderText>MLT</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>30</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>PROCESSED_TIME</Mapping>
+    <HeaderText>Processed Time</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>39</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>FAMILY_ID</Mapping>
+    <HeaderText>Family ID</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>2</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>RELATION_ID</Mapping>
+    <HeaderText>Relation ID</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+
+  <Column>
+    <DefaultOrder>40</DefaultOrder>
+    <DefaultCharWidth>11</DefaultCharWidth>
+    <Mapping>SOURCE</Mapping>
+    <HeaderText>SOURCE</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>41</DefaultOrder>
+    <DefaultCharWidth>11</DefaultCharWidth>
+    <Mapping>DED_APPLIED</Mapping>
+    <HeaderText>Dep Applied</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>42</DefaultOrder>
+    <DefaultCharWidth>11</DefaultCharWidth>
+    <Mapping>PROCESS_STATUS</Mapping>
+    <HeaderText>Process Status</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>43</DefaultOrder>
+    <DefaultCharWidth>11</DefaultCharWidth>
+    <Mapping>ONLINE_USERID</Mapping>
+    <HeaderText>Online UserID</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>44</DefaultOrder>
+    <DefaultCharWidth>11</DefaultCharWidth>
+    <Mapping>ONLINE_DATE</Mapping>
+    <HeaderText>Online Date</HeaderText>
+    <Type>Text</Type>
+    <Format>MM-dd-yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>45</DefaultOrder>
+    <DefaultCharWidth>11</DefaultCharWidth>
+    <Mapping>PROV_NAME</Mapping>
+    <HeaderText>Prov Name</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>46</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>PREV_YR_RO_PAID_AMT</Mapping>
+    <HeaderText>Rollover Payment</HeaderText>
+    <Type>Text</Type>
+    <Format>c</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>47</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>CURR_YR_PAID_AMT</Mapping>
+    <HeaderText>Paid Amt</HeaderText>
+    <Type>Text</Type>
+    <Format>c</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  
+</DentalLineDetailDataGridStyle>
+
+
+

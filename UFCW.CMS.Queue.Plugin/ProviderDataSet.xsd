@@ -1,0 +1,68 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="ProvDataSet" targetNamespace="http://www.tempuri.org/ProvDataSet.xsd" xmlns:mstns="http://www.tempuri.org/ProvDataSet.xsd"
+	xmlns="http://www.tempuri.org/ProvDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="ProvDataSet" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="PROVIDER">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="PROVIDER_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="TAXID" type="xs:int" />
+							<xs:element name="TAXID_TYPE" type="xs:string" />
+							<xs:element name="NAME1" type="xs:string" />
+							<xs:element name="NAME2" type="xs:string" minOccurs="0" />
+							<xs:element name="NPI" type="xs:decimal" minOccurs="0" />
+							<xs:element name="SUSPEND_SW" type="xs:boolean" />
+							<xs:element name="PPOC_ELIGIBLE_SW" type="xs:boolean" minOccurs="0" />
+							<xs:element name="ONLINE_DATE" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="ONLINE_USERID" type="xs:string" minOccurs="0" />
+							<xs:element name="DESCRIPTION" type="xs:string" minOccurs="0" />
+							<xs:element name="ADDRESS_LINE1" type="xs:string" minOccurs="0" />
+							<xs:element name="ADDRESS_LINE2" type="xs:string" minOccurs="0" />
+							<xs:element name="CITY" type="xs:string" minOccurs="0" />
+							<xs:element name="STATE" type="xs:string" minOccurs="0" />
+							<xs:element name="ZIP" type="xs:decimal" minOccurs="0" />
+							<xs:element name="ZIP_4" type="xs:decimal" minOccurs="0" />
+							<xs:element name="COUNTRY" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="PROVIDER_ADDRESS">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="PROVIDER_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="TAXID" type="xs:int" />
+							<xs:element name="TAXID_TYPE" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+							<xs:element name="NAME1" type="xs:string" />
+							<xs:element name="NAME2" type="xs:string" minOccurs="0" />
+							<xs:element name="ProviderSuspended" type="xs:boolean" />
+							<xs:element name="PPOC_ELIGIBLE_SW" type="xs:boolean" />
+							<xs:element name="PARENT_ID" type="xs:int" minOccurs="0" />
+							<xs:element name="NPI" type="xs:decimal" minOccurs="0" />
+							<xs:element name="COMMENT_ID" type="xs:int" minOccurs="0" />
+							<xs:element name="ALERT" type="xs:string" minOccurs="0" />
+							<xs:element name="ADDRESS_LINE1" type="xs:string" minOccurs="0" />
+							<xs:element name="ADDRESS_LINE2" type="xs:string" minOccurs="0" />
+							<xs:element name="CITY" type="xs:string" minOccurs="0" />
+							<xs:element name="STATE" type="xs:string" minOccurs="0" />
+							<xs:element name="ZIP" type="xs:decimal" minOccurs="0" />
+							<xs:element name="ZIP_4" type="xs:decimal" minOccurs="0" />
+							<xs:element name="COUNTRY" type="xs:string" minOccurs="0" />
+							<xs:element name="AddressSuspended" type="xs:decimal" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:PROVIDER" />
+			<xs:field xpath="mstns:PROVIDER_ID" />
+		</xs:unique>
+		<xs:key name="ProvDataSetKey1">
+			<xs:selector xpath=".//mstns:PROVIDER_ADDRESS" />
+			<xs:field xpath="mstns:PROVIDER_ID" />
+		</xs:key>
+	</xs:element>
+</xs:schema>

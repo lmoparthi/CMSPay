@@ -1,0 +1,47 @@
+-- <ScriptOptions statementSeparator="@"/>
+@
+-- <ScriptOptions errors="off"/>
+@
+-- Drop the procedure if one already exists
+DROP  PROCEDURE FDBMD.DELETE_PROVIDER_ADDRESS
+@
+COMMIT
+@
+-- <ScriptOptions errors="on"/>
+@
+-- Create procedure
+CREATE PROCEDURE FDBMD.DELETE_PROVIDER_ADDRESS(
+		IN	vPROVIDER_ID			INTEGER,
+		IN	vADDRESS_TYPE			INTEGER,
+		IN	vORIGINAL_ONLINE_DATE	TIMESTAMP)
+	--LANGUAGE SQL
+	COLLID FODBMDFY
+	--WLM ENVIRONMENT WLMDENV4
+	RUN OPTIONS ''
+--------------------------------------------------------------------------
+-- DB2 SQL procedure
+--------------------------------------------------------------------------
+
+P1: BEGIN
+
+-- Declare variables
+
+
+
+--
+
+DELETE FROM FDBMD.PROVIDER_ADDRESS PROVIDER_ADDRESS
+WHERE	PROVIDER_ADDRESS.PROVIDER_ID = vPROVIDER_ID 
+AND		PROVIDER_ADDRESS.ADDRESS_TYPE = vADDRESS_TYPE 
+AND		(ONLINE_DATE >= vORIGINAL_ONLINE_DATE AND ONLINE_DATE < (vORIGINAL_ONLINE_DATE + 1 SECOND));
+
+
+--
+
+END P1
+@
+-- <ScriptOptions WLMRefresh="WLMDENV4" />
+@
+-- Grant access privilages to procedure
+GRANT EXECUTE ON PROCEDURE FDBMD.DELETE_PROVIDER_ADDRESS TO PUBLIC
+@

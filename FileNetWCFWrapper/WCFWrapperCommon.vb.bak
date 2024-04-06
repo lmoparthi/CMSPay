@@ -1,0 +1,770 @@
+﻿Option Infer On
+Option Strict On
+
+Imports Microsoft.Practices.EnterpriseLibrary.Common.Configuration
+Imports Microsoft.Practices.EnterpriseLibrary.Data.Configuration
+Imports Microsoft.Practices.EnterpriseLibrary.Data
+Imports System.Configuration
+Imports UFCW.WCF.FileNet
+Imports System.ServiceModel
+Imports System.ServiceModel.Discovery
+Imports System.Collections.Generic
+Imports System.Runtime.InteropServices
+Imports System.Threading
+Imports System.Reflection
+Imports System.IO
+
+Public NotInheritable Class WCFWrapperCommon
+
+    Private Shared _TraceWCF As New BooleanSwitch("TraceWCF", "Trace Switch in App.Config")
+
+    Private Shared _Terminating As Boolean = False
+    Private Shared _FileNetUserID As String
+    Private Shared _FileNetPassword As String
+    Private Shared _SubscribedProcesses As New List(Of Process)
+
+    Private Shared _WCFServiceFaultException As FaultException(Of FileNetWCFFault)
+    Private Shared _WCFProcessStartInfo As ProcessStartInfo
+    Private Shared _WCFServiceHostClient As FileNetClient
+
+    Private Shared WithEvents _WCFServiceHostProcess As Process
+    Private Shared WithEvents _WCFDiscoveryClient As DiscoveryClient
+    Private Shared WithEvents _WCFFindCriteria As FindCriteria
+
+    Private Shared Property _WCFServiceHostClientState As CommunicationState
+
+    Private Shared _WCFProcessInfo As WCFProcessInfo
+
+    Public Shared Property WCFProcessInfo As WCFProcessInfo
+
+        Set(value As WCFProcessInfo)
+            _WCFProcessInfo = value
+            ConnectToWCF()
+        End Set
+        Get
+            Return _WCFProcessInfo
+        End Get
+    End Property
+
+    'Public Shared ReadOnly Property Password(ByVal databasename As String) As String
+    '    Get
+    '        Dim encryptedPassword As String = System.Configuration.ConfigurationManager.AppSettings(databasename & "PW")
+
+    '        Return SimpleCrypt(encryptedPassword)
+
+    '    End Get
+    'End Property
+
+    Friend Shared ReadOnly Property WCFServiceFaultException As FaultException(Of FileNetWCFFault)
+        Get
+            Return _WCFServiceFaultException
+        End Get
+    End Property
+
+    Friend Shared Property FileNetPassword As String
+        Get
+            Return _FileNetPassword
+        End Get
+        Set(value As String)
+            _FileNetPassword = value
+        End Set
+    End Property
+
+    Friend Shared Property FileNetUserID As String
+        Get
+            Return _FileNetUserID
+        End Get
+        Set(value As String)
+            _FileNetUserID = value.Trim
+        End Set
+    End Property
+
+    Friend Shared ReadOnly Property GetDatabaseName(Optional ByVal instance As String = Nothing) As String
+        Get
+
+            Dim Settings As DatabaseSettings
+            Dim ConnectionStringName As String
+            Dim CSS As ConnectionStringSettings
+            Dim ConnString As String
+
+            Dim Connections() As String
+
+
+
+            Try
+                Using SCS As SystemConfigurationSource = New SystemConfigurationSource()
+                    Settings = DatabaseSettings.GetDatabaseSettings(SCS)
+                End Using
+                ConnectionStringName = Settings.DefaultDatabase
+
+                If instance Is Nothing OrElse instance.Trim.Length = 0 Then
+                    instance = ConnectionStringName
+                End If
+
+                CSS = ConfigurationManager.ConnectionStrings(instance)
+
+                ConnString = CSS.ConnectionString.ToString
+
+                Connections = ConnString.Split(New Char() {CChar(";")})
+
+                If ConnString.ToUpper.Contains("DB2") Then
+                    For X As Integer = 0 To Connections.Length - 1
+                        If Connections(X).ToLower.Contains("database=") Then
+                            Return Connections(X).ToLower.Replace("database=", "").ToString.ToUpper.Trim
+                        End If
+                    Next
+                Else  'use sql database referenced in connection string
+                    For X As Integer = 0 To Connections.Length - 1
+                        If Connections(X).Contains("Initial Catalog=") Then
+                            Return Connections(X).Replace("Initial Catalog=", "").ToString.Trim & ".dbo"
+                        End If
+                    Next
+                End If
+
+                Return "" 'Fallout
+
+            Catch ex As Exception
+
+                Throw
+
+            End Try
+
+        End Get
+
+    End Property
+
+    Friend Shared ReadOnly Property GetServerName(Optional ByVal instance As String = Nothing) As String
+        Get
+
+
+            Dim DB As Database
+            Dim ServerInfo() As String
+            Dim Server As String = ""
+
+            Try
+
+                If instance Is Nothing OrElse instance.Trim.Length = 0 Then
+                    DB = WCFWrapperDAL.CreateDatabase()
+                Else
+                    DB = WCFWrapperDAL.CreateDatabase(instance)
+                End If
+
+                ServerInfo = DB.ConnectionString.Split(CChar(";"))
+
+                For Cnt As Integer = 0 To UBound(ServerInfo, 1)
+                    Select Case True
+                        Case ServerInfo(Cnt).ToLower.Contains("server"), ServerInfo(Cnt).ToLower.Contains("host"), ServerInfo(Cnt).ToLower.Contains("data source")
+                            Server = Right(ServerInfo(Cnt), ServerInfo(Cnt).Length - InStr(ServerInfo(Cnt), "="))
+                            Exit For
+                    End Select
+                Next
+
+                For Cnt As Integer = 0 To UBound(ServerInfo, 1)
+                    If ServerInfo(Cnt).ToLower.StartsWith("port=") = True Then
+                        Server += ";" & ServerInfo(Cnt)
+                        Exit For
+                    End If
+                Next
+
+                Return Server
+
+            Catch ex As Exception
+
+                Throw
+
+            Finally
+
+                DB = Nothing
+            End Try
+
+        End Get
+    End Property
+
+    Friend Shared ReadOnly Property GetDisplayConnectionString(ByVal instance As String) As String
+        Get
+            Dim DB As Database
+            Dim ServerInfo() As String
+            Dim Server As String = ""
+            Try
+
+                If instance Is Nothing Then
+                    DB = WCFWrapperDAL.CreateDatabase()
+                Else
+                    DB = WCFWrapperDAL.CreateDatabase(instance)
+                End If
+
+                ServerInfo = DB.ConnectionString.Split(CChar(";"))
+
+                For Cnt As Integer = 0 To UBound(ServerInfo, 1)
+                    If ServerInfo(Cnt).ToLower.StartsWith("database=") = True Or
+                            ServerInfo(Cnt).ToLower.StartsWith("host=") = True Then
+                        Server = ServerInfo(Cnt)
+                        Exit For
+                    End If
+                Next
+
+                For Cnt As Integer = 0 To UBound(ServerInfo, 1)
+                    If ServerInfo(Cnt).ToLower.StartsWith("port=") = True Then
+                        Server += ";" & ServerInfo(Cnt)
+                        Exit For
+                    End If
+                Next
+
+                Return Server
+            Catch ex As Exception
+                Throw
+            Finally
+                DB = Nothing
+            End Try
+
+        End Get
+    End Property
+
+    Public Shared ReadOnly Property UserName(ByVal schema As String) As String
+        Get
+            Dim DB As Database
+
+            DB = WCFWrapperDAL.CreateDatabase(schema)
+            Return DB.ConnectionString.Substring(DB.ConnectionString.ToLower.IndexOf("user id") + 8, DB.ConnectionString.IndexOf(";"c, DB.ConnectionString.ToLower.IndexOf("user id")) - DB.ConnectionString.ToLower.IndexOf("user id") - 8)
+
+        End Get
+    End Property
+
+    Private Shared Event OnExit As Action
+
+    Sub New()
+
+    End Sub
+
+    Shared Sub New()
+
+    End Sub
+
+    Private Shared Sub ConnectToWCF()
+
+        Dim EndpointAddress As EndpointAddress
+
+        If CBool(CType(ConfigurationManager.GetSection("FNWCFService"), IDictionary)("UseWCFDiscovery")) Then
+            For x As Integer = 0 To 3 Step 1
+
+                EndpointAddress = WCFWrapperCommon.CheckforWCFService()
+
+                If EndpointAddress IsNot Nothing Then
+                    Exit For
+                End If
+
+                WCFWrapperCommon.AttachToService(_WCFProcessInfo)
+
+            Next
+        Else
+            WCFWrapperCommon.AttachToService(_WCFProcessInfo)
+        End If
+
+        If _TraceWCF.Enabled Then Trace.WriteLine(Now.ToString("HH:mm:ss.fffffff") & " : Thread " & Thread.CurrentThread.ManagedThreadId.ToString & vbTab & " : " & WCFWrapperCommon.WCFServiceHostClient.Echo("WCF is returning data") & " : " & New System.Diagnostics.StackTrace(True).GetFrame(0).GetMethod.Module.ToString & " : " & New System.Diagnostics.StackTrace(True).GetFrame(0).GetMethod.ToString & "  (" & New System.Diagnostics.StackTrace(True).GetFrame(0).GetFileLineNumber.ToString & ")" & " < " & New System.Diagnostics.StackTrace(True).GetFrame(1).GetMethod.ToString & "  (" & New System.Diagnostics.StackTrace(True).GetFrame(1).GetFileLineNumber.ToString & ")", MethodBase.GetCurrentMethod().DeclaringType.ToString)
+
+    End Sub
+
+    Private Shared Sub InvokeService(endpointAddress As EndpointAddress, currentProcess As WCFProcessInfo)
+
+        Try
+
+            If _WCFServiceHostClient Is Nothing Then
+
+                If _TraceWCF.Enabled Then Trace.WriteLine(Now.ToString("HH:mm:ss.fffffff") & " : Thread " & Thread.CurrentThread.ManagedThreadId.ToString & vbTab & " : WCF Host Created" & " : " & New System.Diagnostics.StackTrace(True).GetFrame(0).GetMethod.Module.ToString & " : " & New System.Diagnostics.StackTrace(True).GetFrame(0).GetMethod.ToString & "  (" & New System.Diagnostics.StackTrace(True).GetFrame(0).GetFileLineNumber.ToString & ")" & " < " & New System.Diagnostics.StackTrace(True).GetFrame(1).GetMethod.ToString & "  (" & New System.Diagnostics.StackTrace(True).GetFrame(1).GetFileLineNumber.ToString & ")", MethodBase.GetCurrentMethod().DeclaringType.ToString)
+
+                _WCFServiceHostClient = New FileNetClient
+                _WCFServiceHostClientState = CommunicationState.Created
+
+                'prevent duplicate handlers
+                RemoveHandler DirectCast(_WCFServiceHostClient, System.ServiceModel.ICommunicationObject).Opened, AddressOf WCFServiceHostClient_Opened
+                RemoveHandler DirectCast(_WCFServiceHostClient, System.ServiceModel.ICommunicationObject).Closed, AddressOf WCFServiceHostClient_Closed
+
+            End If
+
+            If _TraceWCF.Enabled Then Trace.WriteLine(Now.ToString("HH:mm:ss.fffffff") & " : Thread " & Thread.CurrentThread.ManagedThreadId.ToString & vbTab & " : WCF Add Open handler" & " : " & New System.Diagnostics.StackTrace(True).GetFrame(0).GetMethod.Module.ToString & " : " & New System.Diagnostics.StackTrace(True).GetFrame(0).GetMethod.ToString & "  (" & New System.Diagnostics.StackTrace(True).GetFrame(0).GetFileLineNumber.ToString & ")" & " < " & New System.Diagnostics.StackTrace(True).GetFrame(1).GetMethod.ToString & "  (" & New System.Diagnostics.StackTrace(True).GetFrame(1).GetFileLineNumber.ToString & ")", MethodBase.GetCurrentMethod().DeclaringType.ToString)
+
+            AddHandler DirectCast(_WCFServiceHostClient, System.ServiceModel.ICommunicationObject).Opened, AddressOf WCFServiceHostClient_Opened
+            AddHandler DirectCast(_WCFServiceHostClient, System.ServiceModel.ICommunicationObject).Faulted, AddressOf WCFServiceHostClient_Faulted
+
+            Thread.Sleep(200)
+
+            Do
+
+                If _WCFServiceHostClient.State <> CommunicationState.Opening Then
+
+                    Try
+                        'do you have FileNetWCFService.exe open in Visual Studio
+                        If _WCFServiceHostClientState <> CommunicationState.Opened Then
+                            If _TraceWCF.Enabled Then Trace.WriteLine(Now.ToString("HH:mm:ss.fffffff") & " : Thread " & Thread.CurrentThread.ManagedThreadId.ToString & vbTab & " : WCF Open attempt" & " : " & New System.Diagnostics.StackTrace(True).GetFrame(0).GetMethod.Module.ToString & " : " & New System.Diagnostics.StackTrace(True).GetFrame(0).GetMethod.ToString & "  (" & New System.Diagnostics.StackTrace(True).GetFrame(0).GetFileLineNumber.ToString & ")" & " < " & New System.Diagnostics.StackTrace(True).GetFrame(1).GetMethod.ToString & "  (" & New System.Diagnostics.StackTrace(True).GetFrame(1).GetFileLineNumber.ToString & ")", MethodBase.GetCurrentMethod().DeclaringType.ToString)
+                            _WCFServiceHostClient.Open()
+                        End If
+
+                    Catch enfe As EndpointNotFoundException
+                        ' ... 
+
+                        If _TraceWCF.Enabled Then Trace.WriteLine(Now.ToString("HH:mm:ss.fffffff") & " : Thread " & Thread.CurrentThread.ManagedThreadId.ToString & vbTab & " : WCF Abort due to EndpointNotFoundException" & " : " & New System.Diagnostics.StackTrace(True).GetFrame(0).GetMethod.Module.ToString & " : " & New System.Diagnostics.StackTrace(True).GetFrame(0).GetMethod.ToString & "  (" & New System.Diagnostics.StackTrace(True).GetFrame(0).GetFileLineNumber.ToString & ")" & " < " & New System.Diagnostics.StackTrace(True).GetFrame(1).GetMethod.ToString & "  (" & New System.Diagnostics.StackTrace(True).GetFrame(1).GetFileLineNumber.ToString & ")", MethodBase.GetCurrentMethod().DeclaringType.ToString)
+
+                        _WCFServiceHostClient.Abort()
+                        _WCFServiceHostClient = New FileNetClient
+
+                    Catch ex As TimeoutException
+                        Try
+
+                            If _WCFServiceHostClient.State.Equals(CommunicationState.Faulted) Then
+                                If _TraceWCF.Enabled Then Trace.WriteLine(Now.ToString("HH:mm:ss.fffffff") & " : Thread " & Thread.CurrentThread.ManagedThreadId.ToString & vbTab & " : WCF Abort due to TimeoutException" & " : " & New System.Diagnostics.StackTrace(True).GetFrame(0).GetMethod.Module.ToString & " : " & New System.Diagnostics.StackTrace(True).GetFrame(0).GetMethod.ToString & "  (" & New System.Diagnostics.StackTrace(True).GetFrame(0).GetFileLineNumber.ToString & ")" & " < " & New System.Diagnostics.StackTrace(True).GetFrame(1).GetMethod.ToString & "  (" & New System.Diagnostics.StackTrace(True).GetFrame(1).GetFileLineNumber.ToString & ")", MethodBase.GetCurrentMethod().DeclaringType.ToString)
+                                _WCFServiceHostClient.Abort()
+                            End If
+
+                        Catch ex2 As Exception
+                            Throw
+                        End Try
+                    End Try
+                End If
+
+                Thread.Sleep(100)
+
+            Loop While _WCFServiceHostClientState <> CommunicationState.Opened
+
+            Thread.Sleep(100)
+
+            _WCFServiceHostClient.Attach(currentProcess)
+
+        Catch ex As TimeoutException
+
+            If _WCFServiceHostClient.State.Equals(CommunicationState.Faulted) Then
+                If _TraceWCF.Enabled Then Trace.WriteLine(Now.ToString("HH:mm:ss.fffffff") & " : Thread " & Thread.CurrentThread.ManagedThreadId.ToString & vbTab & " : WCF Abort due to TimeoutException" & " : " & New System.Diagnostics.StackTrace(True).GetFrame(0).GetMethod.Module.ToString & " : " & New System.Diagnostics.StackTrace(True).GetFrame(0).GetMethod.ToString & "  (" & New System.Diagnostics.StackTrace(True).GetFrame(0).GetFileLineNumber.ToString & ")" & " < " & New System.Diagnostics.StackTrace(True).GetFrame(1).GetMethod.ToString & "  (" & New System.Diagnostics.StackTrace(True).GetFrame(1).GetFileLineNumber.ToString & ")", MethodBase.GetCurrentMethod().DeclaringType.ToString)
+                _WCFServiceHostClient.Abort()
+            End If
+
+            Trace.WriteLine(Now.ToString("HH:mm:ss.fffffff") & " : Thread " & Thread.CurrentThread.ManagedThreadId.ToString & vbTab & " : WCF Open Failed" & " : " & New System.Diagnostics.StackTrace(True).GetFrame(0).GetMethod.Module.ToString & " : " & New System.Diagnostics.StackTrace(True).GetFrame(0).GetMethod.ToString & "  (" & New System.Diagnostics.StackTrace(True).GetFrame(0).GetFileLineNumber.ToString & ")" & " < " & New System.Diagnostics.StackTrace(True).GetFrame(1).GetMethod.ToString & "  (" & New System.Diagnostics.StackTrace(True).GetFrame(1).GetFileLineNumber.ToString & ")", MethodBase.GetCurrentMethod().DeclaringType.ToString)
+
+        Catch ex As System.ServiceModel.CommunicationException
+
+            Trace.WriteLine(Now.ToString("HH:mm:ss.fffffff") & " : Thread " & Thread.CurrentThread.ManagedThreadId.ToString & vbTab & " : WCF Open Failed" & " : " & New System.Diagnostics.StackTrace(True).GetFrame(0).GetMethod.Module.ToString & " : " & New System.Diagnostics.StackTrace(True).GetFrame(0).GetMethod.ToString & "  (" & New System.Diagnostics.StackTrace(True).GetFrame(0).GetFileLineNumber.ToString & ")" & " < " & New System.Diagnostics.StackTrace(True).GetFrame(1).GetMethod.ToString & "  (" & New System.Diagnostics.StackTrace(True).GetFrame(1).GetFileLineNumber.ToString & ")", MethodBase.GetCurrentMethod().DeclaringType.ToString)
+
+        Catch ex As Exception
+
+            Trace.WriteLine(Now.ToString("HH:mm:ss.fffffff") & " : Thread " & Thread.CurrentThread.ManagedThreadId.ToString & vbTab & " : WCF Open Failed" & " : " & New System.Diagnostics.StackTrace(True).GetFrame(0).GetMethod.Module.ToString & " : " & New System.Diagnostics.StackTrace(True).GetFrame(0).GetMethod.ToString & "  (" & New System.Diagnostics.StackTrace(True).GetFrame(0).GetFileLineNumber.ToString & ")" & " < " & New System.Diagnostics.StackTrace(True).GetFrame(1).GetMethod.ToString & "  (" & New System.Diagnostics.StackTrace(True).GetFrame(1).GetFileLineNumber.ToString & ")", MethodBase.GetCurrentMethod().DeclaringType.ToString)
+
+        Finally
+
+            If _TraceWCF.Enabled Then Trace.WriteLine(Now.ToString("HH:mm:ss.fffffff") & " : Thread " & Thread.CurrentThread.ManagedThreadId.ToString & vbTab & " : WCF Add Closed handler" & " : " & New System.Diagnostics.StackTrace(True).GetFrame(0).GetMethod.Module.ToString & " : " & New System.Diagnostics.StackTrace(True).GetFrame(0).GetMethod.ToString & "  (" & New System.Diagnostics.StackTrace(True).GetFrame(0).GetFileLineNumber.ToString & ")" & " < " & New System.Diagnostics.StackTrace(True).GetFrame(1).GetMethod.ToString & "  (" & New System.Diagnostics.StackTrace(True).GetFrame(1).GetFileLineNumber.ToString & ")", MethodBase.GetCurrentMethod().DeclaringType.ToString)
+
+            If _WCFServiceHostClient IsNot Nothing Then
+                AddHandler DirectCast(_WCFServiceHostClient, System.ServiceModel.ICommunicationObject).Closed, AddressOf WCFServiceHostClient_Closed
+            End If
+
+        End Try
+
+    End Sub
+
+    Private Shared Sub WCFServiceHostClient_Faulted(sender As Object, e As EventArgs)
+        _WCFServiceHostClientState = CommunicationState.Faulted
+        If _TraceWCF.Enabled Then Trace.WriteLine(Now.ToString("HH:mm:ss.fffffff") & " : Thread " & Thread.CurrentThread.ManagedThreadId.ToString & vbTab & " : WCF Opened" & " : " & New System.Diagnostics.StackTrace(True).GetFrame(0).GetMethod.Module.ToString & " : " & New System.Diagnostics.StackTrace(True).GetFrame(0).GetMethod.ToString & "  (" & New System.Diagnostics.StackTrace(True).GetFrame(0).GetFileLineNumber.ToString & ")" & " < " & New System.Diagnostics.StackTrace(True).GetFrame(1).GetMethod.ToString & "  (" & New System.Diagnostics.StackTrace(True).GetFrame(1).GetFileLineNumber.ToString & ")", MethodBase.GetCurrentMethod().DeclaringType.ToString)
+    End Sub
+
+    Private Shared Sub WCFServiceHostClient_Opened(sender As Object, e As System.EventArgs)
+        _WCFServiceHostClientState = CommunicationState.Opened
+        If _TraceWCF.Enabled Then Trace.WriteLine(Now.ToString("HH:mm:ss.fffffff") & " : Thread " & Thread.CurrentThread.ManagedThreadId.ToString & vbTab & " : WCF Opened" & " : " & New System.Diagnostics.StackTrace(True).GetFrame(0).GetMethod.Module.ToString & " : " & New System.Diagnostics.StackTrace(True).GetFrame(0).GetMethod.ToString & "  (" & New System.Diagnostics.StackTrace(True).GetFrame(0).GetFileLineNumber.ToString & ")" & " < " & New System.Diagnostics.StackTrace(True).GetFrame(1).GetMethod.ToString & "  (" & New System.Diagnostics.StackTrace(True).GetFrame(1).GetFileLineNumber.ToString & ")", MethodBase.GetCurrentMethod().DeclaringType.ToString)
+    End Sub
+
+    Private Shared Sub WCFServiceHostClient_Closed(sender As Object, e As System.EventArgs)
+        _WCFServiceHostClientState = CommunicationState.Closed
+        If _TraceWCF.Enabled Then Trace.WriteLine(Now.ToString("HH:mm:ss.fffffff") & " : Thread " & Thread.CurrentThread.ManagedThreadId.ToString & vbTab & " : WCF Closed" & " : " & New System.Diagnostics.StackTrace(True).GetFrame(0).GetMethod.Module.ToString & " : " & New System.Diagnostics.StackTrace(True).GetFrame(0).GetMethod.ToString & "  (" & New System.Diagnostics.StackTrace(True).GetFrame(0).GetFileLineNumber.ToString & ")" & " < " & New System.Diagnostics.StackTrace(True).GetFrame(1).GetMethod.ToString & "  (" & New System.Diagnostics.StackTrace(True).GetFrame(1).GetFileLineNumber.ToString & ")", MethodBase.GetCurrentMethod().DeclaringType.ToString)
+    End Sub
+
+    Private Shared Sub WCFServiceHostProcess_Exited(ByVal sender As Object, ByVal e As System.EventArgs)
+
+        If _TraceWCF.Enabled Then Trace.WriteLine(Now.ToString("HH:mm:ss.fffffff") & " : Thread " & Thread.CurrentThread.ManagedThreadId.ToString & vbTab & " : WCF Exited" & " : " & New System.Diagnostics.StackTrace(True).GetFrame(0).GetMethod.Module.ToString & " : " & New System.Diagnostics.StackTrace(True).GetFrame(0).GetMethod.ToString & "  (" & New System.Diagnostics.StackTrace(True).GetFrame(0).GetFileLineNumber.ToString & ")" & " < " & New System.Diagnostics.StackTrace(True).GetFrame(1).GetMethod.ToString & "  (" & New System.Diagnostics.StackTrace(True).GetFrame(1).GetFileLineNumber.ToString & ")", MethodBase.GetCurrentMethod().DeclaringType.ToString)
+
+        RemoveHandler _WCFServiceHostProcess.Exited, AddressOf WCFServiceHostProcess_Exited ' to ensure event is only responded too once due to this code being executed more than once
+
+        _Terminating = True
+
+        _WCFProcessStartInfo = Nothing
+        _WCFServiceHostClientState = Nothing
+
+        If _WCFServiceHostProcess IsNot Nothing Then _WCFServiceHostProcess.Close()
+        _WCFServiceHostProcess = Nothing
+
+        'if this app created the host it's cached info is no longer valid
+        If _WCFServiceHostClient IsNot Nothing AndAlso _WCFServiceHostClient.State <> CommunicationState.Closed Then _WCFServiceHostClient.Abort()
+        _WCFServiceHostClient = Nothing
+
+        _SubscribedProcesses = Nothing
+
+    End Sub
+
+    Friend Shared Function CheckforWCFService() As EndpointAddress
+
+        Try
+
+            _WCFDiscoveryClient = New DiscoveryClient(New UdpDiscoveryEndpoint())
+            _WCFFindCriteria = New FindCriteria(GetType(IFileNet))
+
+            '_WCFFindCriteria.Duration = TimeSpan.FromSeconds(0.5)
+
+            'findCriteria.Scopes.Add(New Uri("net.pipe://localhost"))
+
+            Dim findResponse As FindResponse = _WCFDiscoveryClient.Find(_WCFFindCriteria)
+
+            If findResponse.Endpoints.Count > 0 Then
+                Return findResponse.Endpoints(0).Address
+            End If
+
+            Return Nothing
+
+        Catch ex As Exception
+        Finally
+
+            If _WCFDiscoveryClient IsNot Nothing Then _WCFDiscoveryClient.Close()
+            _WCFDiscoveryClient = Nothing
+
+        End Try
+
+    End Function
+
+    Private Shared Sub AttachToService(wcfProcessInfo As WCFProcessInfo, Optional endpointAddress As EndpointAddress = Nothing)
+
+        If _Terminating Then Throw New ApplicationException("Terminate initiated by FileNet Host")
+
+        Dim Handle As System.IntPtr
+        Dim Process As Process
+        Dim ExitCode As System.UInt32
+        Dim FNWCFServiceName As String
+        Dim WCFServiceHostProcesses As Process()
+
+        Const STILL_ACTIVE = &H103
+
+        Try
+            If _WCFServiceHostProcess Is Nothing Then
+
+                Dim fInfo As FileInfo = New FileInfo(CStr(CType(ConfigurationManager.GetSection("FNWCFService"), IDictionary)("EXEName")))
+
+                _WCFProcessStartInfo = New ProcessStartInfo(fInfo.FullName)
+                FNWCFServiceName = CStr(fInfo.Name).Replace(".EXE", "")
+
+                WCFServiceHostProcesses = Process.GetProcessesByName(FNWCFServiceName)
+
+                If CBool(CType(ConfigurationManager.GetSection("FNWCFService"), IDictionary)("TestMode")) Then
+                    If WCFServiceHostProcesses.Count < 1 Then
+                        FNWCFServiceName &= ".vshost"
+                        WCFServiceHostProcesses = Process.GetProcessesByName(FNWCFServiceName)
+                    End If
+                End If
+
+                If WCFServiceHostProcesses.Count < 1 Then
+                    _WCFServiceHostProcess = Process.Start(_WCFProcessStartInfo)
+
+                    System.Threading.Thread.Sleep(500)
+
+                Else
+                    _WCFServiceHostProcess = WCFServiceHostProcesses(0)
+                End If
+            End If
+
+            'this handles issues if getting information about elevated processes due to UAC
+            Process = Process.GetProcessById(_WCFServiceHostProcess.Id)
+
+            Handle = NativeMethods.OpenProcess(CType(&H1000, ProcessAccessFlags), False, Process.Id) '&H1000 &H100000
+            NativeMethods.GetExitCodeProcess(Handle, ExitCode)
+
+            If ExitCode = STILL_ACTIVE Then
+                RemoveHandler _WCFServiceHostProcess.Exited, AddressOf WCFServiceHostProcess_Exited ' to ensure event is only responded too once due to this code being executed more than once
+                AddHandler _WCFServiceHostProcess.Exited, AddressOf WCFServiceHostProcess_Exited
+
+                Try
+
+                    If Not Process.EnableRaisingEvents Then _WCFServiceHostProcess.EnableRaisingEvents = True
+
+                Catch ex As Exception
+                End Try
+            End If
+
+        Catch ex As Exception
+#If DEBUG Then 'allow more than one instance when testing
+            If _WCFServiceHostProcess IsNot Nothing Then MsgBox(_WCFServiceHostProcess.ToString, CType(MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, MsgBoxStyle), "Refresh required to complete action")
+#End If
+        Finally
+
+            NativeMethods.CloseHandle(Handle)
+
+        End Try
+
+        Try
+
+            If wcfProcessInfo Is Nothing Then wcfProcessInfo = New WCFProcessInfo With {.ProcessID = Process.GetCurrentProcess.Id, .ProcessName = Process.GetCurrentProcess.ProcessName, .ByProcessName = True}
+            WCFWrapperCommon.InvokeService(endpointAddress, wcfProcessInfo)
+
+        Catch ex As Exception
+            Stop
+        End Try
+
+    End Sub
+
+    Private Shared Sub DetachFromService(subscribingProcess As WCFProcessInfo)
+        Try
+
+            If WCFWrapperCommon.WCFServiceHostClient IsNot Nothing Then
+                WCFWrapperCommon.WCFServiceHostClient.Detach(subscribingProcess)
+                WCFWrapperCommon.WCFServiceHostClient.Terminate()
+            End If
+
+            System.Threading.Thread.Sleep(100)
+
+        Catch fe As FaultException(Of FileNetWCFFault) When fe.Message.Contains("Terminate")
+            'normal termination
+        Catch ex As Exception
+            Throw
+        Finally
+            WCFWrapperCommon.WCFServiceHostClient = Nothing
+        End Try
+    End Sub
+
+    Friend Shared Property WCFServiceHostClient As FileNetClient
+        Get
+            If _WCFServiceHostClient Is Nothing Then
+                _Terminating = False
+
+                ConnectToWCF()
+            End If
+            Return _WCFServiceHostClient
+        End Get
+        Set(value As FileNetClient)
+            _WCFServiceHostClient = value
+        End Set
+    End Property
+
+    'Friend Shared Function CreateDatabase(Optional ByVal instance As String = "") As Database
+
+    '    Dim ReplaceUserID As Boolean = True
+    '    Dim AppConfigInstance() As String
+    '    Dim Settings As DatabaseSettings
+    '    Dim ConnectionStringName As String
+    '    Dim CSS As ConnectionStringSettings
+    '    Dim ConnString As String
+
+    '    Dim Connections() As String
+    '    Dim User As String
+    '    Dim PW As String = ""
+
+    '    Dim DBProviderFactory As DbProviderFactory
+    '    Dim DB As Database
+
+    '    Dim ComputerName As String = SystemInformation.ComputerName
+
+    '    Try
+
+    '        AppConfigInstance = instance.Split(New Char() {CChar(";")})
+
+    '        Try
+    '            If ConfigurationManager.AppSettings("ReplaceUserID") IsNot Nothing Then
+    '                ReplaceUserID = CBool(ConfigurationManager.AppSettings("ReplaceUserID"))
+    '            End If
+
+    '        Catch ex As Exception
+
+    '        End Try
+
+    '        Settings = DatabaseSettings.GetDatabaseSettings(New SystemConfigurationSource())
+    '        ConnectionStringName = Settings.DefaultDatabase
+
+    '        AppConfigInstance(0) = CStr(If(AppConfigInstance(0) Is Nothing OrElse (AppConfigInstance(0).Length > 0 AndAlso AppConfigInstance(0).ToLower.Contains("ddtek")) OrElse AppConfigInstance(0).Length = 0, ConnectionStringName, AppConfigInstance(0)))
+
+    '        CSS = ConfigurationManager.ConnectionStrings(AppConfigInstance(0))
+
+    '        If CSS Is Nothing Then Throw New ApplicationException("No connection string found for " & AppConfigInstance(0) & " in Config file")
+
+    '        ConnString = CSS.ConnectionString.ToString
+    '        If AppConfigInstance.Count > 1 Then ConnString = ConnString.Replace("$mdb$", AppConfigInstance(1)).Replace("$MDB$", AppConfigInstance(1))
+
+    '        If AppConfigInstance(0).ToLower.Contains("ddtek") OrElse AppConfigInstance(0).ToLower.Contains("mdb") Then 'DB2
+    '            Connections = ConnString.Split(New Char() {CChar(";")})
+
+    '            For X As Integer = 0 To Connections.Length - 1
+    '                If Connections(X).Contains("user id=") Then
+    '                    User = Connections(X)
+    '                End If
+    '                If Connections(X).ToLower.Contains("password=") OrElse Connections(X).Contains("Database Password=") Then
+    '                    PW = Connections(X)
+    '                End If
+    '            Next
+
+    '            If ReplaceUserID Then
+    '                If User.Trim.Length < 1 Then
+    '                    ConnString &= ";user id=" & SystemInformation.ComputerName
+    '                Else
+    '                    ConnString = ConnString.Replace(User, "user id=" & ComputerName)
+    '                End If
+    '            End If
+
+    '            If PW.Trim.Length < 1 AndAlso Not AppConfigInstance(0).ToUpper.Contains("MDB") Then
+    '                ConnString &= ";password=" & Password("DB2")
+    '            Else
+    '                Select Case True
+    '                    Case AppConfigInstance(0).ToUpper.Contains("MDB") AndAlso PW.ToUpper.Contains("MDB")
+    '                        ConnString = ConnString.Replace(PW, "Jet OLEDB:Database Password=" & Password("MDB"))
+    '                    Case AppConfigInstance(0).ToUpper.Contains("MDB")
+    '                        'do nothing
+    '                    Case Else
+    '                        ConnString = ConnString.Replace(PW, "password=" & Password("DB2"))
+    '                End Select
+    '            End If
+
+    '        Else
+    '            ConnString = CSS.ConnectionString 'SQL uses integrated security
+    '        End If
+
+
+    '        DBProviderFactory = DbProviderFactories.GetFactory(CSS.ProviderName)
+    '        DB = New GenericDatabase(ConnString, DBProviderFactory)
+
+    '        Return DB
+
+    '    Catch ex As Exception
+    '        Throw
+    '    End Try
+
+    'End Function
+
+    Friend Shared Function SimpleCrypt(ByVal text As String) As String
+        ' Encrypts/decrypts the passed string using 
+        ' a simple ASCII value-swapping algorithm
+        Dim strTempChar As String, i As Integer
+        For i = 1 To Len(text)
+            If Asc(Mid$(text, i, 1)) < 128 Then
+                strTempChar = CType(Asc(Mid$(text, i, 1)) + 128, String)
+            ElseIf Asc(Mid$(text, i, 1)) > 128 Then
+                strTempChar = CType(Asc(Mid$(text, i, 1)) - 128, String)
+            End If
+            Mid$(text, i, 1) = Chr(CType(strTempChar, Integer))
+        Next i
+        Return text
+    End Function
+
+    Public Shared Function InitializeFileNetUserInfo() As Tuple(Of String, String)
+        ' -----------------------------------------------------------------------------
+        ' <summary>
+        ' Gets User Name and Password based on AD Security Roles.
+        ' </summary>
+        ' <remarks>
+        ' </remarks>
+        ' <history>
+        ' 	[Nick Snyder]	4/7/2006	Created
+        ' </history>
+        ' -----------------------------------------------------------------------------
+
+        Dim FileNetUser As Object
+        Dim FileNetPassword As Object
+        Dim FNUser As String
+        Dim FNPassword As String
+        Const CRYPTORKEY As String = "UFCW CMS ACCESS"
+
+        Try
+            If UFCWGeneralAD.CMSCanAdjudicateEmployee OrElse UFCWGeneralAD.REGMEmployeeAccess OrElse UFCWGeneralAD.WorkflowEmployeeAccess Then
+
+                If UFCWGeneralAD.CMSAdministrators OrElse UFCWGeneralAD.REGMAdministrators OrElse UFCWGeneralAD.WorkflowAdministrators Then
+                    FileNetUser = WCFWrapperDAL.RetrieveRoleSettings("FN Admin User Name")
+                    If FileNetUser IsNot Nothing AndAlso Not IsDBNull(FileNetUser) Then
+
+                        FNUser = UFCWCryptor.DecryptString(FileNetUser.ToString, CRYPTORKEY)
+                    Else
+                        FNUser = ""
+                    End If
+
+                    FileNetPassword = WCFWrapperDAL.RetrieveRoleSettings("FN Admin Password")
+                    If FileNetPassword IsNot Nothing AndAlso Not IsDBNull(FileNetPassword) Then
+                        FNPassword = UFCWCryptor.DecryptString(FileNetPassword.ToString, CRYPTORKEY)
+                    Else
+                        FNPassword = ""
+                    End If
+                Else
+                    FileNetUser = WCFWrapperDAL.RetrieveRoleSettings("FN Emp User Name")
+                    If FileNetUser IsNot Nothing AndAlso Not IsDBNull(FileNetUser) Then
+                        FNUser = UFCWCryptor.DecryptString(FileNetUser.ToString, CRYPTORKEY)
+                    Else
+                        FNUser = ""
+                    End If
+
+                    FileNetPassword = WCFWrapperDAL.RetrieveRoleSettings("FN Emp Password")
+                    If FileNetPassword IsNot Nothing AndAlso Not IsDBNull(FileNetPassword) Then
+                        FNPassword = UFCWCryptor.DecryptString(FileNetPassword.ToString, CRYPTORKEY)
+                    Else
+                        FNPassword = ""
+                    End If
+                End If
+            Else
+                FileNetUser = WCFWrapperDAL.RetrieveRoleSettings("FN User Name")
+                If FileNetUser IsNot Nothing AndAlso Not IsDBNull(FileNetUser) Then
+                    FNUser = UFCWCryptor.DecryptString(FileNetUser.ToString, CRYPTORKEY)
+                Else
+                    FNUser = ""
+                End If
+
+                FileNetPassword = WCFWrapperDAL.RetrieveRoleSettings("FN Password")
+                If FileNetPassword IsNot Nothing AndAlso Not IsDBNull(FileNetPassword) Then
+                    FNPassword = UFCWCryptor.DecryptString(FileNetPassword.ToString, CRYPTORKEY)
+                Else
+                    FNPassword = ""
+                End If
+            End If
+
+            Return New Tuple(Of String, String)(FNUser, FNPassword)
+
+        Catch ex As Exception
+            Throw
+        End Try
+    End Function
+
+    Protected Overrides Sub Finalize()
+
+        If _WCFProcessInfo IsNot Nothing Then WCFWrapperCommon.DetachFromService(_WCFProcessInfo)
+
+        MyBase.Finalize()
+    End Sub
+End Class
+
+Friend Enum ProcessAccessFlags As UInteger
+    All = &H1F0FFF
+    Terminate = &H1
+    CreateThread = &H2
+    VMOperation = &H8
+    VMRead = &H10
+    VMWrite = &H20
+    DupHandle = &H40
+    SetInformation = &H200
+    QueryInformation = &H400
+    Synchronize = &H100000
+End Enum
+
+Friend NotInheritable Class NativeMethods
+    Private Sub New()
+    End Sub
+
+    <DllImport("user32.dll", SetLastError:=True)> _
+    Friend Shared Function IsWindowVisible(ByVal hWnd As IntPtr) As <MarshalAs(UnmanagedType.Bool)> Boolean
+    End Function
+
+    <DllImport("kernel32.dll")> _
+    Friend Shared Function OpenProcess(ByVal dwDesiredAccess As ProcessAccessFlags, <MarshalAs(UnmanagedType.Bool)> ByVal bInheritHandle As Boolean, ByVal dwProcessId As Integer) As IntPtr
+    End Function
+
+    <DllImport("kernel32.dll", SetLastError:=True)> _
+    Friend Shared Function CloseHandle(ByVal hObject As IntPtr) As <MarshalAs(UnmanagedType.Bool)> Boolean
+    End Function
+
+    <DllImport("kernel32.dll", SetLastError:=True)> _
+    Friend Shared Function GetExitCodeProcess(ByVal hProcess As IntPtr, ByRef lpExitCode As UInteger) As <MarshalAs(UnmanagedType.Bool)> Boolean
+    End Function
+
+
+    '<DllImport("kernel32.dll", SetLastError:=True)> _
+    'Friend Shared Function SetConsoleCtrlHandler(<[In]> <[Optional]> <MarshalAs(UnmanagedType.FunctionPtr)> HandlerRoutine As ConsoleEventDelegate, <[In]> <MarshalAs(UnmanagedType.Bool)> Add As Boolean) As <MarshalAs(UnmanagedType.Bool)> Boolean
+    'End Function
+
+    '<DllImport("shell32.dll")> _
+    'Friend Shared Function SHGetFileInfo(pszPath As String, dwFileAttributes As UInteger, ByRef psfi As SHFILEINFO, cbSizeFileInfo As UInteger, uFlags As UInteger) As IntPtr
+    'End Function
+End Class
+
+

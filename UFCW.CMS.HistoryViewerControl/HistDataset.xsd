@@ -1,0 +1,34 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="HistDataset" targetNamespace="http://www.tempuri.org/HistDataset.xsd" xmlns:mstns="http://www.tempuri.org/HistDataset.xsd" xmlns="http://www.tempuri.org/HistDataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="HistDataset" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="History">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="SQLTranID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:decimal" />
+							<xs:element name="TranID" type="xs:decimal" minOccurs="0" />
+							<xs:element name="ProcessDateTime" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="TransactionType" type="xs:string" minOccurs="0" />
+							<xs:element name="DocumentID" type="xs:integer" minOccurs="0" />
+							<xs:element name="SSN" type="xs:integer" minOccurs="0" />
+							<xs:element name="SSNAlias" type="xs:string" minOccurs="0" />
+							<xs:element name="HistoryText" type="xs:string" minOccurs="0" />
+							<xs:element name="Detail" type="xs:string" minOccurs="0" />
+							<xs:element name="Code" type="xs:string" minOccurs="0" />
+							<xs:element name="DocClass" type="xs:string" minOccurs="0" />
+							<xs:element name="DocType" type="xs:string" minOccurs="0" />
+							<xs:element name="userid" type="xs:string" minOccurs="0" />
+							<xs:element name="lastupdt" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="CompleteDate" type="xs:dateTime" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:History" />
+			<xs:field xpath="mstns:SQLTranID" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

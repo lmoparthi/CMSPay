@@ -1,0 +1,56 @@
+
+
+
+
+msbuild /bl:C:\VB.NET.2017\FileNet\FileNetWCFWrapper\FileNetWCFWrapper\msbuild.binlog C:\VB.NET.2017\FileNet\FileNetWCFWrapper\FileNetWCFWrapper\FileNetWCFWrapper.sln /property:Configuration=Release
+msbuild /bl:C:\VB.NET.2017\UFCW.CMS\UFCW.CMS.DAL\msbuild.binlog C:\VB.NET.2017\UFCW.CMS\UFCW.CMS.DAL\UFCW.CMS.DAL.sln /property:Configuration=Release
+msbuild /bl:C:\VB.NET.2017\FileNet\UFCWFileNet\msbuild.binlog C:\VB.NET.2017\FileNet\UFCWFileNet\UFCWFileNet.sln /property:Configuration=Release
+msbuild /bl:C:\VB.NET.2017\UFCW.RegMaster\UFCW.RegMasterDAL\msbuild.binlog C:\VB.NET.2017\UFCW.RegMaster\UFCW.RegMasterDAL\UFCW.RegMasterDAL.sln /property:Configuration=Release
+
+msbuild /bl:C:\VB.NET.2017\UFCW.CMS\UFCW.CMS.ACCUMULATOR\msbuild.binlog C:\VB.NET.2017\UFCW.CMS\UFCW.CMS.ACCUMULATOR\UFCW.CMS.ACCUMULATOR.sln /property:Configuration=Release
+msbuild /bl:C:\VB.NET.2017\UFCW.CMS\UFCW.CMS.ALERTMANAGER\msbuild.binlog C:\VB.NET.2017\UFCW.CMS\UFCW.CMS.ALERTMANAGER\UFCW.CMS.ALERTMANAGER.sln /property:Configuration=Release
+msbuild /bl:C:\VB.NET.2017\UFCW.CMS\UFCW.CMS.PLAN\msbuild.binlog C:\VB.NET.2017\UFCW.CMS\UFCW.CMS.PLAN\UFCW.CMS.PLAN.sln /property:Configuration=Release
+msbuild /bl:C:\VB.NET.2017\UFCW.CMS\UFCW.CMS.AccumulatorControl\msbuild.binlog C:\VB.NET.2017\UFCW.CMS\UFCW.CMS.AccumulatorControl\UFCW.CMS.AccumulatorControl.sln /property:Configuration=Release
+
+msbuild /bl:C:\VB.NET.2017\UFCW.RegMaster\UFCW.REGMASTER.HISTORYControl\msbuild.binlog C:\VB.NET.2017\UFCW.RegMaster\UFCW.REGMASTER.HISTORYControl\UFCW.REGMASTER.History.sln /property:Configuration=Release
+msbuild /bl:C:\VB.NET.2017\UFCW.CMS\UFCW.CMS.ANNOTATIONControl\msbuild.binlog C:\VB.NET.2017\UFCW.CMS\UFCW.CMS.ANNOTATIONControl\UFCW.CMS.AnnotationEditor.sln /property:Configuration=Release
+msbuild /bl:C:\VB.NET.2017\UFCW.CMS\UFCW.CMS.HistoryViewerControl\msbuild.binlog C:\VB.NET.2017\UFCW.CMS\UFCW.CMS.HistoryViewerControl\UFCW.CMS.HistoryViewerControl.sln /property:Configuration=Release
+msbuild /bl:C:\VB.NET.2017\UFCW.RegMaster\UFCW.REGMASTER.EligMaintenance\msbuild.binlog C:\VB.NET.2017\UFCW.RegMaster\UFCW.REGMASTER.EligMaintenance\UFCW.REGMASTER.EligMaintenance.sln /property:Configuration=Release
+
+
+
+msbuild /bl:C:\VB.NET.2017\UFCW.CMS\UFCW.CMS.CLAIMDOCUMENTHISTORY\msbuild.binlog C:\VB.NET.2017\UFCW.CMS\UFCW.CMS.CLAIMDOCUMENTHISTORY\UFCW.CMS.CLAIMDOCUMENTHISTORY.sln /property:Configuration=Release
+msbuild /bl:C:\VB.NET.2017\UFCW.CMS\UFCW.CMS.COBControl\msbuild.binlog C:\VB.NET.2017\UFCW.CMS\UFCW.CMS.COBControl\UFCW.CMS.COB.sln /property:Configuration=Release
+msbuild /bl:C:\VB.NET.2017\UFCW.CMS\UFCW.CMS.FREETEXTControl\msbuild.binlog C:\VB.NET.2017\UFCW.CMS\UFCW.CMS.FREETEXTControl\UFCW.CMS.FREETEXTControl.sln /property:Configuration=Release
+msbuild /bl:C:\VB.NET.2017\UFCW.CMS\UFCW.CMS.HoursControl\msbuild.binlog C:\VB.NET.2017\UFCW.CMS\UFCW.CMS.HoursControl\UFCW.CMS.HoursControl.sln /property:Configuration=Release
+msbuild /bl:C:\VB.NET.2017\UFCW.CMS\UFCW.CMS.HRA\UFCW.CMS.HRAControl\msbuild.binlog C:\VB.NET.2017\UFCW.CMS\UFCW.CMS.HRA\UFCW.CMS.HRAControl\UFCW.CMS.HRAControl.sln /property:Configuration=Release
+msbuild /bl:C:\VB.NET.2017\UFCW.CMS\UFCW.CMS.MemberSearchControl\msbuild.binlog C:\VB.NET.2017\UFCW.CMS\UFCW.CMS.MemberSearchControl\UFCW.CMS.MemberSearchControl.sln /property:Configuration=Release
+msbuild /bl:C:\VB.NET.2017\UFCW.CMS\UFCW.CMS.PremiumsControl\msbuild.binlog C:\VB.NET.2017\UFCW.CMS\UFCW.CMS.PremiumsControl\UFCW.CMS.PremiumsControl.sln /property:Configuration=Release
+msbuild /bl:C:\VB.NET.2017\UFCW.CMS\UFCW.CMS.Provider\ProviderControl\msbuild.binlog C:\VB.NET.2017\UFCW.CMS\UFCW.CMS.Provider\ProviderControl\UFCW.CMS.ProviderControl.sln /property:Configuration=Release
+msbuild /bl:C:\VB.NET.2017\UFCW.CMS\UFCW.CMS.UFCWDocsControl\msbuild.binlog C:\VB.NET.2017\UFCW.CMS\UFCW.CMS.UFCWDocsControl\UFCW.CMS.UFCWDocsControl.sln /property:Configuration=Release
+msbuild /bl:C:\VB.NET.2017\UFCW.CMS\UFCW.CMS.ELIGIBILITYControl\msbuild.binlog C:\VB.NET.2017\UFCW.CMS\UFCW.CMS.ELIGIBILITYControl\UFCW.CMS.ELIGIBILITYControl.sln /property:Configuration=Release
+
+msbuild /bl:C:\VB.NET.2017\UFCW.RegMaster\UFCW.REGMASTER.CoverageHistoryControl\msbuild.binlog C:\VB.NET.2017\UFCW.RegMaster\UFCW.REGMASTER.CoverageHistoryControl\UFCW.REGMASTER.CoverageHistory.sln /property:Configuration=Release
+msbuild /bl:C:\VB.NET.2017\UFCW.RegMaster\UFCW.REGMASTER.RemarksControl\msbuild.binlog C:\VB.NET.2017\UFCW.RegMaster\UFCW.REGMASTER.RemarksControl\UFCW.REGMASTER.RemarksControl.sln /property:Configuration=Release
+
+msbuild /bl:C:\VB.NET.2017\UFCW.CMS\UFCW.CMS.DentalControl\msbuild.binlog C:\VB.NET.2017\UFCW.CMS\UFCW.CMS.DentalControl\UFCW.CMS.Dental.sln /property:Configuration=Release
+msbuild /bl:C:\VB.NET.2017\UFCW.CMS\UFCW.CMS.PrescriptionsControl\msbuild.binlog C:\VB.NET.2017\UFCW.CMS\UFCW.CMS.PrescriptionsControl\UFCW.CMS.PrescriptionsControl.sln /property:Configuration=Release
+
+msbuild /bl:C:\VB.NET.2017\UFCW.CMS\UFCW.CMS.CUSTOMERSERVICEControl\msbuild.binlog C:\VB.NET.2017\UFCW.CMS\UFCW.CMS.CUSTOMERSERVICEControl\UFCW.CMS.CUSTOMERSERVICEControl.sln /property:Configuration=Release
+
+
+
+
+
+
+msbuild /bl:C:\VB.NET.2017\UFCW.RegMaster\UFCW.REGMASTER.AddressControl\msbuild.binlog C:\VB.NET.2017\UFCW.RegMaster\UFCW.REGMASTER.AddressControl\UFCW.REGMASTER.AddressControl.sln /property:Configuration=Release
+msbuild /bl:C:\VB.NET.2017\UFCW.RegMaster\UFCW.REGMASTER.AlertControl\msbuild.binlog C:\VB.NET.2017\UFCW.RegMaster\UFCW.REGMASTER.AlertControl\UFCW.REGMASTER.AlertControl.sln /property:Configuration=Release
+msbuild /bl:C:\VB.NET.2017\UFCW.RegMaster\UFCW.REGMASTER.EmailControl\msbuild.binlog C:\VB.NET.2017\UFCW.RegMaster\UFCW.REGMASTER.EmailControl\UFCW.REGMASTER.EmailControl.sln /property:Configuration=Release
+msbuild /bl:C:\VB.NET.2017\UFCW.RegMaster\UFCW.REGMASTER.LifeEventsControl\msbuild.binlog C:\VB.NET.2017\UFCW.RegMaster\UFCW.REGMASTER.LifeEventsControl\UFCW.REGMASTER.LifeEventsControl.sln /property:Configuration=Release
+msbuild /bl:C:\VB.NET.2017\UFCW.RegMaster\UFCW.REGMASTER.PhoneControl\msbuild.binlog C:\VB.NET.2017\UFCW.RegMaster\UFCW.REGMASTER.PhoneControl\UFCW.REGMASTER.PhoneControl.sln /property:Configuration=Release
+msbuild /bl:C:\VB.NET.2017\UFCW.RegMaster\UFCW.REGMASTER.RegMasterControl\msbuild.binlog C:\VB.NET.2017\UFCW.RegMaster\UFCW.REGMASTER.RegMasterControl\UFCW.REGMASTER.RegMasterControl.sln /property:Configuration=Release
+msbuild /bl:C:\VB.NET.2017\UFCW.RegMaster\UFCW.REGMASTER.Main\UFCW.REGMASTER.RegMasterControl\msbuild.binlog C:\VB.NET.2017\UFCW.RegMaster\UFCW.REGMASTER.Main\UFCW.REGMASTER.RegMasterControl.sln /property:Configuration=Release
+
+
+msbuild /bl:C:\VB.NET.2017\UFCW.CMS\UFCW.CMS.CUSTOMERSERVICE\msbuild.binlog C:\VB.NET.2017\UFCW.CMS\UFCW.CMS.CUSTOMERSERVICE\UFCW.CMS.CUSTOMERSERVICE-AllDependants-ProjectReferences.sln /property:Configuration=Release
+

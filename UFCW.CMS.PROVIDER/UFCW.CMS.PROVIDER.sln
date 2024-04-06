@@ -1,0 +1,105 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34302.85
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ProviderDAL", "ProviderDAL\ProviderDAL.vbproj", "{B49374BD-88C2-4A65-A739-985B929FAB3E}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ProviderSearch", "ProviderSearch\ProviderSearch.vbproj", "{DBD0D7A7-4FB8-40D8-86CB-D12BCA4929FB}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ProviderWork", "ProviderWork\ProviderWork.vbproj", "{7BE689D3-8F65-475F-993A-CDF0441F6606}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ProviderConfiguration", "ProviderMain.Configuration\ProviderConfiguration.vbproj", "{E11AE14A-80F4-4EF7-9390-9A1F54BA1AC3}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "NPIView", "NPIView\NPIView.vbproj", "{2CD40CAF-1F80-4BAA-81FA-C71E98C672C6}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ProviderMain", "ProviderMain\ProviderMain.vbproj", "{BC4632DD-DFA9-4DFE-B609-1BFE37361DCC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|Win32 = Debug|Win32
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B49374BD-88C2-4A65-A739-985B929FAB3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B49374BD-88C2-4A65-A739-985B929FAB3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B49374BD-88C2-4A65-A739-985B929FAB3E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{B49374BD-88C2-4A65-A739-985B929FAB3E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{B49374BD-88C2-4A65-A739-985B929FAB3E}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{B49374BD-88C2-4A65-A739-985B929FAB3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B49374BD-88C2-4A65-A739-985B929FAB3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B49374BD-88C2-4A65-A739-985B929FAB3E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{B49374BD-88C2-4A65-A739-985B929FAB3E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{B49374BD-88C2-4A65-A739-985B929FAB3E}.Release|Win32.ActiveCfg = Release|Any CPU
+		{DBD0D7A7-4FB8-40D8-86CB-D12BCA4929FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBD0D7A7-4FB8-40D8-86CB-D12BCA4929FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBD0D7A7-4FB8-40D8-86CB-D12BCA4929FB}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{DBD0D7A7-4FB8-40D8-86CB-D12BCA4929FB}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{DBD0D7A7-4FB8-40D8-86CB-D12BCA4929FB}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{DBD0D7A7-4FB8-40D8-86CB-D12BCA4929FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBD0D7A7-4FB8-40D8-86CB-D12BCA4929FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBD0D7A7-4FB8-40D8-86CB-D12BCA4929FB}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{DBD0D7A7-4FB8-40D8-86CB-D12BCA4929FB}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{DBD0D7A7-4FB8-40D8-86CB-D12BCA4929FB}.Release|Win32.ActiveCfg = Release|Any CPU
+		{7BE689D3-8F65-475F-993A-CDF0441F6606}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BE689D3-8F65-475F-993A-CDF0441F6606}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BE689D3-8F65-475F-993A-CDF0441F6606}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{7BE689D3-8F65-475F-993A-CDF0441F6606}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{7BE689D3-8F65-475F-993A-CDF0441F6606}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{7BE689D3-8F65-475F-993A-CDF0441F6606}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BE689D3-8F65-475F-993A-CDF0441F6606}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BE689D3-8F65-475F-993A-CDF0441F6606}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{7BE689D3-8F65-475F-993A-CDF0441F6606}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{7BE689D3-8F65-475F-993A-CDF0441F6606}.Release|Win32.ActiveCfg = Release|Any CPU
+		{E11AE14A-80F4-4EF7-9390-9A1F54BA1AC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E11AE14A-80F4-4EF7-9390-9A1F54BA1AC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E11AE14A-80F4-4EF7-9390-9A1F54BA1AC3}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{E11AE14A-80F4-4EF7-9390-9A1F54BA1AC3}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{E11AE14A-80F4-4EF7-9390-9A1F54BA1AC3}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{E11AE14A-80F4-4EF7-9390-9A1F54BA1AC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E11AE14A-80F4-4EF7-9390-9A1F54BA1AC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E11AE14A-80F4-4EF7-9390-9A1F54BA1AC3}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{E11AE14A-80F4-4EF7-9390-9A1F54BA1AC3}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{E11AE14A-80F4-4EF7-9390-9A1F54BA1AC3}.Release|Win32.ActiveCfg = Release|Any CPU
+		{2CD40CAF-1F80-4BAA-81FA-C71E98C672C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CD40CAF-1F80-4BAA-81FA-C71E98C672C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CD40CAF-1F80-4BAA-81FA-C71E98C672C6}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{2CD40CAF-1F80-4BAA-81FA-C71E98C672C6}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{2CD40CAF-1F80-4BAA-81FA-C71E98C672C6}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{2CD40CAF-1F80-4BAA-81FA-C71E98C672C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CD40CAF-1F80-4BAA-81FA-C71E98C672C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CD40CAF-1F80-4BAA-81FA-C71E98C672C6}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{2CD40CAF-1F80-4BAA-81FA-C71E98C672C6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{2CD40CAF-1F80-4BAA-81FA-C71E98C672C6}.Release|Win32.ActiveCfg = Release|Any CPU
+		{BC4632DD-DFA9-4DFE-B609-1BFE37361DCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC4632DD-DFA9-4DFE-B609-1BFE37361DCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC4632DD-DFA9-4DFE-B609-1BFE37361DCC}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{BC4632DD-DFA9-4DFE-B609-1BFE37361DCC}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{BC4632DD-DFA9-4DFE-B609-1BFE37361DCC}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{BC4632DD-DFA9-4DFE-B609-1BFE37361DCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC4632DD-DFA9-4DFE-B609-1BFE37361DCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC4632DD-DFA9-4DFE-B609-1BFE37361DCC}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{BC4632DD-DFA9-4DFE-B609-1BFE37361DCC}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{BC4632DD-DFA9-4DFE-B609-1BFE37361DCC}.Release|Win32.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {709032A1-CE10-4DA7-9EF3-1805E91395F5}
+		PostBuildRule0 = "cmd" /c copy  $(SolutionDir)\ProviderDAL\bin\UFCW.CMS.ProviderDal.*   C:\VB.NET\UFCW.CMS\UFCW.CMS.PROVIDER\Provider\bin /y
+		PostBuildRule1 = "cmd" /c copy  $(SolutionDir)\Provider\*.config  C:\VB.NET\UFCW.CMS\UFCW.CMS.PROVIDER\Provider\bin /y
+		PostBuildRule2 = "cmd" /c copy  $(SolutionDir)\Provider\*.XML   C:\VB.NET\UFCW.CMS\UFCW.CMS.PROVIDER\Provider\bin /y
+		PostBuildRule3 = "cmd" /c copy  $(SolutionDir)\ProviderMain.Configuration\bin\UFCW.CMS.ProviderConfiguration.*  C:\VB.NET\UFCW.CMS\UFCW.CMS.PROVIDER\Provider\bin /y
+		PostBuildRule4 = "cmd" /c copy  $(SolutionDir)\ProviderWork\bin\UFCW.CMS.ProviderWork.*   C:\VB.NET\UFCW.CMS\UFCW.CMS.PROVIDER\Provider\bin /y
+		PostBuildRule5 = "cmd" /c copy  $(SolutionDir)\ExtendedErrorProvider\bin\UFCW.CMS.ExtendedErrorProvider.*   C:\VB.NET\UFCW.CMS\UFCW.CMS.PROVIDER\Provider\bin /y
+		PostBuildRule6 = "cmd" /c copy  $(SolutionDir)\ProviderWork\*.XML   C:\VB.NET\UFCW.CMS\UFCW.CMS.PROVIDER\Provider\bin /y
+		PostBuildRule7 = "cmd" /c copy $(SolutionDir)\ProviderSearch\bin\UFCW.CMS.ProviderSearch.*   C:\VB.NET\UFCW.CMS\UFCW.CMS.PROVIDER\Provider\bin /y
+		PostBuildRule8 = "cmd" /c copy  $(SolutionDir)\ProviderSearch\*.XML  C:\VB.NET\UFCW.CMS\UFCW.CMS.PROVIDER\Provider\bin /y
+		PostBuildRule9 = "cmd" /c COPY C:\VB.NET\bin\*.* C:\vb.net\UFCW.CMS\UFCW.CMS.PROVIDER\Provider\bin\*.* /y
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35;packages\Unity.Interception.2.1.505.0\lib\NET35;packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Data.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.ExceptionHandling.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Logging.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.ExceptionHandling.Logging.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Logging.5.0.505.1\lib\NET35;packages\EnterpriseLibrary.Security.Cryptography.5.0.505.0\lib\NET35;packages\Unity.Interception.2.1.505.2\lib\NET35;packages\Unity.2.1.505.2\lib\NET35
+	EndGlobalSection
+EndGlobal

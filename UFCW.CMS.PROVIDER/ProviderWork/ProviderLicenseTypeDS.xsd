@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="Dataset2" targetNamespace="http://tempuri.org/Dataset2.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/Dataset2.xsd" xmlns:mstns="http://tempuri.org/Dataset2.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="Dataset2" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="PROVIDER_LICENSE_TYPE">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="LICENSE_PREFIX" type="xs:string" />
+							<xs:element name="DEGREE_TITLE" type="xs:string" />
+							<xs:element name="LICENSE_DESCRIPTION" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Dataset2Key1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:PROVIDER_LICENSE_TYPE" />
+			<xs:field xpath="mstns:LICENSE_PREFIX" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiagnosisLookupDataGridStyle>
+  <ColumnCount>6</ColumnCount>
+  <GridLineStyle>False</GridLineStyle>
+  <Column>
+    <DefaultOrder>1</DefaultOrder>
+    <DefaultCharWidth>6</DefaultCharWidth>
+    <Mapping>DIAG_VALUE</Mapping>
+    <HeaderText>Code</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>False</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>2</DefaultOrder>
+    <DefaultCharWidth>40</DefaultCharWidth>
+    <Mapping>SHORT_DESC</Mapping>
+    <HeaderText>Short Description</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>3</DefaultOrder>
+    <DefaultCharWidth>162</DefaultCharWidth>
+    <Mapping>FULL_DESC</Mapping>
+    <HeaderText>Full Description</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>4</DefaultOrder>
+    <DefaultCharWidth>11</DefaultCharWidth>
+    <Mapping>PREVENTATIVE_USE_SW</Mapping>
+    <HeaderText>Preventative</HeaderText>
+    <Type>Bool</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>5</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>SOURCE</Mapping>
+    <HeaderText>CodeSet</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>6</DefaultOrder>
+    <DefaultCharWidth>1</DefaultCharWidth>
+    <Mapping>VALIDITY</Mapping>
+    <HeaderText>Validity</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+</DiagnosisLookupDataGridStyle>

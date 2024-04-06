@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32106.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "UFCW.REGMASTER.History", "UFCW.REGMASTER.History.vbproj", "{67CC517A-B141-4DEE-946A-73C6C5522640}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		AutoOnly|Any CPU = AutoOnly|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		DebugAll|Any CPU = DebugAll|Any CPU
+		DebugLocals|Any CPU = DebugLocals|Any CPU
+		DebugZ|Any CPU = DebugZ|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67CC517A-B141-4DEE-946A-73C6C5522640}.AutoOnly|Any CPU.ActiveCfg = DebugLocals|Any CPU
+		{67CC517A-B141-4DEE-946A-73C6C5522640}.AutoOnly|Any CPU.Build.0 = DebugLocals|Any CPU
+		{67CC517A-B141-4DEE-946A-73C6C5522640}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67CC517A-B141-4DEE-946A-73C6C5522640}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67CC517A-B141-4DEE-946A-73C6C5522640}.DebugAll|Any CPU.ActiveCfg = DebugLocals|Any CPU
+		{67CC517A-B141-4DEE-946A-73C6C5522640}.DebugAll|Any CPU.Build.0 = DebugLocals|Any CPU
+		{67CC517A-B141-4DEE-946A-73C6C5522640}.DebugLocals|Any CPU.ActiveCfg = DebugLocals|Any CPU
+		{67CC517A-B141-4DEE-946A-73C6C5522640}.DebugLocals|Any CPU.Build.0 = DebugLocals|Any CPU
+		{67CC517A-B141-4DEE-946A-73C6C5522640}.DebugZ|Any CPU.ActiveCfg = DebugLocals|Any CPU
+		{67CC517A-B141-4DEE-946A-73C6C5522640}.DebugZ|Any CPU.Build.0 = DebugLocals|Any CPU
+		{67CC517A-B141-4DEE-946A-73C6C5522640}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67CC517A-B141-4DEE-946A-73C6C5522640}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0BE035D5-8C66-415B-9AAF-6B1FE3C7AAA9}
+	EndGlobalSection
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 1
+		SccProjectUniqueName0 = UFCW.REGMASTER.History.vbproj
+		SccProjectName0 = \u0022$/UFCW.RegMaster/UFCW.REGMASTER.History\u0022,\u0020HLGAAAAA
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+	EndGlobalSection
+EndGlobal

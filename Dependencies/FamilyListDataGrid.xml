@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FamilyListDataGridStyle>
+	<ColumnCount>13</ColumnCount>
+  <GridLineStyle>False</GridLineStyle>
+  <Column>
+    <DefaultOrder>7</DefaultOrder>
+    <DefaultCharWidth>9</DefaultCharWidth>
+    <Mapping>FAMILY_ID</Mapping>
+    <HeaderText>Family ID</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>8</DefaultOrder>
+    <DefaultCharWidth>10</DefaultCharWidth>
+    <Mapping>RELATION_ID</Mapping>
+    <HeaderText>Relation ID</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+		<DefaultOrder>1</DefaultOrder>
+		<DefaultCharWidth>11</DefaultCharWidth>
+		<Mapping>SSNO</Mapping>
+		<HeaderText>Patient SSN</HeaderText>
+		<Type>Text</Type>
+		<Format>000-00-0000</Format>
+		<ReadOnly>True</ReadOnly>
+		<NullText></NullText>
+	</Column>
+	<Column>
+		<DefaultOrder>2</DefaultOrder>
+		<DefaultCharWidth>13</DefaultCharWidth>
+		<Mapping>PART_SSNO</Mapping>
+		<HeaderText>Participant SSN</HeaderText>
+		<Type>Text</Type>
+		<Format>000-00-0000</Format>
+		<ReadOnly>True</ReadOnly>
+		<NullText></NullText>
+	</Column>
+	<Column>
+		<DefaultOrder>3</DefaultOrder>
+		<DefaultCharWidth>12</DefaultCharWidth>
+		<Mapping>FIRST_NAME</Mapping>
+		<HeaderText>First Name</HeaderText>
+		<Type>Text</Type>
+		<Format></Format>
+		<ReadOnly>True</ReadOnly>
+		<NullText></NullText>
+	</Column>
+	<Column>
+		<DefaultOrder>4</DefaultOrder>
+		<DefaultCharWidth>12</DefaultCharWidth>
+		<Mapping>MIDDLE_INITIAL</Mapping>
+		<HeaderText>Middle Initial</HeaderText>
+		<Type>Text</Type>
+		<Format></Format>
+		<ReadOnly>True</ReadOnly>
+		<NullText></NullText>
+	</Column>
+	<Column>
+		<DefaultOrder>5</DefaultOrder>
+		<DefaultCharWidth>13</DefaultCharWidth>
+		<Mapping>LAST_NAME</Mapping>
+		<HeaderText>Last Name</HeaderText>
+		<Type>Text</Type>
+		<Format></Format>
+		<ReadOnly>True</ReadOnly>
+		<NullText></NullText>
+	</Column>
+</FamilyListDataGridStyle>

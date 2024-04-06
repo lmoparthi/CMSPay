@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9F10495A-D947-4C86-B4E1-91B4D0B9DE46}</ProjectGuid>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>UFCW.CMS.Binder</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>Off</OptionStrict>
+    <RootNamespace>
+    </RootNamespace>
+    <StartupObject>UFCW.CMS.Binder.%28None%29</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <MyType>Windows</MyType>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <PublishUrl>http://localhost/UFCW.CMS.Binder/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>UFCW.CMS.Binder.xml</DocumentationFile>
+    <BaseAddress>11862016</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>40028,40031,42016,42017,42018,42019,42030,42032,42104,42105,42106,42107,42108,42109,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>UFCW.CMS.Binder.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>false</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>40028,40031,42016,42017,42018,42019,42030,42032,42104,42105,42106,42107,42108,42109,42353,42354,42355</NoWarn>
+    <DebugType>Full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\BinderFactory.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\Fact.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\Facts.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\MedicalBinder.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\MedicalBinderItem.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Binder.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\BinderItem.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\BinderItemEventArgs.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Exceptions\BinderException.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Exceptions\BinderItemAlreadyExistsException.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Exceptions\BinderItemDoesNotExistException.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Exceptions\BinderItemException.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Exceptions\BusinessLayerException.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\IBinder.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\IBinderItem.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <None Include="ProjectBuildScripts\PreBuild.ps1" />
+    <None Include="UFCW.CMS.Binder.nuspec" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DAL\" />
+    <Folder Include="My Project\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="EnterpriseLibrary.Common">
+      <Version>6.0.1304</Version>
+    </PackageReference>
+    <PackageReference Include="EnterpriseLibrary.Data">
+      <Version>6.0.1304</Version>
+    </PackageReference>
+    <PackageReference Include="EnterpriseLibrary.ExceptionHandling">
+      <Version>6.0.1304</Version>
+    </PackageReference>
+    <PackageReference Include="EnterpriseLibrary.ExceptionHandling.Logging">
+      <Version>6.0.1304</Version>
+    </PackageReference>
+    <PackageReference Include="EnterpriseLibrary.Logging">
+      <Version>6.0.1304</Version>
+    </PackageReference>
+    <PackageReference Include="EnterpriseLibrary.Security.Cryptography">
+      <Version>5.0.505</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers">
+      <Version>7.0.4</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="System.Runtime">
+      <Version>4.3.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\HowToCreateNuGetPackage.txt" />
+    <Content Include="Resources\Pencil.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UFCW.CMS.ACCUMULATOR\UFCW.CMS.Accumulator.vbproj">
+      <Project>{07cd7164-bacc-4d1c-b4b3-bbfc9098854c}</Project>
+      <Name>UFCW.CMS.Accumulator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCW.CMS.ALERTMANAGER\UFCW.CMS.AlertManager.vbproj">
+      <Project>{7797b898-e04f-4fdb-a1a5-d2bc9a6b0cb0}</Project>
+      <Name>UFCW.CMS.AlertManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCW.CMS.PLAN\UFCW.CMS.Plan.vbproj">
+      <Project>{08d607b7-37d0-4e90-b6f9-8c62b7f8545d}</Project>
+      <Name>UFCW.CMS.Plan</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCWClone\UFCWClone.vbproj">
+      <Project>{ff828be4-0360-4e70-ab3e-36e04bfc4727}</Project>
+      <Name>UFCWClone</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCWEMail\UFCWEMail.vbproj">
+      <Project>{29e92272-0d8e-43d5-be84-3cdee5d65da5}</Project>
+      <Name>UFCWEMail</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCWException\UFCWException.vbproj">
+      <Project>{78ee1c94-91b9-4671-b0be-7a6ecfa86b2e}</Project>
+      <Name>UFCWException</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCWGeneralAD\UFCWGeneralAD.vbproj">
+      <Project>{ecc7a924-2f43-4816-ad73-314611f04177}</Project>
+      <Name>UFCWGeneralAD</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCWGeneral\UFCWGeneral.vbproj">
+      <Project>{bb199520-51d4-4a6a-8a94-123b39d139d6}</Project>
+      <Name>UFCWGeneral</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>powershell.exe -ExecutionPolicy Bypass -File "$(ProjectDir)ProjectBuildScripts\PreBuild.ps1" -SolutionDir "$(SolutionDir)\" -ProjectName "$(ProjectName)"  -ProjectDir "$(ProjectDir)\" -TargetDir "$(TargetDir)\" -TargetPath "$(TargetPath)" -ConfigurationName "$(ConfigurationName)"</PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

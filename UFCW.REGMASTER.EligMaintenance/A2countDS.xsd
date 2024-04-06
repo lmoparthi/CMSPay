@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="A2countDS" targetNamespace="http://tempuri.org/A2countDS.xsd" xmlns:mstns="http://tempuri.org/A2countDS.xsd" xmlns="http://tempuri.org/A2countDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="A2countDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="A2countDS" msprop:Generator_UserDSName="A2countDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="A2BKCNT" msprop:Generator_TableClassName="A2BKCNTDataTable" msprop:Generator_TableVarName="tableA2BKCNT" msprop:Generator_TablePropName="A2BKCNT" msprop:Generator_RowDeletingName="A2BKCNTRowDeleting" msprop:Generator_RowChangingName="A2BKCNTRowChanging" msprop:Generator_RowEvHandlerName="A2BKCNTRowChangeEventHandler" msprop:Generator_RowDeletedName="A2BKCNTRowDeleted" msprop:Generator_UserTableName="A2BKCNT" msprop:Generator_RowChangedName="A2BKCNTRowChanged" msprop:Generator_RowEvArgName="A2BKCNTRowChangeEvent" msprop:Generator_RowClassName="A2BKCNTRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SSNO" msprop:Generator_ColumnVarNameInTable="columnSSNO" msprop:Generator_ColumnPropNameInRow="SSNO" msprop:Generator_ColumnPropNameInTable="SSNOColumn" msprop:Generator_UserColumnName="SSNO" type="xs:int" />
+              <xs:element name="WRKPERIOD" msprop:Generator_ColumnVarNameInTable="columnWRKPERIOD" msprop:Generator_ColumnPropNameInRow="WRKPERIOD" msprop:Generator_ColumnPropNameInTable="WRKPERIODColumn" msprop:Generator_UserColumnName="WRKPERIOD" type="xs:dateTime" />
+              <xs:element name="A2COUNT" msprop:Generator_ColumnVarNameInTable="columnA2COUNT" msprop:Generator_ColumnPropNameInRow="A2COUNT" msprop:Generator_ColumnPropNameInTable="A2COUNTColumn" msprop:Generator_UserColumnName="A2COUNT" type="xs:short" />
+              <xs:element name="MEMTYPE" msprop:Generator_ColumnVarNameInTable="columnMEMTYPE" msprop:Generator_ColumnPropNameInRow="MEMTYPE" msprop:Generator_ColumnPropNameInTable="MEMTYPEColumn" msprop:Generator_UserColumnName="MEMTYPE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OLDESTHRS" msprop:Generator_ColumnVarNameInTable="columnOLDESTHRS" msprop:Generator_ColumnPropNameInRow="OLDESTHRS" msprop:Generator_ColumnPropNameInTable="OLDESTHRSColumn" msprop:Generator_UserColumnName="OLDESTHRS" type="xs:dateTime" />
+              <xs:element name="PARDTHRS" msprop:Generator_ColumnVarNameInTable="columnPARDTHRS" msprop:Generator_ColumnPropNameInRow="PARDTHRS" msprop:Generator_ColumnPropNameInTable="PARDTHRSColumn" msprop:Generator_UserColumnName="PARDTHRS" type="xs:dateTime" />
+              <xs:element name="PARELG" msprop:Generator_ColumnVarNameInTable="columnPARELG" msprop:Generator_ColumnPropNameInRow="PARELG" msprop:Generator_ColumnPropNameInTable="PARELGColumn" msprop:Generator_UserColumnName="PARELG" type="xs:dateTime" />
+              <xs:element name="DEPDTHRS" msprop:Generator_ColumnVarNameInTable="columnDEPDTHRS" msprop:Generator_ColumnPropNameInRow="DEPDTHRS" msprop:Generator_ColumnPropNameInTable="DEPDTHRSColumn" msprop:Generator_UserColumnName="DEPDTHRS" type="xs:dateTime" />
+              <xs:element name="DEPELG" msprop:Generator_ColumnVarNameInTable="columnDEPELG" msprop:Generator_ColumnPropNameInRow="DEPELG" msprop:Generator_ColumnPropNameInTable="DEPELGColumn" msprop:Generator_UserColumnName="DEPELG" type="xs:dateTime" />
+              <xs:element name="LASTUPDT" msprop:Generator_ColumnVarNameInTable="columnLASTUPDT" msprop:Generator_ColumnPropNameInRow="LASTUPDT" msprop:Generator_ColumnPropNameInTable="LASTUPDTColumn" msprop:Generator_UserColumnName="LASTUPDT" type="xs:dateTime" />
+              <xs:element name="USERID" msprop:Generator_ColumnVarNameInTable="columnUSERID" msprop:Generator_ColumnPropNameInRow="USERID" msprop:Generator_ColumnPropNameInTable="USERIDColumn" msprop:Generator_UserColumnName="USERID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ONLNOPRID" msprop:Generator_ColumnVarNameInTable="columnONLNOPRID" msprop:Generator_ColumnPropNameInRow="ONLNOPRID" msprop:Generator_ColumnPropNameInTable="ONLNOPRIDColumn" msprop:Generator_UserColumnName="ONLNOPRID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ONLSTUPDT" msprop:Generator_ColumnVarNameInTable="columnONLSTUPDT" msprop:Generator_ColumnPropNameInRow="ONLSTUPDT" msprop:Generator_ColumnPropNameInTable="ONLSTUPDTColumn" msprop:Generator_UserColumnName="ONLSTUPDT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="INSTELGSW" msprop:Generator_ColumnVarNameInTable="columnINSTELGSW" msprop:Generator_ColumnPropNameInRow="INSTELGSW" msprop:Generator_ColumnPropNameInTable="INSTELGSWColumn" msprop:Generator_UserColumnName="INSTELGSW" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OVRIDE_RSNCD" msprop:Generator_ColumnVarNameInTable="columnOVRIDE_RSNCD" msprop:Generator_ColumnPropNameInRow="OVRIDE_RSNCD" msprop:Generator_ColumnPropNameInTable="OVRIDE_RSNCDColumn" msprop:Generator_UserColumnName="OVRIDE_RSNCD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CNT_AT_BREAK" msprop:Generator_ColumnVarNameInTable="columnCNT_AT_BREAK" msprop:Generator_ColumnPropNameInRow="CNT_AT_BREAK" msprop:Generator_ColumnPropNameInTable="CNT_AT_BREAKColumn" msprop:Generator_UserColumnName="CNT_AT_BREAK" type="xs:int" minOccurs="0" />
+              <xs:element name="BREAK_DATE" msprop:Generator_ColumnVarNameInTable="columnBREAK_DATE" msprop:Generator_ColumnPropNameInRow="BREAK_DATE" msprop:Generator_ColumnPropNameInTable="BREAK_DATEColumn" msprop:Generator_UserColumnName="BREAK_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FAMILY_ID" msprop:Generator_ColumnVarNameInTable="columnFAMILY_ID" msprop:Generator_ColumnPropNameInRow="FAMILY_ID" msprop:Generator_ColumnPropNameInTable="FAMILY_IDColumn" msprop:Generator_UserColumnName="FAMILY_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="RELATION_ID" msprop:Generator_ColumnVarNameInTable="columnRELATION_ID" msprop:Generator_ColumnPropNameInRow="RELATION_ID" msprop:Generator_ColumnPropNameInTable="RELATION_IDColumn" msprop:Generator_UserColumnName="RELATION_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="CREATE_USERID" msprop:Generator_ColumnVarNameInTable="columnCREATE_USERID" msprop:Generator_ColumnPropNameInRow="CREATE_USERID" msprop:Generator_ColumnPropNameInTable="CREATE_USERIDColumn" msprop:Generator_UserColumnName="CREATE_USERID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CREATE_DATE" msprop:Generator_ColumnVarNameInTable="columnCREATE_DATE" msprop:Generator_ColumnPropNameInRow="CREATE_DATE" msprop:Generator_ColumnPropNameInTable="CREATE_DATEColumn" msprop:Generator_UserColumnName="CREATE_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ACA_HLPR_ELIG_DATE" msprop:Generator_ColumnVarNameInTable="columnACA_HLPR_ELIG_DATE" msprop:Generator_ColumnPropNameInRow="ACA_HLPR_ELIG_DATE" msprop:Generator_ColumnPropNameInTable="ACA_HLPR_ELIG_DATEColumn" msprop:Generator_UserColumnName="ACA_HLPR_ELIG_DATE" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:A2BKCNT" />
+      <xs:field xpath="mstns:SSNO" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

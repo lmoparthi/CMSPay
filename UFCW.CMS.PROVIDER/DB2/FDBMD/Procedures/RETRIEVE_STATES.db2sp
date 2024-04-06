@@ -1,0 +1,53 @@
+-- <ScriptOptions statementSeparator="@"/>
+@
+-- <ScriptOptions errors="off"/>
+@
+-- Drop the procedure if one already exists
+DROP  PROCEDURE FDBMD.RETRIEVE_STATES
+@
+COMMIT
+@
+-- <ScriptOptions errors="on"/>
+@
+-- Create procedure
+CREATE PROCEDURE FDBMD.RETRIEVE_STATES()
+	RESULT SETS 1
+	--LANGUAGE SQL
+	COLLID FODBCOLL
+	--WLM ENVIRONMENT WLMDENV4 
+	STAY RESIDENT YES
+	RUN OPTIONS ''
+--------------------------------------------------------------------------
+-- DB2 SQL procedure
+--------------------------------------------------------------------------
+
+P1: BEGIN
+
+-- Declare variables
+
+
+
+
+-- Declare cursors
+DECLARE RETRIEVE_STATES CURSOR WITH RETURN FOR 
+	SELECT  LOOKUP_STATES.ABBRV,
+			LOOKUP_STATES.STATE
+	FROM    HOURS.LOOKUP_STATES LOOKUP_STATES
+	FOR READ ONLY
+	OPTIMIZE FOR 60 ROWS
+	WITH UR;
+
+--
+
+-- Cursor left open for client application.
+OPEN RETRIEVE_STATES;
+
+
+--
+END P1
+@
+-- <ScriptOptions WLMRefresh="WLMPENV4" />
+@
+-- Grant access privilages to procedure
+GRANT EXECUTE ON PROCEDURE FDBMD.RETRIEVE_STATES TO PUBLIC
+@

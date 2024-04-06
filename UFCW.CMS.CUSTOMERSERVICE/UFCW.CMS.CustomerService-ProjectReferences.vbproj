@@ -1,0 +1,468 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>40028,40031,42030,42104,42105,42106,42107,42108,42109,42353,42354,42355</NoWarn>
+    <DebugType>Full</DebugType>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>false</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>40028,40031,42030,42104,42105,42106,42107,42108,42109,42353,42354,42355</NoWarn>
+    <DebugType>Full</DebugType>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugLocals|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <OutputPath>bin\DebugLocals\</OutputPath>
+    <BaseAddress>285212672</BaseAddress>
+    <DocumentationFile>
+    </DocumentationFile>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>40028,40031,42030,42104,42105,42106,42107,42108,42109,42353,42354,42355</NoWarn>
+    <DebugType>Full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <CodeAnalysisRuleSet>..\..\..\BaseMSRulesminusGlobalization.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath />
+    <SccProvider>
+    </SccProvider>
+    <ProjectGuid>{DAF418F0-3D16-4A5F-BCDA-8DF0DBD73E8F}</ProjectGuid>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>\\ufcwfs1\ufcw\Eval Code\CS Eval\PublishClickOnce\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>true</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>Customer Service %28Eval ClickOnce%29</ProductName>
+    <PublisherName>UFCW</PublisherName>
+    <SuiteName>CMS</SuiteName>
+    <MinimumRequiredVersion>1.472.1.18</MinimumRequiredVersion>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>20</ApplicationRevision>
+    <ApplicationVersion>1.472.1.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <ExcludeDeploymentUrl>true</ExcludeDeploymentUrl>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>40B70A1243220B32B93B07B692AFFE48B0D4E30B</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>UFCW.CMS.CustomerService_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Publish|AnyCPU'">
+    <OutputPath>bin\Publish\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+    <Optimize>true</Optimize>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Sub Main</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>UFCW CMS.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyName>UFCW.CMS.CustomerService</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DDTek.Data.Common, Version=4.3.0.0, Culture=neutral, PublicKeyToken=c84cd5c63851e072, processorArchitecture=MSIL" />
+    <Reference Include="DDTek.DB2, Version=4.3.0.0, Culture=neutral, PublicKeyToken=c84cd5c63851e072, processorArchitecture=MSIL" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccumulatorView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AuditDetailsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerService.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KeyboardHook.vb" />
+    <Compile Include="Message.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="AboutForm.resx">
+      <DependentUpon>AboutForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccumulatorView.resx">
+      <DependentUpon>AccumulatorView.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuditDetailsForm.resx">
+      <DependentUpon>AuditDetailsForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerService.resx">
+      <DependentUpon>CustomerService.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Message.resx">
+      <DependentUpon>Message.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashForm.resx">
+      <DependentUpon>SplashForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="appSettings.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="UFCW CMS.ico" />
+    <None Include="My Project\app.manifest" />
+    <None Include="ProjectBuildScripts\AutoUpdateProjectsMinimumRequiredClickOnceVersion.ps1" />
+    <None Include="ProjectBuildScripts\PreBuild.ps1" />
+    <None Include="ProjectBuildScripts\SetConfig2DB2P.ps1" />
+    <None Include="ProjectBuildScripts\UFCW.CMS.CustomerService.ps1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(SolutionDir)Dependencies\*">
+      <Link>%(Filename)%(Extension)</Link>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+      <Visible>false</Visible>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataGridPlus\DataGridPlus.vbproj">
+      <Project>{ee57884b-70a4-4f52-b418-e9f0a76f6473}</Project>
+      <Name>DataGridPlus</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FileNetWCFWrapper\FileNetWCFWrapper.vbproj">
+      <Project>{4a970b6c-cb67-42d6-9bd1-bb02d1b12eb2}</Project>
+      <Name>FileNetWCFWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ImageSelector\ImageSelector.vbproj">
+      <Project>{0e9bf6a4-6ecc-47da-9eb3-bdc04db562f9}</Project>
+      <Name>ImageSelector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCW.CMS.AccumulatorControl\UFCW.CMS.AccumulatorControl.vbproj">
+      <Project>{09a3bba0-6778-4917-93bd-fbe7ecada82f}</Project>
+      <Name>UFCW.CMS.AccumulatorControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCW.CMS.ACCUMULATOR\UFCW.CMS.Accumulator.vbproj">
+      <Project>{07cd7164-bacc-4d1c-b4b3-bbfc9098854c}</Project>
+      <Name>UFCW.CMS.Accumulator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCW.CMS.ALERTMANAGER\UFCW.CMS.AlertManager.vbproj">
+      <Project>{7797b898-e04f-4fdb-a1a5-d2bc9a6b0cb0}</Project>
+      <Name>UFCW.CMS.AlertManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCW.CMS.ANNOTATIONControl\UFCW.CMS.AnnotationEditor.vbproj">
+      <Project>{cc556172-0e56-4814-b79e-4abdeddc6962}</Project>
+      <Name>UFCW.CMS.AnnotationEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCW.CMS.BINDER\UFCW.CMS.Binder.vbproj">
+      <Project>{9f10495a-d947-4c86-b4e1-91b4d0b9de46}</Project>
+      <Name>UFCW.CMS.Binder</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCW.CMS.CLAIMDOCUMENTHISTORY\UFCW.CMS.ClaimDocumentHistory.vbproj">
+      <Project>{20758691-f241-4692-8eec-2e56ad35ab7a}</Project>
+      <Name>UFCW.CMS.ClaimDocumentHistory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCW.CMS.COBControl\UFCW.CMS.COBControl.vbproj">
+      <Project>{90e050e2-c922-4b0a-b2b7-68927ab32d45}</Project>
+      <Name>UFCW.CMS.COBControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCW.CMS.CUSTOMERSERVICEControl\UFCW.CMS.CustomerServiceControl.vbproj">
+      <Project>{91e97fd9-347b-43f0-92a5-bd1b746c59c9}</Project>
+      <Name>UFCW.CMS.CustomerServiceControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCW.CMS.DAL\UFCW.CMS.DAL.vbproj">
+      <Project>{378ef1dc-a863-4262-94ef-43a7a1d92de6}</Project>
+      <Name>UFCW.CMS.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCW.CMS.ELIGIBILITYControl\UFCW.CMS.Eligibility.vbproj">
+      <Project>{0f8183dc-dd91-493d-bba7-fe504634706d}</Project>
+      <Name>UFCW.CMS.Eligibility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCW.CMS.FREETEXTControl\UFCW.CMS.FreeText.vbproj">
+      <Project>{b7416cb4-0dbf-42fc-9674-f8f608e4ca0d}</Project>
+      <Name>UFCW.CMS.FreeText</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCW.CMS.HistoryViewerControl\UFCW.CMS.HistoryViewer.vbproj">
+      <Project>{6300b8b3-f47f-4f36-88f9-2ee61dd87bff}</Project>
+      <Name>UFCW.CMS.HistoryViewer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCW.CMS.HoursControl\UFCW.CMS.Hours.vbproj">
+      <Project>{48334597-8c66-4eb3-ba30-bbcb9cf7c2cd}</Project>
+      <Name>UFCW.CMS.Hours</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCW.CMS.HRAControl\UFCW.CMS.HRAControl.vbproj">
+      <Project>{6f97f91e-05ad-4377-8570-0f6db3cc8907}</Project>
+      <Name>UFCW.CMS.HRAControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCW.CMS.MemberSearchControl\UFCW.CMS.MemberSearch.vbproj">
+      <Project>{31e67307-7ef5-48ae-a463-b54091160658}</Project>
+      <Name>UFCW.CMS.MemberSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCW.CMS.PARTICIPANTControl\UFCW.CMS.PARTICIPANTControl.vbproj">
+      <Project>{3db36492-39f1-45e0-a759-f6d585f1dd54}</Project>
+      <Name>UFCW.CMS.PARTICIPANTControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCW.CMS.PLAN\UFCW.CMS.Plan.vbproj">
+      <Project>{08d607b7-37d0-4e90-b6f9-8c62b7f8545d}</Project>
+      <Name>UFCW.CMS.Plan</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCW.CMS.PremiumsControl\UFCW.CMS.PremiumsControl.vbproj">
+      <Project>{46a5bf5f-415e-4810-8bf3-ba81a606f91c}</Project>
+      <Name>UFCW.CMS.PremiumsControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCW.CMS.PrescriptionsControl\UFCW.CMS.Prescriptions.vbproj">
+      <Project>{7ce67568-daff-4264-823e-2f4508d49671}</Project>
+      <Name>UFCW.CMS.Prescriptions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCW.CMS.PROCESSINGENGINE\UFCW.CMS.ProcessingEngine.vbproj">
+      <Project>{27c37e9b-63a4-49e5-87ae-a55955368ee4}</Project>
+      <Name>UFCW.CMS.ProcessingEngine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCW.CMS.PROVIDERCONTROL\UFCW.CMS.ProviderControl.vbproj">
+      <Project>{4d4ca6ee-6ee8-42fd-a68d-eeb934d228bc}</Project>
+      <Name>UFCW.CMS.ProviderControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCW.CMS.SharedInterfaces\UFCW.CMS.SharedInterfaces.vbproj">
+      <Project>{f152d5f9-e10d-452d-a843-1f27c2574fd9}</Project>
+      <Name>UFCW.CMS.SharedInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCW.CMS.UFCWDocsControl\UFCW.CMS.UFCWDocs.vbproj">
+      <Project>{0955d9c0-99c6-4ac6-b475-d13de7fdd911}</Project>
+      <Name>UFCW.CMS.UFCWDocs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCW.REGMASTER.AlertControl\UFCW.REGMASTER.AlertControl.vbproj">
+      <Project>{e0b912ed-90cd-4168-b96b-2cdc46a0d043}</Project>
+      <Name>UFCW.REGMASTER.AlertControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCW.REGMASTER.CoverageHistoryControl\UFCW.REGMASTER.CoverageHistory.vbproj">
+      <Project>{b75234a9-5c96-4050-8a29-ce01a7142a67}</Project>
+      <Name>UFCW.REGMASTER.CoverageHistory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCW.REGMASTER.HISTORYControl\UFCW.REGMASTER.History.vbproj">
+      <Project>{67cc517a-b141-4dee-946a-73c6c5522640}</Project>
+      <Name>UFCW.REGMASTER.History</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCW.REGMASTER.RemarksControl\UFCW.REGMASTER.RemarksControl.vbproj">
+      <Project>{990eacdf-1b8e-4750-93dc-9adfe6c4bc3b}</Project>
+      <Name>UFCW.REGMASTER.RemarksControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCW.RegMasterDAL\UFCW.RegMasterDAL.vbproj">
+      <Project>{1db1fa39-8a5c-4dee-a47b-5dec11912a6d}</Project>
+      <Name>UFCW.RegMasterDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCWClone\UFCWClone.vbproj">
+      <Project>{ff828be4-0360-4e70-ab3e-36e04bfc4727}</Project>
+      <Name>UFCWClone</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCWCryptor\UFCWCryptor.vbproj">
+      <Project>{610bab67-27d6-4e6d-b4b3-90769fd1eb84}</Project>
+      <Name>UFCWCryptor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCWEMail\UFCWEMail.vbproj">
+      <Project>{29e92272-0d8e-43d5-be84-3cdee5d65da5}</Project>
+      <Name>UFCWEMail</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCWException\UFCWException.vbproj">
+      <Project>{78ee1c94-91b9-4671-b0be-7a6ecfa86b2e}</Project>
+      <Name>UFCWException</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCWGeneralAD\UFCWGeneralAD.vbproj">
+      <Project>{ecc7a924-2f43-4816-ad73-314611f04177}</Project>
+      <Name>UFCWGeneralAD</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UFCWGeneral\UFCWGeneral.vbproj">
+      <Project>{bb199520-51d4-4a6a-8a94-123b39d139d6}</Project>
+      <Name>UFCWGeneral</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoUpdateProjectsMinimumRequiredClickOnceVersion">
+      <Version>1.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="ClosedXML">
+      <Version>0.97.0</Version>
+    </PackageReference>
+    <PackageReference Include="DocumentFormat.OpenXml">
+      <Version>2.20.0</Version>
+    </PackageReference>
+    <PackageReference Include="EnterpriseLibrary.Common">
+      <Version>6.0.1304</Version>
+    </PackageReference>
+    <PackageReference Include="EnterpriseLibrary.Data">
+      <Version>6.0.1304</Version>
+    </PackageReference>
+    <PackageReference Include="EnterpriseLibrary.ExceptionHandling">
+      <Version>6.0.1304</Version>
+    </PackageReference>
+    <PackageReference Include="EnterpriseLibrary.ExceptionHandling.Logging">
+      <Version>6.0.1304</Version>
+    </PackageReference>
+    <PackageReference Include="EnterpriseLibrary.Logging">
+      <Version>6.0.1304</Version>
+    </PackageReference>
+    <PackageReference Include="EnterpriseLibrary.Security.Cryptography">
+      <Version>5.0.505</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers">
+      <Version>8.0.0</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+		powershell.exe -ExecutionPolicy Bypass -File "$(ProjectDir)ProjectBuildScripts\PreBuild.ps1" -SolutionDir "$(SolutionDir)\" -ProjectName "$(ProjectName)"  -ProjectDir "$(ProjectDir)\" -TargetDir "$(TargetDir)\" -TargetPath "$(TargetPath)" -ConfigurationName "$(ConfigurationName)"
+	    powershell.exe -ExecutionPolicy Unrestricted -File "$(ProjectDir)ProjectBuildScripts\SetConfig2DB2P.ps1"  -SolutionDir "$(SolutionDir)\" -ProjectName "$(ProjectName)"  -ProjectDir "$(ProjectDir)\" -TargetDir "$(TargetDir)\" -TargetPath "$(TargetPath)" -ConfigurationName "$(ConfigurationName)"
+	</PreBuildEvent>
+    <PostBuildEvent>if not $(ConfigurationName) == Publish ( powershell -ExecutionPolicy Unrestricted -File "$(ProjectDir)ProjectBuildScripts\UFCW.CMS.CustomerService.ps1"  -SolutionDir "$(SolutionDir)\" -ProjectName "$(ProjectName)"  -ProjectDir "$(ProjectDir)\" -TargetDir "$(TargetDir)\" -TargetPath "$(TargetPath)" -ConfigurationName "$(ConfigurationName)" )</PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DentalAccumulatorDetailsDataGridStyle>
+  <ColumnCount>6</ColumnCount>
+  <GridLineStyle>False</GridLineStyle>
+  <GridDefaultSort>DATE_OF_SERVICE</GridDefaultSort>
+  <Column>
+    <DefaultOrder>1</DefaultOrder>
+    <DefaultCharWidth>11</DefaultCharWidth>
+    <Mapping>DATE_OF_SERVICE</Mapping>
+    <HeaderText>Date Of Service</HeaderText>
+    <Type>Text</Type>
+    <Format>MM-dd-yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>2</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>CHARGED_AMT</Mapping>
+    <HeaderText>Charged Amt</HeaderText>
+    <Type>Text</Type>
+    <Format>c</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>3</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>PAID_AMT</Mapping>
+    <HeaderText>Paid Amt</HeaderText>
+    <Type>Text</Type>
+    <Format>c</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>4</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>PREV_YR_RO_PAID_AMT</Mapping>
+    <HeaderText>Rollover Paid Amt</HeaderText>
+    <Type>Text</Type>
+    <Format>c</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>5</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>CURR_YR_PAID_AMT</Mapping>
+    <HeaderText>Current Year Paid Amt</HeaderText>
+    <Type>Text</Type>
+    <Format>c</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>6</DefaultOrder>
+    <DefaultCharWidth>8</DefaultCharWidth>
+    <Mapping>DED_APPLIED</Mapping>
+    <HeaderText>Deductible Applied</HeaderText>
+    <Type>Text</Type>
+    <Format>c</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+</DentalAccumulatorDetailsDataGridStyle>

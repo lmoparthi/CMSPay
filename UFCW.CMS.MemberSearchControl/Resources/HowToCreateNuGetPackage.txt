@@ -1,0 +1,20 @@
+﻿https://learn.microsoft.com/en-us/azure/devops/artifacts/get-started-nuget?view=azure-devops&tabs=windows
+
+Make sure you have Nuget.exe installed to path used in commands
+Change Name & version as needed
+
+Tools\Command Line\Developer Command Prompt
+c:\NuGet\nuget spec UFCW.CMS.MemberSearch.vbproj  
+
+Add dependencies if necassary to *.nuspec file
+
+    <dependency id="UFCWGeneral" version="[1.0.0,2.0.0)" />
+    <dependency id="UFCWGeneralAD" version="[1.0.0,2.0.0)" />
+    <dependency id="UFCWException" version="[1.0.0,2.0.0)" />
+    <dependency id="UFCWEmail" version="[1.0.0,2.0.0)" />
+    <dependency id="DataGridPlus" version="[1.0.0,2.0.0)" />
+    <dependency id="UFCW.CMS.DAL" version="[1.0.0,2.0.0)" />
+
+
+c:\NuGet\nuget pack UFCW.CMS.MemberSearch.vbproj -Properties Configuration=Release  
+c:\NuGet\nuget push UFCW.CMS.MemberSearch.1.7.48.27188.nupkg -src http://ufcwdevops/SCUFCWFunds/FundApps/_packaging/UFCWNuGetPackages/nuget/v3/index.json -ApiKey UFCW.CMS.MemberSearch

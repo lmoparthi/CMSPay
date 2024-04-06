@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/IDMObjects" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/IDMObjects" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:simpleType name="idmObjectType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="idmObjTypeAny" />
+      <xs:enumeration value="idmObjTypeDocument" />
+      <xs:enumeration value="idmObjTypeFolder" />
+      <xs:enumeration value="idmObjTypeAnnotation" />
+      <xs:enumeration value="idmObjTypeLibrary" />
+      <xs:enumeration value="idmObjTypeExternalObj" />
+      <xs:enumeration value="idmObjTypeNeighborhood" />
+      <xs:enumeration value="idmObjTypeEntireNetwork" />
+      <xs:enumeration value="idmObjTypeLocalCache">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="idmObjTypeServerCache">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">13</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="idmObjTypeObjectSet">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">14</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="idmObjTypeStoredSearch">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">12</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="idmObjTypeCustomObject">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">15</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="idmObjTypeUser">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">16</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="idmObjTypeGroup">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">17</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="idmObjTypeQueue">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">19</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="idmObjTypeQueueQuerySpecification">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">20</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="idmObjTypeQueueEntries">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">21</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="idmObjTypeQueueEntry">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">22</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="idmObjTypeQueueBrowseSet">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">23</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="idmObjTypeRemotePrinter">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">26</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="idmObjTypePropDesc">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">24</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="idmObjTypeClassDesc">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">25</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="idmObjTypeQueueWorkspace">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">27</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="idmObjTypeLink">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">29</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="idmObjTypeRenditionEngine">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">30</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="idmObjTypeStyleTemplate">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">31</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="idmObjTypeRelationship">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">34</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="idmObjTypePrintFaxService">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">35</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="idmObjectType" nillable="true" type="tns:idmObjectType" />
+  <xs:simpleType name="idmTypeID">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="idmTypeEmpty" />
+      <xs:enumeration value="idmTypeNull" />
+      <xs:enumeration value="idmTypeShort" />
+      <xs:enumeration value="idmTypeLong" />
+      <xs:enumeration value="idmTypeSingle" />
+      <xs:enumeration value="idmTypeDouble" />
+      <xs:enumeration value="idmTypeCurrency" />
+      <xs:enumeration value="idmTypeDate" />
+      <xs:enumeration value="idmTypeString" />
+      <xs:enumeration value="idmTypeObject" />
+      <xs:enumeration value="idmTypeError" />
+      <xs:enumeration value="idmTypeBoolean" />
+      <xs:enumeration value="idmTypeVariant" />
+      <xs:enumeration value="idmTypeUnknown" />
+      <xs:enumeration value="idmTypeCharacter">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">16</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="idmTypeByte">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">17</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="idmTypeUnsignedShort">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">18</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="idmTypeUnsignedLong">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">19</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="idmTypeGuid">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">72</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="idmTypeArray">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8192</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="idmTypeID" nillable="true" type="tns:idmTypeID" />
+  <xs:simpleType name="idmPrintFaxDirectionType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="idmPrintFaxDirectionForward" />
+      <xs:enumeration value="idmPrintFaxDirectionBackward" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="idmPrintFaxDirectionType" nillable="true" type="tns:idmPrintFaxDirectionType" />
+  <xs:complexType name="ArrayOfidmPrintFaxPaperSizeType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="idmPrintFaxPaperSizeType" type="tns:idmPrintFaxPaperSizeType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfidmPrintFaxPaperSizeType" nillable="true" type="tns:ArrayOfidmPrintFaxPaperSizeType" />
+  <xs:simpleType name="idmPrintFaxPaperSizeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="idmPrintFaxPaperSizeUnknown" />
+      <xs:enumeration value="idmPrintFaxPaperSizeLetter" />
+      <xs:enumeration value="idmPrintFaxPaperSizeLegal" />
+      <xs:enumeration value="idmPrintFaxPaperSizeB" />
+      <xs:enumeration value="idmPrintFaxPaperSizeC" />
+      <xs:enumeration value="idmPrintFaxPaperSizeD" />
+      <xs:enumeration value="idmPrintFaxPaperSizeE" />
+      <xs:enumeration value="idmPrintFaxPaperSizeA0" />
+      <xs:enumeration value="idmPrintFaxPaperSizeA1" />
+      <xs:enumeration value="idmPrintFaxPaperSizeA2" />
+      <xs:enumeration value="idmPrintFaxPaperSizeA3" />
+      <xs:enumeration value="idmPrintFaxPaperSizeA4" />
+      <xs:enumeration value="idmPrintFaxPaperSizeA5" />
+      <xs:enumeration value="idmPrintFaxPaperSizeB4" />
+      <xs:enumeration value="idmPrintFaxPaperSizeB5" />
+      <xs:enumeration value="idmPrintFaxPaperSize18x24" />
+      <xs:enumeration value="idmPrintFaxPaperSizeTop" />
+      <xs:enumeration value="idmPrintFaxPaperSizeBottom" />
+      <xs:enumeration value="idmPrintFaxPaperSizeThird" />
+      <xs:enumeration value="idmPrintFaxPaperSizeDontCare" />
+      <xs:enumeration value="idmPrintFaxPaperSizeHalfLetter" />
+      <xs:enumeration value="idmPrintFaxPaperSizeBestAvailable" />
+      <xs:enumeration value="idmPrintFaxPaperSize10x14" />
+      <xs:enumeration value="idmPrintFaxPaperSizeGlobalDefault" />
+      <xs:enumeration value="idmPrintFaxPaperSizeExecutive" />
+      <xs:enumeration value="idmPrintFaxPaperSizeMaxPaperSize">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">24</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="idmPrintFaxPaperSizeType" nillable="true" type="tns:idmPrintFaxPaperSizeType" />
+  <xs:simpleType name="idmPrintFaxQueueType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="idmPrintFaxQueueAll" />
+      <xs:enumeration value="idmPrintFaxQueuePrint" />
+      <xs:enumeration value="idmPrintFaxQueueFax" />
+      <xs:enumeration value="idmPrintFaxQueueUnknown">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="idmPrintFaxQueueType" nillable="true" type="tns:idmPrintFaxQueueType" />
+  <xs:simpleType name="idmPrintFaxQueueStatusType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="idmPrintFaxQueueStatusUnknown" />
+      <xs:enumeration value="idmPrintFaxQueueStatusDisabled" />
+      <xs:enumeration value="idmPrintFaxQueueStatusAvailable" />
+      <xs:enumeration value="idmPrintFaxQueueStatusNeedsAttention" />
+      <xs:enumeration value="idmPrintFaxQueueStatusNeedsService" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="idmPrintFaxQueueStatusType" nillable="true" type="tns:idmPrintFaxQueueStatusType" />
+  <xs:simpleType name="idmSysTypeOptions">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="idmSysTypeIS">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="idmSysTypeDS">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="idmSysTypeDMA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="idmSysTypeOptions" nillable="true" type="tns:idmSysTypeOptions" />
+</xs:schema>

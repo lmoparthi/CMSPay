@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PlaceOfServiceDataGridStyle>
+  <ColumnCount>2</ColumnCount>
+  <GridLineStyle>False</GridLineStyle>
+  <Column>
+    <DefaultOrder>1</DefaultOrder>
+    <DefaultCharWidth>5</DefaultCharWidth>
+    <Mapping>PLACE_OF_SERV_VALUE</Mapping>
+    <HeaderText>Code</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>2</DefaultOrder>
+    <DefaultCharWidth>470</DefaultCharWidth>
+    <Mapping>FULL_DESC</Mapping>
+    <HeaderText>Description</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+</PlaceOfServiceDataGridStyle>

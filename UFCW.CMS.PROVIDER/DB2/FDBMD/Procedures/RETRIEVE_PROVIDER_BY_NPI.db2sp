@@ -1,0 +1,64 @@
+-- <ScriptOptions statementSeparator="@"/>
+@
+-- <ScriptOptions errors="off"/>
+@
+-- Drop the procedure if one already exists
+DROP  PROCEDURE FDBMD.RETRIEVE_PROVIDER_BY_NPI
+@
+COMMIT
+@
+-- <ScriptOptions errors="on"/>
+@
+-- Create procedure
+CREATE PROCEDURE FDBMD.RETRIEVE_PROVIDER_BY_NPI(
+		IN	vNPI		DECIMAL ( 10,0 ))
+	RESULT SETS 1
+	--LANGUAGE SQL
+	COLLID FODBCOLL
+	--WLM ENVIRONMENT WLMDENV4 STAY RESIDENT YES
+	RUN OPTIONS ''
+--------------------------------------------------------------------------
+-- DB2 SQL procedure
+--------------------------------------------------------------------------
+
+P1: BEGIN
+
+-- Declare variables
+
+
+
+
+-- Declare cursors
+DECLARE PROVIDERSUMMARY CURSOR WITH RETURN FOR 
+	SELECT	PROVIDER.PROVIDER_ID,
+			PROVIDER.TAXID_TYPE || CAST(PROVIDER.TAXID AS CHAR(9)) "TypeAndTaxID",
+			PROVIDER.TAXID,
+			PROVIDER.TAXID_TYPE,
+			PROVIDER.NAME1,
+			PROVIDER.NAME2,
+			PROVIDER.NPI,
+			PROVIDER.COMMENT_ID,
+			PROVIDER.ONLINE_DATE "ProviderTimestamp",
+			PROVIDER.ONLINE_USERID "ProviderUserID",
+			ALERT_VALUES.DESCRIPTION,
+			PROVIDER.ELECTRONIC_USE_ONLY_SW
+	FROM	FDBMD.PROVIDER PROVIDER  LEFT JOIN
+			FDBMD.ALERT_VALUES ALERT_VALUES  ON ALERT_VALUES.ALERT =  PROVIDER.ALERT
+	WHERE	PROVIDER.NPI = vNPI
+	OPTIMIZE FOR 1 ROW;
+
+--
+
+-- Cursor left open for client application.
+OPEN PROVIDERSUMMARY;
+
+
+--
+
+END P1
+@
+-- <ScriptOptions WLMRefresh="WLMDENV4" />
+@
+-- Grant access privilages to procedure
+GRANT EXECUTE ON PROCEDURE FDBMD.RETRIEVE_PROVIDER_BY_NPI TO PUBLIC
+@

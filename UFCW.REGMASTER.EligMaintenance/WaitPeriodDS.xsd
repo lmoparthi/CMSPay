@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="WaitPeriodDS" targetNamespace="http://tempuri.org/WaitPeriodDS.xsd" xmlns:mstns="http://tempuri.org/WaitPeriodDS.xsd" xmlns="http://tempuri.org/WaitPeriodDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="WaitPeriodDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="WaitPeriodDS" msprop:Generator_UserDSName="WaitPeriodDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="WAITING_PERIOD" msprop:Generator_TableClassName="WAITING_PERIODDataTable" msprop:Generator_TableVarName="tableWAITING_PERIOD" msprop:Generator_RowChangedName="WAITING_PERIODRowChanged" msprop:Generator_TablePropName="WAITING_PERIOD" msprop:Generator_RowDeletingName="WAITING_PERIODRowDeleting" msprop:Generator_RowChangingName="WAITING_PERIODRowChanging" msprop:Generator_RowEvHandlerName="WAITING_PERIODRowChangeEventHandler" msprop:Generator_RowDeletedName="WAITING_PERIODRowDeleted" msprop:Generator_RowClassName="WAITING_PERIODRow" msprop:Generator_UserTableName="WAITING_PERIOD" msprop:Generator_RowEvArgName="WAITING_PERIODRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SSNO" msprop:Generator_ColumnVarNameInTable="columnSSNO" msprop:Generator_ColumnPropNameInRow="SSNO" msprop:Generator_ColumnPropNameInTable="SSNOColumn" msprop:Generator_UserColumnName="SSNO" type="xs:int" />
+              <xs:element name="CONSEC_MO_SW" msprop:Generator_ColumnVarNameInTable="columnCONSEC_MO_SW" msprop:Generator_ColumnPropNameInRow="CONSEC_MO_SW" msprop:Generator_ColumnPropNameInTable="CONSEC_MO_SWColumn" msprop:Generator_UserColumnName="CONSEC_MO_SW" type="xs:decimal" />
+              <xs:element name="CONSEC_MO_DATE" msprop:Generator_ColumnVarNameInTable="columnCONSEC_MO_DATE" msprop:Generator_ColumnPropNameInRow="CONSEC_MO_DATE" msprop:Generator_ColumnPropNameInTable="CONSEC_MO_DATEColumn" msprop:Generator_UserColumnName="CONSEC_MO_DATE" type="xs:dateTime" />
+              <xs:element name="ELGQUAL_DATE" msprop:Generator_ColumnVarNameInTable="columnELGQUAL_DATE" msprop:Generator_ColumnPropNameInRow="ELGQUAL_DATE" msprop:Generator_ColumnPropNameInTable="ELGQUAL_DATEColumn" msprop:Generator_UserColumnName="ELGQUAL_DATE" type="xs:dateTime" />
+              <xs:element name="WAITPER_DATE" msprop:Generator_ColumnVarNameInTable="columnWAITPER_DATE" msprop:Generator_ColumnPropNameInRow="WAITPER_DATE" msprop:Generator_ColumnPropNameInTable="WAITPER_DATEColumn" msprop:Generator_UserColumnName="WAITPER_DATE" type="xs:dateTime" />
+              <xs:element name="WAIT_MO_CNTR" msprop:Generator_ColumnVarNameInTable="columnWAIT_MO_CNTR" msprop:Generator_ColumnPropNameInRow="WAIT_MO_CNTR" msprop:Generator_ColumnPropNameInTable="WAIT_MO_CNTRColumn" msprop:Generator_UserColumnName="WAIT_MO_CNTR" type="xs:int" />
+              <xs:element name="WAIT_MO_SW" msprop:Generator_ColumnVarNameInTable="columnWAIT_MO_SW" msprop:Generator_ColumnPropNameInRow="WAIT_MO_SW" msprop:Generator_ColumnPropNameInTable="WAIT_MO_SWColumn" msprop:Generator_UserColumnName="WAIT_MO_SW" type="xs:decimal" />
+              <xs:element name="USERID" msprop:Generator_ColumnVarNameInTable="columnUSERID" msprop:Generator_ColumnPropNameInRow="USERID" msprop:Generator_ColumnPropNameInTable="USERIDColumn" msprop:Generator_UserColumnName="USERID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LASTUPDT" msprop:Generator_ColumnVarNameInTable="columnLASTUPDT" msprop:Generator_ColumnPropNameInRow="LASTUPDT" msprop:Generator_ColumnPropNameInTable="LASTUPDTColumn" msprop:Generator_UserColumnName="LASTUPDT" type="xs:dateTime" />
+              <xs:element name="ONLNOPRID" msprop:Generator_ColumnVarNameInTable="columnONLNOPRID" msprop:Generator_ColumnPropNameInRow="ONLNOPRID" msprop:Generator_ColumnPropNameInTable="ONLNOPRIDColumn" msprop:Generator_UserColumnName="ONLNOPRID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ONLSTUPDT" msprop:Generator_ColumnVarNameInTable="columnONLSTUPDT" msprop:Generator_ColumnPropNameInRow="ONLSTUPDT" msprop:Generator_ColumnPropNameInTable="ONLSTUPDTColumn" msprop:Generator_UserColumnName="ONLSTUPDT" type="xs:dateTime" />
+              <xs:element name="FAMILY_ID" msprop:Generator_ColumnVarNameInTable="columnFAMILY_ID" msprop:Generator_ColumnPropNameInRow="FAMILY_ID" msprop:Generator_ColumnPropNameInTable="FAMILY_IDColumn" msprop:Generator_UserColumnName="FAMILY_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="RELATION_ID" msprop:Generator_ColumnVarNameInTable="columnRELATION_ID" msprop:Generator_ColumnPropNameInRow="RELATION_ID" msprop:Generator_ColumnPropNameInTable="RELATION_IDColumn" msprop:Generator_UserColumnName="RELATION_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="CREATE_USERID" msprop:Generator_ColumnVarNameInTable="columnCREATE_USERID" msprop:Generator_ColumnPropNameInRow="CREATE_USERID" msprop:Generator_ColumnPropNameInTable="CREATE_USERIDColumn" msprop:Generator_UserColumnName="CREATE_USERID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CREATE_DATE" msprop:Generator_ColumnVarNameInTable="columnCREATE_DATE" msprop:Generator_ColumnPropNameInRow="CREATE_DATE" msprop:Generator_ColumnPropNameInTable="CREATE_DATEColumn" msprop:Generator_UserColumnName="CREATE_DATE" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:WAITING_PERIOD" />
+      <xs:field xpath="mstns:SSNO" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

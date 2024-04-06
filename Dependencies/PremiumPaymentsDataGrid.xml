@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PremiumPaymentsDataGridStyle>
+  <ColumnCount>32</ColumnCount>
+  <GridLineStyle>False</GridLineStyle>
+  <GridDefaultSort>PSTPERIOD DESC</GridDefaultSort>
+  <Column>
+    <DefaultOrder>1</DefaultOrder>
+    <DefaultCharWidth>9</DefaultCharWidth>
+    <Mapping>FAMILY_ID</Mapping>
+    <HeaderText>Family ID</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+   <Column>
+    <DefaultOrder>2</DefaultOrder>
+    <DefaultCharWidth>11</DefaultCharWidth>
+    <Mapping>PSTPERIOD</Mapping>
+    <HeaderText>Posting Period</HeaderText>
+    <Type>Text</Type>
+    <Format>MM/dd/yyyy</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>3</DefaultOrder>
+    <DefaultCharWidth>15</DefaultCharWidth>
+    <Mapping>MEMSTATA</Mapping>
+    <HeaderText>Medical Status After</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>4</DefaultOrder>
+    <DefaultCharWidth>16</DefaultCharWidth>
+    <Mapping>MEMSTATB</Mapping>
+    <HeaderText>Medical Status Before</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>5</DefaultOrder>
+    <DefaultCharWidth>18</DefaultCharWidth>
+    <Mapping>ACCTNOA</Mapping>
+    <HeaderText>Account# After</HeaderText>
+    <Type>Text</Type>
+    <Format>00000</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>6</DefaultOrder>
+    <DefaultCharWidth>18</DefaultCharWidth>
+    <Mapping>ACCTNOB</Mapping>
+    <HeaderText>Account# Before</HeaderText>
+    <Type>Text</Type>
+    <Format>00000</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>7</DefaultOrder>
+    <DefaultCharWidth>18</DefaultCharWidth>
+    <Mapping>PREM_TYPEA</Mapping>
+    <HeaderText>Premium Type After</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>8</DefaultOrder>
+    <DefaultCharWidth>18</DefaultCharWidth>
+    <Mapping>PREM_TYPEB</Mapping>
+    <HeaderText>Premium Type Before</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>9</DefaultOrder>
+    <DefaultCharWidth>18</DefaultCharWidth>
+    <Mapping>PREM_MEDCA</Mapping>
+    <HeaderText>Medical Premium After</HeaderText>
+    <Type>Text</Type>
+    <Format>c</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>10</DefaultOrder>
+    <DefaultCharWidth>18</DefaultCharWidth>
+    <Mapping>PREM_MEDCB</Mapping>
+    <HeaderText>Medical Premium Before</HeaderText>
+    <Type>Text</Type>
+    <Format>c</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>11</DefaultOrder>
+    <DefaultCharWidth>18</DefaultCharWidth>
+    <Mapping>PREM_PLANA</Mapping>
+    <HeaderText>Medical Plan After</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>12</DefaultOrder>
+    <DefaultCharWidth>18</DefaultCharWidth>
+    <Mapping>PREM_PLANB</Mapping>
+    <HeaderText>Medical Plan Before</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>13</DefaultOrder>
+    <DefaultCharWidth>18</DefaultCharWidth>
+    <Mapping>DENT_PLANA</Mapping>
+    <HeaderText>Dental Plan After</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>14</DefaultOrder>
+    <DefaultCharWidth>18</DefaultCharWidth>
+    <Mapping>DENT_PLANB</Mapping>
+    <HeaderText>Dental Plan Before</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>15</DefaultOrder>
+    <DefaultCharWidth>18</DefaultCharWidth>
+    <Mapping>PREMAMTA</Mapping>
+    <HeaderText>Premium Amt After</HeaderText>
+    <Type>Text</Type>
+    <Format>c</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>16</DefaultOrder>
+    <DefaultCharWidth>18</DefaultCharWidth>
+    <Mapping>PREMAMTB</Mapping>
+    <HeaderText>Premium Amt Before</HeaderText>
+    <Type>Text</Type>
+    <Format>c</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>17</DefaultOrder>
+    <DefaultCharWidth>13</DefaultCharWidth>
+    <Mapping>DENTAL_COVA</Mapping>
+    <HeaderText>Dental Coverage After</HeaderText>
+    <Type>Text</Type>
+    <Format>Boolean</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>18</DefaultOrder>
+    <DefaultCharWidth>15</DefaultCharWidth>
+    <Mapping>DENTAL_COVB</Mapping>
+    <HeaderText>Dental Coverage Before</HeaderText>
+    <Type>Text</Type>
+    <Format>Boolean</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>19</DefaultOrder>
+    <DefaultCharWidth>12</DefaultCharWidth>
+    <Mapping>DENTAMTA</Mapping>
+    <HeaderText>Dental Amt After</HeaderText>
+    <Type>Text</Type>
+    <Format>c</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>20</DefaultOrder>
+    <DefaultCharWidth>11</DefaultCharWidth>
+    <Mapping>DENTAMTB</Mapping>
+    <HeaderText>Dental Amt Before</HeaderText>
+    <Type>Text</Type>
+    <Format>c</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>21</DefaultOrder>
+    <DefaultCharWidth>13</DefaultCharWidth>
+    <Mapping>PREMPAIDA</Mapping>
+    <HeaderText>Premium Paid After</HeaderText>
+    <Type>Text</Type>
+    <Format>c</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>22</DefaultOrder>
+    <DefaultCharWidth>11</DefaultCharWidth>
+    <Mapping>PREMPAIDB</Mapping>
+    <HeaderText>Premium Paid Before</HeaderText>
+    <Type>Text</Type>
+    <Format>c</Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>23</DefaultOrder>
+    <DefaultCharWidth>13</DefaultCharWidth>
+    <Mapping>PAY_TYPEA</Mapping>
+    <HeaderText>Payment Type After</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>24</DefaultOrder>
+    <DefaultCharWidth>13</DefaultCharWidth>
+    <Mapping>PAY_TYPEB</Mapping>
+    <HeaderText>Payment Type Before</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>25</DefaultOrder>
+    <DefaultCharWidth>13</DefaultCharWidth>
+    <Mapping>BAL_MEDA</Mapping>
+    <HeaderText>Medical Balance After</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>26</DefaultOrder>
+    <DefaultCharWidth>13</DefaultCharWidth>
+    <Mapping>BAL_MEDB</Mapping>
+    <HeaderText>Medical Balance Before</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>27</DefaultOrder>
+    <DefaultCharWidth>13</DefaultCharWidth>
+    <Mapping>BAL_DENTA</Mapping>
+    <HeaderText>Dental Balance After</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>28</DefaultOrder>
+    <DefaultCharWidth>13</DefaultCharWidth>
+    <Mapping>BAL_DENTB</Mapping>
+    <HeaderText>Dental Balance Before</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>29</DefaultOrder>
+    <DefaultCharWidth>13</DefaultCharWidth>
+    <Mapping>ACTION</Mapping>
+    <HeaderText>Action</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>30</DefaultOrder>
+    <DefaultCharWidth>13</DefaultCharWidth>
+    <Mapping>REMARK</Mapping>
+    <HeaderText>Remark</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>31</DefaultOrder>
+    <DefaultCharWidth>13</DefaultCharWidth>
+    <Mapping>USERIDA</Mapping>
+    <HeaderText>UserID After</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>32</DefaultOrder>
+    <DefaultCharWidth>13</DefaultCharWidth>
+    <Mapping>USERIDB</Mapping>
+    <HeaderText>UserID Before</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+  <Column>
+    <DefaultOrder>32</DefaultOrder>
+    <DefaultCharWidth>13</DefaultCharWidth>
+    <Mapping>LASTUPDT</Mapping>
+    <HeaderText>Update Date/Timem</HeaderText>
+    <Type>Text</Type>
+    <Format></Format>
+    <ReadOnly>True</ReadOnly>
+    <NullText></NullText>
+  </Column>
+</PremiumPaymentsDataGridStyle>

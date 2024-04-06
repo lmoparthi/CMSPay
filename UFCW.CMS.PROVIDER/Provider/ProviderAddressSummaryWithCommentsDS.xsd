@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="ProviderAddressSummaryWithComments" targetNamespace="http://tempuri.org/ProviderAddressSummaryWithComments.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/ProviderAddressSummaryWithComments.xsd"
+	xmlns:mstns="http://tempuri.org/ProviderAddressSummaryWithComments.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+	<xs:element name="ProviderAddressSummaryWithComments" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="ProviderAddressSummaryWithComments">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="PROVIDER_ID" type="xs:int" />
+							<xs:element name="TAXID" type="xs:int" minOccurs="0" />
+							<xs:element name="TAXID_TYPE" type="xs:string" minOccurs="0" />
+							<xs:element name="NAME1" type="xs:string" minOccurs="0" />
+							<xs:element name="NAME2" type="xs:string" minOccurs="0" />
+							<xs:element name="ProviderSuspended" type="xs:boolean" minOccurs="0" default="0" />
+							<xs:element name="PPOC_ELIGIBLE_SW" type="xs:boolean" minOccurs="0" default="0" />
+							<xs:element name="PARENT_ID" type="xs:int" minOccurs="0" />
+							<xs:element name="NPI" type="xs:decimal" minOccurs="0" />
+							<xs:element name="COMMENT_ID" type="xs:int" minOccurs="0" />
+							<xs:element name="ProviderUserID" type="xs:string" minOccurs="0" />
+							<xs:element name="ProviderTimestamp" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="ADDRESS_LINE1" type="xs:string" minOccurs="0" />
+							<xs:element name="ADDRESS_LINE2" type="xs:string" minOccurs="0" msprop:nullValue="_empty" />
+							<xs:element name="CITY" type="xs:string" minOccurs="0" />
+							<xs:element name="COUNTRY" type="xs:string" minOccurs="0" />
+							<xs:element name="STATE" type="xs:string" minOccurs="0" />
+							<xs:element name="ZIP" type="xs:decimal" minOccurs="0" />
+							<xs:element name="ZIP_4" type="xs:decimal" minOccurs="0" />
+							<xs:element name="PHONE1" type="xs:decimal" minOccurs="0" />
+							<xs:element name="EMAIL1" type="xs:string" minOccurs="0" />
+							<xs:element name="EXTENSION1" type="xs:int" minOccurs="0" />
+							<xs:element name="CONTACT1" type="xs:string" minOccurs="0" msprop:nullValue="_empty" />
+							<xs:element name="EMAIL2" type="xs:string" minOccurs="0" />
+							<xs:element name="PHONE2" type="xs:decimal" minOccurs="0" />
+							<xs:element name="EXTENSION2" type="xs:int" minOccurs="0" />
+							<xs:element name="CONTACT2" type="xs:string" minOccurs="0" msprop:nullValue="_empty" />
+							<xs:element name="AddressSuspended" type="xs:boolean" minOccurs="0" default="0" />
+							<xs:element name="ADDRESS_TYPE" type="xs:int" minOccurs="0" />
+							<xs:element name="AddressType" type="xs:string" minOccurs="0" />
+							<xs:element name="AddressUserID" type="xs:string" minOccurs="0" />
+							<xs:element name="AddressTimestamp" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="ALERT" type="xs:string" minOccurs="0" />
+							<xs:element name="AlertDescription" type="xs:string" minOccurs="0" />
+							<xs:element name="COMMENT_TEXT" type="xs:string" minOccurs="0" />
+							<xs:element name="CommentCreatedBy" type="xs:string" minOccurs="0" />
+							<xs:element name="CommentTimestamp" type="xs:dateTime" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

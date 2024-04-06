@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ProviderAssociatedSummaryDS" targetNamespace="http://tempuri.org/ProviderAssociatedSummary.xsd" elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/ProviderAssociatedSummary.xsd" xmlns:mstns="http://tempuri.org/ProviderAssociatedSummary.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="ProviderAssociatedSummaryDS" msdata:IsDataSet="true">
+        <xs:complexType>
+            <xs:choice maxOccurs="unbounded">
+                <xs:element name="ProviderAssociatedSummary">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="PROVIDER_ID" type="xs:int" />
+                            <xs:element name="TypeAndTaxID" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+                            <xs:element name="TAXID" type="xs:int" />
+                            <xs:element name="TAXID_TYPE" type="xs:string" />
+                            <xs:element name="NAME1" type="xs:string" />
+                            <xs:element name="ProviderSuspended" type="xs:decimal" />
+                            <xs:element name="NAME2" type="xs:string" minOccurs="0" />
+                            <xs:element name="PARENT_ID" type="xs:int" minOccurs="0" />
+                            <xs:element name="CompositeAddress" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+                            <xs:element name="AddressSuspended" type="xs:decimal" />
+                            <xs:element name="AddressType" type="xs:string" />
+                            <xs:element name="AlertDescription" type="xs:string" minOccurs="0" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
