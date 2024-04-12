@@ -15,7 +15,7 @@ Imports System.Text.RegularExpressions
 Imports SharedInterfaces
 Imports System.IO
 
-<PlugIn("Medical", "Queue")> Public Class Work
+<PlugIn("Medical", "Queue")> Public Class Work_COPYBACKUP04062024
     Implements SharedInterfaces.IMessage
 
 #Region "Private form variables and structs"
@@ -2566,7 +2566,7 @@ Imports System.IO
         ' </history>
         ' -----------------------------------------------------------------------------
         Dim Frm As ProviderLookUpForm
-        Dim AlertDV As DataView
+        'Dim AlertDV As DataView
 
         Try
 
@@ -8351,7 +8351,7 @@ UpdateDetail:
         ' </history>
         ' -----------------------------------------------------------------------------
         Dim DV As DataView
-        Dim AlertDV As DataView
+        ' Dim AlertDV As DataView
 
         Try
 

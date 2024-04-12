@@ -140,6 +140,9 @@ Imports System.IO
     Private _ViewedClaimHistory As Boolean = False
     Private _IsShown As Boolean = False
 
+    Private _ValidateCancelled As Boolean = False
+    Private _ValidateChildren As Boolean = False
+
     Private WithEvents _FileNetDisplay As Display
 
     Private WithEvents _ExDup As ExecuteDuplicates
@@ -14599,16 +14602,101 @@ UpdateDetail:
 
 #Region "Detail Form Events"
 
+    '    Private Sub txtFromDate_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtFromDate.Validating
+
+    '#If TRACE Then
+    '        If CInt(_TraceBinding.Level) > 1 Then Trace.WriteLine(UFCWGeneral.NowDate.ToString("HH:mm:ss.fffffff") & " : " & Me.Name & If(_TraceBinding.TraceVerbose, vbCrLf & Environment.StackTrace & vbCrLf, ""), "TraceBinding" & vbTab)
+    '#End If
+
+
+    '        If _ValidateCancelled AndAlso _ValidateChildren Then
+    '            e.Cancel = True
+    '        Else
+    '            _ValidateCancelled = False
+    '            e = ValidateDate(sender, e, True)
+    '        End If
+
+
+    '#If TRACE Then
+    '        If CInt(_TraceBinding.Level) > 1 Then Trace.WriteLine(UFCWGeneral.NowDate.ToString("HH:mm:ss.fffffff") & " : " & Me.Name & ": " & CType(sender, TextBox).Name & " Proposed: " & CType(sender, TextBox).Text & " Cancel: " & e.Cancel.ToString & If(_TraceBinding.TraceVerbose, vbCrLf & Environment.StackTrace & vbCrLf, ""), "TraceBinding" & vbTab)
+    '#End If
+
+    '    End Sub
+    '    Private Sub txtToDate_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtToDate.Validating
+
+    '#If TRACE Then
+    '        If CInt(_TraceBinding.Level) > 1 Then Trace.WriteLine(CMSDALCommon.NowDate.ToString("HH:mm:ss.fffffff") & " : Thread " & Thread.CurrentThread.ManagedThreadId.ToString & vbTab & New StackFrame().GetMethod.ToString & " Control: " & CType(sender, TextBox).Name & " ValidateChildren: " & _ValidateChildren.ToString & " ValidateCancelled: " & _ValidateCancelled.ToString & If(_TraceBinding.TraceVerbose, vbCrLf & Environment.StackTrace & vbCrLf, ""), "TraceBinding" & vbTab)
+    '#End If
+
+    '        If _ValidateCancelled AndAlso _ValidateChildren Then
+    '            e.Cancel = True
+    '        Else
+    '            _ValidateCancelled = False
+    '            e = ValidateDate(sender, e)
+    '        End If
+
+    '#If TRACE Then
+    '        If CInt(_TraceBinding.Level) > 1 Then Trace.WriteLine(CMSDALCommon.NowDate.ToString("HH:mm:ss.fffffff") & " : Thread " & Thread.CurrentThread.ManagedThreadId.ToString & vbTab & New StackFrame().GetMethod.ToString & ": " & CType(sender, TextBox).Name & " Proposed: " & CType(sender, TextBox).Text & " Cancel: " & e.Cancel.ToString & If(_TraceBinding.TraceVerbose, vbCrLf & Environment.StackTrace & vbCrLf, ""), "TraceBinding" & vbTab)
+    '#End If
+
+    '    End Sub
+    '    Private Function ValidateDate(sender As Object, e As System.ComponentModel.CancelEventArgs, Optional required As Boolean = False) As System.ComponentModel.CancelEventArgs
+
+    '        Dim DisplayDate As Date?
+
+    '        Try
+
+    '            If String.IsNullOrEmpty(CType(sender, TextBox).Text.Trim) AndAlso (Me.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange OrElse Not required) Then 'EnableAllowFocusChange indicates its not required to hold a claim
+
+    '            Else
+    '                DisplayDate = UFCWGeneral.ValidateDate(CType(sender, TextBox).Text.Trim)
+
+    '                If DisplayDate Is Nothing Then
+
+    '                    _ValidateCancelled = True
+    '                    e.Cancel = True 'this will cancel the Validated event
+    '                    Me.ActiveControl = CType(sender, TextBox)
+    '                    CType(sender, TextBox).SelectAll()
+    '                    MessageBox.Show(If(CType(sender, TextBox).Text.Trim.Length = 0, "Date is Invalid", "Invalid Date Specified"), "Invalid Date format", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+
+    '                Else
+    '                    CType(sender, TextBox).Text = Format(DisplayDate.Value, "MM-dd-yyyy")
+
+    '                    Select Case CType(sender, TextBox).Name
+    '                        Case "txtFromDate", "txtToDate"
+    '                            If CType(sender, TextBox).Text.Trim.Length > 0 AndAlso txtToDate.Text.Trim.Length > 0 AndAlso IsDate(CType(sender, TextBox).Text) AndAlso IsDate(txtToDate.Text) Then
+    '                                If CDate(txtToDate.Text) < CDate(CType(sender, TextBox).Text) Then
+    '                                    e.Cancel = True 'this will cancel the Validated event
+    '                                    MessageBox.Show("From Date cannot be after To Date", "From/To Date(s) Invalid", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+    '                                    txtToDate.Text = ""
+    '                                    Me.ActiveControl = CType(sender, TextBox)
+    '                                    CType(sender, TextBox).SelectAll()
+    '                                End If
+    '                            End If
+    '                    End Select
+    '                End If
+
+    '            End If
+
+    '            Return e
+
+    '        Catch ex As Exception
+    '            Throw
+    '        End Try
+    '    End Function
     Private Sub txtFromDate_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtFromDate.Validating
 
 #If TRACE Then
-        If CInt(_TraceBinding.Level) > 1 Then Trace.WriteLine(UFCWGeneral.NowDate.ToString("HH:mm:ss.fffffff") & " : " & Me.Name & If(_TraceBinding.TraceVerbose, vbCrLf & Environment.StackTrace & vbCrLf, ""), "TraceBinding" & vbTab)
+            If CInt(_TraceBinding.Level) > 1 Then Trace.WriteLine(UFCWGeneral.NowDate.ToString("HH:mm:ss.fffffff") & " : " & Me.Name & If(_TraceBinding.TraceVerbose, vbCrLf & Environment.StackTrace & vbCrLf, ""), "TraceBinding" & vbTab)
 #End If
 
         Dim Tbox As TextBox = CType(sender, TextBox)
         Dim DGRow As DataRow
 
         Try
+            If DetailLinesDataGrid Is Nothing OrElse DetailLinesDataGrid.GetGridRowCount = 0 Then Return
+
+            _MedDtlBS = DirectCast(DetailLinesDataGrid.DataSource, BindingSource)
 
             ErrorProvider1.ClearError(Tbox)
 
@@ -14653,7 +14741,7 @@ UpdateDetail:
         End Try
 
 #If TRACE Then
-        If CInt(_TraceBinding.Level) > 1 Then Trace.WriteLine(UFCWGeneral.NowDate.ToString("HH:mm:ss.fffffff") & " : " & Me.Name & ": " & CType(sender, TextBox).Name & " Proposed: " & CType(sender, TextBox).Text & " Cancel: " & e.Cancel.ToString & If(_TraceBinding.TraceVerbose, vbCrLf & Environment.StackTrace & vbCrLf, ""), "TraceBinding" & vbTab)
+            If CInt(_TraceBinding.Level) > 1 Then Trace.WriteLine(UFCWGeneral.NowDate.ToString("HH:mm:ss.fffffff") & " : " & Me.Name & ": " & CType(sender, TextBox).Name & " Proposed: " & CType(sender, TextBox).Text & " Cancel: " & e.Cancel.ToString & If(_TraceBinding.TraceVerbose, vbCrLf & Environment.StackTrace & vbCrLf, ""), "TraceBinding" & vbTab)
 #End If
 
     End Sub
@@ -14680,7 +14768,7 @@ UpdateDetail:
 
             DGRow = DirectCast(_MedDtlBS.Current, DataRowView).Row
 
-            'Binding = Tbox.DataBindings("TEXT")
+            Binding = Tbox.DataBindings("TEXT")
             'If Tbox.Text.Trim.Length > 1 OrElse UFCWGeneral.ValidateDate(Tbox.Text) IsNot Nothing Then
             '    ErrorProvider1.ClearError(Tbox)
             'End If
@@ -14694,53 +14782,40 @@ UpdateDetail:
             ElseIf Not IsDBNull(_ClaimDr("REC_DATE")) AndAlso CDate(CType(sender, TextBox).Text) < DateAdd(DateInterval.Year, -1, CDate(_ClaimDr("REC_DATE"))) Then
                 _ClaimAlertManager.AddAlertRow(New Object() {"Line " & DGRow("LINE_NBR").ToString & ": Was Received 1 Year After DOS", DGRow("LINE_NBR").ToString, "Detail", 15})
             End If
-            '  If Binding IsNot Nothing AndAlso UpdateTextBinding(sender) Then
+            If Binding IsNot Nothing AndAlso UpdateTextBinding(sender) Then
 
-            'DGRow(Binding.BindingMemberInfo.BindingField) = UFCWGeneral.ToNullDateHandler(CType(sender, TextBox).Text)
+                DGRow(Binding.BindingMemberInfo.BindingField) = UFCWGeneral.ToNullDateHandler(CType(sender, TextBox).Text)
 
-            ''Validate From date based on the Status
+                ''Validate From date based on the Status
 
-            'reevaluate diagnosis preventative status based upon new from date
+                'reevaluate diagnosis preventative status based upon new from date
 
-            'If IsDate(CType(sender, TextBox).Text) Then
-            If IsDate(txtFromDate.Text) Then
-                If IsDate(txtToDate.Text) Then
-                    If CDate(txtFromDate.Text) > CDate(txtToDate.Text) Then
+                'If IsDate(CType(sender, TextBox).Text) Then
+                If IsDate(txtFromDate.Text) Then
+                    If IsDate(txtToDate.Text) Then
+                        If CDate(txtFromDate.Text) > CDate(txtToDate.Text) Then
+                            txtToDate.Text = txtFromDate.Text
+                        End If
+                    Else
                         txtToDate.Text = txtFromDate.Text
                     End If
-                Else
-                    txtToDate.Text = txtFromDate.Text
+
+                    Dim DiagDV As New DataView(_ClaimDS.MEDDIAG, "LINE_NBR = " & DGRow("LINE_NBR").ToString, "", DataViewRowState.CurrentRows)
+
+                    For Each DRV As DataRowView In DiagDV
+                        Dim DR As DataRow = CMSDALFDBMD.RetrieveDiagnosisPreventativeStatusEffectiveAsOf(CStr(DRV("DIAGNOSIS")), CDate(CType(sender, TextBox).Text))
+                        If DR IsNot Nothing AndAlso CBool(DRV("PREVENTATIVE_USE_SW")) <> CBool(DR("PREVENTATIVE_USE_SW")) Then
+                            DRV.Row("PREVENTATIVE_USE_SW") = DR("PREVENTATIVE_USE_SW")
+                        End If
+                    Next
+                    LoadDetailLineEligibility(DGRow, False)
+                    SyncAllowed()
+                    SumPaid()
+                    SumAllowed()
+                    SumOI()
+
                 End If
-
-                Dim DiagDV As New DataView(_ClaimDS.MEDDIAG, "LINE_NBR = " & DGRow("LINE_NBR").ToString, "", DataViewRowState.CurrentRows)
-
-                For Each DRV As DataRowView In DiagDV
-                    Dim DR As DataRow = CMSDALFDBMD.RetrieveDiagnosisPreventativeStatusEffectiveAsOf(CStr(DRV("DIAGNOSIS")), CDate(CType(sender, TextBox).Text))
-                    If DR IsNot Nothing AndAlso CBool(DRV("PREVENTATIVE_USE_SW")) <> CBool(DR("PREVENTATIVE_USE_SW")) Then
-                        DRV.Row("PREVENTATIVE_USE_SW") = DR("PREVENTATIVE_USE_SW")
-                    End If
-                Next
-                LoadDetailLineEligibility(DGRow, False)
-                SyncAllowed()
-                SumPaid()
-                SumAllowed()
-                SumOI()
-
             End If
-            '  End If
-            'If Not IsDBNull(DGRow("DIAGNOSIS")) Then
-            '    Dim UpdatePreventativeQuery = _ClaimDS.MEDDIAG.AsEnumerable().Where(Function(r) r.RowState <> DataRowState.Deleted AndAlso r.Field(Of Short)("LINE_NBR") = CInt(DGRow("LINE_NBR")))
-
-            '    For Each MedDiagDR As DataRow In UpdatePreventativeQuery.ToList()
-            '        Dim DR As DataRow = CMSDALFDBMD.RetrieveDiagnosisPreventativeStatusEffectiveAsOf(CStr(MedDiagDR("DIAGNOSIS")), CDate(Tbox.Text))
-            '        If DR IsNot Nothing AndAlso CBool(MedDiagDR("PREVENTATIVE_USE_SW")) <> CBool(DR("PREVENTATIVE_USE_SW")) Then
-            '            MedDiagDR("PREVENTATIVE_USE_SW") = DR("PREVENTATIVE_USE_SW")
-            '            MedDiagDR.EndEdit()
-            '        End If
-            '    Next
-
-            'End If
-
 
             Debug.Print(UFCWGeneral.NowDate.ToString("HH:mm:ss.fffffff") & " Out: " & Me.Name & " " & UFCWGeneral.FlattenStack(New System.Diagnostics.StackTrace(True)))
 
@@ -14752,7 +14827,7 @@ UpdateDetail:
     Private Sub txtToDate_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtToDate.Validating
 
 #If TRACE Then
-        If CInt(_TraceBinding.Level) > 1 Then Trace.WriteLine(UFCWGeneral.NowDate.ToString("HH:mm:ss.fffffff") & " : " & Me.Name & If(_TraceBinding.TraceVerbose, vbCrLf & Environment.StackTrace & vbCrLf, ""), "TraceBinding" & vbTab)
+            If CInt(_TraceBinding.Level) > 1 Then Trace.WriteLine(UFCWGeneral.NowDate.ToString("HH:mm:ss.fffffff") & " : " & Me.Name & If(_TraceBinding.TraceVerbose, vbCrLf & Environment.StackTrace & vbCrLf, ""), "TraceBinding" & vbTab)
 #End If
 
         Dim Tbox As TextBox = CType(sender, TextBox)
@@ -14808,7 +14883,7 @@ UpdateDetail:
         End Try
 
 #If TRACE Then
-        If CInt(_TraceBinding.Level) > 1 Then Trace.WriteLine(UFCWGeneral.NowDate.ToString("HH:mm:ss.fffffff") & " : " & Me.Name & ": " & CType(sender, TextBox).Name & " Proposed: " & CType(sender, TextBox).Text & " Cancel: " & e.Cancel.ToString & If(_TraceBinding.TraceVerbose, vbCrLf & Environment.StackTrace & vbCrLf, ""), "TraceBinding" & vbTab)
+            If CInt(_TraceBinding.Level) > 1 Then Trace.WriteLine(UFCWGeneral.NowDate.ToString("HH:mm:ss.fffffff") & " : " & Me.Name & ": " & CType(sender, TextBox).Name & " Proposed: " & CType(sender, TextBox).Text & " Cancel: " & e.Cancel.ToString & If(_TraceBinding.TraceVerbose, vbCrLf & Environment.StackTrace & vbCrLf, ""), "TraceBinding" & vbTab)
 #End If
 
     End Sub
@@ -14936,9 +15011,8 @@ UpdateDetail:
         If CInt(_TraceBinding.Level) > 1 Then Trace.WriteLine(UFCWGeneral.NowDate.ToString("HH:mm:ss.fffffff") & " : Thread " & Thread.CurrentThread.ManagedThreadId.ToString & vbTab & New StackFrame().GetMethod.ToString & " Control: " & CType(sender, TextBox).Name & " ValidateChildren: " & _ValidateChildren.ToString & " ValidateCancelled: " & _ValidateCancelled.ToString & If(_TraceBinding.TraceVerbose, vbCrLf & Environment.StackTrace & vbCrLf, ""), "TraceBinding" & vbTab)
 #End If
 
-        'Dim Binding As Binding
+        Dim Binding As Binding
         Dim BS As BindingSource
-
         Dim DGRow As DataRow
 
         If DetailLinesDataGrid.GetGridRowCount = 0 Then Return
@@ -14947,17 +15021,23 @@ UpdateDetail:
 
             BS = DirectCast(DetailLinesDataGrid.DataSource, BindingSource)
             DGRow = DirectCast(BS.Current, DataRowView).Row
-            If DGRow Is Nothing Then Return
 
-            _ClaimAlertManager.DeleteAlertRowsByMessageAndLine("'Line " & DGRow("LINE_NBR").ToString & ": Paid Is More Than Priced'", CInt(DGRow("LINE_NBR")))
+            Binding = CType(sender, TextBox).DataBindings("TEXT")
 
-            If CType(sender, TextBox).Text.IsDecimal() AndAlso Not IsDBNull(DGRow("PAID_AMT")) AndAlso CDec(CType(sender, TextBox).Text) < CDec(Format(DGRow("PAID_AMT"), "0.00")) Then
-                _ClaimAlertManager.AddAlertRow(New Object() {"Line " & DGRow("LINE_NBR").ToString & ": Paid Is More Than Priced", DGRow("LINE_NBR").ToString, "Detail", 20})
+            If Binding IsNot Nothing AndAlso UpdateTextBinding(sender) Then
+
+                DGRow(Binding.BindingMemberInfo.BindingField) = UFCWGeneral.ToNullDecimalHandler(CType(sender, TextBox).Text)
+
+                _ClaimAlertManager.DeleteAlertRowsByMessageAndLine("'Line " & DGRow("LINE_NBR").ToString & ": Paid Is More Than Priced'", CInt(DGRow("LINE_NBR")))
+
+                If CType(sender, TextBox).Text.IsDecimal() AndAlso Not IsDBNull(DGRow("PAID_AMT")) AndAlso CDec(CType(sender, TextBox).Text) < CDec(Format(DGRow("PAID_AMT"), "0.00")) Then
+                    _ClaimAlertManager.AddAlertRow(New Object() {"Line " & DGRow("LINE_NBR").ToString & ": Paid Is More Than Priced", DGRow("LINE_NBR").ToString, "Detail", 20})
+                End If
+
+                SumPriced()
+                SyncAllowed(CShort(DGRow("LINE_NBR")))
+                SumAllowed()
             End If
-
-            SumPriced()
-            SumAllowed()
-            BS.EndEdit()
 
 
         Catch ex As Exception
@@ -15285,7 +15365,7 @@ UpdateDetail:
         Dim LineNumber As Short
         Dim ValidatedMedDiagDT As DataTable
         Dim DIAGNOSES As New StringBuilder
-
+        Dim Binding As Binding
         Try
 
             If _Disposed OrElse _MedDtlBS Is Nothing OrElse _MedDtlBS.Current Is Nothing OrElse Tbox.ReadOnly Then Return
@@ -15388,10 +15468,14 @@ UpdateDetail:
                 _ClaimDS.Tables("MEDDIAG").Merge(ValidatedMedDiagDT)
             End If
 
-            If DGRow("DIAGNOSES").ToString <> DIAGNOSES.ToString Then
-                DGRow("DIAGNOSES") = DIAGNOSES.ToString
-            End If
+            'If DGRow("DIAGNOSES").ToString <> DIAGNOSES.ToString Then
+            '    DGRow("DIAGNOSES") = DIAGNOSES.ToString
+            'End If
+            Binding = CType(sender, TextBox).DataBindings("TEXT")
 
+            If Binding IsNot Nothing AndAlso UpdateTextBinding(sender) Then
+                DGRow(Binding.BindingMemberInfo.BindingField) = DIAGNOSES.ToString
+            End If
 
             Debug.Print(UFCWGeneral.NowDate.ToString("HH:mm:ss.fffffff") & " Out: " & Me.Name & " " & UFCWGeneral.FlattenStack(New System.Diagnostics.StackTrace(True)))
 
@@ -16149,10 +16233,10 @@ UpdateDetail:
 
                     ValidPatient = ValidatePatient()
                     LoadDetailLineEligibility(True) ' LM 03/14/2023
-                    'SumPaid()
-                    'SyncAllowed()
-                    'SumAllowed()
-                    'SumOI()
+                    SumPaid()
+                    SyncAllowed()
+                    SumAllowed()
+                    SumOI()
                 End Using
 
                 If _Mode.ToUpper = "AUDIT" Then

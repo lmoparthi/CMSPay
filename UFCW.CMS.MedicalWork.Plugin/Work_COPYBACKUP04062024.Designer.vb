@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Work
+Partial Class Work_COPYBACKUP04062024
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -12,7 +12,7 @@ Partial Class Work
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Work))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Work_COPYBACKUP04062024))
         Me.MainMenu = New System.Windows.Forms.MainMenu(Me.components)
         Me.FileMenuItem = New System.Windows.Forms.MenuItem()
         Me.CompleteMenuItem = New System.Windows.Forms.MenuItem()
@@ -1401,7 +1401,7 @@ Partial Class Work
         Me.DetailLineGroupBox.Location = New System.Drawing.Point(3, 110)
         Me.DetailLineGroupBox.Name = "DetailLineGroupBox"
         Me.DetailLineGroupBox.Size = New System.Drawing.Size(535, 128)
-        Me.DetailLineGroupBox.TabIndex = 68
+        Me.DetailLineGroupBox.TabIndex = 114
         Me.DetailLineGroupBox.TabStop = False
         Me.DetailLineGroupBox.Text = "Edit Item - 0"
         '
@@ -1890,7 +1890,7 @@ Partial Class Work
         Me.cmbPlanTC.Location = New System.Drawing.Point(228, 4)
         Me.cmbPlanTC.Name = "cmbPlanTC"
         Me.cmbPlanTC.Size = New System.Drawing.Size(79, 21)
-        Me.cmbPlanTC.TabIndex = 33
+        Me.cmbPlanTC.TabIndex = 2
         '
         'cmbPlan
         '
@@ -1918,7 +1918,7 @@ Partial Class Work
         Me.cmbStatus.Name = "cmbStatus"
         Me.cmbStatus.ReadOnly = False
         Me.cmbStatus.Size = New System.Drawing.Size(64, 21)
-        Me.cmbStatus.TabIndex = 63
+        Me.cmbStatus.TabIndex = 0
         '
         'Label9
         '
@@ -3200,9 +3200,9 @@ Partial Class Work
         'SplitContainerHistory.Panel1
         '
         Me.SplitContainerHistory.Panel1.Controls.Add(Me.DocumentHistoryViewer)
-        Me.SplitContainerHistory.Size = New System.Drawing.Size(606, 457)
-        Me.SplitContainerHistory.SplitterDistance = 35
-        Me.SplitContainerHistory.TabIndex = 2
+        'Me.SplitContainerHistory.Size = New System.Drawing.Size(606, 457)
+        'Me.SplitContainerHistory.SplitterDistance = 35
+        'Me.SplitContainerHistory.TabIndex = 2
         '
         'DocumentHistoryViewer
         '
@@ -3216,7 +3216,7 @@ Partial Class Work
         '
         'SplitContainerHistory.Panel2
         '
-        Me.SplitContainerHistory.Panel2.Controls.Add(Me.AnnotationControl)
+        'Me.SplitContainerHistory.Panel2.Controls.Add(Me.AnnotationControl)
         Me.SplitContainerHistory.Size = New System.Drawing.Size(606, 457)
         Me.SplitContainerHistory.SplitterDistance = 221
         Me.SplitContainerHistory.TabIndex = 2

@@ -1,8 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Work
+Partial Class Workbackup33120240406
     Inherits System.Windows.Forms.Form
-
-    'Form overrides dispose to clean up the component list.
 
     'Required by the Windows Form Designer
     Private components As System.ComponentModel.IContainer
@@ -12,7 +10,7 @@ Partial Class Work
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Work))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Workbackup33120240406))
         Me.MainMenu = New System.Windows.Forms.MainMenu(Me.components)
         Me.FileMenuItem = New System.Windows.Forms.MenuItem()
         Me.CompleteMenuItem = New System.Windows.Forms.MenuItem()
@@ -1401,7 +1399,7 @@ Partial Class Work
         Me.DetailLineGroupBox.Location = New System.Drawing.Point(3, 110)
         Me.DetailLineGroupBox.Name = "DetailLineGroupBox"
         Me.DetailLineGroupBox.Size = New System.Drawing.Size(535, 128)
-        Me.DetailLineGroupBox.TabIndex = 114
+        Me.DetailLineGroupBox.TabIndex = 68
         Me.DetailLineGroupBox.TabStop = False
         Me.DetailLineGroupBox.Text = "Edit Item - 0"
         '
@@ -1552,7 +1550,7 @@ Partial Class Work
         Me.AccumulatorsButton.Location = New System.Drawing.Point(454, 84)
         Me.AccumulatorsButton.Name = "AccumulatorsButton"
         Me.AccumulatorsButton.Size = New System.Drawing.Size(32, 20)
-        Me.AccumulatorsButton.TabIndex = 68
+        Me.AccumulatorsButton.TabIndex = 67
         Me.AccumulatorsButton.Text = "lll"
         Me.AccumulatorsButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         '
@@ -1564,7 +1562,7 @@ Partial Class Work
         Me.AccumulatorLabel.Location = New System.Drawing.Point(379, 88)
         Me.AccumulatorLabel.Name = "AccumulatorLabel"
         Me.AccumulatorLabel.Size = New System.Drawing.Size(71, 13)
-        Me.AccumulatorLabel.TabIndex = 67
+        Me.AccumulatorLabel.TabIndex = 66
         Me.AccumulatorLabel.Text = "Accumulators"
         Me.AccumulatorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -1687,7 +1685,7 @@ Partial Class Work
         Me.ReasonButton.Location = New System.Drawing.Point(342, 85)
         Me.ReasonButton.Name = "ReasonButton"
         Me.ReasonButton.Size = New System.Drawing.Size(32, 20)
-        Me.ReasonButton.TabIndex = 66
+        Me.ReasonButton.TabIndex = 65
         Me.ReasonButton.Text = "lll"
         Me.ReasonButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         '
@@ -1890,7 +1888,7 @@ Partial Class Work
         Me.cmbPlanTC.Location = New System.Drawing.Point(228, 4)
         Me.cmbPlanTC.Name = "cmbPlanTC"
         Me.cmbPlanTC.Size = New System.Drawing.Size(79, 21)
-        Me.cmbPlanTC.TabIndex = 2
+        Me.cmbPlanTC.TabIndex = 33
         '
         'cmbPlan
         '
@@ -1918,7 +1916,7 @@ Partial Class Work
         Me.cmbStatus.Name = "cmbStatus"
         Me.cmbStatus.ReadOnly = False
         Me.cmbStatus.Size = New System.Drawing.Size(64, 21)
-        Me.cmbStatus.TabIndex = 0
+        Me.cmbStatus.TabIndex = 63
         '
         'Label9
         '
@@ -2111,7 +2109,7 @@ Partial Class Work
         Me.AssociatedTabPage.Location = New System.Drawing.Point(4, 22)
         Me.AssociatedTabPage.Name = "AssociatedTabPage"
         Me.AssociatedTabPage.Padding = New System.Windows.Forms.Padding(3)
-        Me.AssociatedTabPage.Size = New System.Drawing.Size(606, 457)
+        Me.AssociatedTabPage.Size = New System.Drawing.Size(192, 74)
         Me.AssociatedTabPage.TabIndex = 10
         Me.AssociatedTabPage.Text = "Associated"
         Me.AssociatedTabPage.UseVisualStyleBackColor = True
@@ -2138,7 +2136,7 @@ Partial Class Work
         '
         Me.SplitContainerAssociated.Panel2.Controls.Add(Me.SplitContainerAssociatedResults)
         Me.SplitContainerAssociated.Panel2MinSize = 100
-        Me.SplitContainerAssociated.Size = New System.Drawing.Size(600, 451)
+        Me.SplitContainerAssociated.Size = New System.Drawing.Size(186, 68)
         Me.SplitContainerAssociated.SplitterDistance = 35
         Me.SplitContainerAssociated.SplitterWidth = 1
         Me.SplitContainerAssociated.TabIndex = 0
@@ -2635,7 +2633,7 @@ Partial Class Work
         Me.AccumulatorsTabPage.Controls.Add(Me.SplitContainerAccumulators)
         Me.AccumulatorsTabPage.Location = New System.Drawing.Point(4, 22)
         Me.AccumulatorsTabPage.Name = "AccumulatorsTabPage"
-        Me.AccumulatorsTabPage.Size = New System.Drawing.Size(1095, 850)
+        Me.AccumulatorsTabPage.Size = New System.Drawing.Size(192, 74)
         Me.AccumulatorsTabPage.TabIndex = 5
         Me.AccumulatorsTabPage.Text = "Accumulators"
         Me.AccumulatorsTabPage.UseVisualStyleBackColor = True
@@ -2657,8 +2655,8 @@ Partial Class Work
         Me.SplitContainerAccumulators.Panel2.Controls.Add(Me.ManualAccumulatorValues)
         Me.SplitContainerAccumulators.Panel2.Controls.Add(Me.ManualAccumulatorButton)
         Me.SplitContainerAccumulators.Panel2.Controls.Add(Me.OverrideHistoryButton)
-        Me.SplitContainerAccumulators.Size = New System.Drawing.Size(1095, 850)
-        Me.SplitContainerAccumulators.SplitterDistance = 411
+        Me.SplitContainerAccumulators.Size = New System.Drawing.Size(192, 74)
+        Me.SplitContainerAccumulators.SplitterDistance = 35
         Me.SplitContainerAccumulators.TabIndex = 5
         '
         'AccumulatorsDataGrid
@@ -2716,7 +2714,7 @@ Partial Class Work
         Me.AccumulatorsDataGrid.SetRowOnRightClick = True
         Me.AccumulatorsDataGrid.ShiftPressed = False
         Me.AccumulatorsDataGrid.SingleClickBooleanColumns = True
-        Me.AccumulatorsDataGrid.Size = New System.Drawing.Size(1095, 411)
+        Me.AccumulatorsDataGrid.Size = New System.Drawing.Size(192, 35)
         Me.AccumulatorsDataGrid.Sort = Nothing
         Me.AccumulatorsDataGrid.StyleName = ""
         Me.AccumulatorsDataGrid.SubKey = ""
@@ -2733,13 +2731,13 @@ Partial Class Work
         Me.ManualAccumulatorValues.IsInEditMode = False
         Me.ManualAccumulatorValues.Location = New System.Drawing.Point(3, 3)
         Me.ManualAccumulatorValues.Name = "ManualAccumulatorValues"
-        Me.ManualAccumulatorValues.Size = New System.Drawing.Size(1090, 384)
+        Me.ManualAccumulatorValues.Size = New System.Drawing.Size(187, 0)
         Me.ManualAccumulatorValues.TabIndex = 8
         '
         'ManualAccumulatorButton
         '
         Me.ManualAccumulatorButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ManualAccumulatorButton.Location = New System.Drawing.Point(3, 393)
+        Me.ManualAccumulatorButton.Location = New System.Drawing.Point(3, -7)
         Me.ManualAccumulatorButton.Name = "ManualAccumulatorButton"
         Me.ManualAccumulatorButton.Size = New System.Drawing.Size(98, 40)
         Me.ManualAccumulatorButton.TabIndex = 7
@@ -2748,7 +2746,7 @@ Partial Class Work
         'OverrideHistoryButton
         '
         Me.OverrideHistoryButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.OverrideHistoryButton.Location = New System.Drawing.Point(994, 393)
+        Me.OverrideHistoryButton.Location = New System.Drawing.Point(91, -7)
         Me.OverrideHistoryButton.Name = "OverrideHistoryButton"
         Me.OverrideHistoryButton.Size = New System.Drawing.Size(99, 39)
         Me.OverrideHistoryButton.TabIndex = 6
@@ -2760,7 +2758,7 @@ Partial Class Work
         Me.EligibilityTabPage.Controls.Add(Me.EligControl)
         Me.EligibilityTabPage.Location = New System.Drawing.Point(4, 22)
         Me.EligibilityTabPage.Name = "EligibilityTabPage"
-        Me.EligibilityTabPage.Size = New System.Drawing.Size(1095, 850)
+        Me.EligibilityTabPage.Size = New System.Drawing.Size(192, 74)
         Me.EligibilityTabPage.TabIndex = 2
         Me.EligibilityTabPage.Text = "Eligibility"
         Me.EligibilityTabPage.UseVisualStyleBackColor = True
@@ -2772,7 +2770,7 @@ Partial Class Work
         Me.EligControl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.EligControl.Location = New System.Drawing.Point(0, 0)
         Me.EligControl.Name = "EligControl"
-        Me.EligControl.Size = New System.Drawing.Size(1095, 850)
+        Me.EligControl.Size = New System.Drawing.Size(192, 74)
         Me.EligControl.TabIndex = 0
         '
         'AddressesTabPage
@@ -2781,7 +2779,7 @@ Partial Class Work
         Me.AddressesTabPage.Controls.Add(Me.AddressesPanel)
         Me.AddressesTabPage.Location = New System.Drawing.Point(4, 22)
         Me.AddressesTabPage.Name = "AddressesTabPage"
-        Me.AddressesTabPage.Size = New System.Drawing.Size(1095, 850)
+        Me.AddressesTabPage.Size = New System.Drawing.Size(192, 74)
         Me.AddressesTabPage.TabIndex = 1
         Me.AddressesTabPage.Text = "Addresses"
         Me.AddressesTabPage.UseVisualStyleBackColor = True
@@ -2796,7 +2794,7 @@ Partial Class Work
         Me.AddressesPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.AddressesPanel.Location = New System.Drawing.Point(0, 0)
         Me.AddressesPanel.Name = "AddressesPanel"
-        Me.AddressesPanel.Size = New System.Drawing.Size(1095, 850)
+        Me.AddressesPanel.Size = New System.Drawing.Size(192, 74)
         Me.AddressesPanel.TabIndex = 0
         '
         'Label31
@@ -2837,7 +2835,7 @@ Partial Class Work
         Me.ProviderTabPage.Controls.Add(Me.ProviderPanel)
         Me.ProviderTabPage.Location = New System.Drawing.Point(4, 22)
         Me.ProviderTabPage.Name = "ProviderTabPage"
-        Me.ProviderTabPage.Size = New System.Drawing.Size(1095, 850)
+        Me.ProviderTabPage.Size = New System.Drawing.Size(192, 74)
         Me.ProviderTabPage.TabIndex = 1
         Me.ProviderTabPage.Text = "Provider"
         Me.ProviderTabPage.UseVisualStyleBackColor = True
@@ -2851,7 +2849,7 @@ Partial Class Work
         Me.ProviderPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ProviderPanel.Location = New System.Drawing.Point(0, 0)
         Me.ProviderPanel.Name = "ProviderPanel"
-        Me.ProviderPanel.Size = New System.Drawing.Size(1095, 850)
+        Me.ProviderPanel.Size = New System.Drawing.Size(192, 74)
         Me.ProviderPanel.TabIndex = 1
         '
         'NpiRegistryControl
@@ -2897,7 +2895,7 @@ Partial Class Work
         Me.QueueTabPage.Controls.Add(Me.RouteDataGrid)
         Me.QueueTabPage.Location = New System.Drawing.Point(4, 22)
         Me.QueueTabPage.Name = "QueueTabPage"
-        Me.QueueTabPage.Size = New System.Drawing.Size(606, 457)
+        Me.QueueTabPage.Size = New System.Drawing.Size(192, 74)
         Me.QueueTabPage.TabIndex = 3
         Me.QueueTabPage.Text = "Queue"
         Me.QueueTabPage.UseVisualStyleBackColor = True
@@ -2926,7 +2924,7 @@ Partial Class Work
         '
         Me.DuplicateCheckBox.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DuplicateCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.DuplicateCheckBox.Location = New System.Drawing.Point(493, 72)
+        Me.DuplicateCheckBox.Location = New System.Drawing.Point(79, 72)
         Me.DuplicateCheckBox.Name = "DuplicateCheckBox"
         Me.DuplicateCheckBox.Size = New System.Drawing.Size(72, 24)
         Me.DuplicateCheckBox.TabIndex = 9
@@ -3077,7 +3075,7 @@ Partial Class Work
         'ArchiveButton
         '
         Me.ArchiveButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ArchiveButton.Location = New System.Drawing.Point(493, 32)
+        Me.ArchiveButton.Location = New System.Drawing.Point(79, 32)
         Me.ArchiveButton.Name = "ArchiveButton"
         Me.ArchiveButton.Size = New System.Drawing.Size(75, 23)
         Me.ArchiveButton.TabIndex = 8
@@ -3088,7 +3086,7 @@ Partial Class Work
         'RouteButton
         '
         Me.RouteButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RouteButton.Location = New System.Drawing.Point(493, 4)
+        Me.RouteButton.Location = New System.Drawing.Point(79, 4)
         Me.RouteButton.Name = "RouteButton"
         Me.RouteButton.Size = New System.Drawing.Size(75, 23)
         Me.RouteButton.TabIndex = 7
@@ -3171,7 +3169,7 @@ Partial Class Work
         Me.RouteDataGrid.SetRowOnRightClick = True
         Me.RouteDataGrid.ShiftPressed = False
         Me.RouteDataGrid.SingleClickBooleanColumns = True
-        Me.RouteDataGrid.Size = New System.Drawing.Size(592, 146)
+        Me.RouteDataGrid.Size = New System.Drawing.Size(178, 0)
         Me.RouteDataGrid.Sort = Nothing
         Me.RouteDataGrid.StyleName = ""
         Me.RouteDataGrid.SubKey = ""
@@ -3184,7 +3182,7 @@ Partial Class Work
         Me.HistoryTabPage.Controls.Add(Me.SplitContainerHistory)
         Me.HistoryTabPage.Location = New System.Drawing.Point(4, 22)
         Me.HistoryTabPage.Name = "HistoryTabPage"
-        Me.HistoryTabPage.Size = New System.Drawing.Size(606, 457)
+        Me.HistoryTabPage.Size = New System.Drawing.Size(192, 74)
         Me.HistoryTabPage.TabIndex = 4
         Me.HistoryTabPage.Text = "History"
         Me.HistoryTabPage.UseVisualStyleBackColor = True
@@ -3200,9 +3198,9 @@ Partial Class Work
         'SplitContainerHistory.Panel1
         '
         Me.SplitContainerHistory.Panel1.Controls.Add(Me.DocumentHistoryViewer)
-        'Me.SplitContainerHistory.Size = New System.Drawing.Size(606, 457)
-        'Me.SplitContainerHistory.SplitterDistance = 35
-        'Me.SplitContainerHistory.TabIndex = 2
+        Me.SplitContainerHistory.Size = New System.Drawing.Size(192, 74)
+        Me.SplitContainerHistory.SplitterDistance = 37
+        Me.SplitContainerHistory.TabIndex = 0
         '
         'DocumentHistoryViewer
         '
@@ -3211,7 +3209,7 @@ Partial Class Work
         Me.DocumentHistoryViewer.Location = New System.Drawing.Point(0, 0)
         Me.DocumentHistoryViewer.Name = "DocumentHistoryViewer"
         Me.DocumentHistoryViewer.ShowClose = True
-        Me.DocumentHistoryViewer.Size = New System.Drawing.Size(606, 221)
+        Me.DocumentHistoryViewer.Size = New System.Drawing.Size(192, 37)
         Me.DocumentHistoryViewer.TabIndex = 1
         '
         'SplitContainerHistory.Panel2
@@ -3237,7 +3235,7 @@ Partial Class Work
         Me.COBTabPage.Location = New System.Drawing.Point(4, 22)
         Me.COBTabPage.Name = "COBTabPage"
         Me.COBTabPage.Padding = New System.Windows.Forms.Padding(3)
-        Me.COBTabPage.Size = New System.Drawing.Size(606, 457)
+        Me.COBTabPage.Size = New System.Drawing.Size(192, 74)
         Me.COBTabPage.TabIndex = 9
         Me.COBTabPage.Text = "COB"
         Me.COBTabPage.UseVisualStyleBackColor = True
@@ -3249,7 +3247,7 @@ Partial Class Work
         Me.CobControl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CobControl.Location = New System.Drawing.Point(3, 3)
         Me.CobControl.Name = "CobControl"
-        Me.CobControl.Size = New System.Drawing.Size(600, 451)
+        Me.CobControl.Size = New System.Drawing.Size(186, 68)
         Me.CobControl.TabIndex = 0
         '
         'FreeTextTabPage
@@ -3258,7 +3256,7 @@ Partial Class Work
         Me.FreeTextTabPage.Controls.Add(Me.Panel3)
         Me.FreeTextTabPage.Location = New System.Drawing.Point(4, 22)
         Me.FreeTextTabPage.Name = "FreeTextTabPage"
-        Me.FreeTextTabPage.Size = New System.Drawing.Size(606, 457)
+        Me.FreeTextTabPage.Size = New System.Drawing.Size(192, 74)
         Me.FreeTextTabPage.TabIndex = 6
         Me.FreeTextTabPage.Text = "Free Text"
         Me.FreeTextTabPage.Visible = False
@@ -3270,7 +3268,7 @@ Partial Class Work
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(606, 457)
+        Me.Panel3.Size = New System.Drawing.Size(192, 74)
         Me.Panel3.TabIndex = 0
         '
         'WorkFreeTextEditor
@@ -3282,7 +3280,7 @@ Partial Class Work
         Me.WorkFreeTextEditor.Dock = System.Windows.Forms.DockStyle.Fill
         Me.WorkFreeTextEditor.Location = New System.Drawing.Point(0, 0)
         Me.WorkFreeTextEditor.Name = "WorkFreeTextEditor"
-        Me.WorkFreeTextEditor.Size = New System.Drawing.Size(606, 457)
+        Me.WorkFreeTextEditor.Size = New System.Drawing.Size(192, 74)
         Me.WorkFreeTextEditor.TabIndex = 0
         '
         'DuplicatesTabPage
@@ -3290,7 +3288,7 @@ Partial Class Work
         Me.DuplicatesTabPage.Controls.Add(Me.DuplicatesPanel)
         Me.DuplicatesTabPage.Location = New System.Drawing.Point(4, 22)
         Me.DuplicatesTabPage.Name = "DuplicatesTabPage"
-        Me.DuplicatesTabPage.Size = New System.Drawing.Size(606, 457)
+        Me.DuplicatesTabPage.Size = New System.Drawing.Size(192, 74)
         Me.DuplicatesTabPage.TabIndex = 7
         Me.DuplicatesTabPage.Text = "Duplicates"
         Me.DuplicatesTabPage.UseVisualStyleBackColor = True
@@ -3304,7 +3302,7 @@ Partial Class Work
         Me.DuplicatesPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DuplicatesPanel.Location = New System.Drawing.Point(0, 0)
         Me.DuplicatesPanel.Name = "DuplicatesPanel"
-        Me.DuplicatesPanel.Size = New System.Drawing.Size(606, 457)
+        Me.DuplicatesPanel.Size = New System.Drawing.Size(192, 74)
         Me.DuplicatesPanel.TabIndex = 0
         '
         'SplitContainerDuplicates
@@ -3321,7 +3319,7 @@ Partial Class Work
         'SplitContainerDuplicates.Panel2
         '
         Me.SplitContainerDuplicates.Panel2.Controls.Add(Me.DuplicatesOriginalDetailLinesDataGrid)
-        Me.SplitContainerDuplicates.Size = New System.Drawing.Size(606, 221)
+        Me.SplitContainerDuplicates.Size = New System.Drawing.Size(192, 0)
         Me.SplitContainerDuplicates.SplitterDistance = 106
         Me.SplitContainerDuplicates.TabIndex = 3
         '
@@ -3471,7 +3469,7 @@ Partial Class Work
         Me.HeaderPanel.Dock = System.Windows.Forms.DockStyle.Top
         Me.HeaderPanel.Location = New System.Drawing.Point(0, 181)
         Me.HeaderPanel.Name = "HeaderPanel"
-        Me.HeaderPanel.Size = New System.Drawing.Size(606, 55)
+        Me.HeaderPanel.Size = New System.Drawing.Size(192, 55)
         Me.HeaderPanel.TabIndex = 2
         '
         'txtDupsCompletedDate
@@ -3614,7 +3612,7 @@ Partial Class Work
         Me.DupesHSplitter.MinExtra = 220
         Me.DupesHSplitter.MinSize = 90
         Me.DupesHSplitter.Name = "DupesHSplitter"
-        Me.DupesHSplitter.Size = New System.Drawing.Size(1095, 5)
+        Me.DupesHSplitter.Size = New System.Drawing.Size(192, 5)
         Me.DupesHSplitter.TabIndex = 1
         Me.DupesHSplitter.TabStop = False
         '
@@ -3623,7 +3621,7 @@ Partial Class Work
         Me.DupsTreeView.Dock = System.Windows.Forms.DockStyle.Top
         Me.DupsTreeView.Location = New System.Drawing.Point(0, 0)
         Me.DupsTreeView.Name = "DupsTreeView"
-        Me.DupsTreeView.Size = New System.Drawing.Size(606, 176)
+        Me.DupsTreeView.Size = New System.Drawing.Size(192, 176)
         Me.DupsTreeView.TabIndex = 0
         '
         'LettersTabPage
@@ -3632,7 +3630,7 @@ Partial Class Work
         Me.LettersTabPage.Controls.Add(Me.Panel1)
         Me.LettersTabPage.Location = New System.Drawing.Point(4, 22)
         Me.LettersTabPage.Name = "LettersTabPage"
-        Me.LettersTabPage.Size = New System.Drawing.Size(606, 457)
+        Me.LettersTabPage.Size = New System.Drawing.Size(192, 74)
         Me.LettersTabPage.TabIndex = 8
         Me.LettersTabPage.Text = "Letter(s)"
         Me.LettersTabPage.UseVisualStyleBackColor = True
@@ -3643,7 +3641,7 @@ Partial Class Work
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Location = New System.Drawing.Point(0, 65)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(606, 392)
+        Me.Panel2.Size = New System.Drawing.Size(192, 9)
         Me.Panel2.TabIndex = 1
         '
         'SplitContainerLetters
@@ -3660,7 +3658,7 @@ Partial Class Work
         'SplitContainerLetters.Panel2
         '
         Me.SplitContainerLetters.Panel2.Controls.Add(Me.LettersHistoryControl)
-        Me.SplitContainerLetters.Size = New System.Drawing.Size(606, 392)
+        Me.SplitContainerLetters.Size = New System.Drawing.Size(192, 9)
         Me.SplitContainerLetters.SplitterDistance = 186
         Me.SplitContainerLetters.TabIndex = 3
         '
@@ -3690,7 +3688,7 @@ Partial Class Work
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(606, 65)
+        Me.Panel1.Size = New System.Drawing.Size(192, 65)
         Me.Panel1.TabIndex = 0
         '
         'GroupBox5
@@ -3702,7 +3700,7 @@ Partial Class Work
         Me.GroupBox5.Dock = System.Windows.Forms.DockStyle.Top
         Me.GroupBox5.Location = New System.Drawing.Point(0, 29)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(1095, 29)
+        Me.GroupBox5.Size = New System.Drawing.Size(192, 29)
         Me.GroupBox5.TabIndex = 19
         Me.GroupBox5.TabStop = False
         '
@@ -3745,7 +3743,7 @@ Partial Class Work
         Me.ParticipantAddressGroupBox.Dock = System.Windows.Forms.DockStyle.Top
         Me.ParticipantAddressGroupBox.Location = New System.Drawing.Point(0, 0)
         Me.ParticipantAddressGroupBox.Name = "ParticipantAddressGroupBox"
-        Me.ParticipantAddressGroupBox.Size = New System.Drawing.Size(606, 29)
+        Me.ParticipantAddressGroupBox.Size = New System.Drawing.Size(192, 29)
         Me.ParticipantAddressGroupBox.TabIndex = 18
         Me.ParticipantAddressGroupBox.TabStop = False
         '
@@ -3983,10 +3981,9 @@ Partial Class Work
         'IDMCorrelationTimer
         '
         Me.IDMCorrelationTimer.Interval = 2000
-        '
         'DIList
         '
-        Me.DIList.ImageStream = CType(resources.GetObject("DIList.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.DIList.ImageStream = CType(Resources.GetObject("DIList.ImageStream"), System.Windows.Forms.ImageListStreamer)
         Me.DIList.TransparentColor = System.Drawing.Color.Transparent
         Me.DIList.Images.SetKeyName(0, "")
         Me.DIList.Images.SetKeyName(1, "")
@@ -4458,4 +4455,3 @@ Partial Class Work
     Friend WithEvents PatientHistoryButton As Button
     Friend WithEvents ImageWarning2 As Label
 End Class
-

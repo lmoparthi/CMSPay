@@ -14,8 +14,7 @@ Imports UFCW.WCF
 Imports System.Text.RegularExpressions
 Imports SharedInterfaces
 Imports System.IO
-
-<PlugIn("Medical", "Queue")> Public Class Work
+<PlugIn("Medical", "Queue")> Public Class Workbackup33120240406
     Implements SharedInterfaces.IMessage
 
 #Region "Private form variables and structs"

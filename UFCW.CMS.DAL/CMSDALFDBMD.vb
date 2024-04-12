@@ -1739,12 +1739,15 @@ Public NotInheritable Class CMSDALFDBMD
 
             CloneDS = _ReasonDS.Clone
 
-            If effectiveDate Is Nothing OrElse IsDBNull(effectiveDate) Then
-                effectiveDate = UFCWGeneral.NowDate
-            End If
+            'If effectiveDate Is Nothing OrElse IsDBNull(effectiveDate) Then
+            '    effectiveDate = UFCWGeneral.NowDate
+            'End If
 
             _ReasonDS.Tables(0).DefaultView.Sort = "REASON"
-            _ReasonDS.Tables(0).DefaultView.RowFilter = "#" & Format(effectiveDate, "yyyy-MM-dd").ToString & "# >= FROM_DATE AND #" & Format(effectiveDate, "yyyy-MM-dd").ToString & "# <= THRU_DATE "
+
+            If effectiveDate IsNot Nothing Then
+                _ReasonDS.Tables(0).DefaultView.RowFilter = "#" & Format(effectiveDate, "yyyy-MM-dd").ToString & "# >= FROM_DATE AND #" & Format(effectiveDate, "yyyy-MM-dd").ToString & "# <= THRU_DATE "
+            End If
 
             For Each ReasonRow As DataRowView In _ReasonDS.Tables(0).DefaultView
                 CloneDS.Tables(0).LoadDataRow(ReasonRow.Row.ItemArray, True)
