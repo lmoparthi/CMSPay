@@ -587,8 +587,8 @@ Public NotInheritable Class MemberAccumulatorManager
 
         Catch ex As Exception
             Throw
-        Finally
-            MemberAccumulator = Nothing
+            'Finally
+            '    MemberAccumulator = Nothing
         End Try
     End Function
 

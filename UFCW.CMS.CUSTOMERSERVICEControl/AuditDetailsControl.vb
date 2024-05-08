@@ -464,7 +464,7 @@ Public Class AuditDetailsControl
         '
         'SaveButton
         '
-        Me.SaveButton.Location = New System.Drawing.Point(648, 522)
+        Me.SaveButton.Location = New System.Drawing.Point(615, 470)
         Me.SaveButton.Name = "SaveButton"
         Me.SaveButton.Size = New System.Drawing.Size(75, 23)
         Me.SaveButton.TabIndex = 34
@@ -472,7 +472,7 @@ Public Class AuditDetailsControl
         '
         'CancelButton
         '
-        Me.CancelButton.Location = New System.Drawing.Point(729, 522)
+        Me.CancelButton.Location = New System.Drawing.Point(696, 470)
         Me.CancelButton.Name = "CancelButton"
         Me.CancelButton.Size = New System.Drawing.Size(75, 23)
         Me.CancelButton.TabIndex = 35

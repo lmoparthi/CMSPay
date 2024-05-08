@@ -3560,9 +3560,8 @@ Imports System.IO
         Dim TBox As TextBox
         Try
             TBox = CType(sender, TextBox)
-            Dim digitsOnly As Regex = New Regex("[^\d]")
+            Dim digitsOnly As Regex = New Regex("[^\d-]")
             TBox.Text = digitsOnly.Replace(TBox.Text, "")
-
         Catch ex As Exception
             Throw
         End Try
@@ -7184,7 +7183,7 @@ ShowUpdate:
             End If
 
 UpdateDetail:
-            DR.BeginEdit()
+            '    DR.BeginEdit()
             'Test if the Elig started or ended in the middle of the month
             Dim LineNotEligReason As String = NotEligReason
             If IsDBNull(DR("OCC_FROM_DATE")) OrElse (EligDR IsNot Nothing AndAlso Not (CDate(DR("OCC_FROM_DATE")) >= CDate(EligDR("FROM_DATE")) AndAlso CDate(DR("OCC_FROM_DATE")) <= CDate(EligDR("THRU_DATE")))) Then
@@ -7228,7 +7227,7 @@ UpdateDetail:
                 'add an alert
                 _ClaimAlertManager.AddAlertRow(New Object() {"Line " & DR("LINE_NBR").ToString & ": " & LineNotEligReason, DR("LINE_NBR").ToString, "Eligibility", 20})
             End If
-            DR.EndEdit()
+            '   DR.EndEdit()
         Catch ex As Exception
             Throw
         End Try
@@ -8036,7 +8035,7 @@ UpdateDetail:
 
                                     DetailDV(0).Row("OVERRIDE_SW") = True
                                 End If
-                            Case Is = DataRowState.Modified, Is = DataRowState.Unchanged
+                            Case Is = DataRowState.Modified ', Is = DataRowState.Unchanged
                                 If AccumDV.Count > 0 Then
                                     _ClaimMemberAccumulatorManager.OverrideEntry(CInt(AccumulatorController.GetAccumulatorID(CStr(DV(Cnt)("ACCUM_NAME")))), _ClaimID, CShort(detailLine), ApplyDate, CDec(DV(Cnt)("ENTRY_VALUE")), _DomainUser.ToUpper)
 
@@ -14280,7 +14279,9 @@ UpdateDetail:
 
             txtUnits.DataBindings.Clear()
             Bind = New Binding("Text", _MedDtlBS, "DAYS_UNITS")
-            Bind.DataSourceUpdateMode = DataSourceUpdateMode.OnPropertyChanged
+            Bind.DataSourceUpdateMode = DataSourceUpdateMode.OnValidation
+            AddHandler Bind.Parse, AddressOf UFCWGeneral.MoneyBinding_Parse
+            AddHandler Bind.Format, AddressOf UFCWGeneral.MoneyBinding_Format
             txtUnits.DataBindings.Add(Bind)
 
             txtNDC.DataBindings.Clear()
@@ -14790,8 +14791,8 @@ UpdateDetail:
 
                 'reevaluate diagnosis preventative status based upon new from date
 
-                'If IsDate(CType(sender, TextBox).Text) Then
-                If IsDate(txtFromDate.Text) Then
+                If IsDate(CType(sender, TextBox).Text) Then
+                    'If IsDate(txtFromDate.Text) Then
                     If IsDate(txtToDate.Text) Then
                         If CDate(txtFromDate.Text) > CDate(txtToDate.Text) Then
                             txtToDate.Text = txtFromDate.Text
@@ -14887,6 +14888,7 @@ UpdateDetail:
 #End If
 
     End Sub
+
     Private Sub BoundTextBoxDetail_Validated(sender As Object, e As System.EventArgs) Handles txtOIAmt.Validated, txtToDate.Validated, txtUnits.Validated
 
 #If TRACE Then
@@ -14894,11 +14896,14 @@ UpdateDetail:
 #End If
         Dim Binding As Binding
         Dim DGRow As DataRow
+        Dim BS As BindingSource
+
+        If DetailLinesDataGrid.GetGridRowCount = 0 Then Return
+
         Try
 
-            If _MedDtlBS Is Nothing OrElse _MedDtlBS.Current Is Nothing OrElse _MedDtlBS.Count = 0 Then Return
-
-            DGRow = DirectCast(_MedDtlBS.Current, DataRowView).Row
+            BS = DirectCast(DetailLinesDataGrid.DataSource, BindingSource)
+            DGRow = DirectCast(BS.Current, DataRowView).Row
 
             If DGRow Is Nothing Then Return
 
@@ -14912,25 +14917,24 @@ UpdateDetail:
                     txtToDate.Text = txtFromDate.Text
                 End If
             End If
-            SumOI()
 
-            'If Binding IsNot Nothing AndAlso UpdateTextBinding(sender) Then
+            If Binding IsNot Nothing AndAlso UpdateTextBinding(sender) Then
 
-            '    Select Case DGRow(Binding.BindingMemberInfo.BindingField).GetType
-            '        Case System.Type.GetType("System.Integer")
-            '            DGRow(Binding.BindingMemberInfo.BindingField) = UFCWGeneral.ToNullIntegerHandler(CType(sender, TextBox).Text)
-            '        Case System.Type.GetType("System.Decimal")
-            '            DGRow(Binding.BindingMemberInfo.BindingField) = UFCWGeneral.ToNullDecimalHandler(CType(sender, TextBox).Text)
-            '        Case System.Type.GetType("System.Date")
-            '            DGRow(Binding.BindingMemberInfo.BindingField) = UFCWGeneral.ToNullDateHandler(CType(sender, TextBox).Text)
-            '        Case Else
+                Select Case DGRow(Binding.BindingMemberInfo.BindingField).GetType
+                    Case System.Type.GetType("System.Integer")
+                        DGRow(Binding.BindingMemberInfo.BindingField) = UFCWGeneral.ToNullIntegerHandler(CType(sender, TextBox).Text)
+                    Case System.Type.GetType("System.Decimal")
+                        DGRow(Binding.BindingMemberInfo.BindingField) = UFCWGeneral.ToNullDecimalHandler(CType(sender, TextBox).Text)
+                    Case System.Type.GetType("System.Date")
+                        DGRow(Binding.BindingMemberInfo.BindingField) = UFCWGeneral.ToNullDateHandler(CType(sender, TextBox).Text)
+                    Case Else
 
-            '            DGRow(Binding.BindingMemberInfo.BindingField) = CType(sender, TextBox).Text
-            '    End Select
+                        DGRow(Binding.BindingMemberInfo.BindingField) = CType(sender, TextBox).Text
+                End Select
 
-            '    SumOI()
-            'End If
-
+                SumOI()
+            End If
+            BS.EndEdit()
         Catch ex As Exception
             Throw
         End Try

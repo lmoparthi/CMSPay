@@ -340,7 +340,7 @@ Public Class DetailLineDiagnosisForm
         If DiagnosisCodesTextBox.Text.Length = 0 Then
             AddButton.Enabled = False
         Else
-            If LineDiagnosisDataGrid.GetGridRowCount < MAXDIAGNOSIS Then
+            If LineDiagnosisDataGrid.GetGridRowCount <= MAXDIAGNOSIS Then
                 AddButton.Enabled = True
             Else
                 AddButton.Enabled = False
@@ -406,7 +406,7 @@ Public Class DetailLineDiagnosisForm
             Source = Source.Replace(" ", "")
 
             DiagnosisCodes2Add = Source.ToUpper.Split(CChar(","))
-            If DiagnosisCodes2Add.Length + _MedDiagBS.Count > MAXDIAGNOSIS Then
+            If DiagnosisCodes2Add.Length + _MedDiagBS.Count >= MAXDIAGNOSIS Then
                 DiagnosisCodesTextBox.SelectionStart = 0
                 DiagnosisCodesTextBox.SelectionLength = DiagnosisCodesTextBox.Text.Length
 

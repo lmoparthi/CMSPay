@@ -103,7 +103,7 @@ Public NotInheritable Class ClaimProcessor
             '         COBDT = claimDS.Tables("FUNDDUALCOVERAGE")
             '     End If
             COBDT = claimDS.Tables("FUNDDUALCOVERAGE")
-            If COBDT IsNot Nothing AndAlso COBDT.Rows.Count > 1 Then
+            If COBDT IsNot Nothing AndAlso COBDT.Rows.Count > 0 Then
                 claimAlertManager.AddAlertRow(New Object() {"Possible UFCW Dual Coverage (Family ID: " & COBDT.Rows(0)("FAMILY_ID").ToString & If(COBDT.Rows(0)("MEDICAL_PLAN").ToString.Trim = "0", " - Ineligible)", " Plan: " & COBDT.Rows(0)("PLAN_TYPE").ToString & " )"), 0, "Header", 20})
 
                 If UFCWGeneral.IsNullShortHandler(ClaimMasterDR("RELATION_ID")) > 0 Then

@@ -18,7 +18,7 @@
     <ApplicationIcon>UFCW CMS.ico</ApplicationIcon>
     <AssemblyKeyContainerName>
     </AssemblyKeyContainerName>
-    <AssemblyName>CMSPayMain</AssemblyName>
+    <AssemblyName>CMSPayUAT</AssemblyName>
     <AssemblyOriginatorKeyFile>
     </AssemblyOriginatorKeyFile>
     <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
@@ -44,7 +44,7 @@
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
-    <PublishUrl>\\ufcwfs1\ufcw\Eval Code\CMS Pay\PublishClickOnceIT\</PublishUrl>
+    <PublishUrl>\\ufcwfs1\ufcw\Eval Code\CMS Pay\CMS Pay UAT\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Unc</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -54,11 +54,11 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>true</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ProductName>CMS Pay %28PublishClickOnceIT%29</ProductName>
-    <PublisherName>UFCW</PublisherName>
+    <ProductName>CMS Pay %28UAT%29</ProductName>
+    <PublisherName>UFCW Trust</PublisherName>
     <SuiteName>CMS</SuiteName>
     <MinimumRequiredVersion>2.2.48.16</MinimumRequiredVersion>
-    <ApplicationRevision>87</ApplicationRevision>
+    <ApplicationRevision>89</ApplicationRevision>
     <ApplicationVersion>2.2.48.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>

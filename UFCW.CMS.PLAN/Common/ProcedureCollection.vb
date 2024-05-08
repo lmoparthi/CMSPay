@@ -676,7 +676,7 @@ Public Class Procedures
                     If (MatchingProcRule.MonthsMin > 0 OrElse MatchingProcRule.MonthsMax > 0) Then 'give a rule with a dob component a slight edge
                         Weight += 1
                     End If
-#If debug Then
+#If DEBUG Then
                     Debug.Print("+DOB Line Info: " & procedureClaimLineItem.MonthsMin.ToString & " - " & procedureClaimLineItem.MonthsMax.ToString & " Rule Info: " & MatchingProcRule.MonthsMin.ToString & " - " & MatchingProcRule.MonthsMax)
 #End If
                 End If

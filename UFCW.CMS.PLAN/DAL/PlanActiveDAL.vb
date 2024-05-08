@@ -1684,10 +1684,10 @@ FETCH FIRST 1 ROWS ONLY
             If procedureCol IsNot Nothing Then
                 procedureCol = Nothing
             End If
-
-            If dt IsNot Nothing Then
-                dt = Nothing
-            End If
+            'MH 5/3/2024
+            'If dt IsNot Nothing Then
+            '    dt = Nothing
+            'End If
 
 #If TRACE Then
             If CInt(_TraceParallel.Level) > 1 Then

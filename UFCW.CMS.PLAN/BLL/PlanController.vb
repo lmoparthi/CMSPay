@@ -1770,7 +1770,10 @@ Public NotInheritable Class PlanController
 
         Try
             RuleSetTypesCol = PlanController.GetRulesetTypes()
-            RuleSetTypeName = GetRuleSetTypeName(claimType, medhdrDT).ToUpper
+            RuleSetTypeName = GetRuleSetTypeName(claimType, medhdrDT)
+            If RuleSetTypeName IsNot Nothing Then
+                RuleSetTypeName = RuleSetTypeName.ToUpper
+            End If
 
             For Each RuleSetTypeItem As RuleSetType In RuleSetTypesCol
                 If RuleSetTypeItem.Name.ToUpper.Trim = RuleSetTypeName Then
@@ -1929,28 +1932,23 @@ Public NotInheritable Class PlanController
         Try
             If _SequenceNumbersDT Is Nothing Then
                 _SequenceNumbersDT = New DataTable
+                DC = New DataColumn("SEQ_NBR", GetType(System.Int32))
+                _SequenceNumbersDT.Columns.Add(DC)
+
+                DC = New DataColumn("OCC_FROM_DATE", GetType(System.DateTime))
+                _SequenceNumbersDT.Columns.Add(DC)
+
+                DC = New DataColumn("OCC_TO_DATE", GetType(System.DateTime))
+                _SequenceNumbersDT.Columns.Add(DC)
+
+                DC = New DataColumn("PLAN_TYPE", GetType(System.String))
+                _SequenceNumbersDT.Columns.Add(DC)
             End If
 
             SyncLock _GetSequenceNumberSyncLock
-                If _SequenceNumbersDT.Rows.Count < 1 Then
-                    If _SequenceNumbersDT.Rows.Count < 1 Then
-                        DC = New DataColumn("SEQ_NBR", GetType(System.Int32))
-                        _SequenceNumbersDT.Columns.Add(DC)
+                ' PlanActiveDAL.GetWildCardProceduresAndSequenceNumbers(_WildCardProcedureCollection, _SequenceNumbers)
+                PlanActiveDAL.GetWildCardProceduresAndSequenceNumbersFor_PlanType_And_DateOfService(_WildCardProcedures, _SequenceNumbersDT, planType, relevantDate)
 
-                        DC = New DataColumn("OCC_FROM_DATE", GetType(System.DateTime))
-                        _SequenceNumbersDT.Columns.Add(DC)
-
-                        DC = New DataColumn("OCC_TO_DATE", GetType(System.DateTime))
-                        _SequenceNumbersDT.Columns.Add(DC)
-
-                        DC = New DataColumn("PLAN_TYPE", GetType(System.String))
-                        _SequenceNumbersDT.Columns.Add(DC)
-                    End If
-
-                    ' PlanActiveDAL.GetWildCardProceduresAndSequenceNumbers(_WildCardProcedureCollection, _SequenceNumbers)
-                    PlanActiveDAL.GetWildCardProceduresAndSequenceNumbersFor_PlanType_And_DateOfService(_WildCardProcedures, _SequenceNumbersDT, planType, relevantDate)
-
-                End If
             End SyncLock
 
             DRs = _SequenceNumbersDT.Select("PLAN_TYPE = '" & planType & "' AND '" & relevantDate & "' >= OCC_FROM_DATE AND '" & relevantDate & "' <= OCC_TO_DATE", "SEQ_NBR DESC")

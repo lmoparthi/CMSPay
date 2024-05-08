@@ -3157,7 +3157,6 @@ Imports SharedInterfaces
         ' 	[Nick Snyder]	9/8/2006	Created
         ' </history>
         ' -----------------------------------------------------------------------------
-        Dim eOriginal As String = e.Value.ToString
 
         Try
             If Not IsDBNull(e.Value) AndAlso e.Value IsNot Nothing AndAlso e.Value.ToString.Trim.Length > 0 AndAlso CStr(e.Value) <> CStr(e.Value).ToUpper Then
@@ -3183,7 +3182,6 @@ Imports SharedInterfaces
         ' 	[Nick Snyder]	9/8/2006	Created
         ' </history>
         ' -----------------------------------------------------------------------------
-        Dim eOriginal As String = e.Value.ToString
 
         Try
             If Not IsDBNull(e.Value) AndAlso CStr(e.Value).Trim.Length > 0 AndAlso e.Value.ToString.ToUpper <> CStr(e.Value).ToUpper Then
