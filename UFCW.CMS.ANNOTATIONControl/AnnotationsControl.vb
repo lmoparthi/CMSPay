@@ -495,7 +495,7 @@ Public Class AnnotationsControl
     End Property
 #End Region
 
-    Protected Overrides Sub Dispose(disposing As Boolean)
+    Protected Overloads Sub Dispose(disposing As Boolean)
 
         If _IconCol IsNot Nothing Then AddHandler _IconCol.PaintCellPicture, AddressOf DetermineCellIcon
 
@@ -525,7 +525,7 @@ Public Class AnnotationsControl
         _IconCol = Nothing
 
         If disposing Then
-            If Not (components Is Nothing) Then
+            If (components IsNot Nothing) Then
                 components.Dispose()
             End If
         End If

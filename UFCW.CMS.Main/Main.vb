@@ -446,8 +446,8 @@ Public NotInheritable Class Main
         AppDomain.CurrentDomain.SetPrincipalPolicy(System.Security.Principal.PrincipalPolicy.WindowsPrincipal)
 
         'Check the access to application
-        If Not UFCWGeneralAD.CMSUsers() AndAlso Not UFCWGeneralAD.CMSUTL Then
-            MessageBox.Show("You do not have permission to use this application", "Check Access (CMSUsers/CMSUTL)", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        If Not UFCWGeneralAD.CMSPay() Then
+            MessageBox.Show("You do not have permission to use this application", "Check Access (CMSPay)", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Me.Close()
             Return
         End If

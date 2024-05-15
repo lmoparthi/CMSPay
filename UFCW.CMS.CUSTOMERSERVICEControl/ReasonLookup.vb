@@ -194,7 +194,7 @@ Public Class ReasonLookup
 
     Private Sub LoadReasons()
         Try
-            _ReasonDS = CMSDALFDBMD.RetrieveReasonValues(Nothing, _ReasonDS)
+            _ReasonDS = CMSDALFDBMD.RetrieveReasonValues(UFCWGeneral.NowDate, _ReasonDS)
 
             ReasonsDataGrid.SuspendLayout()
             ReasonsDataGrid.DataSource = _ReasonDS.Tables("REASON_VALUES")

@@ -3671,7 +3671,7 @@ Partial Class Work
         Me.LettersControl.LineOfBusiness = ""
         Me.LettersControl.Location = New System.Drawing.Point(0, 0)
         Me.LettersControl.Name = "LettersControl"
-        Me.LettersControl.Size = New System.Drawing.Size(606, 186)
+        Me.LettersControl.Size = New System.Drawing.Size(606, 202)
         Me.LettersControl.TabIndex = 2
         '
         'LettersHistoryControl

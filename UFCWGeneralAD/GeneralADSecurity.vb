@@ -106,11 +106,12 @@ Partial Public Class UFCWGeneralAD
 #If DEBUG AndAlso CMSCanRunReports = True Then 'This conditional check is Configuration Properties \ Build
         a.Add("CMSCanRunReports")
 #End If
-
+#If DEBUG AndAlso CMSPay = True Then
+        a.Add("CMSPay")
+#End If
 #If DEBUG AndAlso CMSUsers = True Then
         a.Add("CMSUsers")
 #End If
-
 #If DEBUG AndAlso CMSDental = True Then
         a.Add("CMSDental")
 #End If
@@ -508,6 +509,19 @@ Partial Public Class UFCWGeneralAD
 #End If
         Return True
     End Function
+
+    Public Shared Function CMSPay() As Boolean
+
+#If DEBUG And CMSPay = True Then 'This conditional check is Configuration Properties \ Build
+                Return True
+#ElseIf DEBUG And CMSPay = False Then
+                Return False
+#Else
+        Return _WindowsPrincipalForID.IsInRole("UFCW\CMSPay")
+#End If
+        Return True
+    End Function
+
     Public Shared Function CMSLocals() As Boolean
 
 #If DEBUG And CMSLocals = True Then 'This conditional check is Configuration Properties \ Build

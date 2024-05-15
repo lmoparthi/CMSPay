@@ -406,7 +406,7 @@ Public Class DetailLineDiagnosisForm
             Source = Source.Replace(" ", "")
 
             DiagnosisCodes2Add = Source.ToUpper.Split(CChar(","))
-            If DiagnosisCodes2Add.Length + _MedDiagBS.Count >= MAXDIAGNOSIS Then
+            If _MedDiagBS.Count > MAXDIAGNOSIS Then
                 DiagnosisCodesTextBox.SelectionStart = 0
                 DiagnosisCodesTextBox.SelectionLength = DiagnosisCodesTextBox.Text.Length
 

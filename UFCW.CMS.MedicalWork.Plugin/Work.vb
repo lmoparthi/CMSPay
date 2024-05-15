@@ -971,7 +971,7 @@ Imports System.IO
         Me.WorkFreeTextEditor = Nothing
         Me.LettersControl = Nothing
 
-        Me.AnnotationControl.Dispose()
+        Me.AnnotationControl = Nothing
         Me.ProvProviderControl.Dispose()
         Me.PartParticipantControl.Dispose()
         Me.LettersHistoryControl.Dispose()
@@ -6448,11 +6448,10 @@ ShowUpdate:
         Dim ProvDR As DataRow
         Dim DGRow As DataRow
         Dim canDeny As Boolean = False
-
+        Dim DV As DataView
         Try
 
             If _Disposed OrElse _MedDtlBS Is Nothing OrElse _MedDtlBS.Position < -1 Then Return
-
 
 #If TRACE Then
                 If CInt(_TraceParallel.Level) > 1 Then Trace.WriteLine(UFCWGeneral.NowDate.ToString("HH:mm:ss.fffffff") & " : Thread " & Thread.CurrentThread.ManagedThreadId.ToString & vbTab & New StackFrame(True).GetFileLineNumber.ToString & vbTab & New StackFrame(True).GetMethod.ToString & vbTab & New System.Diagnostics.StackTrace(True).GetFrame(0).GetMethod.Module.ToString & " : " & New System.Diagnostics.StackTrace(True).GetFrame(0).GetMethod.ToString & "  (" & New System.Diagnostics.StackTrace(True).GetFrame(0).GetFileLineNumber.ToString & ")" & " < " & New System.Diagnostics.StackTrace(True).GetFrame(1).GetMethod.ToString & "  (" & New System.Diagnostics.StackTrace(True).GetFrame(1).GetFileLineNumber.ToString & ")", "TraceParallel" & vbTab)
@@ -6481,11 +6480,12 @@ ShowUpdate:
                                     canDeny = True
                                     'set as non-par
                                     _MedHdrDr("NON_PAR_SW") = True
+
                                 End If
                             End If
                         End If
-                        _MedHdrDr.EndEdit()
-                        _MedHdrBS.EndEdit()
+                        ' _MedHdrDr.EndEdit()
+                       ' _MedHdrBS.EndEdit()
                                 'Mental Health
                     Case "MENTAL HEALTH"
                         If Not CBool(_MedHdrDr("AUTHORIZED_SW")) Then
@@ -6495,18 +6495,18 @@ ShowUpdate:
                             End If
                         End If
                 End Select
-
                 If canDeny Then
-                    'Deny all lines
-                    ' cmbStatus.SelectedText = "DENY"
-                    _MedDtlBS.SuspendBinding()
-                    Dim DV As DataView = New DataView(_ClaimDS.MEDDTL, "STATUS <> 'DENY'", "STATUS", DataViewRowState.CurrentRows)
+                    _MedDtlBS.RaiseListChangedEvents = False
+                    DV = New DataView(_ClaimDS.MEDDTL, "STATUS <> 'DENY'", "STATUS", DataViewRowState.CurrentRows)
                     For Each DVR As DataRowView In DV
                         DVR.Row("STATUS") = "DENY"
                     Next
-                    _MedDtlBS.ResumeBinding()
-                    _MedDtlBS.ResetBindings(False)
+                    _MedDtlBS.RaiseListChangedEvents = True
                 End If
+
+                '    '_MedDtlBS.ResumeBinding()
+                '    '_MedDtlBS.ResetBindings(False)
+                'End If
 
             End Using
 
@@ -7183,7 +7183,7 @@ ShowUpdate:
             End If
 
 UpdateDetail:
-            '    DR.BeginEdit()
+            DR.BeginEdit()
             'Test if the Elig started or ended in the middle of the month
             Dim LineNotEligReason As String = NotEligReason
             If IsDBNull(DR("OCC_FROM_DATE")) OrElse (EligDR IsNot Nothing AndAlso Not (CDate(DR("OCC_FROM_DATE")) >= CDate(EligDR("FROM_DATE")) AndAlso CDate(DR("OCC_FROM_DATE")) <= CDate(EligDR("THRU_DATE")))) Then
@@ -7227,7 +7227,7 @@ UpdateDetail:
                 'add an alert
                 _ClaimAlertManager.AddAlertRow(New Object() {"Line " & DR("LINE_NBR").ToString & ": " & LineNotEligReason, DR("LINE_NBR").ToString, "Eligibility", 20})
             End If
-            '   DR.EndEdit()
+            DR.EndEdit()
         Catch ex As Exception
             Throw
         End Try
@@ -14903,6 +14903,9 @@ UpdateDetail:
         Try
 
             BS = DirectCast(DetailLinesDataGrid.DataSource, BindingSource)
+
+            If BS Is Nothing OrElse BS.Current Is Nothing OrElse BS.Count = 0 Then Return
+
             DGRow = DirectCast(BS.Current, DataRowView).Row
 
             If DGRow Is Nothing Then Return
@@ -14917,24 +14920,24 @@ UpdateDetail:
                     txtToDate.Text = txtFromDate.Text
                 End If
             End If
+            SumOI()
+            'If Binding IsNot Nothing AndAlso UpdateTextBinding(sender) Then
 
-            If Binding IsNot Nothing AndAlso UpdateTextBinding(sender) Then
+            '    Select Case DGRow(Binding.BindingMemberInfo.BindingField).GetType
+            '        Case System.Type.GetType("System.Integer")
+            '            DGRow(Binding.BindingMemberInfo.BindingField) = UFCWGeneral.ToNullIntegerHandler(CType(sender, TextBox).Text)
+            '        Case System.Type.GetType("System.Decimal")
+            '            DGRow(Binding.BindingMemberInfo.BindingField) = UFCWGeneral.ToNullDecimalHandler(CType(sender, TextBox).Text)
+            '        Case System.Type.GetType("System.Date")
+            '            DGRow(Binding.BindingMemberInfo.BindingField) = UFCWGeneral.ToNullDateHandler(CType(sender, TextBox).Text)
+            '        Case Else
 
-                Select Case DGRow(Binding.BindingMemberInfo.BindingField).GetType
-                    Case System.Type.GetType("System.Integer")
-                        DGRow(Binding.BindingMemberInfo.BindingField) = UFCWGeneral.ToNullIntegerHandler(CType(sender, TextBox).Text)
-                    Case System.Type.GetType("System.Decimal")
-                        DGRow(Binding.BindingMemberInfo.BindingField) = UFCWGeneral.ToNullDecimalHandler(CType(sender, TextBox).Text)
-                    Case System.Type.GetType("System.Date")
-                        DGRow(Binding.BindingMemberInfo.BindingField) = UFCWGeneral.ToNullDateHandler(CType(sender, TextBox).Text)
-                    Case Else
+            '            DGRow(Binding.BindingMemberInfo.BindingField) = CType(sender, TextBox).Text
+            '    End Select
 
-                        DGRow(Binding.BindingMemberInfo.BindingField) = CType(sender, TextBox).Text
-                End Select
+            '    SumOI()
+            'End If
 
-                SumOI()
-            End If
-            BS.EndEdit()
         Catch ex As Exception
             Throw
         End Try
@@ -16105,9 +16108,9 @@ UpdateDetail:
 
             _MedDtlBS.EndEdit()
 
-            Debug.Print(UFCWGeneral.NowDate.ToString("HH:mm:ss.fffffff") & " In:  " & Me.Name & ":" & CBox.Name & " BS(" & _MedDtlBS.Position.ToString & ") Val(" & CType(_MedDtlBS.Current, DataRowView).Row("STATUS").ToString & "/" & CBox.Text & ") " & UFCWGeneral.FlattenStack(New System.Diagnostics.StackTrace(True)))
+            'Debug.Print(UFCWGeneral.NowDate.ToString("HH:mm:ss.fffffff") & " In:  " & Me.Name & ":" & CBox.Name & " BS(" & _MedDtlBS.Position.ToString & ") Val(" & CType(_MedDtlBS.Current, DataRowView).Row("STATUS").ToString & "/" & CBox.Text & ") " & UFCWGeneral.FlattenStack(New System.Diagnostics.StackTrace(True)))
 
-            Debug.Print(UFCWGeneral.NowDate.ToString("HH:mm:ss.fffffff") & " Out: " & Me.Name & ":" & CBox.Name & " BS(" & _MedDtlBS.Position.ToString & ") Val(" & CType(_MedDtlBS.Current, DataRowView).Row("STATUS").ToString & "/" & CBox.Text & ") " & UFCWGeneral.FlattenStack(New System.Diagnostics.StackTrace(True)))
+            'Debug.Print(UFCWGeneral.NowDate.ToString("HH:mm:ss.fffffff") & " Out: " & Me.Name & ":" & CBox.Name & " BS(" & _MedDtlBS.Position.ToString & ") Val(" & CType(_MedDtlBS.Current, DataRowView).Row("STATUS").ToString & "/" & CBox.Text & ") " & UFCWGeneral.FlattenStack(New System.Diagnostics.StackTrace(True)))
 
         Catch ex As Exception
             Throw
@@ -16251,9 +16254,9 @@ UpdateDetail:
                         _DetailAccumulatorsDT = Nothing
                         _AccumulatorsDT = Nothing
                         Using WC As New GlobalCursor
-                            ' _MedDtlBS.RaiseListChangedEvents = False
+                            '_MedDtlBS.RaiseListChangedEvents = False
                             ClaimProcessor.LoadDetailLineAccumulators(AddressOf WorkStatusMessage, AddressOf SelectAccidentUI, AddressOf AccumulatorCheckIfOverrideNeededUI, _HighestEntryID, _ClaimBinder, _ClaimMemberAccumulatorManager, CType(_ClaimDS, DataSet), _DetailAccumulatorsDT, _AccumulatorsDT, _ClaimAlertManager)
-                            ' _MedDtlBS.RaiseListChangedEvents = True
+                            '_MedDtlBS.RaiseListChangedEvents = True
                             '  _MedDtlBS.EndEdit()
                             Me.BindingContext(_ClaimDS.MEDDTL).EndCurrentEdit()
 
@@ -17407,12 +17410,13 @@ UpdateDetail:
                     SumPaid()
                 End If
             Else
-                MeddtlDR("REASON_SW") = 0
-                If IsDBNull(MeddtlDR("PAID_AMT")) OrElse CDec(MeddtlDR("PAID_AMT")) = 0D Then
-                    _ClaimAlertManager.AddAlertRow(New Object() {"Line " & MeddtlDR("LINE_NBR").ToString & ": Paid Is 0 and a Reason is Required", MeddtlDR("LINE_NBR").ToString, "Detail", 30})
+                If MeddtlDR IsNot Nothing Then
+                    MeddtlDR("REASON_SW") = 0
+                    If IsDBNull(MeddtlDR("PAID_AMT")) OrElse CDec(MeddtlDR("PAID_AMT")) = 0D Then
+                        _ClaimAlertManager.AddAlertRow(New Object() {"Line " & MeddtlDR("LINE_NBR").ToString & ": Paid Is 0 and a Reason is Required", MeddtlDR("LINE_NBR").ToString, "Detail", 30})
+                    End If
                 End If
             End If
-
 
         Catch ex As Exception
             Throw

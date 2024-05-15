@@ -315,8 +315,8 @@ Public Class DiagnosisLookupForm
             }
             DiagnosisLookupDataGrid.SuspendLayout()
             DiagnosisLookupDataGrid.DataSource = _DiagBS
-            DiagnosisLookupDataGrid.SetTableStyle()
-
+            ' DiagnosisLookupDataGrid.SetTableStyle()
+            SetDiagnosisTableStyle(DiagnosisLookupDataGrid)
             DiagnosisLookupDataGrid.ResumeLayout()
 
         Catch ex As Exception

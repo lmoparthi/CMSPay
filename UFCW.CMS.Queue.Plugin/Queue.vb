@@ -1989,7 +1989,7 @@ CleanUp:
             End If
 
             If Not CStr(claimDR("DOC_TYPE")).ToUpper.Trim.StartsWith("UTL") Then
-                If Not UFCWGeneralAD.CMSUsers Then
+                If Not UFCWGeneralAD.CMSPay Then
                     MessageBox.Show("Item " & claimID & " is not of the type UTL." & Microsoft.VisualBasic.vbCrLf &
                                      "Please select another item.", "Access Prohibited via Security", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     Return False
