@@ -130,7 +130,6 @@ Public Class LETTERSControl
 
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.LettersDataGrid = New DataGridCustom()
         Me.LettersCXTMenu = New System.Windows.Forms.ContextMenu()
         Me.MenuGenerateLetter = New System.Windows.Forms.MenuItem()
         Me.FindMenuItem = New System.Windows.Forms.MenuItem()
@@ -138,9 +137,50 @@ Public Class LETTERSControl
         Me.ActionButton = New System.Windows.Forms.Button()
         Me.Status = New System.Windows.Forms.Label()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        CType(Me.LettersDataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.LettersDataGrid = New DataGridCustom()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LettersDataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'LettersCXTMenu
+        '
+        Me.LettersCXTMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuGenerateLetter, Me.FindMenuItem})
+        '
+        'MenuGenerateLetter
+        '
+        Me.MenuGenerateLetter.Index = 0
+        Me.MenuGenerateLetter.Text = "Generate Selected Letter"
+        '
+        'FindMenuItem
+        '
+        Me.FindMenuItem.Index = 1
+        Me.FindMenuItem.Shortcut = System.Windows.Forms.Shortcut.CtrlF
+        Me.FindMenuItem.Text = "Find"
+        '
+        'ActionButton
+        '
+        Me.ActionButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.ActionButton.Location = New System.Drawing.Point(0, 400)
+        Me.ActionButton.Name = "ActionButton"
+        Me.ActionButton.Size = New System.Drawing.Size(104, 24)
+        Me.ActionButton.TabIndex = 1
+        Me.ActionButton.Text = "Select Letter"
+        '
+        'Status
+        '
+        Me.Status.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Status.BackColor = System.Drawing.SystemColors.Control
+        Me.Status.ForeColor = System.Drawing.Color.Red
+        Me.Status.Location = New System.Drawing.Point(0, 376)
+        Me.Status.Name = "Status"
+        Me.Status.Size = New System.Drawing.Size(416, 16)
+        Me.Status.TabIndex = 2
+        Me.Status.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'ErrorProvider1
+        '
+        Me.ErrorProvider1.ContainerControl = Me
         '
         'LettersDataGrid
         '
@@ -149,8 +189,8 @@ Public Class LETTERSControl
         Me.LettersDataGrid.ADGroupsThatCanExport = "CMSCanAudit,CMSCanRunReports,CMSAdministrators"
         Me.LettersDataGrid.ADGroupsThatCanFilter = "CMSCanAudit,CMSCanRunReports,CMSAdministrators"
         Me.LettersDataGrid.ADGroupsThatCanFind = ""
-        Me.LettersDataGrid.ADGroupsThatCanPrint = "CMSCanAudit,CMSCanRunReports,CMSAdministrators"
         Me.LettersDataGrid.ADGroupsThatCanMultiSort = ""
+        Me.LettersDataGrid.ADGroupsThatCanPrint = "CMSCanAudit,CMSCanRunReports,CMSAdministrators"
         Me.LettersDataGrid.AllowAutoSize = True
         Me.LettersDataGrid.AllowColumnReorder = False
         Me.LettersDataGrid.AllowCopy = False
@@ -171,6 +211,7 @@ Public Class LETTERSControl
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LettersDataGrid.AppKey = "UFCW\Claims\"
+        Me.LettersDataGrid.AutoSaveCols = True
         Me.LettersDataGrid.BackgroundColor = System.Drawing.SystemColors.Window
         Me.LettersDataGrid.CaptionText = "Available Letters"
         Me.LettersDataGrid.ColumnHeaderLabel = Nothing
@@ -179,67 +220,34 @@ Public Class LETTERSControl
         Me.LettersDataGrid.ConfirmDelete = True
         Me.LettersDataGrid.ContextMenu = Me.LettersCXTMenu
         Me.LettersDataGrid.CopySelectedOnly = True
+        Me.LettersDataGrid.CurrentBSPosition = -1
         Me.LettersDataGrid.DataMember = ""
         Me.LettersDataGrid.DragColumn = 0
         Me.LettersDataGrid.ExportSelectedOnly = True
         Me.LettersDataGrid.HeaderForeColor = System.Drawing.SystemColors.ControlText
         Me.LettersDataGrid.HighlightedRow = Nothing
+        Me.LettersDataGrid.HighLightModifiedRows = False
+        Me.LettersDataGrid.ImeMode = System.Windows.Forms.ImeMode.Off
         Me.LettersDataGrid.IsMouseDown = False
         Me.LettersDataGrid.LastGoToLine = ""
         Me.LettersDataGrid.Location = New System.Drawing.Point(0, 0)
         Me.LettersDataGrid.MultiSort = False
         Me.LettersDataGrid.Name = "LettersDataGrid"
         Me.LettersDataGrid.OldSelectedRow = Nothing
+        Me.LettersDataGrid.PreviousBSPosition = -1
         Me.LettersDataGrid.ReadOnly = True
+        Me.LettersDataGrid.RetainRowSelectionAfterSort = True
         Me.LettersDataGrid.SetRowOnRightClick = True
         Me.LettersDataGrid.ShiftPressed = False
         Me.LettersDataGrid.SingleClickBooleanColumns = True
-        Me.LettersDataGrid.Size = New System.Drawing.Size(424, 360)
+        Me.LettersDataGrid.Size = New System.Drawing.Size(424, 373)
+        Me.LettersDataGrid.Sort = Nothing
         Me.LettersDataGrid.StyleName = ""
         Me.LettersDataGrid.SubKey = ""
+        Me.LettersDataGrid.SuppressMouseDown = False
         Me.LettersDataGrid.SuppressTriangle = False
         Me.LettersDataGrid.TabIndex = 0
         Me.ToolTip.SetToolTip(Me.LettersDataGrid, "Double click a Letter to continue")
-        '
-        'Letters
-        '
-        Me.LettersCXTMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuGenerateLetter, Me.FindMenuItem})
-        '
-        'MenuGenerateLetter
-        '
-        Me.MenuGenerateLetter.Index = 0
-        Me.MenuGenerateLetter.Text = "Generate Selected Letter"
-        '
-        'FindMenuItem
-        '
-        Me.FindMenuItem.Index = 1
-        Me.FindMenuItem.Shortcut = System.Windows.Forms.Shortcut.CtrlF
-        Me.FindMenuItem.Text = "Find"
-        '
-        'btnAction
-        '
-        Me.ActionButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ActionButton.Location = New System.Drawing.Point(0, 400)
-        Me.ActionButton.Name = "ActionButton"
-        Me.ActionButton.Size = New System.Drawing.Size(104, 24)
-        Me.ActionButton.TabIndex = 1
-        Me.ActionButton.Text = "Select Letter"
-        '
-        'lblStatus
-        '
-        Me.Status.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Status.BackColor = System.Drawing.SystemColors.Control
-        Me.Status.ForeColor = System.Drawing.Color.Red
-        Me.Status.Location = New System.Drawing.Point(0, 376)
-        Me.Status.Name = "Status"
-        Me.Status.Size = New System.Drawing.Size(416, 16)
-        Me.Status.TabIndex = 2
-        Me.Status.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'ErrorProvider1
-        '
-        Me.ErrorProvider1.ContainerControl = Me
         '
         'LETTERSControl
         '
@@ -249,8 +257,8 @@ Public Class LETTERSControl
         Me.Name = "LETTERSControl"
         Me.Size = New System.Drawing.Size(424, 432)
         Me.ToolTip.SetToolTip(Me, "Double click a Letter to continue")
-        CType(Me.LettersDataGrid, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LettersDataGrid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

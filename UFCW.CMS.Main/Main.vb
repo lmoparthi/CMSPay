@@ -446,8 +446,8 @@ Public NotInheritable Class Main
         AppDomain.CurrentDomain.SetPrincipalPolicy(System.Security.Principal.PrincipalPolicy.WindowsPrincipal)
 
         'Check the access to application
-        If Not UFCWGeneralAD.CMSPay() Then
-            MessageBox.Show("You do not have permission to use this application", "Check Access (CMSPay)", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        If Not UFCWGeneralAD.CMSPay() AndAlso Not UFCWGeneralAD.CMSUTL Then
+            MessageBox.Show("You do not have permission to use this application", "Check Access (CMSPay/CMSUTL)", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Me.Close()
             Return
         End If
@@ -575,7 +575,11 @@ Public NotInheritable Class Main
 
         DomainUserStatusBarPanel.Text = SystemInformation.UserName
         DataStatusBarPanel.Text = "Server=" & CMSDALCommon.GetServerName(Nothing) & ";DB=" & CMSDALCommon.GetDatabaseName(Nothing)
-
+        If Not Me.DataStatusBarPanel.Text.Contains("PLOC") Then
+            Me.DataStatusBarPanel.Style = StatusBarPanelStyle.OwnerDraw
+            AddHandler Me.MainStatusBar.DrawItem, AddressOf DrawCustomStatusBarPanel
+        End If
+        Me.DateStatusBarPanel.Text = Format(UFCWGeneral.NowDate, "MM-dd-yyyy")
         Timer1.Enabled = True
 
         InfoStatusBarPanel.Text = ""
@@ -587,7 +591,26 @@ Public NotInheritable Class Main
         MsgFrm = Nothing
 
     End Sub
+    Private Sub DrawCustomStatusBarPanel(ByVal sender As Object, ByVal e As StatusBarDrawItemEventArgs)
 
+        ' Draw a blue background in the owner-drawn panel.
+        'e.Graphics.FillRectangle(Brushes., e.Bounds)
+
+        ' Create a StringFormat object to align text in the panel.
+        Using textFormat As New StringFormat()
+
+            ' Center the text in the middle of the line.
+            textFormat.LineAlignment = StringAlignment.Near
+
+            ' Align the text to the left.
+            textFormat.Alignment = StringAlignment.Near
+
+            ' Draw the panel's text in dark blue using the Panel 
+            ' and Bounds properties of the StatusBarEventArgs object 
+            ' and the StringFormat object.
+            e.Graphics.DrawString(e.Panel.Text, e.Font, Brushes.Red, New RectangleF(e.Bounds.X, e.Bounds.Y, e.Bounds.Width, e.Bounds.Height), textFormat)
+        End Using
+    End Sub
     Private Sub Main_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         Try
 

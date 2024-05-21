@@ -146,6 +146,7 @@ Public Class AccidentAccumulatorSelector
         Me.Controls.Add(Me.NewButton)
         Me.Controls.Add(Me.SelectButton)
         Me.Controls.Add(Me.AccidentAccumulatorDataGrid)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Name = "AccidentAccumulatorSelector"
         Me.Text = "Select Accident Accumulator"
         CType(Me.AccidentAccumulatorDataGrid, System.ComponentModel.ISupportInitialize).EndInit()

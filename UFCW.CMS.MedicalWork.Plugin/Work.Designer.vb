@@ -1602,6 +1602,7 @@ Partial Class Work
         Me.txtModifiers.Location = New System.Drawing.Point(456, 5)
         Me.txtModifiers.MaxLength = 11
         Me.txtModifiers.Name = "txtModifiers"
+        Me.txtModifiers.ReadOnly = True
         Me.txtModifiers.Size = New System.Drawing.Size(39, 20)
         Me.txtModifiers.TabIndex = 38
         '
@@ -1654,6 +1655,7 @@ Partial Class Work
         Me.txtDiagnoses.Location = New System.Drawing.Point(276, 29)
         Me.txtDiagnoses.MaxLength = 24
         Me.txtDiagnoses.Name = "txtDiagnoses"
+        Me.txtDiagnoses.ReadOnly = True
         Me.txtDiagnoses.Size = New System.Drawing.Size(174, 20)
         Me.txtDiagnoses.TabIndex = 47
         '
@@ -3671,7 +3673,7 @@ Partial Class Work
         Me.LettersControl.LineOfBusiness = ""
         Me.LettersControl.Location = New System.Drawing.Point(0, 0)
         Me.LettersControl.Name = "LettersControl"
-        Me.LettersControl.Size = New System.Drawing.Size(606, 202)
+        Me.LettersControl.Size = New System.Drawing.Size(606, 500)
         Me.LettersControl.TabIndex = 2
         '
         'LettersHistoryControl

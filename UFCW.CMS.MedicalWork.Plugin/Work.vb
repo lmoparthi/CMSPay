@@ -2128,12 +2128,8 @@ Imports System.IO
     End Sub
 
     Private Sub ReasonButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ReasonButton.Click
-
         Try
-            If _MedDtlBS Is Nothing OrElse _MedDtlBS.Current Is Nothing Then Return
-
             ShowDetailLineReasons()
-
         Catch ex As Exception
             Throw
         End Try
@@ -6496,12 +6492,15 @@ ShowUpdate:
                         End If
                 End Select
                 If canDeny Then
-                    _MedDtlBS.RaiseListChangedEvents = False
+                    ' _MedDtlBS.RaiseListChangedEvents = False
+                    _MedDtlBS.SuspendBinding()
                     DV = New DataView(_ClaimDS.MEDDTL, "STATUS <> 'DENY'", "STATUS", DataViewRowState.CurrentRows)
                     For Each DVR As DataRowView In DV
                         DVR.Row("STATUS") = "DENY"
                     Next
-                    _MedDtlBS.RaiseListChangedEvents = True
+                    _MedDtlBS.ResumeBinding()
+                    _MedDtlBS.ResetBindings(True)
+                    '    _MedDtlBS.RaiseListChangedEvents = True
                 End If
 
                 '    '_MedDtlBS.ResumeBinding()
@@ -7620,7 +7619,7 @@ UpdateDetail:
                     End If
                 End If
             End Using
-            _MedDtlBS.EndEdit()
+            ' _MedDtlBS.EndEdit()
         Catch ex As Exception
             Throw
         Finally
@@ -11362,7 +11361,7 @@ UpdateDetail:
                     OverDV = New DataView(_ClaimDS.MEDMOD, "LINE_NBR = " & MEDDTLDVR("LINE_NBR").ToString, "LINE_NBR, PRIORITY", DataViewRowState.Added Or DataViewRowState.CurrentRows Or DataViewRowState.Deleted)
                     For Each MEDMODDVR As DataRowView In OverDV
 
-                        OrigDV = New DataView(_ClaimDS.MEDMOD, "LINE_NBR = " & MEDDTLDVR("LINE_NBR").ToString & " AND PRIORITY = " & MEDMODDVR("PRIORITY").ToString, "LINE_NBR, PRIORITY", DataViewRowState.OriginalRows)
+                        OrigDV = New DataView(_ClaimDS.MEDMOD, "LINE_NBR = " & MEDDTLDVR("LINE_NBR").ToString & " AND PRIORITY = " & MEDMODDVR("PRIORITY").ToString, "LINE_NBR, PRIORITY", DataViewRowState.ModifiedOriginal)
                         CurDV = New DataView(_ClaimDS.MEDMOD, "LINE_NBR = " & MEDDTLDVR("LINE_NBR").ToString & " AND PRIORITY = " & MEDMODDVR("PRIORITY").ToString, "LINE_NBR, PRIORITY", DataViewRowState.CurrentRows)
 
                         If OrigDV.Count > CurDV.Count Then
@@ -11457,7 +11456,7 @@ UpdateDetail:
                     OverDV = New DataView(_ClaimDS.MEDDIAG, "LINE_NBR = " & MEDDTLDVR("LINE_NBR").ToString, "LINE_NBR, PRIORITY", DataViewRowState.Added Or DataViewRowState.CurrentRows Or DataViewRowState.Deleted)
                     For Each MEDDIAGDVR As DataRowView In OverDV
 
-                        OrigDV = New DataView(_ClaimDS.MEDDIAG, "LINE_NBR = " & MEDDTLDVR("LINE_NBR").ToString & " AND PRIORITY = " & MEDDIAGDVR("PRIORITY").ToString, "LINE_NBR, PRIORITY", DataViewRowState.OriginalRows)
+                        OrigDV = New DataView(_ClaimDS.MEDDIAG, "LINE_NBR = " & MEDDTLDVR("LINE_NBR").ToString & " AND PRIORITY = " & MEDDIAGDVR("PRIORITY").ToString, "LINE_NBR, PRIORITY", DataViewRowState.ModifiedOriginal)
                         CurDV = New DataView(_ClaimDS.MEDDIAG, "LINE_NBR = " & MEDDTLDVR("LINE_NBR").ToString & " AND PRIORITY = " & MEDDIAGDVR("PRIORITY").ToString, "LINE_NBR, PRIORITY", DataViewRowState.CurrentRows)
 
                         If OrigDV.Count > CurDV.Count Then
@@ -11552,7 +11551,7 @@ UpdateDetail:
                 OverDV = New DataView(_ClaimDS.REASON, "LINE_NBR = " & MEDDTLDVR("LINE_NBR").ToString, "LINE_NBR, PRIORITY", DataViewRowState.Added Or DataViewRowState.CurrentRows Or DataViewRowState.Deleted)
                 For Each REASONDVR As DataRowView In OverDV
 
-                    OrigDV = New DataView(_ClaimDS.REASON, "LINE_NBR = " & MEDDTLDVR("LINE_NBR").ToString & " AND PRIORITY = " & REASONDVR("PRIORITY").ToString, "", DataViewRowState.OriginalRows)
+                    OrigDV = New DataView(_ClaimDS.REASON, "LINE_NBR = " & MEDDTLDVR("LINE_NBR").ToString & " AND PRIORITY = " & REASONDVR("PRIORITY").ToString, "", DataViewRowState.ModifiedOriginal)
                     CurDV = New DataView(_ClaimDS.REASON, "LINE_NBR = " & MEDDTLDVR("LINE_NBR").ToString & " AND PRIORITY = " & REASONDVR("PRIORITY").ToString, "", DataViewRowState.CurrentRows)
 
                     If OrigDV.Count > CurDV.Count Then
@@ -17384,33 +17383,34 @@ UpdateDetail:
                 Else
                     ApplyStatus = MeddtlDR("STATUS").ToString
                 End If
-                If ApplyStatus = "DENY" AndAlso Not IsDBNull(MeddtlDR("PAID_AMT")) Then
-                    If CDec(MeddtlDR("PAID_AMT")) <> 0D Then
-                        MeddtlDR("PAID_AMT") = 0D
-                    End If
-                End If
+                'If ApplyStatus = "DENY" AndAlso Not IsDBNull(MeddtlDR("PAID_AMT")) Then
+                '    If CDec(MeddtlDR("PAID_AMT")) <> 0D Then
+                '        MeddtlDR("PAID_AMT") = 0D
+                '    End If
+                'End If
 
-                'If paid = 0 And there Is reasons Then delete alert
-                If IsDBNull(MeddtlDR("PAID_AMT")) OrElse CDec(MeddtlDR("PAID_AMT")) = 0D Then
-                    _ClaimAlertManager.DeleteAlertRowsByMessageAndLine("'Line " & MeddtlDR("LINE_NBR").ToString & ": Paid Is 0 and a Reason is Required'", CInt(MeddtlDR("LINE_NBR")))
-                End If
+                ''If paid = 0 And there Is reasons Then delete alert
+                'If IsDBNull(MeddtlDR("PAID_AMT")) OrElse CDec(MeddtlDR("PAID_AMT")) = 0D Then
+                '    _ClaimAlertManager.DeleteAlertRowsByMessageAndLine("'Line " & MeddtlDR("LINE_NBR").ToString & ": Paid Is 0 and a Reason is Required'", CInt(MeddtlDR("LINE_NBR")))
+                'End If
 
-                If ApplyStatus = "DENY" AndAlso Not IsDBNull(MeddtlDR("PAID_AMT")) Then
-                    _ClaimAlertManager.DeleteAlertRowsByMessageAndLine("'Line " & MeddtlDR("LINE_NBR").ToString & ": Paid Is More Than Priced'", CInt(MeddtlDR("LINE_NBR")))
-                    _ClaimAlertManager.DeleteAlertRowsByMessageAndLine("'Line " & MeddtlDR("LINE_NBR").ToString & ": Paid Is 0 and a Reason is Required'", CInt(MeddtlDR("LINE_NBR")))
+                'If ApplyStatus = "DENY" AndAlso Not IsDBNull(MeddtlDR("PAID_AMT")) Then
+                '    _ClaimAlertManager.DeleteAlertRowsByMessageAndLine("'Line " & MeddtlDR("LINE_NBR").ToString & ": Paid Is More Than Priced'", CInt(MeddtlDR("LINE_NBR")))
+                '    _ClaimAlertManager.DeleteAlertRowsByMessageAndLine("'Line " & MeddtlDR("LINE_NBR").ToString & ": Paid Is 0 and a Reason is Required'", CInt(MeddtlDR("LINE_NBR")))
 
-                    If Not IsDBNull(MeddtlDR("PRICED_AMT")) AndAlso CDec(MeddtlDR("PAID_AMT")) > CDec(Format(MeddtlDR("PRICED_AMT"), "0.00")) Then
-                        _ClaimAlertManager.AddAlertRow(New Object() {"Line " & MeddtlDR("LINE_NBR").ToString & ": Paid Is More Than Priced", MeddtlDR("LINE_NBR").ToString, "Detail", 20})
-                    End If
+                '    If Not IsDBNull(MeddtlDR("PRICED_AMT")) AndAlso CDec(MeddtlDR("PAID_AMT")) > CDec(Format(MeddtlDR("PRICED_AMT"), "0.00")) Then
+                '        _ClaimAlertManager.AddAlertRow(New Object() {"Line " & MeddtlDR("LINE_NBR").ToString & ": Paid Is More Than Priced", MeddtlDR("LINE_NBR").ToString, "Detail", 20})
+                '    End If
 
-                    If Not CBool(MeddtlDR("REASON_SW")) AndAlso CDec(MeddtlDR("PAID_AMT")) = 0D Then
-                        _ClaimAlertManager.AddAlertRow(New Object() {"Line " & MeddtlDR("LINE_NBR").ToString & ": Paid Is 0 and a Reason is Required", MeddtlDR("LINE_NBR").ToString, "Detail", 30})
-                    End If
+                '    If Not CBool(MeddtlDR("REASON_SW")) AndAlso CDec(MeddtlDR("PAID_AMT")) = 0D Then
+                '        _ClaimAlertManager.AddAlertRow(New Object() {"Line " & MeddtlDR("LINE_NBR").ToString & ": Paid Is 0 and a Reason is Required", MeddtlDR("LINE_NBR").ToString, "Detail", 30})
+                '    End If
 
-                    SumPaid()
-                End If
+                '    SumPaid()
+                'End If
             Else
                 If MeddtlDR IsNot Nothing Then
+
                     MeddtlDR("REASON_SW") = 0
                     If IsDBNull(MeddtlDR("PAID_AMT")) OrElse CDec(MeddtlDR("PAID_AMT")) = 0D Then
                         _ClaimAlertManager.AddAlertRow(New Object() {"Line " & MeddtlDR("LINE_NBR").ToString & ": Paid Is 0 and a Reason is Required", MeddtlDR("LINE_NBR").ToString, "Detail", 30})
