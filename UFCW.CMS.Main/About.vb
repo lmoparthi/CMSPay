@@ -1,7 +1,9 @@
 Imports System
+Imports System.Collections.Generic
 Imports System.Configuration
 Imports System.IO
 Imports System.Security.Principal
+Imports System.Threading.Tasks
 
 
 Public Class About
@@ -598,31 +600,60 @@ Public Class About
         Dim dllFileArray() As FileInfo = dInfo.GetFiles("*.dll")
         Dim exeFileArray() As FileInfo = dInfo.GetFiles("*.exe")
 
-        Versions.BeginUpdate()
-        For Each fi As FileInfo In exeFileArray
-            With System.Diagnostics.FileVersionInfo.GetVersionInfo(fi.FullName)
-                Versions.Items.Add($"{fi.FullName} ( { .FileMajorPart}.{ .FileMinorPart}.{ .FileBuildPart}.{ .FilePrivatePart} )")
-            End With
-        Next
-        For Each fi As FileInfo In dllFileArray
-            With System.Diagnostics.FileVersionInfo.GetVersionInfo(fi.FullName)
-                Versions.Items.Add($"{fi.FullName} ( { .FileMajorPart}.{ .FileMinorPart}.{ .FileBuildPart}.{ .FilePrivatePart} )")
-            End With
-        Next
-        For Each fi As FileInfo In xmlFileArray
-            With System.Diagnostics.FileVersionInfo.GetVersionInfo(fi.FullName)
-                Versions.Items.Add($"{fi.FullName} ( { .FileMajorPart}.{ .FileMinorPart}.{ .FileBuildPart}.{ .FilePrivatePart} )")
-            End With
-        Next
-        For Each fi As FileInfo In configFileArray
-            With System.Diagnostics.FileVersionInfo.GetVersionInfo(fi.FullName)
-                Versions.Items.Add($"{fi.FullName} ( { .FileMajorPart}.{ .FileMinorPart}.{ .FileBuildPart}.{ .FilePrivatePart} )")
-            End With
-        Next
-        Versions.EndUpdate()
+
+        ProcessFiles(configFileArray)
+        ProcessFiles(xmlFileArray)
+        ProcessFiles(dllFileArray)
+        ProcessFiles(exeFileArray)
+
+
+        'Versions.BeginUpdate()
+        'For Each fi As FileInfo In exeFileArray
+        '    With System.Diagnostics.FileVersionInfo.GetVersionInfo(fi.FullName)
+        '        Versions.Items.Add($"{fi.FullName} ( { .FileMajorPart}.{ .FileMinorPart}.{ .FileBuildPart}.{ .FilePrivatePart} )")
+        '    End With
+        'Next
+        'For Each fi As FileInfo In dllFileArray
+        '    With System.Diagnostics.FileVersionInfo.GetVersionInfo(fi.FullName)
+        '        Versions.Items.Add($"{fi.FullName} ( { .FileMajorPart}.{ .FileMinorPart}.{ .FileBuildPart}.{ .FilePrivatePart} )")
+        '    End With
+        'Next
+        'For Each fi As FileInfo In xmlFileArray
+        '    With System.Diagnostics.FileVersionInfo.GetVersionInfo(fi.FullName)
+        '        Versions.Items.Add($"{fi.FullName} ( { .FileMajorPart}.{ .FileMinorPart}.{ .FileBuildPart}.{ .FilePrivatePart} )")
+        '    End With
+        'Next
+        'For Each fi As FileInfo In configFileArray
+        '    With System.Diagnostics.FileVersionInfo.GetVersionInfo(fi.FullName)
+        '        Versions.Items.Add($"{fi.FullName} ( { .FileMajorPart}.{ .FileMinorPart}.{ .FileBuildPart}.{ .FilePrivatePart} )")
+        '    End With
+        'Next
+        'Versions.EndUpdate()
 
     End Sub
+    Private Sub ProcessFiles(ByVal verFileArray As FileInfo())
+        ' Create a list to store version information strings
+        Dim versionInfoList As New List(Of String)
+        Try
+            Parallel.ForEach(verFileArray, Sub(fi)
+                                               ' Get the file version information for the current file
+                                               Dim versionInfo As FileVersionInfo = FileVersionInfo.GetVersionInfo(fi.FullName)
 
+                                               ' Format the version information
+                                               Dim versionString As String = $"{fi.FullName} ({versionInfo.FileMajorPart}.{versionInfo.FileMinorPart}.{versionInfo.FileBuildPart}.{versionInfo.FilePrivatePart})"
+
+                                               ' Lock the list to avoid race conditions
+                                               SyncLock versionInfoList
+                                                   versionInfoList.Add(versionString)
+                                               End SyncLock
+                                           End Sub)
+            ' Add all collected version information strings to the ListBox
+            Versions.Items.AddRange(versionInfoList.ToArray())
+        Catch ex As Exception
+            Throw
+        End Try
+
+    End Sub
     Private Sub LoadImagingDocTypes()
         Dim DocSecurityDT As DataTable = CMSDALDBO.RetrieveImagingDocTypesByUserID("ImgWorkflow", _DomainUser)
 

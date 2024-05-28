@@ -12,7 +12,7 @@ Imports UFCW.WCF
 Imports DDTek.DB2
 Imports System.Threading.Tasks
 Imports System.Text.RegularExpressions
-
+Imports System.IO
 
 ''' -----------------------------------------------------------------------------
 ''' Project	 : UFCW.CMS.CustomerServiceControl
@@ -10270,6 +10270,7 @@ Public Class CustomerServiceControl
         Dim BM As BindingManagerBase
         Dim DR As DataRow
         Dim ProcessProperties As ProcessStartInfo
+        Dim CustomerServiceFI As FileInfo
 
         Try
 
@@ -10293,6 +10294,24 @@ Public Class CustomerServiceControl
             'Shell(Environment.CurrentDirectory & "\" & "CustomerService.exe  CLAIM_ID=" & dr("CLAIM_ID").ToString, AppWinStyle.NormalFocus)
 
             'Process.Start(Environment.CurrentDirectory & "\" & "CustomerService.exe", " CLAIM_ID=" & dr("CLAIM_ID").ToString)
+
+            'ProcessProperties = New ProcessStartInfo
+            'CustomerServiceFI = UFCWGeneral.FindCustomerService()
+
+            'ProcessProperties.FileName = CustomerServiceFI.FullName 'Environment.CurrentDirectory & "\" & "UFCW.CMS.CustomerService.exe"
+
+            'Select Case True
+            '    Case CType(sender, ToolStripMenuItem).Name.Contains("Claim")
+            '        ProcessProperties.Arguments = "CLAIM_ID=" & DR("CLAIM_ID").ToString
+            '    Case CType(sender, ToolStripMenuItem).Name.Contains("Patient")
+            '        ProcessProperties.Arguments = "PAT_SSN=" & DR("PAT_SSN").ToString
+            '    Case CType(sender, ToolStripMenuItem).Name.Contains("Family")
+            '        ProcessProperties.Arguments = "FAMILY_ID=" & DR("FAMILY_ID").ToString
+            'End Select
+            'ProcessProperties.WindowStyle = ProcessWindowStyle.Normal
+
+            'ProcessProperties.UseShellExecute = False
+            'Process.Start(ProcessProperties)
 
         Catch ex As Exception
 

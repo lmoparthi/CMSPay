@@ -392,7 +392,8 @@ Imports System.IO
 
             LoadClaim()
 
-            '   AddHandler cmbPlan.SelectedIndexChanged, AddressOf cmbPlan_SelectedIndexChanged
+            AddHandler cmbPlan.SelectedIndexChanged, AddressOf cmbPlan_SelectedIndexChanged
+            'AddHandler cmbStatus.SelectedIndexChanged, AddressOf cmbStatus_SelectedIndexChanged
 
             AddHandler AutoCheckBox.CheckedChanged, AddressOf CheckBoxs_CheckedChanged
             AddHandler WorkersCompCheckBox.CheckedChanged, AddressOf CheckBoxs_CheckedChanged
@@ -412,11 +413,11 @@ Imports System.IO
                     End If
                 End If
             End If
-            If _MedDtlBS IsNot Nothing Then
-                DirectCast(_MedDtlBS.DataSource, DataTable).AcceptChanges()
-                _MedDtlBS.EndEdit()
-                _MedDtlBS.ResetBindings(False)
-            End If
+            'If _MedDtlBS IsNot Nothing Then
+            '    DirectCast(_MedDtlBS.DataSource, DataTable).AcceptChanges()
+            '    _MedDtlBS.EndEdit()
+            '    _MedDtlBS.ResetBindings(true)
+            'End If
 
         Catch ex As Exception
             Throw
@@ -5844,7 +5845,6 @@ ShowUpdate:
 
             LoadClaimHeader()
             LoadClaimDetail()
-
             LoadHeaderDataBindings()
             LoadDetailLineDataBindings()
 
@@ -5878,9 +5878,9 @@ ShowUpdate:
                     Using WC As New GlobalCursor
 
                         AccumulatorsDataGrid.DataSource = Nothing
-                        _MedDtlBS.RaiseListChangedEvents = False
+                        '_MedDtlBS.RaiseListChangedEvents = False
                         ClaimProcessor.LoadDetailLineAccumulators(AddressOf WorkStatusMessage, AddressOf SelectAccidentUI, AddressOf AccumulatorCheckIfOverrideNeededUI, _HighestEntryID, _ClaimBinder, _ClaimMemberAccumulatorManager, CType(_ClaimDS, DataSet), _DetailAccumulatorsDT, _AccumulatorsDT, _ClaimAlertManager)
-                        _MedDtlBS.RaiseListChangedEvents = True
+                        '_MedDtlBS.RaiseListChangedEvents = True
                     End Using
                 End If
                 If Not _HasBeenAudited Then
@@ -5910,7 +5910,14 @@ ShowUpdate:
             LoadAudit()
             LoadDocHistory()
 
-            '  If DetailLinesDataGrid.GetGridRowCount > 0 Then LoadDetailLineRow(1)
+            If DetailLinesDataGrid.GetGridRowCount > 0 Then
+                LoadDetailLineRow(1)
+                If _MedDtlBS IsNot Nothing AndAlso _MedDtlBS.Count > 0 Then
+                    _MedDtlBS.Position = 0
+                    DetailLinesDataGrid.Select(0)
+                    _MedDtlDR = DirectCast(_MedDtlBS.Current, DataRowView).Row
+                End If
+            End If
 
             SetUIElements()
 
@@ -5954,6 +5961,7 @@ ShowUpdate:
         Try
             _ClaimDS = New ClaimDataset
             _ClaimDS = CType(CMSDALFDBMD.RetrieveCompleteClaim(_ClaimID, PatientClaimCount, DBTableNames, _ClaimDS, _DomainUser.ToUpper), ClaimDataset)
+            _ClaimDS.AcceptChanges()
         Catch ex As Exception
             Throw
         End Try
@@ -6087,6 +6095,7 @@ ShowUpdate:
 
     Private Sub LoadClaimDetail()
         Try
+
             _MedDtlBS = New BindingSource With {
                 .DataSource = _ClaimDS.Tables("MEDDTL"),
                 .Sort = "LINE_NBR"
@@ -6096,10 +6105,11 @@ ShowUpdate:
 
             SetTableStyle(DetailLinesDataGrid, DetailLinesDataGridCustomContextMenu)
 
-            If _MedDtlBS IsNot Nothing AndAlso _MedDtlBS.Count > 0 Then
-                _MedDtlDR = DirectCast(_MedDtlBS.Current, DataRowView).Row
-            End If
-
+            'If _MedDtlBS IsNot Nothing Then
+            '    DirectCast(_MedDtlBS.DataSource, DataTable).AcceptChanges()
+            '    _MedDtlBS.EndEdit()
+            '    _MedDtlBS.ResetBindings(true)
+            'End If
 
         Catch ex As Exception
             Throw
@@ -6283,22 +6293,20 @@ ShowUpdate:
         If CInt(_TraceBinding.Level) > 1 Then Trace.WriteLine(UFCWGeneral.NowDate.ToString("HH:mm:ss.fffffff") & " : " & Me.Name & ": Line -> " & e.Row("LINE_NBR").ToString & If(_TraceBinding.TraceVerbose, vbCrLf & Environment.StackTrace & vbCrLf, ""), "TraceBinding" & vbTab)
 #End If
 
-        'Dim DGRow As DataRow
+        Dim DGRow As DataRow
 
-        'Try
+        Try
 
-        '    If _Disposed OrElse _MedDtlBS Is Nothing OrElse _MedDtlBS.Position < 0 Then Return
+            If _Disposed OrElse _MedDtlBS Is Nothing OrElse _MedDtlBS.Position < 0 Then Return
 
-        '    Debug.Print(UFCWGeneral.NowDate.ToString("HH:mm:ss.fffffff") & " IO:  " & Me.Name & " " & UFCWGeneral.FlattenStack(New System.Diagnostics.StackTrace(True)))
+            '  Debug.Print(UFCWGeneral.NowDate.ToString("HH:mm:ss.fffffff") & " IO:  " & Me.Name & " " & UFCWGeneral.FlattenStack(New System.Diagnostics.StackTrace(True)))
 
-        '    DGRow = DirectCast(_MedDtlBS.Current, DataRowView).Row
+            DGRow = DirectCast(_MedDtlBS.Current, DataRowView).Row
 
-        '    If (_MedDtlBS.Position + 1 < _MedDtlBS.Count) Then
-        '        _MedDtlBS.MoveNext()
-        '    End If
-        'Catch ex As Exception
-        '    Throw
-        'End Try
+
+        Catch ex As Exception
+            Throw
+        End Try
 
     End Sub
 
@@ -17377,12 +17385,15 @@ UpdateDetail:
             Next
 
             If ReasonMergedQuery.Any Then
+
                 MeddtlDR("REASON_SW") = 1
                 If IsDBNull(MeddtlDR("STATUS")) OrElse (ApplyStatus IsNot Nothing AndAlso ApplyStatus <> "" AndAlso MeddtlDR("STATUS").ToString.Trim <> ApplyStatus) Then
-                    MeddtlDR("STATUS") = ApplyStatus
+                    'MeddtlDR("STATUS") = ApplyStatus
+                    cmbStatus.Text = ApplyStatus
                 Else
                     ApplyStatus = MeddtlDR("STATUS").ToString
                 End If
+
                 'If ApplyStatus = "DENY" AndAlso Not IsDBNull(MeddtlDR("PAID_AMT")) Then
                 '    If CDec(MeddtlDR("PAID_AMT")) <> 0D Then
                 '        MeddtlDR("PAID_AMT") = 0D
